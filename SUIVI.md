@@ -18,7 +18,8 @@ Dernière mise à jour : 12 novembre 2026.
 | Cover 0 | Validée par le coach (habillage et rythme), trois prononciations corrigées |
 | Cover 1 | Première version rendue, en attente de l'avis du coach |
 | Cover 3 | Première version rendue, en attente de l'avis du coach |
-| Cover 2, 4 et la conclusion | À faire |
+| Cover 2 | Première version rendue, en attente de l'avis du coach |
+| Cover 4 et la conclusion | En cours |
 | Fusion en une seule vidéo | À faire |
 
 ## Avancement par vidéo
@@ -30,7 +31,7 @@ Dernière mise à jour : 12 novembre 2026.
 | 2 | Cover 0 | Relu | Fait | Fait | Fait | Fait | Fait | Oui |
 | 3 | Cover 1 | Relu | Fait | Fait | Fait | Fait | Fait (v1) | |
 | 4 | Cover 3 | Relu | Fait | Fait | Fait | Fait | Fait (v1) | |
-| 5 | Cover 2 | Relu | | | | | | |
+| 5 | Cover 2 | Relu | Fait | Fait | Fait | Fait | Fait (v1) | |
 | 6 | Cover 4 | Relu | | | | | | |
 | 7 | Conclusion et quiz | Relu | | | | | | |
 
@@ -53,7 +54,7 @@ Dernière mise à jour : 12 novembre 2026.
 
 ## Points ouverts
 
-1. **Cover 1 et Cover 3** : avis du coach, avec les relevés `videos/voix/03-cover-1.releve.md` et `videos/voix/04-cover-3.releve.md`.
+1. **Cover 1, Cover 3 et Cover 2** : avis du coach, avec les relevés de `videos/voix/` (`03-cover-1`, `04-cover-3`, `05-cover-2`).
 2. **Termes anglais nouveaux** à écouter. Cover 1 : « robber » (« robeur »), « out » (« a-outte »), « comeback » (« comme-bac »), « mesh » (« mèch »), « slots » (« slottes »). Cover 3 : « flat » (« flatt »), « curl » (« keurl »), « seam » (« sim »), « hitch » (« hitsh »).
 3. **Points tactiques à valider** : liste en bas de `scripts/README.md`.
 
@@ -65,3 +66,4 @@ Dernière mise à jour : 12 novembre 2026.
 - **12 novembre 2026, nuit.** Production du chapitre Cover 0 : 43 phrases, neuf scènes, 2 min 14. Premier chapitre avec l'habillage complet (titre, pastilles, progression).
 - **Suite.** Gabarit de chapitre et rythme validés par le coach. Prononciations corrigées : quarterback, rushers, touchdown ; les quatorze phrases concernées régénérées et les trois premières vidéos re-rendues. Production de Cover 1 : 39 phrases, neuf scènes, 2 min 29.
 - **Suite.** Production de Cover 3 : 41 phrases, dix scènes, 2 min 32.
+- **Suite.** Production de Cover 2 : 40 phrases, dix scènes, 2 min 31.
