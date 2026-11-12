@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1920, height=1080">
+<title>04 · Cover 3</title>
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/scene.css">
+<script src="assets/gsap.min.js"></script>
+<script src="assets/kit.js"></script>
+<script src="assets/scene.js"></script>
+<script src="assets/audio/04-cover-3.timing.js"></script>
+</head>
+<body>
+<div id="root" data-composition-id="cover-3" data-start="0" data-duration="151.66" data-width="1920" data-height="1080">
+  <div id="scene" class="clip" data-start="0" data-duration="151.66" data-track-index="0"></div>
+  <audio id="voix" src="assets/audio/04-cover-3.mp3" data-start="0" data-duration="151.66" data-track-index="1" data-volume="1"></audio>
+</div>
+<script>
+// Minutage de la voix : T = début d'une phrase, F = sa fin, A = un instant à l'intérieur (0 = début, 1 = fin).
+const M = window.MINUTAGE, P = {};
+M.scenes.forEach((s) => s.phrases.forEach((p) => { P[p.id] = p; }));
+const T = (id) => P[id].t0, F = (id) => P[id].t1, A = (id, r) => P[id].t0 + r * (P[id].t1 - P[id].t0);
+
+const hote = document.getElementById('scene');
+const S = creerScene(hote);
+const tl = gsap.timeline({ paused: true });
+const { X, Y } = S;
+
+// --- Cover 3 : trois profonds (les deux corners et le safety du milieu), quatre dessous ---
+const DEF3 = { CBG: [4.4, 7.5], CBD: [49, 7.5], N: [15, 5], LBG: [22.3, 4.8], LBD: [31.2, 4.8], SS: [41.2, 5], FS: [26.667, 13.2] };
+// Après le snap : chacun dans sa zone.
+const ZONE3 = { CBG: [4.4, 14.6], CBD: [49, 14.6], N: [11.6, 6.4], LBG: [21.7, 6.8], LBD: [31.7, 6.8], SS: [42, 6.4], FS: [26.667, 15.2] };
+const ZC = ['z-cfg', 'z-hg', 'z-hd', 'z-cfd'], ZP = ['z-p1', 'z-p2', 'z-p3'];
+
+// --- Éléments du terrain ---
+const att = S.creerAttaque(true);
+const def = S.creerDefense(DEF3, false);
+S.zone('z-cfg', 11.6, 7, 6.3, 1.6, 'CURL / FLAT', 'courte'); S.zone('z-hg', 21.7, 7, 3.7, 1.5, 'HOOK', 'courte');
+S.zone('z-hd', 31.7, 7, 3.7, 1.5, 'HOOK', 'courte'); S.zone('z-cfd', 41.8, 7, 6.3, 1.6, 'CURL / FLAT', 'courte');
+S.zone('z-p1', 9, 18, 8.3, 3.4, '1/3 PROFOND'); S.zone('z-p2', 26.667, 18, 8.3, 3.4, '1/3 PROFOND'); S.zone('z-p3', 44.3, 18, 8.3, 3.4, '1/3 PROFOND');
+S.teinte('couloir-h', 16.9, 6, 20.3, 20.5, C.orange, 0.14); S.teinte('couloir-y', 33.1, 6, 36.5, 20.5, C.orange, 0.14);
+S.cone('cone', 26.667, -5, 43.6, 4.5); S.cone('cone-fs', 26.667, -5, 26.667, 14.6, 3.2);
+S.cercle('fl-g', 3.2, 2.6, 34); S.cercle('fl-d', 50.1, 2.6, 34); S.cercle('trou', 47.5, 6.3, 34); S.cercle('fenetre', 46.1, 10.4, 34); S.cercle('trou3', 36.3, 8, 34);
+S.trace('t-hitch', [[47.5, -0.1], [47.5, 6]], { fin: 'stop' });
+const V4 = { X: [[5.8, -0.8], [5.8, 19]], H: [[14, -1.9], [18.2, 6], [18.6, 19]], Y: [[39.3, -1.9], [35.1, 6], [34.7, 19]], Z: [[47.5, -0.8], [47.5, 19]] };
+Object.entries(V4).forEach(([id, p]) => S.trace('t-v' + id, [[p[0][0], p[0][1] + 0.6], ...p.slice(1)]));
+S.trace('t-curl', [[47.5, -0.1], [47.5, 12.6], [46.1, 10.4]], { fin: 'stop' });
+S.trace('t-flat', [[39.3, -1.2], [40.4, 1.7], [48.8, 2.7]]);
+S.trace('t-derive', [[39.3, -1.2], [35.1, 6], [29.6, 17]], { col: C.rouge, op: 0.85 });
+S.trace('t-hx', [[5.8, -0.1], [5.8, 5.2]], { fin: 'stop', col: C.rouge });
+S.trace('t-dig1', [[47.5, -0.1], [47.5, 8], [31.5, 8]]); S.trace('t-dig3', [[47.5, -0.1], [47.5, 8], [36.3, 8]], { fin: 'stop' });
+S.ligne('l-10', 0, 10, 53.333, 10, { col: C.jaune, w: 4, tirets: '14 10' });
+S.ligne('l-regard', 49, 7.5, 26.667, -5, { col: C.jaune, w: 4, tirets: '' });
+S.ligne('ln-Z', 47.5, -0.8, 46.7, 1.6, { col: '#fff', w: 3, tirets: '3 8' });
+const E = (id, x, y, texte, o) => S.etiquette(id, x, y, texte, o);
+const BLANC = { col: '#fff', coulTexte: C.vertTexte, taille: 22 }, ROUGE = { col: C.rouge, coulTexte: '#fff', taille: 19 }, ORANGE = { col: C.orange, taille: 19 };
+E('e-zone', 26.667, 21.6, "CETTE FOIS, C'EST DE LA ZONE", BLANC);
+E('e-ferme', 26.667, 22.4, 'MILIEU FERMÉ', { col: '#fff', coulTexte: C.vertTexte, taille: 24 }); S.cadenas('cad', 26.667, 23.9, true);
+E('e-78', 44.6, 8.4, '7 À 8 YARDS', { taille: 13 }); E('e-ext', 44.6, 7, "À L'EXTÉRIEUR", { taille: 13 });
+E('e-desc', 41.2, 2.9, 'SAFETY DESCENDU', { taille: 16 });
+E('e-cran', 26.667, 21.6, "PERSONNE NE SUIT : ILS SE DÉCALENT D'UN CRAN", BLANC);
+E('e-43', 26.667, 21.9, '4 VERTICAUX CONTRE 3 PROFONDS', BLANC);
+E('e-conflit', 42.2, 7.1, 'DÉFENSEUR EN CONFLIT');
+E('e-fen', 41.4, 11.9, 'LA FENÊTRE', ORANGE);
+E('e-conflit-fs', 26.667, 10.9, 'DÉFENSEUR EN CONFLIT');
+E('e-piege', 26.667, 21.6, 'LE CORNER RESTE COURT : PAS DE HITCH', { col: C.rouge, coulTexte: '#fff', taille: 22 });
+E('e-c1', 38, 10.4, 'COVER 1 : IL SUIT, JE COURS', { col: C.bleu, coulTexte: '#fff', taille: 17 }); E('e-c3', 37, 10.4, "COVER 3 : JE M'ARRÊTE DANS LE TROU", { taille: 17 });
+S.numero('no1g', 3.2, 4.9, 1); S.numero('no1d', 50.1, 4.9, 1); S.numero('no2', 44.7, 6.3, 2); S.numero('no3g', 18.6, 13, 3); S.numero('no3d', 34.7, 13, 3);
+S.marque('m-derive', 29.6, 17); S.marque('m-hitch', 5.8, 6.6);
+S.ballon();
+
+// --- Habillage du chapitre ---
+S.habillage({
+  titre: 'COVER 3',
+  pastilles: [['zone', 'Zone'], ['', '1 safety'], ['', 'Milieu fermé']],
+  etapes: [["Carte d'identité", ''], ['La reconnaître', 'Avant le snap'], ['La reconnaître', 'Au snap'], ['Ses faiblesses', ''],
+    ['La battre', 'Curl et flat'], ['La battre', 'Le curl, côté receveur'], ['La battre', 'Quatre verticaux'], ['Le piège', ''], ['Ne pas confondre', ''], ['Réflexe', '']],
+});
+const gribouillis = [
+  rond(30, 20, 78, C.orange, 9), rond(1450, 82, 56, C.orange, 7), croix(1452, 84, 30, C.craie, 7, 0, .8), croix(1558, 92, 28, C.craie, 7, 4, .8), croix(1662, 96, 28, C.craie, 7, -5, .8),
+  croix(1838, 124, 60, C.orange, 16, 4), hachures(8, 470, 13, 46, 48, C.orange, 9, true), rond(150, 990, 50, C.orange, 8), croix(96, 920, 34, C.craie, 8, -8, .85),
+  hachures(1420, 1016, 7, 44, 56, C.orange, 9, false), rond(1850, 800, 30, C.craie, 6, .75), rond(1790, 872, 28, C.craie, 6, .75), rond(1862, 884, 30, C.craie, 6, .75),
+].join('');
+hote.insertAdjacentHTML('beforeend', `
+  <div class="bloc-g ombre" id="bloc-compte" style="opacity:0"><div class="ligne" id="cp-p" style="opacity:0"><b style="color:var(--ciel)">3</b>profonds</div><div class="ligne" id="cp-d" style="opacity:0"><b style="color:var(--jaune)">4</b>dessous</div></div>
+  <div class="bloc-g ombre" id="bloc-rappel" style="opacity:0"><div class="rappel zone">Zone = je cherche le trou, je m'y arrête</div></div>
+  <div class="bloc-g ombre" id="bloc-un" style="opacity:0"><div class="ligne"><b>1</b>safety</div></div>
+  <div class="bloc-g ombre" id="bloc-regle" style="opacity:0"><div class="regle"><div id="rg-a">Il s'élargit → <b>curl</b></div><div id="rg-b">Il reste → <b>flat</b></div></div></div>
+  <div class="bloc-g ombre" id="bloc-regle2" style="opacity:0"><div class="regle"><div>Il penche d'un côté → <b>l'autre seam</b></div></div></div>
+  <div class="ardoise" id="ardoise" style="opacity:0">
+    <svg width="1920" height="1080" viewBox="0 0 1920 1080">${defs()}${fond()}<g data-layout-allow-overflow>${gribouillis}</g></svg>
+    <div class="coin" style="position:absolute;top:34px;left:160px;display:flex;align-items:center;gap:20px"><span class="titre" style="font-size:46px">COVER 3</span><span class="pastille zone">Zone</span><span class="pastille">1 safety</span></div>
+    <div class="titre-ardoise"><span class="script">Le réflexe</span></div>
+    <div class="cartes">
+      <div class="carte" id="rx-qb" style="opacity:0"><div class="onglet">QB</div><div class="quand">1 safety, les corners reculent</div><div class="quoi">Je lis le <b>défenseur du&nbsp;flat.</b></div></div>
+      <div class="carte" id="rx-wr" style="opacity:0"><div class="onglet">WR</div><div class="quand">Je pousse le corner, puis</div><div class="quoi">Je m'arrête <b>devant&nbsp;lui</b>, ou j'attaque <b>la&nbsp;seam.</b></div></div>
+    </div>
+  </div>`);
+creerSousTitres(hote, tl, M);
+
+// --- Aides propres à cette vidéo ---
+const BLOCS = ['bloc-compte', 'bloc-rappel', 'bloc-un', 'bloc-regle', 'bloc-regle2'];
+const bloc = (id, t) => BLOCS.forEach((b) => tl.to('#' + b, { opacity: b === id ? 1 : 0, duration: 0.25 }, t));
+const regle = (n, t) => ['rg-a', 'rg-b'].forEach((id, i) => tl.to('#' + id, { backgroundColor: i === n ? C.orange : 'rgba(14,18,15,.78)', color: i === n ? C.ardoise : '#fff', duration: 0.2 }, t));
+const zones = (ids, actif, t) => ids.forEach((id, i) => (actif ? S.montre(tl, id, t + i * 0.05, 0.3) : S.cache(tl, id, t, 0.25)));
+const haloEteint = (id, t, col = C.jaune) => { tl.to(`#${id} .halo1`, { opacity: 0, duration: 0.2 }, t); tl.set(`#${id} .halo1`, { stroke: col }, t + 0.25); };
+const cache = (ids, t, d = 0.25) => ids.forEach((id) => S.cache(tl, id, t, d));
+const remet = (t, d = 0.45) => { S.formation(tl, S.ATTAQUE, t, d); S.formation(tl, DEF3, t, d); };
+const marges = (actif, t) => ['ui-d', 'legende'].forEach((id) => (actif ? S.montre(tl, id, t, 0.25) : S.cache(tl, id, t, 0.25)));
+const ZOOM_CB = { zoom: 2.0, cx: 44, cy: 5, sx: 1150, sy: 470 };
+// Le curl et le flat courus par Z et Y, pendant que les corners reculent.
+const curlFlat = (t) => {
+  S.dessine(tl, 't-curl', t, 1.25); S.court(tl, 'Z', [[47.5, -0.8], [47.5, 12.6], [46.1, 10.4]], t, 1.3);
+  S.dessine(tl, 't-flat', t, 1.0); S.court(tl, 'Y', [[39.3, -1.9], [40.4, 1.7], [48.8, 2.7]], t, 1.05);
+  S.va(tl, 'CBD', 49, 14.8, t, 1.3, 'power1.out'); S.va(tl, 'CBG', 4.4, 13, t, 1.3, 'power1.out');
+};
+const finCurlFlat = (t) => { cache(['ballon'], t, 0.15); ['Z', 'Y'].forEach((id) => haloEteint(id, t, C.orange)); S.efface(tl, 't-curl', t, 0.2); S.efface(tl, 't-flat', t, 0.2); };
+
+// ===== Scène 1 · Titre =====
+S.montreHabillage(tl, 0.5);
+S.entre(tl, def, T('t1') - 0.4, 0.05);
+S.halo(tl, 'FS', A('t2', 0.2), 1.8); S.montre(tl, 'e-zone', A('t2', 0.55), 0.3); S.cache(tl, 'e-zone', F('t2') + 0.6, 0.3);
+
+// ===== Scène 2 · Carte d'identité =====
+S.etapeChapitre(tl, 0, T('c1') - 0.3);
+zones(ZP, true, A('c1', 0.1)); bloc('bloc-compte', A('c1', 0.1)); S.montre(tl, 'cp-p', A('c1', 0.15), 0.25);
+['CBG', 'CBD'].forEach((id) => S.halo(tl, id, A('c1', 0.62), 1.8)); S.halo(tl, 'FS', A('c1', 0.82), 1.6);
+zones(ZC, true, A('c2', 0.25)); S.montre(tl, 'cp-d', A('c2', 0.3), 0.25);
+S.montre(tl, 'cad', T('c3') + 0.05, 0.25); S.montre(tl, 'e-ferme', A('c3', 0.4), 0.25);
+bloc('bloc-rappel', A('c4', 0.1));
+
+// ===== Scène 3 · La reconnaître =====
+let t = T('r1') - 0.4;
+S.etapeChapitre(tl, 1, t); bloc(null, t); zones([...ZC, ...ZP], false, t); cache(['cad', 'e-ferme'], t);
+S.montre(tl, 'l-10', A('r1', 0.3), 0.3); bloc('bloc-un', A('r1', 0.35)); S.halo(tl, 'FS', A('r1', 0.35), 2.0);
+// Le corner : sept ou huit yards, à l'extérieur, tourné vers le quarterback.
+t = T('r2') - 0.2;
+cache(['l-10'], t); marges(false, t); bloc(null, t); S.camera(tl, t, 0.85, ZOOM_CB);
+['N', 'LBG', 'LBD'].forEach((id) => tl.to('#' + id, { opacity: 0, duration: 0.25 }, t));
+S.montre(tl, 'e-78', A('r2', 0.3), 0.2); S.montre(tl, 'e-ext', A('r2', 0.58), 0.2); S.montre(tl, 'l-regard', A('r2', 0.8), 0.25);
+// Le deuxième safety, descendu.
+t = T('r3') - 0.35;
+cache(['e-78', 'e-ext', 'l-regard'], t, 0.2); S.cameraLarge(tl, t, 0.8); marges(true, t + 0.5);
+['N', 'LBG', 'LBD'].forEach((id) => tl.to('#' + id, { opacity: 1, duration: 0.25 }, t + 0.3));
+S.halo(tl, 'SS', A('r3', 0.45), 1.8); S.montre(tl, 'e-desc', A('r3', 0.5), 0.25);
+// Le motion : personne ne suit.
+t = T('r4');
+S.cache(tl, 'e-desc', t - 0.1, 0.2);
+S.va(tl, 'H', 33, -2.7, t + 0.15, 1.8, 'power1.inOut');
+[['N', 17, 5], ['LBG', 24.3, 4.8], ['LBD', 33.2, 4.8], ['SS', 43.2, 5], ['FS', 28.4, 13.2]].forEach(([id, x, y]) => S.va(tl, id, x, y, t + 0.5, 1.3, 'power1.inOut'));
+S.montre(tl, 'e-cran', A('r4', 0.5), 0.3);
+// Au snap : les corners reculent, un défenseur court vers le flat.
+t = T('r5') - 0.5;
+S.etapeChapitre(tl, 2, t); S.cache(tl, 'e-cran', t, 0.2); remet(t + 0.02, 0.45);
+t = A('r5', 0.3);
+S.formation(tl, { ...ZONE3, SS: [46, 4] }, t, 1.5);
+[['X', 5.8, 6.5], ['H', 14, 5], ['Y', 39.3, 5], ['Z', 47.5, 6.5]].forEach(([id, x, y]) => S.va(tl, id, x, y, t, 1.5, 'power1.out'));
+S.va(tl, 'QB', 26.667, -6.8, t, 0.9, 'power1.out');
+['CBG', 'CBD'].forEach((id) => S.halo(tl, id, A('r5', 0.45), 1.6)); S.halo(tl, 'SS', A('r5', 0.85), 1.6);
+zones(ZP, true, A('r5', 0.6));
+
+// ===== Scène 4 · Ses faiblesses =====
+t = T('f0') - 0.5;
+S.etapeChapitre(tl, 3, t); zones(ZP, false, t); remet(t + 0.05); zones(ZC, true, T('f0'));
+// Un : les flats.
+['fl-g', 'fl-d', 'no1g', 'no1d'].forEach((id) => S.montre(tl, id, A('f1', 0.35), 0.25));
+// Deux : devant le corner. Il recule, je m'arrête.
+t = T('f2') - 0.2;
+cache(['fl-g', 'fl-d', 'no1g', 'no1d'], t, 0.2); S.montre(tl, 'no2', A('f2', 0.2), 0.25);
+t = T('f3') + 0.05;
+S.dessine(tl, 't-hitch', t, 0.85); S.court(tl, 'Z', [[47.5, -0.8], [47.5, 6]], t, 0.9); S.va(tl, 'CBD', 49, 14.2, t, 1.3, 'power1.out');
+S.montre(tl, 'trou', t + 0.8, 0.25); S.lance(tl, [26.667, -5], [47.5, 5.7], t + 0.75, 0.6); S.halo(tl, 'Z', t + 1.35, 0);
+// Trois : les seams. Quatre verticaux contre trois profonds.
+t = T('f4') - 0.5;
+cache(['ballon', 'trou', 'no2'], t, 0.2); haloEteint('Z', t, C.orange); S.efface(tl, 't-hitch', t, 0.2); zones(ZC, false, t); remet(t + 0.02, 0.42);
+zones(ZP, true, T('f4')); S.montre(tl, 'no3g', A('f4', 0.3), 0.25); S.montre(tl, 'no3d', A('f4', 0.3), 0.25);
+t = T('f5') + 0.1;
+Object.entries(V4).forEach(([id, p]) => { S.dessine(tl, 't-v' + id, t, 2.2); S.court(tl, id, p, t, 2.2); });
+S.formation(tl, { CBG: [5, 16.4], CBD: [48.4, 16.4], FS: [26.667, 16.6] }, t, 2.0);
+S.montre(tl, 'e-43', A('f5', 0.5), 0.3);
+
+// ===== Scène 5 · Le défenseur en conflit : curl et flat =====
+t = T('k1') - 0.55;
+S.etapeChapitre(tl, 4, t); cache(['no3g', 'no3d', 'e-43'], t, 0.2); zones(ZP, false, t); Object.keys(V4).forEach((id) => S.efface(tl, 't-v' + id, t, 0.2)); remet(t + 0.05);
+zones(ZC, true, T('k1') - 0.1);
+S.conflit(tl, 'SS', A('k1', 0.2)); S.montre(tl, 'e-conflit', A('k1', 0.3), 0.25); tl.to('#z-cfd text', { opacity: 0, duration: 0.2 }, A('k1', 0.28));
+tl.to('#z-cfd ellipse', { fillOpacity: 0.5, duration: 0.3, yoyo: true, repeat: 3 }, T('k2'));
+// Deux tracés : le curl dehors, le flat par le slot.
+S.dessine(tl, 't-curl', A('k3', 0.42), 0.8); S.dessine(tl, 't-flat', A('k3', 0.78), 0.7);
+S.montre(tl, 'cone', A('k4', 0.4), 0.3); bloc('bloc-regle', A('k4', 0.4));
+// Il s'élargit : le curl.
+t = T('k5') - 0.3;
+S.efface(tl, 't-curl', t, 0.15); S.efface(tl, 't-flat', t, 0.15); regle(0, T('k5'));
+t = T('k5') + 0.05;
+curlFlat(t); S.va(tl, 'SS', 44.9, 4.1, t + 0.5, 0.6);
+S.lance(tl, [26.667, -5], [46.1, 10.4], t + 1.15, 0.65); S.halo(tl, 'Z', t + 1.8, 0);
+// Il reste à l'intérieur : le flat.
+t = T('k6') - 0.5;
+finCurlFlat(t); remet(t + 0.02, 0.42); regle(1, T('k6'));
+t = T('k6') + 0.05;
+curlFlat(t); S.va(tl, 'SS', 44.4, 8.6, t + 0.5, 0.7);
+S.lance(tl, [26.667, -5], [48.8, 2.7], t + 0.75, 0.6); S.halo(tl, 'Y', t + 1.35, 0);
+
+// ===== Scène 6 · Le curl, côté receveur =====
+t = T('w1') - 0.55;
+S.etapeChapitre(tl, 5, t); finCurlFlat(t); cache(['cone', 'e-conflit'], t, 0.2); bloc(null, t); S.conflit(tl, 'SS', t, false); remet(t + 0.05);
+marges(false, t + 0.3); S.camera(tl, t + 0.3, 0.85, { zoom: 1.9, cx: 43, cy: 6, sx: 1160, sy: 470 });
+t = A('w1', 0.16);
+S.dessine(tl, 't-curl', t, 2.2); S.court(tl, 'Z', [[47.5, -0.8], [47.5, 12.6], [46.1, 10.4]], t, 2.3);
+S.va(tl, 'CBD', 49, 15, t, 2.0, 'power1.out'); S.va(tl, 'SS', 43.4, 7.2, t + 0.4, 1.4); S.va(tl, 'LBD', 32.4, 7, t + 0.4, 1.4);
+S.montre(tl, 'fenetre', A('w1', 0.72), 0.3); S.montre(tl, 'e-fen', A('w1', 0.76), 0.25);
+S.halo(tl, 'SS', A('w2', 0.2), 1.6); S.halo(tl, 'CBD', A('w2', 0.2), 1.6); S.halo(tl, 'Z', A('w2', 0.6), 0);
+
+// ===== Scène 7 · Quatre verticaux =====
+t = T('v1') - 0.6;
+S.etapeChapitre(tl, 6, t); cache(['fenetre', 'e-fen'], t, 0.2); haloEteint('Z', t, C.orange); S.efface(tl, 't-curl', t, 0.2); zones(ZC, false, t);
+S.cameraLarge(tl, t, 0.8); marges(true, t + 0.5); remet(t + 0.05);
+zones(ZP, true, T('v1'));
+S.conflit(tl, 'FS', A('v2', 0.35)); S.montre(tl, 'e-conflit-fs', A('v2', 0.45), 0.25);
+t = T('v3');
+Object.entries(V4).forEach(([id, p]) => { S.dessine(tl, 't-v' + id, t, 2.6); S.court(tl, id, p, t, 2.6); });
+S.formation(tl, { CBG: [5, 16.4], CBD: [48.4, 16.4], FS: [26.667, 16.2] }, t, 2.3);
+S.cache(tl, 'e-conflit-fs', T('v4') - 0.1, 0.2); S.montre(tl, 'cone-fs', T('v4'), 0.3); bloc('bloc-regle2', T('v4'));
+// Il penche d'un côté : je lance l'autre seam.
+t = A('v5', 0.15);
+S.va(tl, 'FS', 31.6, 16.8, t, 0.6); S.lance(tl, [26.667, -5], [18.6, 18.6], t + 0.55, 0.9); S.halo(tl, 'H', t + 1.45, 0);
+// Le slot tient son couloir.
+t = T('v6') - 0.2;
+cache(['ballon', 'cone-fs'], t, 0.2); S.montre(tl, 'couloir-h', A('v6', 0.25), 0.3); S.montre(tl, 'couloir-y', A('v6', 0.25), 0.3);
+S.dessine(tl, 't-derive', A('v6', 0.55), 0.9); S.montre(tl, 'm-derive', A('v6', 0.55) + 0.95, 0.15);
+
+// ===== Scène 8 · Le piège =====
+t = T('p1') - 0.55;
+S.etapeChapitre(tl, 7, t); bloc(null, t); cache(['couloir-h', 'couloir-y', 'm-derive'], t, 0.2); haloEteint('H', t, C.orange); S.conflit(tl, 'FS', t, false);
+['t-derive', ...Object.keys(V4).map((id) => 't-v' + id)].forEach((id) => S.efface(tl, id, t, 0.2)); zones(ZP, false, t); remet(t + 0.05);
+// Le corner de gauche reste court, un safety tourne par-dessus.
+t = A('p2', 0.1);
+S.va(tl, 'CBG', 5.2, 4.6, t, 1.0, 'power1.inOut'); S.va(tl, 'FS', 11, 15.5, t, 1.4, 'power1.inOut'); S.va(tl, 'CBD', 49, 14.6, t, 1.4, 'power1.out');
+S.va(tl, 'SS', 30, 14.5, t, 1.4, 'power1.inOut'); S.va(tl, 'N', 15.5, 6.6, t, 1.2); S.va(tl, 'LBG', 23.5, 6.8, t, 1.2); S.va(tl, 'LBD', 36, 6.6, t, 1.2);
+S.halo(tl, 'CBG', t + 0.6, 0, C.rouge); S.montre(tl, 'e-piege', A('p2', 0.55), 0.3);
+t = T('p3') + 0.1;
+S.dessine(tl, 't-hx', t, 0.8); S.court(tl, 'X', [[5.8, -0.8], [5.8, 5.2]], t, 0.85); S.montre(tl, 'm-hitch', t + 0.9, 0.15);
+
+// ===== Scène 9 · Ne pas confondre =====
+t = T('n1') - 0.55;
+S.etapeChapitre(tl, 8, t); cache(['e-piege', 'm-hitch'], t, 0.2); haloEteint('CBG', t); S.efface(tl, 't-hx', t, 0.2); remet(t + 0.05);
+S.halo(tl, 'FS', T('n2'), 1.6);
+// Cover 1 : il suit, je continue de courir.
+t = T('n3') - 0.45;
+S.va(tl, 'CBD', 46.7, 1.6, t, 0.4); S.montre(tl, 'ln-Z', T('n3'), 0.2, 0.9);
+t = A('n3', 0.3);
+const DIG = [[47.5, -0.8], [47.5, 8], [31.5, 8]], DIG_CB = [[46.7, 1.6], [46.8, 8.9], [34.8, 9.1]];
+S.dessine(tl, 't-dig1', t, 2.0); S.court(tl, 'Z', DIG, t, 2.0); S.court(tl, 'CBD', DIG_CB, t + 0.06, 2.05);
+S.boutCourt(tl, 'ln-Z', 1, DIG, t, 2.0); S.boutCourt(tl, 'ln-Z', 2, DIG_CB, t + 0.06, 2.05);
+S.montre(tl, 'e-c1', t + 1.3, 0.25);
+// Cover 3 : il me laisse partir, je m'arrête dans le trou.
+t = T('n4') - 0.55;
+cache(['e-c1', 'ln-Z'], t, 0.2); S.efface(tl, 't-dig1', t, 0.2); remet(t + 0.02, 0.45); S.poseLigne(tl, 'ln-Z', 47.5, -0.8, 46.7, 1.6, t + 0.5);
+zones(ZC, true, T('n4') - 0.1);
+t = A('n4', 0.25);
+S.dessine(tl, 't-dig3', t, 1.5); S.court(tl, 'Z', [[47.5, -0.8], [47.5, 8], [36.3, 8]], t, 1.5); S.va(tl, 'CBD', 49, 14.6, t, 1.4, 'power1.out');
+S.montre(tl, 'trou3', t + 1.4, 0.25); S.montre(tl, 'e-c3', t + 1.45, 0.25); S.halo(tl, 'Z', t + 1.5, 0);
+
+// ===== Scène 10 · Réflexe (sur ardoise) =====
+t = T('z0') - 0.6;
+S.cacheHabillage(tl, t); bloc(null, t);
+S.ardoise(tl, 'ardoise', t, F('z2') + 0.75, 0.5);
+// Sous l'ardoise, le terrain revient à l'état neutre.
+t += 0.65;
+[...def, ...ZC, 'trou3', 'e-c3'].forEach((id) => tl.set('#' + id, { opacity: 0 }, t));
+S.efface(tl, 't-dig3', t, 0.01); tl.set('#Z .halo1', { opacity: 0 }, t); S.formation(tl, S.ATTAQUE, t, 0.01);
+S.apparait(tl, 'rx-qb', T('z1') - 0.05); S.apparait(tl, 'rx-wr', T('z2') - 0.05);
+
+window.__timelines = window.__timelines || {};
+window.__timelines['cover-3'] = tl;
+tl.seek(0);
+</script>
+</body>
+</html>

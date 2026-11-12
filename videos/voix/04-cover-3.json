@@ -1,0 +1,110 @@
+{
+  "id": "04-cover-3",
+  "debut": 1.2,
+  "fin": 2.4,
+  "pause_phrase": 0.32,
+  "pause_scene": 0.9,
+  "scenes": [
+    {
+      "id": "titre",
+      "phrases": [
+        {"id": "t1", "texte": "Cover 3.", "pause": 0.5},
+        {"id": "t2", "texte": "Même safety au milieu, mais cette fois, c'est de la zone."}
+      ],
+      "pause": 1.1
+    },
+    {
+      "id": "identite",
+      "phrases": [
+        {"id": "c1", "texte": "Trois défenseurs se partagent la profondeur, un tiers chacun : les deux corners, et le safety du milieu.", "pause": 0.6},
+        {"id": "c2", "texte": "Devant eux, quatre défenseurs couvrent la zone courte.", "pause": 0.6},
+        {"id": "c3", "texte": "Le milieu est fermé.", "pause": 0.8},
+        {"id": "c4", "texte": "Zone, donc la règle change : tu cherches le trou, et tu t'y arrêtes."}
+      ],
+      "pause": 1.1
+    },
+    {
+      "id": "reconnaitre",
+      "phrases": [
+        {"id": "r1", "texte": "Avant le snap, un safety au milieu, comme en Cover 1.", "pause": 0.6},
+        {"id": "r2", "texte": "Regarde le corner : il est à sept ou huit yards, plutôt à l'extérieur, tourné vers le quarterback.", "pause": 0.8},
+        {"id": "r3", "texte": "Souvent, le deuxième safety est descendu près de la ligne.", "pause": 0.9},
+        {"id": "r4", "texte": "En motion, personne ne suit : les défenseurs se décalent d'un cran.", "pause": 1.1},
+        {"id": "r5", "texte": "Au snap, confirme : les corners reculent dans leur tiers, et un défenseur court vers le flat.", "pause": 1.5}
+      ],
+      "pause": 0.7
+    },
+    {
+      "id": "faiblesses",
+      "phrases": [
+        {"id": "f0", "texte": "Quatre défenseurs pour toute la largeur en zone courte, c'est peu.", "pause": 0.6},
+        {"id": "f1", "texte": "Un : les flats, près des touches.", "pause": 0.9},
+        {"id": "f2", "texte": "Deux : devant le corner."},
+        {"id": "f3", "texte": "Il recule, toi tu t'arrêtes.", "pause": 1.3},
+        {"id": "f4", "texte": "Trois : les seams."},
+        {"id": "f5", "texte": "Quatre tracés verticaux contre trois défenseurs profonds, il y en a un de trop.", "pause": 1.4}
+      ],
+      "pause": 0.7
+    },
+    {
+      "id": "conflit",
+      "phrases": [
+        {"id": "k1", "texte": "Le défenseur en conflit, c'est celui qui garde le curl et le flat."},
+        {"id": "k2", "texte": "Il a deux zones pour lui tout seul.", "pause": 0.7},
+        {"id": "k3", "texte": "On l'attaque avec deux tracés : un curl à dix ou douze yards à l'extérieur, un flat par le slot.", "pause": 0.8},
+        {"id": "k4", "texte": "Quarterback, tu ne regardes que lui.", "pause": 0.6},
+        {"id": "k5", "texte": "Il s'élargit vers le flat : tu lances le curl.", "pause": 1.5},
+        {"id": "k6", "texte": "Il reste à l'intérieur : tu lances le flat.", "pause": 1.5}
+      ],
+      "pause": 0.7
+    },
+    {
+      "id": "curl",
+      "phrases": [
+        {"id": "w1", "texte": "Receveur extérieur : tu sprintes vertical pour faire reculer le corner, tu stoppes net, et tu t'assieds dans la fenêtre, face au quarterback.", "pause": 0.6},
+        {"id": "w2", "texte": "Pas sur un défenseur : entre deux."}
+      ],
+      "pause": 1.3
+    },
+    {
+      "id": "verticaux",
+      "phrases": [
+        {"id": "v1", "texte": "Deuxième attaque : quatre verticaux.", "pause": 0.6},
+        {"id": "v2", "texte": "Cette fois, le défenseur en conflit, c'est le safety du milieu."},
+        {"id": "v3", "texte": "Il a deux seams à couvrir, et il ne peut en prendre qu'une.", "pause": 0.8},
+        {"id": "v4", "texte": "Quarterback : tu le regardes."},
+        {"id": "v5", "texte": "Il penche d'un côté, tu lances de l'autre.", "pause": 1.4},
+        {"id": "v6", "texte": "Slot : tu tiens ton couloir, et tu ne dérives pas vers lui."}
+      ],
+      "pause": 1.3
+    },
+    {
+      "id": "piege",
+      "phrases": [
+        {"id": "p1", "texte": "Un piège à connaître.", "pause": 0.5},
+        {"id": "p2", "texte": "Si le corner reste court au lieu de reculer, le flat n'est plus libre de ce côté.", "pause": 0.8},
+        {"id": "p3", "texte": "Le hitch devant le corner n'est gratuit que s'il recule vraiment."}
+      ],
+      "pause": 1.2
+    },
+    {
+      "id": "confondre",
+      "phrases": [
+        {"id": "n1", "texte": "Ne confonds pas avec la Cover 1.", "pause": 0.4},
+        {"id": "n2", "texte": "Même safety au milieu.", "pause": 0.7},
+        {"id": "n3", "texte": "Mais en Cover 1, ton défenseur te suit, et tu continues de courir.", "pause": 1.3},
+        {"id": "n4", "texte": "En Cover 3, il te laisse partir, et tu t'arrêtes dans le trou."}
+      ],
+      "pause": 1.5
+    },
+    {
+      "id": "reflexe",
+      "phrases": [
+        {"id": "z0", "texte": "Le réflexe.", "pause": 0.5},
+        {"id": "z1", "texte": "Quarterback : un safety et des corners qui reculent, je lis le défenseur du flat.", "pause": 0.6},
+        {"id": "z2", "texte": "Receveur : je pousse le corner, puis je m'arrête devant lui, ou j'attaque la seam."}
+      ],
+      "pause": 0.2
+    }
+  ]
+}

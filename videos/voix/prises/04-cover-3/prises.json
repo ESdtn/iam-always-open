@@ -1,0 +1,453 @@
+{
+ "t1": {
+  "dit": "Coveur trois.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Cover 3"
+ },
+ "t2": {
+  "dit": "Même séfti au milieu, mais cette fois, c'est de la zone.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Même safety au milieu, mais cette fois, c'est de la zone."
+ },
+ "c1": {
+  "dit": "Trois défenseurs se partagent la profondeur, un tiers chacun : les deux corneurs, et le séfti du milieu.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Trois défenseurs se partagent la profondeur, un tiers chacun. Les deux corners et le safety du milieu."
+ },
+ "c2": {
+  "dit": "Devant eux, quatre défenseurs couvrent la zone courte.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Devant eux, quatre défenseurs couvrent la zone courte."
+ },
+ "c3": {
+  "dit": "Le milieu est fermé.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Le milieu est fermé."
+ },
+ "c4": {
+  "dit": "Zone, donc la règle change : tu cherches le trou, et tu t'y arrêtes.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Zone, donc la règle change. Tu cherches le trou et tu t'y arrêtes."
+ },
+ "r1": {
+  "dit": "Avant le snap, un séfti au milieu, comme en Coveur un.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Avant le snap, un safety au milieu, comme en cover 1."
+ },
+ "r2": {
+  "dit": "Regarde le corneur : il est à sept ou huit yardz, plutôt à l'extérieur, tourné vers le kouateurbak.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.98,
+  "entendu": "Regarde Corner. Il est à sept ou huit yards, plutôt à l'extérieur, tourné vers le quarterback."
+ },
+ "r3": {
+  "dit": "Souvent, le deuxième séfti est descendu près de la ligne.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Souvent, le deuxième safety est descendu près de la ligne."
+ },
+ "r4": {
+  "dit": "En mocheune, personne ne suit : les défenseurs se décalent d'un cran.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.99,
+  "entendu": "En motion, personne ne suite. Les défenseurs se décalent d'un cran."
+ },
+ "r5": {
+  "dit": "Au snap, confirme : les corneurs reculent dans leur tiers, et un défenseur court vers le flatt.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.98,
+  "entendu": "Au snap, confirme, les corners reculent dans leur tiers et un défenseur court vers le flamme."
+ },
+ "f0": {
+  "dit": "Quatre défenseurs pour toute la largeur en zone courte, c'est peu.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "4 défenseurs pour toute la largeur en zone courte, c'est peu."
+ },
+ "f1": {
+  "dit": "Un : les flatt, près des touches.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.93,
+  "entendu": "And. Les flas, près des touches."
+ },
+ "f2": {
+  "dit": "Deux : devant le corneur.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "2 devant le corner."
+ },
+ "f3": {
+  "dit": "Il recule, toi tu t'arrêtes.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Il recule, toi tu t'arrêtes."
+ },
+ "f4": {
+  "dit": "Trois : les sim.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.93,
+  "entendu": "3. Les SEM."
+ },
+ "f5": {
+  "dit": "Quatre tracés verticaux contre trois défenseurs profonds, il y en a un de trop.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "4 tracés verticaux contre 3 défenseurs profonds, il y en a un de trop."
+ },
+ "k1": {
+  "dit": "Le défenseur en conflit, c'est celui qui garde le keurl et le flatt.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.95,
+  "entendu": "Le défenseur en conflit, c'est celui qui garde le cœur de Lefla."
+ },
+ "k2": {
+  "dit": "Il a deux zones pour lui tout seul.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Il a deux zones pour lui tout seul."
+ },
+ "k3": {
+  "dit": "On l'attaque avec deux tracés : un keurl à dix ou douze yardz à l'extérieur, un flatt par le slotte.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.95,
+  "entendu": "On l'attaque avec deux tracés, un curl à 10 ou 12 yards à l'extérieur, un flap par le slot."
+ },
+ "k4": {
+  "dit": "kouateurbak, tu ne regardes que lui.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "« Quarterback, tu ne regardes que lui. »"
+ },
+ "k5": {
+  "dit": "Il s'élargit vers le flatt : tu lances le keurl.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.95,
+  "entendu": "Il s'élargit vers le flat. Tu lances le cale."
+ },
+ "k6": {
+  "dit": "Il reste à l'intérieur : tu lances le flatt.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.97,
+  "entendu": "Il reste à l'intérieur. Tu lances le flas."
+ },
+ "w1": {
+  "dit": "Receveur extérieur : tu sprintes vertical pour faire reculer le corneur, tu stoppes net, et tu t'assieds dans la fenêtre, face au kouateurbak.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.98,
+  "entendu": "Receveur extérieur. Tu sprints vertical pour faire reculer le corner, tu stoppes nez et tu t'assis dans la fenêtre face au quarterback."
+ },
+ "w2": {
+  "dit": "Pas sur un défenseur : entre deux.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Pas sur un défenseur. Entre deux."
+ },
+ "v1": {
+  "dit": "Deuxième attaque : quatre verticaux.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Deuxième attaque, quatre verticaux."
+ },
+ "v2": {
+  "dit": "Cette fois, le défenseur en conflit, c'est le séfti du milieu.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Cette fois, le défenseur en conflit, c'est le safety du milieu."
+ },
+ "v3": {
+  "dit": "Il a deux sim à couvrir, et il ne peut en prendre qu'une.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.96,
+  "entendu": "Il a deux cèmes à couvrir, et il ne peut en prendre qu'une."
+ },
+ "v4": {
+  "dit": "kouateurbak : tu le regardes.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Quarterback. Tu le regardes."
+ },
+ "v5": {
+  "dit": "Il penche d'un côté, tu lances de l'autre.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Il penche d'un côté, tu lances de l'autre."
+ },
+ "v6": {
+  "dit": "slotte : tu tiens ton couloir, et tu ne dérives pas vers lui.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Slot, tu tiens ton couloir et tu ne dérives pas vers lui."
+ },
+ "p1": {
+  "dit": "Un piège à connaître.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Un piège à connaître."
+ },
+ "p2": {
+  "dit": "Si le corneur reste court au lieu de reculer, le flatt n'est plus libre de ce côté.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.99,
+  "entendu": "Si le corner reste court au lieu de reculer, le flan est plus libre de ce côté."
+ },
+ "p3": {
+  "dit": "Le hitsh devant le corneur n'est gratuit que s'il recule vraiment.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Le hitch devant le corner n'est gratuit que s'il recule vraiment."
+ },
+ "n1": {
+  "dit": "Ne confonds pas avec la Coveur un.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.95,
+  "entendu": "Ne confonds pas avec la cover."
+ },
+ "n2": {
+  "dit": "Même séfti au milieu.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Même safety au milieu."
+ },
+ "n3": {
+  "dit": "Mais en Coveur un, ton défenseur te suit, et tu continues de courir.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.98,
+  "entendu": "Mais en cover, ton défenseur te suit et tu continues de courir."
+ },
+ "n4": {
+  "dit": "En Coveur trois, il te laisse partir, et tu t'arrêtes dans le trou.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "En cover 3, il te laisse partir et tu t'arrêtes dans le trou."
+ },
+ "z0": {
+  "dit": "Le réflexe.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Le réflexe."
+ },
+ "z1": {
+  "dit": "kouateurbak : un séfti et des corneurs qui reculent, je lis le défenseur du flatt.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.99,
+  "entendu": "Quarterback. Un safety et des corners qui reculent. Je lis le défenseur Dufla."
+ },
+ "z2": {
+  "dit": "Receveur : je pousse le corneur, puis je m'arrête devant lui, ou j'attaque la sim.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.97,
+  "entendu": "Receveur. Je pousse le corner, puis je m'arrête devant lui, ou j'attaque la scène."
+ }
+}
