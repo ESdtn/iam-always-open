@@ -1,0 +1,54 @@
+/* Identité « Le tableau du coach » : jetons de couleur et typographies. */
+
+@font-face { font-family: "Alfa Slab One"; src: url("fonts/alfa-slab-one-latin-400-normal.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "Kaushan Script"; src: url("fonts/kaushan-script-latin-400-normal.woff2") format("woff2"); font-weight: 400; }
+@font-face { font-family: "Barlow Condensed"; src: url("fonts/barlow-condensed-latin-600-normal.woff2") format("woff2"); font-weight: 600; }
+@font-face { font-family: "Barlow Condensed"; src: url("fonts/barlow-condensed-latin-700-normal.woff2") format("woff2"); font-weight: 700; }
+@font-face { font-family: "Barlow"; src: url("fonts/barlow-latin-500-normal.woff2") format("woff2"); font-weight: 500; }
+@font-face { font-family: "Barlow"; src: url("fonts/barlow-latin-600-normal.woff2") format("woff2"); font-weight: 600; }
+@font-face { font-family: "Permanent Marker"; src: url("fonts/permanent-marker-latin-400-normal.woff2") format("woff2"); font-weight: 400; }
+
+:root {
+  /* Fond */
+  --ardoise: #1d1e20;
+  --ardoise-claire: #2a2b2e;
+  --cadre: #3f4042;
+  --papier: #fbfaf6;
+
+  /* Traits */
+  --craie: #f2efe9;
+  --craie-grise: #8a8d8f;
+  --encre: #2a2b2d;
+
+  /* Rôles */
+  --orange: #f5821f;        /* tracé gagnant, mot clé, titre */
+  --bleu: #2b8fd6;          /* défense */
+  --jaune: #ffb400;         /* défenseur en conflit, regard du QB, pince */
+  --jaune-fonce: #e89b00;
+  --ciel: #8ecbf0;          /* zones profondes */
+  --vert: #47a800;          /* réservé aux images d'ambiance */
+  --rouge: #e5484d;         /* contre-exemple */
+
+  /* Typographies */
+  --titre: "Alfa Slab One", serif;
+  --script: "Kaushan Script", cursive;
+  --label: "Barlow Condensed", sans-serif;
+  --texte: "Barlow", sans-serif;
+  --craie-main: "Permanent Marker", cursive;
+}
+
+* { box-sizing: border-box; }
+html, body { margin: 0; background: var(--ardoise); }
+
+.cadre-video { position: relative; width: 1920px; height: 1080px; overflow: hidden; background: var(--ardoise); color: var(--craie); font-family: var(--texte); }
+.cadre-video > svg.fond, .cadre-video > svg.scene { position: absolute; inset: 0; }
+
+.titre { font-family: var(--titre); color: var(--orange); display: inline-block; transform: skewX(-10deg); letter-spacing: 0.01em; line-height: 1; }
+.script { font-family: var(--script); color: var(--craie); line-height: 1; }
+.label { font-family: var(--label); font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; }
+
+.pastille { display: inline-block; font-family: var(--label); font-weight: 700; font-size: 24px; letter-spacing: 0.12em; text-transform: uppercase; padding: 5px 16px 6px; border-radius: 999px; border: 2.5px solid var(--craie); color: var(--craie); }
+.pastille.pleine { background: var(--bleu); border-color: var(--bleu); color: #fff; }
+
+.sous-titre { position: absolute; left: 160px; right: 160px; top: 922px; text-align: center; font-family: var(--texte); font-weight: 600; font-size: 44px; line-height: 1.25; color: var(--craie); }
+.sous-titre b { color: var(--orange); font-weight: 600; }
