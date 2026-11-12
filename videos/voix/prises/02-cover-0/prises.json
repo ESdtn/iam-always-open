@@ -1,0 +1,475 @@
+{
+ "t1": {
+  "dit": "Coveur zéro.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Cover 0"
+ },
+ "t2": {
+  "dit": "Zéro séfti, et tout le monde arrive.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Zero safety. Et tout le monde arrive."
+ },
+ "c1": {
+  "dit": "C'est du manne partout : chaque receveur a son défenseur.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "C'est du man partout, chaque receveur a son défenseur."
+ },
+ "c2": {
+  "dit": "Personne en profondeur.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Personne en profondeur."
+ },
+ "c3": {
+  "dit": "Et tous ceux qui ne couvrent pas viennent chercher le couarteurbac : six reucheur, parfois plus.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Et tous ceux qui ne couvrent pas viennent chercher le quarterback. Six rushers, parfois plus."
+ },
+ "c4": {
+  "dit": "manne, donc tu connais la règle : tu cours, tu sépares, tu ne t'arrêtes pas.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Man, donc tu connais la règle. Tu cours, tu sépares, tu ne t'arrêtes pas."
+ },
+ "r1": {
+  "dit": "Avant le snap, compte les séfti.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.92,
+  "entendu": "Avant le snap, comptes les safety."
+ },
+ "r2": {
+  "dit": "Tu n'en trouves aucun à di yardz.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.92,
+  "entendu": "Tu n'en trouves aucun Adiard."
+ },
+ "r3": {
+  "dit": "Les corneurs sont collés aux receveurs, les yeux sur eux.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.98,
+  "entendu": "Les corners sont collés au receveur, les yeux sur eux."
+ },
+ "r4": {
+  "dit": "Et il y a beaucoup de monde près de la ligne.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "et il y a beaucoup de monde près de la ligne."
+ },
+ "r5": {
+  "dit": "Au snap, confirme : personne ne recule.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Au snap, confirme, personne ne recule."
+ },
+ "r6": {
+  "dit": "Ton défenseur te colle, les autres foncent.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Ton défenseur te colle, les autres foncent."
+ },
+ "f0": {
+  "dit": "Cette défense prend un risque énorme.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Cette défense prend un risque énorme."
+ },
+ "f1": {
+  "dit": "Un : il n'y a personne derrière.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.95,
+  "entendu": "And, il n'y a personne derrière."
+ },
+ "f2": {
+  "dit": "Un défenseur battu, c'est un tatch-daoune.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Un défenseur battu, c'est un touchdown."
+ },
+ "f3": {
+  "dit": "Deux : avec autant de reucheur, il y en a toujours un que personne ne bloque.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.99,
+  "entendu": "2. Avec autant de rusheurs, il y en a toujours un que personne ne bloque."
+ },
+ "f4": {
+  "dit": "Le ballon doit partir avant qu'il arrive.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Le ballon doit partir avant qu'il arrive."
+ },
+ "f5": {
+  "dit": "Trois : en manne serré, les défenseurs se gênent dès que deux tracés se croisent.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.97,
+  "entendu": "3. En mains serrées, les défenseurs se gênent dès que deux tracés se croisent."
+ },
+ "q1": {
+  "dit": "Ici, il n'y a pas de défenseur en conflit.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Ici, il n'y a pas de défenseur en conflit."
+ },
+ "q2": {
+  "dit": "Ton adversaire, c'est le chrono.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Ton adversaire, c'est le chrono."
+ },
+ "q3": {
+  "dit": "couarteurbac : tu choisis ton duel avant le snap.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Quarterback, tu choisis ton duel avant le snap."
+ },
+ "q4": {
+  "dit": "Tu regardes le levier, le côté où se place le défenseur.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Tu regardes le levier, le côté où se place le défenseur."
+ },
+ "q5": {
+  "dit": "Trois pas, et le ballon est parti.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Trois pas et le ballon est parti."
+ },
+ "w1": {
+  "dit": "Receveur : ton tracé se joue sur le levier.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Receveur, ton tracé se joue sur le levier."
+ },
+ "w2": {
+  "dit": "Le défenseur est à l'intérieur ?",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Le défenseur est à l'intérieur."
+ },
+ "w3": {
+  "dit": "Tu gagnes dehors, couic a-outte.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Tu gagnes dehors, quick out."
+ },
+ "w4": {
+  "dit": "Il est à l'extérieur ?",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Il est à l'extérieur."
+ },
+ "w5": {
+  "dit": "slannt.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Slant"
+ },
+ "w6": {
+  "dit": "Dans les deux cas, tu gagnes tes cinq premières yardz, et tu tournes la tête tout de suite : le ballon est déjà en l'air.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Dans les deux cas, tu gagnes tes cinq premières yards et tu tournes la tête tout de suite. Le ballon est déjà en l'air."
+ },
+ "w7": {
+  "dit": "Pas de double feinte, le couarteurbac n'a pas le temps.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.97,
+  "entendu": "Pas double feinte, le quarterback n'a pas le temps."
+ },
+ "x1": {
+  "dit": "Deuxième arme : le croisement.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Deuxième arme, le croisement."
+ },
+ "x2": {
+  "dit": "Deux receveurs se frôlent, et les défenseurs se rentrent dedans.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.98,
+  "entendu": "Deux receveurs se frôlant et les défenseurs se rentrent dedans."
+ },
+ "x3": {
+  "dit": "Attention, tu ne bloques personne : tu cours ton tracé, c'est tout.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Attention, tu ne bloques personne, tu cours ton tracé, c'est tout."
+ },
+ "x4": {
+  "dit": "La feïde ?",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "La fade."
+ },
+ "x5": {
+  "dit": "C'est un pari, pas une réponse.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "C'est un pari, pas une réponse."
+ },
+ "x6": {
+  "dit": "On la garde pour le duel qu'on est sûr de gagner.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.96,
+  "entendu": "On la garde pour le duel qu'on est sur gagné."
+ },
+ "n1": {
+  "dit": "Ne confonds pas avec la Coveur un.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Ne confonds pas avec la cover 1."
+ },
+ "n2": {
+  "dit": "Si tu vois un séfti au milieu, à douze ou quinze yardz, il y a de l'aide en profondeur.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.91,
+  "entendu": "Si tu vois un safety au milieu, à 12 ou 15 yards, il y a de l'aide en profondeur."
+ },
+ "n3": {
+  "dit": "Ce n'est plus la même défense.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Ce n'est plus la même défense."
+ },
+ "z0": {
+  "dit": "Le réflexe.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Le réflexe."
+ },
+ "z1": {
+  "dit": "couarteurbac : zéro séfti, je sais où je lance avant le snap.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Quarterback, 0 safety. Je sais où je lance avant le snap."
+ },
+ "z2": {
+  "dit": "Receveur : zéro séfti, je gagne mon départ, et je regarde le ballon tout de suite.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Receveur. Zero safety. Je gagne mon départ et je regarde le ballon tout de suite."
+ },
+ "z3": {
+  "dit": "Et après la réception, il n'y a personne derrière : tu fonces.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Et après la réception, il n'y a personne derrière. Tu fonces."
+ }
+}

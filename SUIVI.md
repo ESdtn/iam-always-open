@@ -15,7 +15,8 @@ Dernière mise à jour : 12 novembre 2026.
 | Installation de l'outil de rendu | Fait : HyperFrames, un projet par vidéo |
 | Vidéo pilote (introduction) | Validée par le coach |
 | « Man ou zone ? » | Première version rendue, en attente de l'avis du coach |
-| Les cinq chapitres et la conclusion | À faire |
+| Cover 0 | Première version rendue, en attente de l'avis du coach |
+| Cover 1, 3, 2, 4 et la conclusion | À faire |
 | Fusion en une seule vidéo | À faire |
 
 ## Avancement par vidéo
@@ -24,7 +25,7 @@ Dernière mise à jour : 12 novembre 2026.
 |---|---|---|---|---|---|---|---|---|
 | 0 | Introduction | Relu | Fait | Fait | Fait | Fait | Fait | Oui |
 | 1 | Man ou zone ? | Relu | Fait | Fait | Fait | Fait | Fait (v1) | |
-| 2 | Cover 0 | Relu | | | | | | |
+| 2 | Cover 0 | Relu | Fait | Fait | Fait | Fait | Fait (v1) | |
 | 3 | Cover 1 | Relu | | | | | | |
 | 4 | Cover 3 | Relu | | | | | | |
 | 5 | Cover 2 | Relu | | | | | | |
@@ -50,8 +51,8 @@ Dernière mise à jour : 12 novembre 2026.
 
 ## Points ouverts
 
-1. **« Man ou zone ? »** : avis du coach, avec le relevé `videos/voix/01-man-ou-zone.releve.md`.
-2. **Termes anglais nouveaux** dans cette vidéo : « motion » (écrit « mocheune »). À écouter.
+1. **« Man ou zone ? » et Cover 0** : avis du coach, avec les relevés `videos/voix/01-man-ou-zone.releve.md` et `videos/voix/02-cover-0.releve.md`.
+2. **Termes anglais nouveaux** à écouter : « motion » (« mocheune »), « rushers » (« reucheur »), « touchdown » (« tatch-daoune »), « quick out », « slant », « fade ».
 3. **Points tactiques à valider** : liste en bas de `scripts/README.md`.
 
 ## Journal
@@ -59,3 +60,4 @@ Dernière mise à jour : 12 novembre 2026.
 - **12 novembre 2026.** Lecture du guide, recherche tactique et vérification des outils. Écriture des sept scripts, puis ajout de « Man ou zone ? » à la demande du coach. Création de l'identité visuelle et de quatre images de référence. Comparatif des voix gratuites, choix de Supertonic M3, premiers essais de prononciation. Anonymisation du guide PDF et réécriture de l'historique git. Deuxième version de l'identité visuelle, sur trois nouvelles références, validée. Mise en place de la chaîne de production (voix avec sélection automatique de la meilleure prise, moteur de scène, HyperFrames) et premier rendu de l'introduction : 89 secondes.
 - **12 novembre 2026, suite.** Retours du coach sur le pilote : accent anglophone, pas de pause aux virgules, MOFC et MOFO à retirer. Cause de l'accent trouvée : le réglage de langue n'était pas transmis au moteur de voix, qui lisait tout en anglais. Voix refaite en français, avec pauses à la ponctuation et prises reproductibles. Sigles retirés des scripts, des visuels et de l'animation. Deuxième rendu de l'introduction : 1 min 42.
 - **12 novembre 2026, fin.** Introduction validée par le coach. Production de « Man ou zone ? » : 43 phrases, neuf scènes, 2 min 25.
+- **12 novembre 2026, nuit.** Production du chapitre Cover 0 : 43 phrases, neuf scènes, 2 min 14. Premier chapitre avec l'habillage complet (titre, pastilles, progression).

@@ -19,7 +19,10 @@ TITRES = {"accroche": "Accroche", "promesse": "La promesse", "question": "La pre
           "conflit": "Le défenseur en conflit", "plan": "Le plan de la série", "titre": "Titre", "familles": "Deux familles",
           "pourquoi": "Pourquoi ça change tout", "indices": "Les indices avant le snap", "preuve": "La preuve au snap",
           "receveur": "Ce que ça change pour le receveur", "quarterback": "Ce que ça change pour le quarterback",
-          "rangees": "Les cinq couvertures, rangées", "reflexe": "Le réflexe"}
+          "rangees": "Les cinq couvertures, rangées", "reflexe": "Le réflexe", "identite": "Carte d'identité",
+          "reconnaitre": "La reconnaître", "faiblesses": "Ses faiblesses", "battre-qb": "La battre, côté quarterback",
+          "battre-wr": "La battre, côté receveur", "battre": "La battre", "croisement": "Le croisement, et la fade",
+          "confondre": "Ne pas confondre"}
 
 
 def temps(t):

@@ -27,7 +27,8 @@ est reproductible.
 
 Prises. La prise retenue pour chaque phrase est rangée dans videos/voix/prises/<id>/. Une phrase n'est régénérée
 que si son écriture, sa vitesse ou les pauses changent, ou si on la nomme : REFAIRE=a1,p3 ... Les phrases
-validées par le coach restent donc identiques d'une version à l'autre.
+validées par le coach restent donc identiques d'une version à l'autre. Pour obtenir d'autres prises d'une
+phrase qui sort mal, changer les graines : REFAIRE=x2 DECALAGE=100 ESSAIS=10 ...
 """
 import difflib
 import json
@@ -114,7 +115,7 @@ def prise_phrase(voix, reco, texte, dit, vitesse, essais):
     audio, sr = [], None
     for i, (part, repere) in enumerate(zip(parts, reperes)):
         meilleure = None
-        base = zlib.crc32(part.encode("utf-8")) % 100000
+        base = zlib.crc32(part.encode("utf-8")) % 100000 + int(os.environ.get("DECALAGE", "0"))
         for essai in range(essais):
             x, sr = dire(voix, part, vitesse, base + essai)
             score = ressemblance(repere, retranscrire(reco, x, sr))

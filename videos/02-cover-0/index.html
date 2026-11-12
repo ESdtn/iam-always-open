@@ -12,9 +12,9 @@
 <script src="assets/audio/02-cover-0.timing.js"></script>
 </head>
 <body>
-<div id="root" data-composition-id="cover-0" data-start="0" data-duration="100" data-width="1920" data-height="1080">
-  <div id="scene" class="clip" data-start="0" data-duration="100" data-track-index="0"></div>
-  <audio id="voix" src="assets/audio/02-cover-0.mp3" data-start="0" data-duration="100" data-track-index="1" data-volume="1"></audio>
+<div id="root" data-composition-id="cover-0" data-start="0" data-duration="134.07" data-width="1920" data-height="1080">
+  <div id="scene" class="clip" data-start="0" data-duration="134.07" data-track-index="0"></div>
+  <audio id="voix" src="assets/audio/02-cover-0.mp3" data-start="0" data-duration="134.07" data-track-index="1" data-volume="1"></audio>
 </div>
 <script>
 // Minutage de la voix : T = début d'une phrase, F = sa fin, A = un instant à l'intérieur (0 = début, 1 = fin).
@@ -31,7 +31,7 @@ const { X, Y } = S;
 // Le corner de gauche est à l'extérieur de X, celui de droite à l'intérieur de Z : deux leviers, deux tracés.
 const DEF0 = { CBG: [5, 1.5], CBD: [46.7, 1.5], N: [14.7, 1.6], SS: [38.6, 1.6], LBD: [30.6, 3.2], LBG: [23, 2.9], FS: [34.8, 2.4] };
 const LIENS = [['X', 'CBG'], ['H', 'N'], ['Y', 'SS'], ['Z', 'CBD'], ['RB', 'LBD']];
-const BLITZ_G = [[23, 2.9], [21.3, -0.4], [24.6, -4.6]], BLITZ_D = [[34.8, 2.4], [32.4, -0.5], [28.9, -4.8]];
+const BLITZ_G = [[23, 2.9], [21.3, -0.4], [24.8, -3.7]], BLITZ_D = [[34.8, 2.4], [32.4, -0.5], [28.5, -3.7]];
 const DL = ['DL0', 'DL1', 'DL2', 'DL3'], DLX = [22.4, 25.2, 28.1, 30.9];
 
 // --- Éléments du terrain ---
@@ -200,9 +200,11 @@ S.montre(tl, 'e-chrono', T('q2'), 0.3); tl.set('#chrono .niveau', { attr: { widt
 ['H', 'Y', 'Z'].forEach((id, i) => S.halo(tl, id, A('q3', 0.3) + i * 0.2, 0.25));
 S.halo(tl, 'X', A('q3', 0.3) + 0.62, 0);
 S.camera(tl, T('q4') - 0.15, 0.85, { zoom: 2.2, cx: 9, cy: 3, sx: 780, sy: 470 });
+['ui-d', 'legende', 'chrono'].forEach((id) => S.cache(tl, id, T('q4') - 0.15, 0.25));
 S.halo(tl, 'CBG', A('q4', 0.45), 0); S.montre(tl, 'e-levier', A('q4', 0.5), 0.2);
 t = T('q5') - 0.5;
 S.cameraLarge(tl, t, 0.7); cache(['e-levier', 'e-chrono'], t, 0.2); haloEteint('CBG', t);
+['ui-d', 'legende', 'chrono'].forEach((id) => S.montre(tl, id, t + 0.4, 0.25));
 t = T('q5') + 0.3; // le snap : trois pas, ballon parti
 S.vide(tl, 'chrono', t, 1.5); rush(t, 1.7);
 [[-5.6, 'e-p1'], [-6.2, 'e-p2'], [-6.8, 'e-p3']].forEach(([y, id], i) => { S.va(tl, 'QB', 26.667, y, t + i * 0.27, 0.25, 'power1.out'); S.montre(tl, id, t + i * 0.27 + 0.1, 0.12); });
@@ -233,8 +235,8 @@ S.montre(tl, 'l-5', A('w6', 0.3), 0.25); S.montre(tl, 'e-5y', A('w6', 0.3), 0.25
 t = A('w6', 0.48);
 S.dessine(tl, 't-slant', t, 1.3); S.court(tl, 'X', SLANT_X, t, 1.3); S.court(tl, 'CBG', SLANT_CB, t + 0.08, 1.4);
 S.montre(tl, 'e-tete', t + 0.45, 0.15); S.lance(tl, [26.667, -5], [12.8, 6.7], t + 0.5, 0.8); S.halo(tl, 'X', t + 1.3, 0);
-S.va(tl, 'X', 21, 21.5, t + 1.35, 1.3, 'power1.in'); S.va(tl, 'CBG', 17, 15.5, t + 1.5, 1.2, 'power1.in');
-tl.to('#ballon', { x: X(21), y: Y(21.5), duration: 1.3, ease: 'power1.in' }, t + 1.35);
+S.va(tl, 'X', 17.5, 19, t + 1.35, 1.3, 'power1.in'); S.va(tl, 'CBG', 14.5, 13.5, t + 1.5, 1.2, 'power1.in');
+tl.to('#ballon', { x: X(17.5), y: Y(19), duration: 1.3, ease: 'power1.in' }, t + 1.35);
 S.montre(tl, 'e-feinte', T('w7') + 0.1, 0.25);
 
 // ===== Scène 7 · Le croisement, et la fade =====
