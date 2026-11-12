@@ -1,7 +1,7 @@
 // Généré par outils/voix/synthese.py. Ne pas modifier à la main.
 window.MINUTAGE = {
  "id": "02-cover-0",
- "duree": 134.07,
+ "duree": 134.12,
  "scenes": [
   {
    "id": "titre",
@@ -25,7 +25,7 @@ window.MINUTAGE = {
   {
    "id": "identite",
    "t0": 5.467,
-   "t1": 20.037,
+   "t1": 20.038,
    "phrases": [
     {
      "id": "c1",
@@ -48,19 +48,19 @@ window.MINUTAGE = {
     {
      "id": "c4",
      "t0": 15.788,
-     "t1": 20.037,
+     "t1": 20.038,
      "texte": "Man, donc tu connais la règle : tu cours, tu sépares, tu ne t'arrêtes pas."
     }
    ]
   },
   {
    "id": "reconnaitre",
-   "t0": 21.457,
+   "t0": 21.458,
    "t1": 35.982,
    "phrases": [
     {
      "id": "r1",
-     "t0": 21.457,
+     "t0": 21.458,
      "t1": 23.163,
      "texte": "Avant le snap, compte les safeties."
     },
@@ -85,12 +85,12 @@ window.MINUTAGE = {
     {
      "id": "r5",
      "t0": 30.811,
-     "t1": 33.322,
+     "t1": 33.323,
      "texte": "Au snap, confirme : personne ne recule."
     },
     {
      "id": "r6",
-     "t0": 33.822,
+     "t0": 33.823,
      "t1": 35.982,
      "texte": "Ton défenseur te colle, les autres foncent."
     }
@@ -99,7 +99,7 @@ window.MINUTAGE = {
   {
    "id": "faiblesses",
    "t0": 38.082,
-   "t1": 55.669,
+   "t1": 55.561,
    "phrases": [
     {
      "id": "f0",
@@ -116,210 +116,210 @@ window.MINUTAGE = {
     {
      "id": "f2",
      "t0": 42.043,
-     "t1": 43.903,
+     "t1": 43.887,
      "texte": "Un défenseur battu, c'est un touchdown."
     },
     {
      "id": "f3",
-     "t0": 45.203,
-     "t1": 48.883,
+     "t0": 45.187,
+     "t1": 48.775,
      "texte": "Deux : avec autant de rushers, il y en a toujours un que personne ne bloque."
     },
     {
      "id": "f4",
-     "t0": 49.203,
-     "t1": 50.665,
+     "t0": 49.095,
+     "t1": 50.557,
      "texte": "Le ballon doit partir avant qu'il arrive."
     },
     {
      "id": "f5",
-     "t0": 51.665,
-     "t1": 55.669,
+     "t0": 51.557,
+     "t1": 55.561,
      "texte": "Trois : en man serré, les défenseurs se gênent dès que deux tracés se croisent."
     }
    ]
   },
   {
    "id": "battre-qb",
-   "t0": 57.769,
-   "t1": 70.225,
+   "t0": 57.661,
+   "t1": 70.142,
    "phrases": [
     {
      "id": "q1",
-     "t0": 57.769,
-     "t1": 59.712,
+     "t0": 57.661,
+     "t1": 59.604,
      "texte": "Ici, il n'y a pas de défenseur en conflit."
     },
     {
      "id": "q2",
-     "t0": 60.032,
-     "t1": 61.68,
+     "t0": 59.924,
+     "t1": 61.572,
      "texte": "Ton adversaire, c'est le chrono."
     },
     {
      "id": "q3",
-     "t0": 62.38,
-     "t1": 64.934,
+     "t0": 62.272,
+     "t1": 64.851,
      "texte": "Quarterback : tu choisis ton duel avant le snap."
     },
     {
      "id": "q4",
-     "t0": 65.254,
-     "t1": 67.873,
+     "t0": 65.171,
+     "t1": 67.791,
      "texte": "Tu regardes le levier, le côté où se place le défenseur."
     },
     {
      "id": "q5",
-     "t0": 68.573,
-     "t1": 70.225,
+     "t0": 68.491,
+     "t1": 70.142,
      "texte": "Trois pas, et le ballon est parti."
     }
    ]
   },
   {
    "id": "battre-wr",
-   "t0": 72.225,
-   "t1": 90.687,
+   "t0": 72.142,
+   "t1": 90.707,
    "phrases": [
     {
      "id": "w1",
-     "t0": 72.225,
-     "t1": 74.499,
+     "t0": 72.142,
+     "t1": 74.416,
      "texte": "Receveur : ton tracé se joue sur le levier."
     },
     {
      "id": "w2",
-     "t0": 74.999,
-     "t1": 76.28,
+     "t0": 74.916,
+     "t1": 76.197,
      "texte": "Le défenseur est à l'intérieur ?"
     },
     {
      "id": "w3",
-     "t0": 76.6,
-     "t1": 78.298,
+     "t0": 76.517,
+     "t1": 78.215,
      "texte": "Tu gagnes dehors, quick out."
     },
     {
      "id": "w4",
-     "t0": 79.498,
-     "t1": 80.305,
+     "t0": 79.415,
+     "t1": 80.222,
      "texte": "Il est à l'extérieur ?"
     },
     {
      "id": "w5",
-     "t0": 80.625,
-     "t1": 81.06,
+     "t0": 80.542,
+     "t1": 80.977,
      "texte": "Slant."
     },
     {
      "id": "w6",
-     "t0": 82.36,
-     "t1": 87.909,
+     "t0": 82.277,
+     "t1": 87.827,
      "texte": "Dans les deux cas, tu gagnes tes cinq premières yards, et tu tournes la tête tout de suite : le ballon est déjà en l'air."
     },
     {
      "id": "w7",
-     "t0": 88.509,
-     "t1": 90.687,
+     "t0": 88.427,
+     "t1": 90.707,
      "texte": "Pas de double feinte, le quarterback n'a pas le temps."
     }
    ]
   },
   {
    "id": "croisement",
-   "t0": 92.107,
-   "t1": 107.257,
+   "t0": 92.127,
+   "t1": 107.277,
    "phrases": [
     {
      "id": "x1",
-     "t0": 92.107,
-     "t1": 93.812,
+     "t0": 92.127,
+     "t1": 93.832,
      "texte": "Deuxième arme : le croisement."
     },
     {
      "id": "x2",
-     "t0": 94.312,
-     "t1": 97.126,
+     "t0": 94.332,
+     "t1": 97.147,
      "texte": "Deux receveurs se frôlent, et les défenseurs se rentrent dedans."
     },
     {
      "id": "x3",
-     "t0": 98.326,
-     "t1": 101.986,
+     "t0": 98.347,
+     "t1": 102.006,
      "texte": "Attention, tu ne bloques personne : tu cours ton tracé, c'est tout."
     },
     {
      "id": "x4",
-     "t0": 102.886,
-     "t1": 103.403,
+     "t0": 102.906,
+     "t1": 103.424,
      "texte": "La fade ?"
     },
     {
      "id": "x5",
-     "t0": 103.903,
-     "t1": 105.355,
+     "t0": 103.924,
+     "t1": 105.375,
      "texte": "C'est un pari, pas une réponse."
     },
     {
      "id": "x6",
-     "t0": 105.675,
-     "t1": 107.257,
+     "t0": 105.695,
+     "t1": 107.277,
      "texte": "On la garde pour le duel qu'on est sûr de gagner."
     }
    ]
   },
   {
    "id": "confondre",
-   "t0": 108.677,
-   "t1": 116.241,
+   "t0": 108.697,
+   "t1": 116.261,
    "phrases": [
     {
      "id": "n1",
-     "t0": 108.677,
-     "t1": 110.043,
+     "t0": 108.697,
+     "t1": 110.064,
      "texte": "Ne confonds pas avec la Cover 1."
     },
     {
      "id": "n2",
-     "t0": 110.543,
-     "t1": 114.627,
+     "t0": 110.564,
+     "t1": 114.647,
      "texte": "Si tu vois un safety au milieu, à douze ou quinze yards, il y a de l'aide en profondeur."
     },
     {
      "id": "n3",
-     "t0": 115.127,
-     "t1": 116.241,
+     "t0": 115.147,
+     "t1": 116.261,
      "texte": "Ce n'est plus la même défense."
     }
    ]
   },
   {
    "id": "reflexe",
-   "t0": 117.761,
-   "t1": 131.155,
+   "t0": 117.781,
+   "t1": 131.2,
    "phrases": [
     {
      "id": "z0",
-     "t0": 117.761,
-     "t1": 118.355,
+     "t0": 117.781,
+     "t1": 118.376,
      "texte": "Le réflexe."
     },
     {
      "id": "z1",
-     "t0": 118.855,
-     "t1": 122.234,
+     "t0": 118.876,
+     "t1": 122.28,
      "texte": "Quarterback : zéro safety, je sais où je lance avant le snap."
     },
     {
      "id": "z2",
-     "t0": 122.834,
-     "t1": 127.34,
+     "t0": 122.88,
+     "t1": 127.386,
      "texte": "Receveur : zéro safety, je gagne mon départ, et je regarde le ballon tout de suite."
     },
     {
      "id": "z3",
-     "t0": 127.84,
-     "t1": 131.155,
+     "t0": 127.886,
+     "t1": 131.2,
      "texte": "Et après la réception, il n'y a personne derrière : tu fonces."
     }
    ]

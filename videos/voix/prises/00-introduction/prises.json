@@ -55,7 +55,7 @@
   "entendu": "Pour chacune, trois questions. Comment la reconnaître ? Où est l'espace ? Et où va le ballon ?"
  },
  "p3": {
-  "dit": "couarteurbac et receveurs, vous regardez la même vidéo pour une raison.",
+  "dit": "kouateurbak et receveurs, vous regardez la même vidéo pour une raison.",
   "vitesse": 1.1,
   "pauses": {
    ",": 0.26,
@@ -63,7 +63,7 @@
    ";": 0.4
   },
   "score": 0.99,
-  "entendu": "Quarterback et receveur, vous regardez la même vidéo pour une raison."
+  "entendu": "Quaterback et receveur, vous regardez la même vidéo pour une raison."
  },
  "p4": {
   "dit": "Si vous ne lisez pas la même chose, le ballon part là où il n'y a personne.",
@@ -209,7 +209,7 @@
   "entendu": "collé à toi, à 5 yards ou loin."
  },
  "e7": {
-  "dit": "Tourné vers toi, ou vers le couarteurbac ?",
+  "dit": "Tourné vers toi, ou vers le kouateurbak ?",
   "vitesse": 1.1,
   "pauses": {
    ",": 0.26,
@@ -217,7 +217,7 @@
    ";": 0.4
   },
   "score": 0.99,
-  "entendu": "Tourner vers toi ou vers le quarterback."
+  "entendu": "Tourner vers toi ou vers le quarterback ?"
  },
  "e8": {
   "dit": "Trois, confirme au snap.",
@@ -253,15 +253,15 @@
   "entendu": "Les deux premières secondes te disent si elle était bonne."
  },
  "c1": {
-  "dit": "Dernière idée, et c'est elle qui relie le couarteurbac à ses receveurs.",
+  "dit": "Dernière idée, et c'est elle qui relie le kouateurbak à ses receveurs.",
   "vitesse": 1.1,
   "pauses": {
    ",": 0.26,
    ":": 0.4,
    ";": 0.4
   },
-  "score": 1.0,
-  "entendu": "Dernière idée, et c'est elle qui relie le quarterback à ses receveurs."
+  "score": 0.98,
+  "entendu": "Dernière idée, et c'est elle qui relie le quatorback à ses receveurs."
  },
  "c2": {
   "dit": "Dans chaque couverture de zone, un défenseur a deux joueurs à surveiller.",
@@ -286,7 +286,7 @@
   "entendu": "On l'appelle le défenseur en conflit."
  },
  "c4": {
-  "dit": "Le couarteurbac le regarde, et lance là où il n'est pas.",
+  "dit": "Le kouateurbak le regarde, et lance là où il n'est pas.",
   "vitesse": 1.1,
   "pauses": {
    ",": 0.26,

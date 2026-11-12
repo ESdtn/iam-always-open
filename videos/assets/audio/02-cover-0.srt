@@ -19,11 +19,11 @@ Personne en profondeur.
 Et tous ceux qui ne couvrent pas viennent chercher le quarterback : six rushers, parfois plus.
 
 6
-00:00:15,788 --> 00:00:20,037
+00:00:15,788 --> 00:00:20,038
 Man, donc tu connais la règle : tu cours, tu sépares, tu ne t'arrêtes pas.
 
 7
-00:00:21,457 --> 00:00:23,163
+00:00:21,458 --> 00:00:23,163
 Avant le snap, compte les safeties.
 
 8
@@ -39,11 +39,11 @@ Les corners sont collés aux receveurs, les yeux sur eux.
 Et il y a beaucoup de monde près de la ligne.
 
 11
-00:00:30,811 --> 00:00:33,322
+00:00:30,811 --> 00:00:33,323
 Au snap, confirme : personne ne recule.
 
 12
-00:00:33,822 --> 00:00:35,982
+00:00:33,823 --> 00:00:35,982
 Ton défenseur te colle, les autres foncent.
 
 13
@@ -55,117 +55,117 @@ Cette défense prend un risque énorme.
 Un : il n'y a personne derrière.
 
 15
-00:00:42,043 --> 00:00:43,903
+00:00:42,043 --> 00:00:43,887
 Un défenseur battu, c'est un touchdown.
 
 16
-00:00:45,203 --> 00:00:48,883
+00:00:45,187 --> 00:00:48,775
 Deux : avec autant de rushers, il y en a toujours un que personne ne bloque.
 
 17
-00:00:49,203 --> 00:00:50,665
+00:00:49,095 --> 00:00:50,557
 Le ballon doit partir avant qu'il arrive.
 
 18
-00:00:51,665 --> 00:00:55,669
+00:00:51,557 --> 00:00:55,561
 Trois : en man serré, les défenseurs se gênent dès que deux tracés se croisent.
 
 19
-00:00:57,769 --> 00:00:59,712
+00:00:57,661 --> 00:00:59,604
 Ici, il n'y a pas de défenseur en conflit.
 
 20
-00:01:00,032 --> 00:01:01,680
+00:00:59,924 --> 00:01:01,572
 Ton adversaire, c'est le chrono.
 
 21
-00:01:02,380 --> 00:01:04,934
+00:01:02,272 --> 00:01:04,851
 Quarterback : tu choisis ton duel avant le snap.
 
 22
-00:01:05,254 --> 00:01:07,873
+00:01:05,171 --> 00:01:07,791
 Tu regardes le levier, le côté où se place le défenseur.
 
 23
-00:01:08,573 --> 00:01:10,225
+00:01:08,491 --> 00:01:10,142
 Trois pas, et le ballon est parti.
 
 24
-00:01:12,225 --> 00:01:14,499
+00:01:12,142 --> 00:01:14,416
 Receveur : ton tracé se joue sur le levier.
 
 25
-00:01:14,999 --> 00:01:16,280
+00:01:14,916 --> 00:01:16,197
 Le défenseur est à l'intérieur ?
 
 26
-00:01:16,600 --> 00:01:18,298
+00:01:16,517 --> 00:01:18,215
 Tu gagnes dehors, quick out.
 
 27
-00:01:19,498 --> 00:01:20,305
+00:01:19,415 --> 00:01:20,222
 Il est à l'extérieur ?
 
 28
-00:01:20,625 --> 00:01:21,060
+00:01:20,542 --> 00:01:20,977
 Slant.
 
 29
-00:01:22,360 --> 00:01:27,909
+00:01:22,277 --> 00:01:27,827
 Dans les deux cas, tu gagnes tes cinq premières yards, et tu tournes la tête tout de suite : le ballon est déjà en l'air.
 
 30
-00:01:28,509 --> 00:01:30,687
+00:01:28,427 --> 00:01:30,707
 Pas de double feinte, le quarterback n'a pas le temps.
 
 31
-00:01:32,107 --> 00:01:33,812
+00:01:32,127 --> 00:01:33,832
 Deuxième arme : le croisement.
 
 32
-00:01:34,312 --> 00:01:37,126
+00:01:34,332 --> 00:01:37,147
 Deux receveurs se frôlent, et les défenseurs se rentrent dedans.
 
 33
-00:01:38,326 --> 00:01:41,986
+00:01:38,347 --> 00:01:42,006
 Attention, tu ne bloques personne : tu cours ton tracé, c'est tout.
 
 34
-00:01:42,886 --> 00:01:43,403
+00:01:42,906 --> 00:01:43,424
 La fade ?
 
 35
-00:01:43,903 --> 00:01:45,355
+00:01:43,924 --> 00:01:45,375
 C'est un pari, pas une réponse.
 
 36
-00:01:45,675 --> 00:01:47,257
+00:01:45,695 --> 00:01:47,277
 On la garde pour le duel qu'on est sûr de gagner.
 
 37
-00:01:48,677 --> 00:01:50,043
+00:01:48,697 --> 00:01:50,064
 Ne confonds pas avec la Cover 1.
 
 38
-00:01:50,543 --> 00:01:54,627
+00:01:50,564 --> 00:01:54,647
 Si tu vois un safety au milieu, à douze ou quinze yards, il y a de l'aide en profondeur.
 
 39
-00:01:55,127 --> 00:01:56,241
+00:01:55,147 --> 00:01:56,261
 Ce n'est plus la même défense.
 
 40
-00:01:57,761 --> 00:01:58,355
+00:01:57,781 --> 00:01:58,376
 Le réflexe.
 
 41
-00:01:58,855 --> 00:02:02,234
+00:01:58,876 --> 00:02:02,280
 Quarterback : zéro safety, je sais où je lance avant le snap.
 
 42
-00:02:02,834 --> 00:02:07,340
+00:02:02,880 --> 00:02:07,386
 Receveur : zéro safety, je gagne mon départ, et je regarde le ballon tout de suite.
 
 43
-00:02:07,840 --> 00:02:11,155
+00:02:07,886 --> 00:02:11,200
 Et après la réception, il n'y a personne derrière : tu fonces.

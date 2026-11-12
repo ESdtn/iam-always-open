@@ -1,7 +1,7 @@
 // Généré par outils/voix/synthese.py. Ne pas modifier à la main.
 window.MINUTAGE = {
  "id": "01-man-ou-zone",
- "duree": 145.29,
+ "duree": 144.92,
  "scenes": [
   {
    "id": "titre",
@@ -105,7 +105,7 @@ window.MINUTAGE = {
   {
    "id": "indices",
    "t0": 39.321,
-   "t1": 68.862,
+   "t1": 68.83,
    "phrases": [
     {
      "id": "i0",
@@ -128,198 +128,198 @@ window.MINUTAGE = {
     {
      "id": "i3",
      "t0": 45.43,
-     "t1": 47.378,
+     "t1": 47.345,
      "texte": "En zone, il regarde le quarterback."
     },
     {
      "id": "i4",
-     "t0": 48.278,
-     "t1": 48.79,
+     "t0": 48.245,
+     "t1": 48.758,
      "texte": "Le placement."
     },
     {
      "id": "i5",
-     "t0": 49.19,
-     "t1": 52.832,
+     "t0": 49.158,
+     "t1": 52.8,
      "texte": "En man, il est en face de toi, souvent collé, souvent à l'intérieur."
     },
     {
      "id": "i6",
-     "t0": 53.432,
-     "t1": 56.996,
+     "t0": 53.4,
+     "t1": 56.963,
      "texte": "En zone, il est plus loin, décalé, tourné vers le ballon."
     },
     {
      "id": "i7",
-     "t0": 57.896,
-     "t1": 58.465,
+     "t0": 57.863,
+     "t1": 58.433,
      "texte": "Le motion."
     },
     {
      "id": "i8",
-     "t0": 58.865,
-     "t1": 62.09,
+     "t0": 58.833,
+     "t1": 62.058,
      "texte": "Si un défenseur traverse le terrain avec le receveur, c'est du man."
     },
     {
      "id": "i9",
-     "t0": 63.09,
-     "t1": 65.719,
+     "t0": 63.058,
+     "t1": 65.687,
      "texte": "Si la défense se décale juste d'un cran, c'est de la zone."
     },
     {
      "id": "i10",
-     "t0": 66.619,
-     "t1": 67.398,
+     "t0": 66.587,
+     "t1": 67.366,
      "texte": "Ce sont des indices."
     },
     {
      "id": "i11",
-     "t0": 67.718,
-     "t1": 68.862,
+     "t0": 67.686,
+     "t1": 68.83,
      "texte": "Une bonne défense sait mentir."
     }
    ]
   },
   {
    "id": "preuve",
-   "t0": 70.382,
-   "t1": 79.845,
+   "t0": 70.35,
+   "t1": 79.612,
    "phrases": [
     {
      "id": "s1",
-     "t0": 70.382,
-     "t1": 71.427,
+     "t0": 70.35,
+     "t1": 71.395,
      "texte": "La preuve arrive au snap."
     },
     {
      "id": "s2",
-     "t0": 72.027,
-     "t1": 75.314,
+     "t0": 71.995,
+     "t1": 75.253,
      "texte": "Ton défenseur tourne le dos au quarterback et te suit : c'est du man."
     },
     {
      "id": "s3",
-     "t0": 76.514,
-     "t1": 79.845,
+     "t0": 76.453,
+     "t1": 79.612,
      "texte": "Il recule en gardant les yeux sur le quarterback : c'est de la zone."
     }
    ]
   },
   {
    "id": "receveur",
-   "t0": 81.845,
-   "t1": 97.313,
+   "t0": 81.612,
+   "t1": 96.903,
    "phrases": [
     {
      "id": "r1",
-     "t0": 81.845,
-     "t1": 83.786,
+     "t0": 81.612,
+     "t1": 83.553,
      "texte": "Receveur, ça te donne deux façons de jouer."
     },
     {
      "id": "r2",
-     "t0": 84.286,
-     "t1": 89.864,
+     "t0": 84.053,
+     "t1": 89.63,
      "texte": "En man, tu gagnes un duel : ton départ, ta vitesse, une cassure nette, et tu ne t'arrêtes pas."
     },
     {
      "id": "r3",
-     "t0": 90.564,
-     "t1": 97.313,
+     "t0": 90.33,
+     "t1": 96.903,
      "texte": "En zone, tu cherches un espace : tu trouves le trou entre deux défenseurs, tu t'y assieds, et tu montres tes mains au quarterback."
     }
    ]
   },
   {
    "id": "quarterback",
-   "t0": 98.733,
-   "t1": 115.405,
+   "t0": 98.323,
+   "t1": 115.003,
    "phrases": [
     {
      "id": "b1",
-     "t0": 98.733,
-     "t1": 100.869,
+     "t0": 98.323,
+     "t1": 100.468,
      "texte": "Quarterback, ça te donne deux façons de lire."
     },
     {
      "id": "b2",
-     "t0": 101.369,
-     "t1": 103.111,
+     "t0": 100.968,
+     "t1": 102.71,
      "texte": "En man, il n'y a pas de trou à trouver."
     },
     {
      "id": "b3",
-     "t0": 103.431,
-     "t1": 108.071,
+     "t0": 103.03,
+     "t1": 107.669,
      "texte": "Tu choisis ton meilleur duel avant le snap, et tu lances devant ton receveur, loin de son défenseur."
     },
     {
      "id": "b4",
-     "t0": 109.371,
-     "t1": 115.405,
+     "t0": 108.969,
+     "t1": 115.003,
      "texte": "En zone, tu lis un seul joueur, le défenseur en conflit, et tu lances dans la fenêtre qu'il laisse, à un receveur arrêté."
     }
    ]
   },
   {
    "id": "rangees",
-   "t0": 117.405,
-   "t1": 130.679,
+   "t0": 117.003,
+   "t1": 130.277,
    "phrases": [
     {
      "id": "k1",
-     "t0": 117.405,
-     "t1": 121.805,
+     "t0": 117.003,
+     "t1": 121.403,
      "texte": "Dans cette série, deux couvertures sont en man : la Cover 0, et la Cover 1."
     },
     {
      "id": "k2",
-     "t0": 122.125,
-     "t1": 126.303,
+     "t0": 121.723,
+     "t1": 125.901,
      "texte": "Trois sont en zone : la Cover 2, la Cover 3, et la Cover 4."
     },
     {
      "id": "k3",
-     "t0": 126.803,
-     "t1": 130.679,
+     "t0": 126.401,
+     "t1": 130.277,
      "texte": "À chaque chapitre, tu verras l'étiquette en haut de l'écran : man, ou zone."
     }
    ]
   },
   {
    "id": "reflexe",
-   "t0": 131.999,
-   "t1": 142.372,
+   "t0": 131.597,
+   "t1": 141.996,
    "phrases": [
     {
      "id": "x0",
-     "t0": 131.999,
-     "t1": 132.593,
+     "t0": 131.597,
+     "t1": 132.191,
      "texte": "Le réflexe."
     },
     {
      "id": "x1",
-     "t0": 133.093,
-     "t1": 135.125,
+     "t0": 132.691,
+     "t1": 134.723,
      "texte": "Receveur : man, je cours."
     },
     {
      "id": "x2",
-     "t0": 135.525,
-     "t1": 137.116,
+     "t0": 135.123,
+     "t1": 136.714,
      "texte": "Zone, je m'assieds dans le trou."
     },
     {
      "id": "x3",
-     "t0": 137.816,
-     "t1": 140.444,
+     "t0": 137.414,
+     "t1": 140.067,
      "texte": "Quarterback : man, je choisis mon duel."
     },
     {
      "id": "x4",
-     "t0": 140.844,
-     "t1": 142.372,
+     "t0": 140.467,
+     "t1": 141.996,
      "texte": "Zone, je lis un défenseur."
     }
    ]

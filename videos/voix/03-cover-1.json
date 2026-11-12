@@ -1,0 +1,102 @@
+{
+  "id": "03-cover-1",
+  "debut": 1.2,
+  "fin": 2.4,
+  "pause_phrase": 0.32,
+  "pause_scene": 0.9,
+  "scenes": [
+    {
+      "id": "titre",
+      "phrases": [
+        {"id": "t1", "texte": "Cover 1.", "pause": 0.5},
+        {"id": "t2", "texte": "Du man partout, et un seul safety pour aider."}
+      ],
+      "pause": 1.1
+    },
+    {
+      "id": "identite",
+      "phrases": [
+        {"id": "c1", "texte": "Chaque receveur a son défenseur, comme en Cover 0.", "pause": 0.4},
+        {"id": "c2", "texte": "Man, donc tu cours, et tu ne t'arrêtes pas.", "pause": 0.6},
+        {"id": "c3", "texte": "La différence : un safety reste au milieu, en profondeur.", "pause": 0.4},
+        {"id": "c4", "texte": "Le milieu du terrain est fermé.", "pause": 0.8},
+        {"id": "c5", "texte": "Et la défense garde souvent un joueur libre au milieu court, pour couper les croisements.", "pause": 0.4},
+        {"id": "c6", "texte": "On l'appelle le robber."}
+      ],
+      "pause": 1.1
+    },
+    {
+      "id": "reconnaitre",
+      "phrases": [
+        {"id": "r1", "texte": "Avant le snap, un seul safety, au milieu, à douze ou quinze yards.", "pause": 0.6},
+        {"id": "r2", "texte": "Les corners sont collés ou serrés, souvent placés à l'intérieur, les yeux sur les receveurs.", "pause": 0.8},
+        {"id": "r3", "texte": "Si un receveur part en motion et qu'un défenseur traverse avec lui, c'est un bon indice de man.", "pause": 0.5},
+        {"id": "r4", "texte": "Un indice, pas une preuve.", "pause": 0.9},
+        {"id": "r5", "texte": "Au snap, confirme : ton défenseur te suit, le safety reste au milieu.", "pause": 1.5}
+      ],
+      "pause": 0.7
+    },
+    {
+      "id": "faiblesses",
+      "phrases": [
+        {"id": "f0", "texte": "Le safety ne peut pas être partout.", "pause": 0.6},
+        {"id": "f1", "texte": "Un : les duels à l'extérieur sont loin de lui.", "pause": 0.9},
+        {"id": "f2", "texte": "Deux : sur un tracé vers la touche, personne ne vient aider.", "pause": 1.3},
+        {"id": "f3", "texte": "Trois : sur un croisement, ton défenseur court derrière toi.", "pause": 1.5}
+      ],
+      "pause": 0.7
+    },
+    {
+      "id": "battre-qb",
+      "phrases": [
+        {"id": "q1", "texte": "Quarterback, tu as deux joueurs à situer, et seulement deux : le safety, et le robber.", "pause": 0.6},
+        {"id": "q2", "texte": "Tous les autres ont le dos tourné, occupés par leur receveur.", "pause": 0.8},
+        {"id": "q3", "texte": "Règle simple : tu lances loin du safety, et jamais sur un croisement avant que ton receveur ait dépassé le robber."}
+      ],
+      "pause": 1.2
+    },
+    {
+      "id": "duel",
+      "phrases": [
+        {"id": "d1", "texte": "Première arme : ton meilleur duel à l'extérieur.", "pause": 0.6},
+        {"id": "d2", "texte": "Receveur, tu vends la verticale pour faire reculer ton défenseur, puis tu casses à l'opposé de son levier.", "pause": 0.6},
+        {"id": "d3", "texte": "Il est dedans, tu casses dehors : out, ou comeback.", "pause": 1.4},
+        {"id": "d4", "texte": "Sur la fade, garde ta largeur : si tu te rapproches du milieu, tu amènes le safety.", "pause": 1.3}
+      ],
+      "pause": 0.7
+    },
+    {
+      "id": "mesh",
+      "phrases": [
+        {"id": "m1", "texte": "Deuxième arme : le mesh.", "pause": 0.5},
+        {"id": "m2", "texte": "Les deux slots se croisent à cinq yards, épaule contre épaule.", "pause": 0.5},
+        {"id": "m3", "texte": "Les défenseurs qui poursuivent doivent contourner.", "pause": 1.0},
+        {"id": "m4", "texte": "Receveur, tu ne t'arrêtes jamais, et tu accélères après le croisement.", "pause": 0.7},
+        {"id": "m5", "texte": "Quarterback, tu lances à celui qui a pris de l'avance, une fois le robber derrière lui.", "pause": 1.5}
+      ],
+      "pause": 0.7
+    },
+    {
+      "id": "confondre",
+      "phrases": [
+        {"id": "n1", "texte": "Le piège, c'est la Cover 3.", "pause": 0.4},
+        {"id": "n2", "texte": "Avant le snap, c'est la même image : un safety au milieu.", "pause": 0.7},
+        {"id": "n3", "texte": "La différence se voit au snap.", "pause": 0.4},
+        {"id": "n4", "texte": "En Cover 1, le corner reste attaché à son receveur.", "pause": 1.2},
+        {"id": "n5", "texte": "En Cover 3, il recule en regardant le quarterback.", "pause": 1.2},
+        {"id": "n6", "texte": "Même un corner collé peut reculer : ne te fie pas qu'à sa distance."}
+      ],
+      "pause": 1.2
+    },
+    {
+      "id": "reflexe",
+      "phrases": [
+        {"id": "z0", "texte": "Le réflexe.", "pause": 0.5},
+        {"id": "z1", "texte": "Quarterback : un safety et du man, je lance loin du safety, après le robber.", "pause": 0.6},
+        {"id": "z2", "texte": "Receveur : man, je gagne mon duel.", "pause": 0.4},
+        {"id": "z3", "texte": "Je cours, je sépare, je ne m'arrête pas."}
+      ],
+      "pause": 0.2
+    }
+  ]
+}

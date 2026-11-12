@@ -44,15 +44,15 @@
   "entendu": "Personne en profondeur."
  },
  "c3": {
-  "dit": "Et tous ceux qui ne couvrent pas viennent chercher le couarteurbac : six reucheur, parfois plus.",
+  "dit": "Et tous ceux qui ne couvrent pas viennent chercher le kouateurbak : si rusher, parfoi plusse.",
   "vitesse": 1.1,
   "pauses": {
    ",": 0.26,
    ":": 0.4,
    ";": 0.4
   },
-  "score": 1.0,
-  "entendu": "Et tous ceux qui ne couvrent pas viennent chercher le quarterback. Six rushers, parfois plus."
+  "score": 0.97,
+  "entendu": "Et tous ceux qui ne couvrent pas viennent chercher le quarterback. Si ruchet, parfois plus."
  },
  "c4": {
   "dit": "manne, donc tu connais la règle : tu cours, tu sépares, tu ne t'arrêtes pas.",
@@ -154,7 +154,7 @@
   "entendu": "And, il n'y a personne derrière."
  },
  "f2": {
-  "dit": "Un défenseur battu, c'est un tatch-daoune.",
+  "dit": "Un défenseur battu, c'est un teutchdaoun.",
   "vitesse": 1.1,
   "pauses": {
    ",": 0.26,
@@ -162,10 +162,10 @@
    ";": 0.4
   },
   "score": 1.0,
-  "entendu": "Un défenseur battu, c'est un touchdown."
+  "entendu": "Un défenseur battu. C'est un touchdown."
  },
  "f3": {
-  "dit": "Deux : avec autant de reucheur, il y en a toujours un que personne ne bloque.",
+  "dit": "Deux : avec autant de rusher, il y en a toujours un que personne ne bloque.",
   "vitesse": 1.1,
   "pauses": {
    ",": 0.26,
@@ -173,7 +173,7 @@
    ";": 0.4
   },
   "score": 0.99,
-  "entendu": "2. Avec autant de rusheurs, il y en a toujours un que personne ne bloque."
+  "entendu": "2. Avec autant de ruchers, il y en a toujours un que personne ne bloque."
  },
  "f4": {
   "dit": "Le ballon doit partir avant qu'il arrive.",
@@ -220,7 +220,7 @@
   "entendu": "Ton adversaire, c'est le chrono."
  },
  "q3": {
-  "dit": "couarteurbac : tu choisis ton duel avant le snap.",
+  "dit": "kouateurbak : tu choisis ton duel avant le snap.",
   "vitesse": 1.1,
   "pauses": {
    ",": 0.26,
@@ -319,7 +319,7 @@
   "entendu": "Dans les deux cas, tu gagnes tes cinq premières yards et tu tournes la tête tout de suite. Le ballon est déjà en l'air."
  },
  "w7": {
-  "dit": "Pas de double feinte, le couarteurbac n'a pas le temps.",
+  "dit": "Pas de double feinte, le kouateurbak n'a pas le temps.",
   "vitesse": 1.1,
   "pauses": {
    ",": 0.26,
@@ -327,7 +327,7 @@
    ";": 0.4
   },
   "score": 0.97,
-  "entendu": "Pas double feinte, le quarterback n'a pas le temps."
+  "entendu": "Pas double feinte ? Le quarterback n'a pas le temps."
  },
  "x1": {
   "dit": "Deuxième arme : le croisement.",
@@ -440,7 +440,7 @@
   "entendu": "Le réflexe."
  },
  "z1": {
-  "dit": "couarteurbac : zéro séfti, je sais où je lance avant le snap.",
+  "dit": "kouateurbak : zéro séfti, je sais où je lance avant le snap.",
   "vitesse": 1.1,
   "pauses": {
    ",": 0.26,
@@ -448,7 +448,7 @@
    ";": 0.4
   },
   "score": 1.0,
-  "entendu": "Quarterback, 0 safety. Je sais où je lance avant le snap."
+  "entendu": "Quarterback. Zero safety. Je sais où je lance avant le snap."
  },
  "z2": {
   "dit": "Receveur : zéro séfti, je gagne mon départ, et je regarde le ballon tout de suite.",

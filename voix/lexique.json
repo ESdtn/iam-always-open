@@ -19,7 +19,7 @@
     ["dix yards", "di yardz"],
     ["six yards", "si yardz"],
     ["yards", "yardz"],
-    ["quarterbacks?", "couarteurbac"],
+    ["quarterbacks?", "kouateurbak"],
     ["linebackers?", "laïnebakeur"],
     ["safeties", "séfti"],
     ["safety", "séfti"],
@@ -49,7 +49,7 @@
     ["man", "manne"],
     ["quiz", "couize"],
     ["motion", "mocheune"],
-    ["rushers?", "reucheur"],
-    ["touchdown", "tatch-daoune"]
+    ["rushers?", "rusher"],
+    ["touchdown", "teutchdaoun"]
   ]
 }

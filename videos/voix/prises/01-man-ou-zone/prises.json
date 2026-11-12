@@ -176,7 +176,7 @@
   "entendu": "En man, ton défenseur te regarde, toi."
  },
  "i3": {
-  "dit": "En zone, il regarde le couarteurbac.",
+  "dit": "En zone, il regarde le kouateurbak.",
   "vitesse": 1.1,
   "pauses": {
    ",": 0.26,
@@ -286,7 +286,7 @@
   "entendu": "La preuve arrive au snap."
  },
  "s2": {
-  "dit": "Ton défenseur tourne le dos au couarteurbac et te suit : c'est du manne.",
+  "dit": "Ton défenseur tourne le dos au kouateurbak et te suit : c'est du manne.",
   "vitesse": 1.1,
   "pauses": {
    ",": 0.26,
@@ -297,7 +297,7 @@
   "entendu": "Ton défenseur tourne le dos au quarterback et te suite. C'est du man."
  },
  "s3": {
-  "dit": "Il recule en gardant les yeux sur le couarteurbac : c'est de la zone.",
+  "dit": "Il recule en gardant les yeux sur le kouateurbak : c'est de la zone.",
   "vitesse": 1.1,
   "pauses": {
    ",": 0.26,
@@ -330,7 +330,7 @@
   "entendu": "En man, tu gagnes un duel. Ton départ, ta vitesse, une cassure nette, et tu ne t'arrêtes pas."
  },
  "r3": {
-  "dit": "En zone, tu cherches un espace : tu trouves le trou entre deux défenseurs, tu t'y assieds, et tu montres tes mains au couarteurbac.",
+  "dit": "En zone, tu cherches un espace : tu trouves le trou entre deux défenseurs, tu t'y assieds, et tu montres tes mains au kouateurbak.",
   "vitesse": 1.1,
   "pauses": {
    ",": 0.26,
@@ -341,15 +341,15 @@
   "entendu": "En zone, tu cherches un espace. Tu trouves le trou entre deux défenseurs. Tu t'y assis et tu montres tes mains au quarterback."
  },
  "b1": {
-  "dit": "couarteurbac, ça te donne deux façons de lire.",
+  "dit": "kouateurbak, ça te donne deux façons de lire.",
   "vitesse": 1.1,
   "pauses": {
    ",": 0.26,
    ":": 0.4,
    ";": 0.4
   },
-  "score": 1.0,
-  "entendu": "Quarterback, ça te donne deux façons de lire."
+  "score": 0.99,
+  "entendu": "Quaterback, ça te donne deux façons de lire."
  },
  "b2": {
   "dit": "En manne, il n'y a pas de trou à trouver.",
@@ -451,7 +451,7 @@
   "entendu": "Zone. Je m'assieds dans le trou."
  },
  "x3": {
-  "dit": "couarteurbac : manne, je choisis mon duel.",
+  "dit": "kouateurbak : manne, je choisis mon duel.",
   "vitesse": 1.1,
   "pauses": {
    ",": 0.26,

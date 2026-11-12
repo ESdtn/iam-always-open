@@ -18,7 +18,7 @@
       "phrases": [
         {"id": "c1", "texte": "C'est du man partout : chaque receveur a son défenseur.", "pause": 0.5},
         {"id": "c2", "texte": "Personne en profondeur.", "pause": 0.6},
-        {"id": "c3", "texte": "Et tous ceux qui ne couvrent pas viennent chercher le quarterback : six rushers, parfois plus.", "pause": 0.8},
+        {"id": "c3", "texte": "Et tous ceux qui ne couvrent pas viennent chercher le quarterback : six rushers, parfois plus.", "pause": 0.8, "dit": "Et tous ceux qui ne couvrent pas viennent chercher le kouateurbak : si rusher, parfoi plusse."},
         {"id": "c4", "texte": "Man, donc tu connais la règle : tu cours, tu sépares, tu ne t'arrêtes pas."}
       ],
       "pause": 1.1
