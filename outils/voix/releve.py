@@ -16,7 +16,10 @@ minutage = json.loads(brut[brut.index("{"):brut.rindex("}") + 1])
 plan = json.loads((RACINE / "videos" / "voix" / f"{ident}.json").read_text(encoding="utf-8"))
 forces = {p.get("id"): p.get("dit") or phonetique(p["lu"]) for s in plan["scenes"] for p in s["phrases"] if p.get("dit") or p.get("lu")}
 TITRES = {"accroche": "Accroche", "promesse": "La promesse", "question": "La première question", "etapes": "La lecture en trois étapes",
-          "conflit": "Le défenseur en conflit", "plan": "Le plan de la série"}
+          "conflit": "Le défenseur en conflit", "plan": "Le plan de la série", "titre": "Titre", "familles": "Deux familles",
+          "pourquoi": "Pourquoi ça change tout", "indices": "Les indices avant le snap", "preuve": "La preuve au snap",
+          "receveur": "Ce que ça change pour le receveur", "quarterback": "Ce que ça change pour le quarterback",
+          "rangees": "Les cinq couvertures, rangées", "reflexe": "Le réflexe"}
 
 
 def temps(t):

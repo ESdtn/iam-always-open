@@ -12,9 +12,9 @@
 <script src="assets/audio/01-man-ou-zone.timing.js"></script>
 </head>
 <body>
-<div id="root" data-composition-id="man-ou-zone" data-start="0" data-duration="100" data-width="1920" data-height="1080">
-  <div id="scene" class="clip" data-start="0" data-duration="100" data-track-index="0"></div>
-  <audio id="voix" src="assets/audio/01-man-ou-zone.mp3" data-start="0" data-duration="100" data-track-index="1" data-volume="1"></audio>
+<div id="root" data-composition-id="man-ou-zone" data-start="0" data-duration="145.29" data-width="1920" data-height="1080">
+  <div id="scene" class="clip" data-start="0" data-duration="145.29" data-track-index="0"></div>
+  <audio id="voix" src="assets/audio/01-man-ou-zone.mp3" data-start="0" data-duration="145.29" data-track-index="1" data-volume="1"></audio>
 </div>
 <script>
 // Minutage de la voix : T = début d'une phrase, F = sa fin, A = un instant à l'intérieur (0 = début, 1 = fin).
@@ -75,15 +75,15 @@ const li = (id, texte) => `<li id="${id}" style="opacity:0">${texte}</li>`;
 const ligne = (id, famille, texte) => `<div class="quoi" id="${id}" style="opacity:0"><i class="${famille}">${famille}</i>${texte}</div>`;
 const carteCover = (id, nom) => `<div class="carte-plan" id="${id}" style="opacity:0"><span class="titre">${nom}</span></div>`;
 hote.insertAdjacentHTML('beforeend', `
-  <div class="panneau" id="panneau" style="opacity:0"><span class="label">Lire la couverture</span><span class="script">Man ou zone ?</span></div>
+  <div class="panneau" id="panneau" style="opacity:0"><span class="label">Lire la couverture</span><span class="script" style="font-size:35px;white-space:nowrap">Man ou zone ?</span></div>
   <div class="panneau bas" id="liste" style="opacity:0"><ol class="liste"><li id="et1"><b>1</b>Les yeux</li><li id="et2"><b>2</b>Le placement</li><li id="et3"><b>3</b>Le motion</li></ol></div>
   <div class="badge man" id="b-man">MAN<small>un défenseur, un joueur</small></div>
   <div class="badge zone" id="b-zone">ZONE<small>un défenseur, un espace</small></div>
   <div class="ardoise" id="ardoise" style="opacity:0">
     <svg width="1920" height="1080" viewBox="0 0 1920 1080">${defs()}${fond()}<g data-layout-allow-overflow>${gribouillis}</g></svg>
     <div id="bloc-wr">
-      <div class="titre-ardoise"><span class="script">Receveur : deux façons de jouer</span></div>
-      <div class="cartes">
+      <div class="titre-ardoise" style="top:44px"><span class="script" style="font-size:120px">Receveur</span><div class="label" style="font-size:30px;color:var(--craie);margin-top:8px">Deux façons de jouer</div></div>
+      <div class="cartes haut">
         <div class="carte" id="wr-man" style="opacity:0"><div class="onglet man">MAN</div><div class="quand">Je gagne un duel</div><ul>${li('wm1', 'Mon départ')}${li('wm2', 'Ma vitesse')}${li('wm3', 'Une cassure nette')}${li('wm4', "Je ne m'arrête pas")}</ul></div>
         <div class="carte" id="wr-zone" style="opacity:0"><div class="onglet zone">ZONE</div><div class="quand">Je cherche un espace</div><ul>${li('wz1', 'Je trouve le trou')}${li('wz2', "Je m'y assieds")}${li('wz3', 'Je montre mes mains')}</ul></div>
       </div>
@@ -178,7 +178,7 @@ t = T('w6') - 0.25;
 S.cache(tl, 'ballon', t, 0.15); haloEteint('Z', t, C.orange); S.cache(tl, 'trou', t, 0.2); S.cache(tl, 'e-trou', t, 0.2);
 t = T('w6') + 0.25;
 S.dessine(tl, 't-dc', t, 0.6); S.court(tl, 'Z', [[36.2, 7.5], [32.3, 7.5]], t, 0.65);
-S.va(tl, 'LBD', 31.4, 6.6, t + 0.1, 0.55, 'power1.out');
+S.va(tl, 'LBD', 32.2, 6.05, t + 0.1, 0.55, 'power1.out');
 haloRouge('LBD', t + 0.65); S.montre(tl, 'e-dedans', t + 0.7, 0.2);
 
 // ===== Scène 4 · Les indices avant le snap =====
@@ -221,7 +221,7 @@ S.montre(tl, 'e-ind', T('i10'), 0.3);
 t = T('s1') - 0.6;
 ['e-ind', 'liste'].forEach((id) => S.cache(tl, id, t, 0.25)); S.famille(tl, null, t);
 remet(DEFZ, t + 0.05, 0.45); S.va(tl, 'CBD', 48.3, 4.5, t + 0.05, 0.45);
-const ZOOM_SNAP = { zoom: 1.9, cx: 44, cy: 5, sx: 1180, sy: 480 };
+const ZOOM_SNAP = { zoom: 1.8, cx: 44, cy: 5, sx: 1180, sy: 440 };
 S.camera(tl, T('s1'), 0.85, ZOOM_SNAP);
 // Il tourne le dos et il suit : man.
 t = T('s2') + 0.2;

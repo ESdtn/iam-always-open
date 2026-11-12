@@ -1,0 +1,475 @@
+{
+ "t1": {
+  "dit": "manne ou zone ?",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.9,
+  "entendu": "Manu zone ?"
+ },
+ "t2": {
+  "dit": "C'est la première question.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "C'est la première question."
+ },
+ "t3": {
+  "dit": "Et elle change tout ce que tu fais ensuite.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Et elle change tout ce que tu fais ensuite."
+ },
+ "f1": {
+  "dit": "En manne, chaque défenseur a un joueur.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.97,
+  "entendu": "En man, chaque défenseur un joueur."
+ },
+ "f2": {
+  "dit": "Il le suit partout, même de l'autre côté du terrain.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Il le suit partout, même de l'autre côté du terrain."
+ },
+ "f3": {
+  "dit": "En zone, chaque défenseur a un espace.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "En zone, chaque défenseur a un espace."
+ },
+ "f4": {
+  "dit": "Il te prend quand tu y entres, et il te laisse au suivant quand tu en sors.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Il te prend quand tu y entres, et il te laisse au suivant quand tu en sors."
+ },
+ "w1": {
+  "dit": "Pourquoi c'est si important ?",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Pourquoi c'est si important ?"
+ },
+ "w2": {
+  "dit": "Parce que le même tracé ne se finit pas de la même façon.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "parce que le même tracé ne se finit pas de la même façon."
+ },
+ "w3": {
+  "dit": "Contre du manne, tu continues de courir.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.96,
+  "entendu": "Contre du man, tu continues courir."
+ },
+ "w4": {
+  "dit": "Si tu t'arrêtes, ton défenseur te rattrape.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Si tu t'arrêtes, ton défenseur te rattrape."
+ },
+ "w5": {
+  "dit": "Contre de la zone, tu t'arrêtes dans le trou.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Contre de la zone, tu t'arrêtes dans le trou."
+ },
+ "w6": {
+  "dit": "Si tu continues, tu cours droit dans le défenseur suivant.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Si tu continues, tu cours droit dans le défenseur suivant."
+ },
+ "i0": {
+  "dit": "Avant le snap, trois indices.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Avant le snap, 3 indices."
+ },
+ "i1": {
+  "dit": "Les yeux.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Les yeux"
+ },
+ "i2": {
+  "dit": "En manne, ton défenseur te regarde, toi.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "En man, ton défenseur te regarde, toi."
+ },
+ "i3": {
+  "dit": "En zone, il regarde le couarteurbac.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "En zone, il regarde le quarterback."
+ },
+ "i4": {
+  "dit": "Le placement.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Le placement."
+ },
+ "i5": {
+  "dit": "En manne, il est en face de toi, souvent collé, souvent à l'intérieur.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.98,
+  "entendu": "En manne, il est en face de toi, souvent collé, souvent à l'intérieur."
+ },
+ "i6": {
+  "dit": "En zone, il est plus loin, décalé, tourné vers le ballon.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "En zone, il est plus loin, décalé, tourné vers le ballon."
+ },
+ "i7": {
+  "dit": "Le mocheune.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Le motion."
+ },
+ "i8": {
+  "dit": "Si un défenseur traverse le terrain avec le receveur, c'est du manne.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Si un défenseur traverse le terrain avec le receveur, c'est du man."
+ },
+ "i9": {
+  "dit": "Si la défense se décale juste d'un cran, c'est de la zone.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Si la défense se décale juste d'un cran, c'est de la zone."
+ },
+ "i10": {
+  "dit": "Ce sont des indices.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Ce sont des indices."
+ },
+ "i11": {
+  "dit": "Une bonne défense sait mentir.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.92,
+  "entendu": "Une bonne défense c'est mentir."
+ },
+ "s1": {
+  "dit": "La preuve arrive au snap.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "La preuve arrive au snap."
+ },
+ "s2": {
+  "dit": "Ton défenseur tourne le dos au couarteurbac et te suit : c'est du manne.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.99,
+  "entendu": "Ton défenseur tourne le dos au quarterback et te suite. C'est du man."
+ },
+ "s3": {
+  "dit": "Il recule en gardant les yeux sur le couarteurbac : c'est de la zone.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Il recule en gardant les yeux sur le quarterback. C'est de la zone."
+ },
+ "r1": {
+  "dit": "Receveur, ça te donne deux façons de jouer.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.96,
+  "entendu": "Receveur, ça donne deux façons de jouer."
+ },
+ "r2": {
+  "dit": "En manne, tu gagnes un duel : ton départ, ta vitesse, une cassure nette, et tu ne t'arrêtes pas.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "En man, tu gagnes un duel. Ton départ, ta vitesse, une cassure nette, et tu ne t'arrêtes pas."
+ },
+ "r3": {
+  "dit": "En zone, tu cherches un espace : tu trouves le trou entre deux défenseurs, tu t'y assieds, et tu montres tes mains au couarteurbac.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.99,
+  "entendu": "En zone, tu cherches un espace. Tu trouves le trou entre deux défenseurs. Tu t'y assis et tu montres tes mains au quarterback."
+ },
+ "b1": {
+  "dit": "couarteurbac, ça te donne deux façons de lire.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Quarterback, ça te donne deux façons de lire."
+ },
+ "b2": {
+  "dit": "En manne, il n'y a pas de trou à trouver.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.97,
+  "entendu": "En manne, il n'y a pas de trou à trouver."
+ },
+ "b3": {
+  "dit": "Tu choisis ton meilleur duel avant le snap, et tu lances devant ton receveur, loin de son défenseur.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Tu choisis ton meilleur duel avant le snap, et tu lances devant ton receveur, loin de son défenseur."
+ },
+ "b4": {
+  "dit": "En zone, tu lis un seul joueur, le défenseur en conflit, et tu lances dans la fenêtre qu'il laisse, à un receveur arrêté.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.99,
+  "entendu": "En zone, tu lis un seul joueur, le défenseur en conflit, et tu lances dans la fenêtre qu'il laisse un receveur arrêté."
+ },
+ "k1": {
+  "dit": "Dans cette série, deux couvertures sont en manne : la Coveur zéro, et la Coveur un.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Dans cette série, deux couvertures sont en man. La cover 0 et la cover 1."
+ },
+ "k2": {
+  "dit": "Trois sont en zone : la Coveur deux, la Coveur trois, et la Coveur quatre.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Trois sont en zone, la cover 2, la cover 3 et la cover 4."
+ },
+ "k3": {
+  "dit": "À chaque chapitre, tu verras l'étiquette en haut de l'écran : manne, ou zone.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "À chaque chapitre, tu verras l'étiquette en haut de l'écran. Man ou zone."
+ },
+ "x0": {
+  "dit": "Le réflexe.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Le réflexe."
+ },
+ "x1": {
+  "dit": "Receveur : manne, je cours.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Receveur. Man, je cours."
+ },
+ "x2": {
+  "dit": "Zone, je m'assieds dans le trou.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Zone. Je m'assieds dans le trou."
+ },
+ "x3": {
+  "dit": "couarteurbac : manne, je choisis mon duel.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Quarterback. Man. Je choisis mon duel."
+ },
+ "x4": {
+  "dit": "Zone, je lis un défenseur.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Zone, je lis un défenseur."
+ }
+}

@@ -58,6 +58,7 @@ Le réglage est corrigé. Conséquences :
 | yards | yardz | À réécouter |
 | dix yards, six yards | di yardz, si yardz | À réécouter |
 | quiz | couize | Écriture proposée par le coach |
+| motion | mocheune | Nouveau, à écouter dans « Man ou zone ? » |
 
 Laissés tels quels : snap, blitz. Numéros en toutes lettres et en français : « Coveur trois », « la Tampa deux », « la Coveur six ».
 

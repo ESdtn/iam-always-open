@@ -29,10 +29,10 @@
       "phrases": [
         {"id": "w1", "texte": "Pourquoi c'est si important ?"},
         {"id": "w2", "texte": "Parce que le même tracé ne se finit pas de la même façon.", "pause": 0.7},
-        {"id": "w3", "texte": "Contre du man, tu continues de courir.", "pause": 1.0},
-        {"id": "w4", "texte": "Si tu t'arrêtes, ton défenseur te rattrape.", "pause": 1.3},
-        {"id": "w5", "texte": "Contre de la zone, tu t'arrêtes dans le trou.", "pause": 1.0},
-        {"id": "w6", "texte": "Si tu continues, tu cours droit dans le défenseur suivant.", "pause": 1.3}
+        {"id": "w3", "texte": "Contre du man, tu continues de courir.", "pause": 1.7},
+        {"id": "w4", "texte": "Si tu t'arrêtes, ton défenseur te rattrape.", "pause": 1.5},
+        {"id": "w5", "texte": "Contre de la zone, tu t'arrêtes dans le trou.", "pause": 1.8},
+        {"id": "w6", "texte": "Si tu continues, tu cours droit dans le défenseur suivant.", "pause": 1.5}
       ],
       "pause": 0.7
     },

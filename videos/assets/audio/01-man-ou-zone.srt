@@ -1,0 +1,171 @@
+1
+00:00:01,200 --> 00:00:01,772
+Man ou zone ?
+
+2
+00:00:02,272 --> 00:00:03,121
+C'est la première question.
+
+3
+00:00:03,441 --> 00:00:04,927
+Et elle change tout ce que tu fais ensuite.
+
+4
+00:00:06,347 --> 00:00:08,219
+En man, chaque défenseur a un joueur.
+
+5
+00:00:08,719 --> 00:00:10,894
+Il le suit partout, même de l'autre côté du terrain.
+
+6
+00:00:12,194 --> 00:00:14,242
+En zone, chaque défenseur a un espace.
+
+7
+00:00:14,742 --> 00:00:17,478
+Il te prend quand tu y entres, et il te laisse au suivant quand tu en sors.
+
+8
+00:00:19,478 --> 00:00:20,537
+Pourquoi c'est si important ?
+
+9
+00:00:20,857 --> 00:00:22,814
+Parce que le même tracé ne se finit pas de la même façon.
+
+10
+00:00:23,514 --> 00:00:25,380
+Contre du man, tu continues de courir.
+
+11
+00:00:27,080 --> 00:00:29,193
+Si tu t'arrêtes, ton défenseur te rattrape.
+
+12
+00:00:30,693 --> 00:00:32,683
+Contre de la zone, tu t'arrêtes dans le trou.
+
+13
+00:00:34,483 --> 00:00:37,121
+Si tu continues, tu cours droit dans le défenseur suivant.
+
+14
+00:00:39,321 --> 00:00:40,972
+Avant le snap, trois indices.
+
+15
+00:00:41,572 --> 00:00:42,056
+Les yeux.
+
+16
+00:00:42,456 --> 00:00:44,830
+En man, ton défenseur te regarde, toi.
+
+17
+00:00:45,430 --> 00:00:47,378
+En zone, il regarde le quarterback.
+
+18
+00:00:48,278 --> 00:00:48,790
+Le placement.
+
+19
+00:00:49,190 --> 00:00:52,832
+En man, il est en face de toi, souvent collé, souvent à l'intérieur.
+
+20
+00:00:53,432 --> 00:00:56,996
+En zone, il est plus loin, décalé, tourné vers le ballon.
+
+21
+00:00:57,896 --> 00:00:58,465
+Le motion.
+
+22
+00:00:58,865 --> 00:01:02,090
+Si un défenseur traverse le terrain avec le receveur, c'est du man.
+
+23
+00:01:03,090 --> 00:01:05,719
+Si la défense se décale juste d'un cran, c'est de la zone.
+
+24
+00:01:06,619 --> 00:01:07,398
+Ce sont des indices.
+
+25
+00:01:07,718 --> 00:01:08,862
+Une bonne défense sait mentir.
+
+26
+00:01:10,382 --> 00:01:11,427
+La preuve arrive au snap.
+
+27
+00:01:12,027 --> 00:01:15,314
+Ton défenseur tourne le dos au quarterback et te suit : c'est du man.
+
+28
+00:01:16,514 --> 00:01:19,845
+Il recule en gardant les yeux sur le quarterback : c'est de la zone.
+
+29
+00:01:21,845 --> 00:01:23,786
+Receveur, ça te donne deux façons de jouer.
+
+30
+00:01:24,286 --> 00:01:29,864
+En man, tu gagnes un duel : ton départ, ta vitesse, une cassure nette, et tu ne t'arrêtes pas.
+
+31
+00:01:30,564 --> 00:01:37,313
+En zone, tu cherches un espace : tu trouves le trou entre deux défenseurs, tu t'y assieds, et tu montres tes mains au quarterback.
+
+32
+00:01:38,733 --> 00:01:40,869
+Quarterback, ça te donne deux façons de lire.
+
+33
+00:01:41,369 --> 00:01:43,111
+En man, il n'y a pas de trou à trouver.
+
+34
+00:01:43,431 --> 00:01:48,071
+Tu choisis ton meilleur duel avant le snap, et tu lances devant ton receveur, loin de son défenseur.
+
+35
+00:01:49,371 --> 00:01:55,405
+En zone, tu lis un seul joueur, le défenseur en conflit, et tu lances dans la fenêtre qu'il laisse, à un receveur arrêté.
+
+36
+00:01:57,405 --> 00:02:01,805
+Dans cette série, deux couvertures sont en man : la Cover 0, et la Cover 1.
+
+37
+00:02:02,125 --> 00:02:06,303
+Trois sont en zone : la Cover 2, la Cover 3, et la Cover 4.
+
+38
+00:02:06,803 --> 00:02:10,679
+À chaque chapitre, tu verras l'étiquette en haut de l'écran : man, ou zone.
+
+39
+00:02:11,999 --> 00:02:12,593
+Le réflexe.
+
+40
+00:02:13,093 --> 00:02:15,125
+Receveur : man, je cours.
+
+41
+00:02:15,525 --> 00:02:17,116
+Zone, je m'assieds dans le trou.
+
+42
+00:02:17,816 --> 00:02:20,444
+Quarterback : man, je choisis mon duel.
+
+43
+00:02:20,844 --> 00:02:22,372
+Zone, je lis un défenseur.

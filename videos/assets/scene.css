@@ -67,7 +67,9 @@ html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; backgro
 .titre-ardoise { position: absolute; top: 96px; left: 0; right: 0; text-align: center; }
 .titre-ardoise .script { font-size: 140px; filter: url(#craie); display: inline-block; transform: rotate(-4deg); }
 .cartes { position: absolute; top: 400px; left: 170px; right: 170px; display: flex; gap: 70px; align-items: stretch; }
-.cartes.haut { top: 250px; }
+.cartes.haut { top: 300px; }
+.cartes.haut .carte { padding: 78px 50px 34px; }
+.cartes.haut .carte li { font-size: 50px; padding: 9px 0; }
 .carte { flex: 1; position: relative; background: var(--ardoise-claire); border-radius: 14px; padding: 84px 50px 56px; box-shadow: 0 0 0 3px rgba(242, 239, 233, .55); }
 .carte .onglet { position: absolute; top: -34px; left: 44px; background: var(--orange); color: var(--ardoise); font-family: var(--titre); font-size: 50px; padding: 8px 30px 12px; border-radius: 8px; transform: skewX(-10deg); }
 .carte .onglet.man { background: var(--bleu); color: #fff; }
