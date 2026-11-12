@@ -19,7 +19,8 @@ Dernière mise à jour : 12 novembre 2026.
 | Cover 1 | Première version rendue, en attente de l'avis du coach |
 | Cover 3 | Première version rendue, en attente de l'avis du coach |
 | Cover 2 | Première version rendue, en attente de l'avis du coach |
-| Cover 4 et la conclusion | En cours |
+| Cover 4 | Première version rendue, en attente de l'avis du coach |
+| Conclusion et quiz | Première version rendue, en attente de l'avis du coach |
 | Fusion en une seule vidéo | À faire |
 
 ## Avancement par vidéo
@@ -32,8 +33,8 @@ Dernière mise à jour : 12 novembre 2026.
 | 3 | Cover 1 | Relu | Fait | Fait | Fait | Fait | Fait (v1) | |
 | 4 | Cover 3 | Relu | Fait | Fait | Fait | Fait | Fait (v1) | |
 | 5 | Cover 2 | Relu | Fait | Fait | Fait | Fait | Fait (v1) | |
-| 6 | Cover 4 | Relu | | | | | | |
-| 7 | Conclusion et quiz | Relu | | | | | | |
+| 6 | Cover 4 | Relu | Fait | Fait | Fait | Fait | Fait (v1) | |
+| 7 | Conclusion et quiz | Relu | Fait | Fait | Fait | Fait | Fait (v1) | |
 
 ## Décisions prises
 
@@ -54,9 +55,11 @@ Dernière mise à jour : 12 novembre 2026.
 
 ## Points ouverts
 
-1. **Cover 1, Cover 3 et Cover 2** : avis du coach, avec les relevés de `videos/voix/` (`03-cover-1`, `04-cover-3`, `05-cover-2`).
-2. **Termes anglais nouveaux** à écouter. Cover 1 : « robber » (« robeur »), « out » (« a-outte »), « comeback » (« comme-bac »), « mesh » (« mèch »), « slots » (« slottes »). Cover 3 : « flat » (« flatt »), « curl » (« keurl »), « seam » (« sim »), « hitch » (« hitsh »).
-3. **Points tactiques à valider** : liste en bas de `scripts/README.md`.
+1. **Cover 1, Cover 3, Cover 2, Cover 4 et la conclusion** : avis du coach, avec les relevés de `videos/voix/` (`03-cover-1` à `07-conclusion-quiz`).
+2. **Termes anglais nouveaux** à écouter. Cover 1 : « robber » (« robeur »), « out » (« a-outte »), « comeback » (« comme-bac »), « mesh » (« mèch »), « slots » (« slottes »). Cover 3 : « flat » (« flatt »), « curl » (« keurl »), « seam » (« sim »), « hitch » (« hitsh »). Cover 2 : « hashes » (« hachiz »), « smash » (« smach »), « Tampa 2 ». Cover 4 : « quarters » (« couarteurz »), « post » (« pôste »), « play-action » (« plé-akcheune »).
+3. **Prises douteuses à l'oreille**, que la retranscription automatique n'a pas su confirmer. Cover 4, phrase « Un : la zone courte ». Conclusion, phrases « Compte les safeties » et « Lis le défenseur du flat ».
+4. **Points tactiques à valider** : liste en bas de `scripts/README.md`.
+5. **Fusion des huit vidéos** en une seule, une fois les chapitres validés.
 
 ## Journal
 
@@ -67,3 +70,4 @@ Dernière mise à jour : 12 novembre 2026.
 - **Suite.** Gabarit de chapitre et rythme validés par le coach. Prononciations corrigées : quarterback, rushers, touchdown ; les quatorze phrases concernées régénérées et les trois premières vidéos re-rendues. Production de Cover 1 : 39 phrases, neuf scènes, 2 min 29.
 - **Suite.** Production de Cover 3 : 41 phrases, dix scènes, 2 min 32.
 - **Suite.** Production de Cover 2 : 40 phrases, dix scènes, 2 min 31.
+- **Suite.** Production de Cover 4 : 43 phrases, neuf scènes, 2 min 31. Production de la conclusion et du quiz : 54 phrases, douze scènes, 3 min 15, avec six situations à deviner (trois secondes avant le snap, deux secondes de jeu, trois secondes pour répondre) et un carton de fin. Les huit vidéos de la série existent en première version ; durée totale : un peu moins de 20 minutes.

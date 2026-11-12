@@ -25,7 +25,7 @@ TITRES = {"accroche": "Accroche", "promesse": "La promesse", "question": "La pre
           "confondre": "Ne pas confondre", "curl": "Le curl, côté receveur", "verticaux": "Quatre verticaux", "piege": "Le piège",
           "duel": "Le duel extérieur", "mesh": "Le mesh", "smash": "Le défenseur en conflit : le smash", "smash-wr": "Le smash, côté receveurs", "milieu": "Le milieu profond", "variante": "La variante",
           "court": "Prendre ce qu'elle donne", "hitch": "Le hitch, côté receveur", "post": "Attirer le safety", "arbre": "L'arbre de lecture", "joueurs": "Un joueur à lire par couverture",
-          "quiz": "Le quiz", "variantes": "Trois variantes", "cloture": "Clôture"}
+          "quiz": "La règle du quiz", "situation-1": "Situation 1", "situation-2": "Situation 2", "situation-3": "Situation 3", "situation-4": "Situation 4", "situation-5": "Situation 5", "situation-6": "Situation 6", "variantes": "Trois variantes", "cloture": "Clôture"}
 
 
 def temps(t):

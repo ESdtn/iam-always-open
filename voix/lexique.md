@@ -61,6 +61,7 @@ Le réglage est corrigé. Conséquences :
 | motion | mocheune | Nouveau, à écouter dans « Man ou zone ? » |
 | rushers | rusher | Écriture donnée par le coach. « six rushers, parfois plus » est lu « si rusher, parfoi plusse » |
 | touchdown | teutchdaoun | Écriture donnée par le coach |
+| hashes | hachiz | Nouveau, à écouter dans Cover 2 |
 
 Laissés tels quels : snap, blitz. Numéros en toutes lettres et en français : « Coveur trois », « la Tampa deux », « la Coveur six ».
 

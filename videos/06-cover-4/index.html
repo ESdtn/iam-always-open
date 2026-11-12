@@ -12,9 +12,9 @@
 <script src="assets/audio/06-cover-4.timing.js"></script>
 </head>
 <body>
-<div id="root" data-composition-id="cover-4" data-start="0" data-duration="100" data-width="1920" data-height="1080">
-  <div id="scene" class="clip" data-start="0" data-duration="100" data-track-index="0"></div>
-  <audio id="voix" src="assets/audio/06-cover-4.mp3" data-start="0" data-duration="100" data-track-index="1" data-volume="1"></audio>
+<div id="root" data-composition-id="cover-4" data-start="0" data-duration="151.41" data-width="1920" data-height="1080">
+  <div id="scene" class="clip" data-start="0" data-duration="151.41" data-track-index="0"></div>
+  <audio id="voix" src="assets/audio/06-cover-4.mp3" data-start="0" data-duration="151.41" data-track-index="1" data-volume="1"></audio>
 </div>
 <script>
 // Minutage de la voix : T = début d'une phrase, F = sa fin, A = un instant à l'intérieur (0 = début, 1 = fin).
@@ -62,7 +62,7 @@ E('e-course', 26.667, 21.6, 'ILS MONTENT TRÈS VITE SUR LA COURSE', BLANC);
 E('e-3def', 26.667, 9.6, '3 DÉFENSEURS POUR TOUTE LA LARGEUR', { taille: 19 });
 E('e-tient', 22.4, 14.6, 'LE SLOT TIENT LE SAFETY', ORANGE);
 E('e-vole', 12.2, 9.4, 'LE SAFETY DESCEND VOLER LE BALLON', ROUGE);
-E('e-flatdef', 15, 7.1, 'DÉFENSEUR DU FLAT');
+E('e-flatdef', 15, 3.1, 'DÉFENSEUR DU FLAT');
 E('e-dessous', 11.6, 3.6, "L'ESPACE EST EN DESSOUS", ORANGE);
 E('e-conflit', 32.2, 13.4, 'DÉFENSEUR EN CONFLIT');
 E('e-pa', 26.667, -8, 'PLAY-ACTION', ORANGE);
@@ -219,7 +219,7 @@ S.va(tl, 'N', 15.6, 6.4, t, 1.0); S.lance(tl, [26.667, -5], [5.8, 5.2], t + 0.7,
 t = T('w1') - 0.55;
 S.etapeChapitre(tl, 5, t); cache(['ballon'], t, 0.15); haloEteint('X', t, C.orange); S.conflit(tl, 'N', t, false); S.efface(tl, 't-hv', t, 0.2); S.efface(tl, 't-xh', t, 0.2); remet(t + 0.05);
 marges(false, t + 0.3); S.camera(tl, t + 0.3, 0.85, { zoom: 1.9, cx: 9, cy: 6, sx: 800, sy: 460 });
-['FS', 'M'].forEach((id) => tl.to('#' + id, { opacity: 0, duration: 0.25 }, t + 0.3));
+['FS', 'M', 'QB', 'RB'].forEach((id) => tl.to('#' + id, { opacity: 0, duration: 0.25 }, t + 0.3));
 t = A('w1', 0.2);
 S.dessine(tl, 't-xh', t, 1.4); S.court(tl, 'X', [[5.8, -0.8], [5.8, 5.4]], t, 1.45); recul(t, 1.8); zones(ZP.slice(0, 1), true, t + 0.6);
 S.montre(tl, 'trou-g', A('w1', 0.6), 0.25); S.halo(tl, 'X', A('w1', 0.8), 0);
@@ -229,7 +229,7 @@ S.dessine(tl, 't-xprof', t, 1.0); S.montre(tl, 'm-prof', t + 1.05, 0.15); S.mont
 // ===== Scène 7 · Deuxième arme : attirer le safety =====
 t = T('p1') - 0.6;
 S.etapeChapitre(tl, 6, t); cache(['trou-g', 'm-prof', 'e-dessous'], t, 0.2); haloEteint('X', t, C.orange); S.efface(tl, 't-xh', t, 0.2); S.efface(tl, 't-xprof', t, 0.2); zones(ZP, false, t);
-S.cameraLarge(tl, t, 0.8); marges(true, t + 0.5); ['FS', 'M'].forEach((id) => tl.to('#' + id, { opacity: 1, duration: 0.25 }, t + 0.3)); remet(t + 0.05);
+S.cameraLarge(tl, t, 0.8); marges(true, t + 0.5); ['FS', 'M', 'QB', 'RB'].forEach((id) => tl.to('#' + id, { opacity: 1, duration: 0.25 }, t + 0.3)); remet(t + 0.05);
 S.conflit(tl, 'SS', A('p1', 0.6)); S.montre(tl, 'e-conflit', A('p2', 0.3), 0.25);
 // La feinte de course, le dig du slot, la post derrière.
 t = A('p3', 0.2);
@@ -277,7 +277,7 @@ S.cacheHabillage(tl, t); bloc(null, t);
 S.ardoise(tl, 'ardoise', t, F('z3') + 0.75, 0.5);
 // Sous l'ardoise, le terrain revient à l'état neutre.
 t += 0.65;
-[...def, 'trou', 'e-nc4'].forEach((id) => tl.set('#' + id, { opacity: 0 }, t));
+[...def, ...ZC, ...ZP, 'trou', 'e-nc4'].forEach((id) => tl.set('#' + id, { opacity: 0 }, t));
 S.formation(tl, S.ATTAQUE, t, 0.01);
 S.apparait(tl, 'rx-qb', T('z1') - 0.05); S.apparait(tl, 'rx-wr', T('z2') - 0.05); S.apparait(tl, 'rx-slot', T('z3') + 0.05);
 

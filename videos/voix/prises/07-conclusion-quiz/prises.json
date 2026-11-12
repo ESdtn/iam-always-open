@@ -1,0 +1,596 @@
+{
+ "t1": {
+  "dit": "Cinq couvertures, une seule méthode.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "5 couvertures, une seule méthode."
+ },
+ "a1": {
+  "dit": "Compte les séfti.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.78,
+  "entendu": "Contre les safety."
+ },
+ "a2": {
+  "dit": "Zéro : Coveur zéro.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "0 Cover 0"
+ },
+ "a3": {
+  "dit": "C'est du manne, le ballon part vite.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.97,
+  "entendu": "C'est Dumane, le ballon part vite."
+ },
+ "a4": {
+  "dit": "Un, milieu fermé : regarde le corneur.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Un milieu fermé. Regarde le corner."
+ },
+ "a5": {
+  "dit": "Il te suit, c'est du manne : Coveur un.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.97,
+  "entendu": "Il te suit, c'est Dumane. Cover 1."
+ },
+ "a6": {
+  "dit": "Il recule, c'est de la zone : Coveur trois.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Il recule, c'est de la zone. Cover 3."
+ },
+ "a7": {
+  "dit": "Deux, milieu ouvert : regarde le corneur.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "2. Milieu ouvert. Regarde le corner."
+ },
+ "a8": {
+  "dit": "Il reste court, Coveur deux.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Il reste court, cover 2."
+ },
+ "a9": {
+  "dit": "Il recule, Coveur quatre.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Il recule, cover 4."
+ },
+ "a10": {
+  "dit": "Les deux sont en zone.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Les deux sont en zone."
+ },
+ "j1": {
+  "dit": "Et pour chaque couverture, un joueur à lire.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.98,
+  "entendu": "et pour chaque couverture, un jour à lire."
+ },
+ "j2": {
+  "dit": "Coveur zéro : personne, c'est le chrono.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Cover 0. Personne. C'est le chrono."
+ },
+ "j3": {
+  "dit": "Coveur un : le séfti, et le robeur.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.98,
+  "entendu": "Cover 1, le safety et le rober."
+ },
+ "j4": {
+  "dit": "Coveur trois : le défenseur du flatt.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.98,
+  "entendu": "Cover 3, le défenseur du FLA."
+ },
+ "j5": {
+  "dit": "Coveur deux : le corneur.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Cover 2, le corner."
+ },
+ "j6": {
+  "dit": "Coveur quatre : le séfti.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Cover 4 : le safety"
+ },
+ "q0": {
+  "dit": "À toi de jouer.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "À toi de jouer."
+ },
+ "q1": {
+  "dit": "Six situations.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "6 situations"
+ },
+ "q2": {
+  "dit": "Tu as trois secondes avant le snap, puis l'image se fige.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Tu as 3 secondes avant le snap, puis l'image se fige."
+ },
+ "q3": {
+  "dit": "Dis à voix haute : manne ou zone, quelle couverture, et où va le ballon.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.99,
+  "entendu": "Di à voix haute, man ou zone, quelle couverture, et où va le ballon ?"
+ },
+ "s1": {
+  "dit": "Situation un.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Situation 1"
+ },
+ "r1a": {
+  "dit": "Un séfti, les corneurs reculent : zone, Coveur trois.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.97,
+  "entendu": "Un safety, les corners reculants. Zone, cover 3."
+ },
+ "r1b": {
+  "dit": "Lis le défenseur du flatt.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.92,
+  "entendu": "dit le défenseur du flat."
+ },
+ "s2": {
+  "dit": "Situation deux.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Situation 2"
+ },
+ "r2a": {
+  "dit": "Aucun séfti, tout le monde arrive : manne, Coveur zéro.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Aucun safety, tout le monde arrive. Man, cover 0."
+ },
+ "r2b": {
+  "dit": "slannt, ou couic a-outte, tout de suite.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Slant ou quick out tout de suite."
+ },
+ "s3": {
+  "dit": "Situation trois.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Situation 3"
+ },
+ "r3a": {
+  "dit": "Deux séfti, le corneur reste court : zone, Coveur deux.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.94,
+  "entendu": "De safety, le corner reste court. Zone cover 2."
+ },
+ "r3b": {
+  "dit": "Le smach, en lisant le corneur.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Le smash en lisant le corner."
+ },
+ "s4": {
+  "dit": "Situation quatre.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Situation 4"
+ },
+ "r4a": {
+  "dit": "Un séfti, ton défenseur te suit : manne, Coveur un.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.99,
+  "entendu": "Un safety, ton défenseur te suite. Man, cover 1."
+ },
+ "r4b": {
+  "dit": "Ton meilleur duel dehors, ou le croisement après le robeur.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.98,
+  "entendu": "ton meilleur duel dehors, ou le croisement après le robeur."
+ },
+ "s5": {
+  "dit": "Situation cinq.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Situation 5"
+ },
+ "r5a": {
+  "dit": "Deux séfti bas, les corneurs reculent : zone, Coveur quatre.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.94,
+  "entendu": "2 safety bas, les corners reculants. Zone cover 4."
+ },
+ "r5b": {
+  "dit": "Le hitsh devant le corneur.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Le hitch devant le corner."
+ },
+ "s6": {
+  "dit": "Dernière situation.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Dernière situation."
+ },
+ "s6b": {
+  "dit": "Regarde bien.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Regarde bien."
+ },
+ "r6a": {
+  "dit": "Deux séfti avant le snap.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.92,
+  "entendu": "2 safety avant le snap."
+ },
+ "r6b": {
+  "dit": "Mais au snap, l'un descend, et l'autre glisse au milieu.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Mais au snap, l'un descend et l'autre glisse au milieu."
+ },
+ "r6c": {
+  "dit": "C'est une Coveur trois.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "C'est une Cover 3."
+ },
+ "r6d": {
+  "dit": "Voilà pourquoi on confirme toujours.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Voilà pourquoi on confirme toujours."
+ },
+ "v0": {
+  "dit": "Les défenses ont d'autres tours.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Les défenses ont d'autres tours."
+ },
+ "v01": {
+  "dit": "Trois à connaître.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Trois à connaître."
+ },
+ "v1": {
+  "dit": "La Tampa deux : une Coveur deux où le laïnebakeur du milieu recule fermer le milieu profond.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.99,
+  "entendu": "La Tampa 2, une cover 2 ou le linebacker du milieu recul fermé le milieu profond."
+ },
+ "v2": {
+  "dit": "La deux mane : deux séfti, mais des corneurs collés qui te suivent.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.97,
+  "entendu": "La 2 man, 2 safety, mais des corners collés qui te suivent."
+ },
+ "v3": {
+  "dit": "C'est du manne, tu ne t'arrêtes pas.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "C'est du man, tu ne t'arrêtes pas."
+ },
+ "v4": {
+  "dit": "La Coveur six : Coveur deux d'un côté, Coveur quatre de l'autre.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.97,
+  "entendu": "la cover 6, cover 2 d'un côté, cover 4 l'autre."
+ },
+ "v5": {
+  "dit": "Tu lis ton côté.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Tu lis ton côté."
+ },
+ "e1": {
+  "dit": "La défense te dit toujours quelque chose.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "La défense te dit toujours quelque chose."
+ },
+ "e2": {
+  "dit": "Compte.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Compte"
+ },
+ "e3": {
+  "dit": "Regarde.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Regarde."
+ },
+ "e4": {
+  "dit": "Confirme.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Confirme."
+ },
+ "e5": {
+  "dit": "Et si kouateurbak et receveurs voient la même chose, il y aura toujours quelqu'un d'ouvert.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.97,
+  "entendu": "Et si Kuatorback et Receveur voient la même chose, il y aura toujours quelqu'un d'ouvert."
+ }
+}

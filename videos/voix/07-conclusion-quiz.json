@@ -1,0 +1,135 @@
+{
+  "id": "07-conclusion-quiz",
+  "debut": 1.2,
+  "fin": 4.6,
+  "pause_phrase": 0.32,
+  "pause_scene": 0.9,
+  "scenes": [
+    {
+      "id": "titre",
+      "phrases": [
+        {"id": "t1", "texte": "Cinq couvertures, une seule méthode."}
+      ],
+      "pause": 1.1
+    },
+    {
+      "id": "arbre",
+      "phrases": [
+        {"id": "a1", "texte": "Compte les safeties.", "pause": 0.6},
+        {"id": "a2", "texte": "Zéro : Cover 0.", "pause": 0.3},
+        {"id": "a3", "texte": "C'est du man, le ballon part vite.", "pause": 0.8},
+        {"id": "a4", "texte": "Un, milieu fermé : regarde le corner.", "pause": 0.4},
+        {"id": "a5", "texte": "Il te suit, c'est du man : Cover 1.", "pause": 0.5},
+        {"id": "a6", "texte": "Il recule, c'est de la zone : Cover 3.", "pause": 0.8},
+        {"id": "a7", "texte": "Deux, milieu ouvert : regarde le corner.", "pause": 0.4},
+        {"id": "a8", "texte": "Il reste court, Cover 2.", "pause": 0.5},
+        {"id": "a9", "texte": "Il recule, Cover 4.", "pause": 0.4},
+        {"id": "a10", "texte": "Les deux sont en zone."}
+      ],
+      "pause": 1.2
+    },
+    {
+      "id": "joueurs",
+      "phrases": [
+        {"id": "j1", "texte": "Et pour chaque couverture, un joueur à lire.", "pause": 0.6},
+        {"id": "j2", "texte": "Cover 0 : personne, c'est le chrono.", "pause": 0.5},
+        {"id": "j3", "texte": "Cover 1 : le safety, et le robber.", "pause": 0.5},
+        {"id": "j4", "texte": "Cover 3 : le défenseur du flat.", "pause": 0.5},
+        {"id": "j5", "texte": "Cover 2 : le corner.", "pause": 0.5},
+        {"id": "j6", "texte": "Cover 4 : le safety."}
+      ],
+      "pause": 1.3
+    },
+    {
+      "id": "quiz",
+      "phrases": [
+        {"id": "q0", "texte": "À toi de jouer.", "pause": 0.4},
+        {"id": "q1", "texte": "Six situations.", "pause": 0.5},
+        {"id": "q2", "texte": "Tu as trois secondes avant le snap, puis l'image se fige.", "pause": 0.5},
+        {"id": "q3", "texte": "Dis à voix haute : man ou zone, quelle couverture, et où va le ballon."}
+      ],
+      "pause": 1.2
+    },
+    {
+      "id": "situation-1",
+      "phrases": [
+        {"id": "s1", "texte": "Situation un.", "pause": 8.4},
+        {"id": "r1a", "texte": "Un safety, les corners reculent : zone, Cover 3."},
+        {"id": "r1b", "texte": "Lis le défenseur du flat."}
+      ],
+      "pause": 1.6
+    },
+    {
+      "id": "situation-2",
+      "phrases": [
+        {"id": "s2", "texte": "Situation deux.", "pause": 8.4},
+        {"id": "r2a", "texte": "Aucun safety, tout le monde arrive : man, Cover 0."},
+        {"id": "r2b", "texte": "Slant, ou quick out, tout de suite."}
+      ],
+      "pause": 1.6
+    },
+    {
+      "id": "situation-3",
+      "phrases": [
+        {"id": "s3", "texte": "Situation trois.", "pause": 8.4},
+        {"id": "r3a", "texte": "Deux safeties, le corner reste court : zone, Cover 2."},
+        {"id": "r3b", "texte": "Le smash, en lisant le corner."}
+      ],
+      "pause": 1.6
+    },
+    {
+      "id": "situation-4",
+      "phrases": [
+        {"id": "s4", "texte": "Situation quatre.", "pause": 8.4},
+        {"id": "r4a", "texte": "Un safety, ton défenseur te suit : man, Cover 1."},
+        {"id": "r4b", "texte": "Ton meilleur duel dehors, ou le croisement après le robber."}
+      ],
+      "pause": 1.6
+    },
+    {
+      "id": "situation-5",
+      "phrases": [
+        {"id": "s5", "texte": "Situation cinq.", "pause": 8.4},
+        {"id": "r5a", "texte": "Deux safeties bas, les corners reculent : zone, Cover 4."},
+        {"id": "r5b", "texte": "Le hitch devant le corner."}
+      ],
+      "pause": 1.6
+    },
+    {
+      "id": "situation-6",
+      "phrases": [
+        {"id": "s6", "texte": "Dernière situation.", "pause": 0.4},
+        {"id": "s6b", "texte": "Regarde bien.", "pause": 8.4},
+        {"id": "r6a", "texte": "Deux safeties avant le snap.", "pause": 0.5},
+        {"id": "r6b", "texte": "Mais au snap, l'un descend, et l'autre glisse au milieu.", "pause": 0.6},
+        {"id": "r6c", "texte": "C'est une Cover 3.", "pause": 0.6},
+        {"id": "r6d", "texte": "Voilà pourquoi on confirme toujours."}
+      ],
+      "pause": 1.6
+    },
+    {
+      "id": "variantes",
+      "phrases": [
+        {"id": "v0", "texte": "Les défenses ont d'autres tours.", "pause": 0.4},
+        {"id": "v01", "texte": "Trois à connaître.", "pause": 0.7},
+        {"id": "v1", "texte": "La Tampa 2 : une Cover 2 où le linebacker du milieu recule fermer le milieu profond.", "pause": 1.0},
+        {"id": "v2", "texte": "La 2-Man : deux safeties, mais des corners collés qui te suivent.", "pause": 0.4},
+        {"id": "v3", "texte": "C'est du man, tu ne t'arrêtes pas.", "pause": 1.0},
+        {"id": "v4", "texte": "La Cover 6 : Cover 2 d'un côté, Cover 4 de l'autre.", "pause": 0.4},
+        {"id": "v5", "texte": "Tu lis ton côté."}
+      ],
+      "pause": 1.4
+    },
+    {
+      "id": "cloture",
+      "phrases": [
+        {"id": "e1", "texte": "La défense te dit toujours quelque chose.", "pause": 0.6},
+        {"id": "e2", "texte": "Compte.", "pause": 0.5},
+        {"id": "e3", "texte": "Regarde.", "pause": 0.5},
+        {"id": "e4", "texte": "Confirme.", "pause": 1.0},
+        {"id": "e5", "texte": "Et si quarterback et receveurs voient la même chose, il y aura toujours quelqu'un d'ouvert."}
+      ],
+      "pause": 0.4
+    }
+  ]
+}

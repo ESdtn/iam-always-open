@@ -1,0 +1,475 @@
+{
+ "t1": {
+  "dit": "Coveur quatre.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Cover 4"
+ },
+ "t2": {
+  "dit": "Deux séfti encore, mais quatre défenseurs en profondeur.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "2 safeties encore, mais 4 défenseurs en profondeur."
+ },
+ "c1": {
+  "dit": "Les deux corneurs et les deux séfti prennent chacun un quart du terrain.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.97,
+  "entendu": "Les deux corners et les deux safety prennent chacun un quart du terrain."
+ },
+ "c2": {
+  "dit": "On l'appelle aussi couarteurz.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.98,
+  "entendu": "On l'appelle aussi quarter."
+ },
+ "c3": {
+  "dit": "Conséquence directe : il ne reste que trois défenseurs pour toute la zone courte.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.99,
+  "entendu": "Conséquences directes. Il ne reste que trois défenseurs pour toute la zone courte."
+ },
+ "c4": {
+  "dit": "C'est de la zone, avec une nuance : si tu pars vertical, le défenseur de ton quart te suit comme en manne.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "C'est de la zone, avec une nuance. Si tu pars vertical, le défenseur de ton quart te suit comme en man."
+ },
+ "c5": {
+  "dit": "En dessous, tu t'arrêtes dans le trou.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "En dessous, tu t'arrêtes dans le trou."
+ },
+ "c6": {
+  "dit": "En profondeur, tu continues de courir.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.96,
+  "entendu": "En profondeur, tu continues courir."
+ },
+ "r1": {
+  "dit": "Avant le snap, deux séfti, mais plus bas et plus resserrés qu'en Coveur deux : dix à douze yardz.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.93,
+  "entendu": "Avant le snap, deux safety, mais plus bas et plus resserré qu'en cover 2, 10 à 12 yards."
+ },
+ "r2": {
+  "dit": "Les corneurs sont loin, à sept ou huit yardz.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.87,
+  "entendu": "Les corners sont loin, à 7 ou 8 yards."
+ },
+ "r3": {
+  "dit": "Au snap, confirme : les corneurs reculent.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.96,
+  "entendu": "Au snap, confirme les corners reculants."
+ },
+ "r4": {
+  "dit": "Les séfti, eux, restent à plat, et regardent le slotte.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.96,
+  "entendu": "Les safety, eux, restent à plat et regardent le slot."
+ },
+ "r5": {
+  "dit": "Et dès qu'ils voient une course, ils montent très vite.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.94,
+  "entendu": "Et dès qu'il voit une course, il monte très vite."
+ },
+ "f1": {
+  "dit": "Un : la zone courte.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.89,
+  "entendu": "Anne, la zone courte."
+ },
+ "f2": {
+  "dit": "Trois défenseurs pour toute la largeur du terrain.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Trois défenseurs pour toute la largeur du terrain."
+ },
+ "f3": {
+  "dit": "Deux : devant le corneur qui recule.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Deux, devant le corner qui recule."
+ },
+ "f4": {
+  "dit": "Trois : derrière un séfti qui monte trop vite.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "3. Derrière un safety qui monte trop vite."
+ },
+ "k1": {
+  "dit": "Première arme : prends ce qu'elle te donne.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Première arme, prends ce qu'elle te donne."
+ },
+ "k2": {
+  "dit": "Le receveur extérieur s'arrête à cinq ou si yardz, devant le corneur qui recule.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Le receveur extérieur s'arrête à 5 ou 6 yards, devant le corner qui recule."
+ },
+ "k3": {
+  "dit": "Le slotte, lui, part vertical.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.98,
+  "entendu": "Le slot, lui, part verticale."
+ },
+ "k4": {
+  "dit": "C'est important : c'est son tracé qui tient le séfti en profondeur.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "C'est important. C'est son tracé qui tient le safety en profondeur."
+ },
+ "k5": {
+  "dit": "S'il part tout de suite vers le flatt, le séfti est libre de descendre voler le ballon.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.96,
+  "entendu": "Si par tout de suite vers le FLA, le safety est libre de descendre voler ballon."
+ },
+ "k6": {
+  "dit": "kouateurbak, tu regardes le défenseur du flatt avant le snap.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.99,
+  "entendu": "Quarterback, tu regardes le défenseur du FLA avant le snap."
+ },
+ "k7": {
+  "dit": "S'il est à l'intérieur, le hitsh part dans le rythme.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "S'il est à l'intérieur, le hitch part dans le rythme."
+ },
+ "w1": {
+  "dit": "Receveur : tu vends la verticale pour garder le corneur loin, tu t'arrêtes, tu montres tes mains.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Receveur, tu vends la verticale pour garder le corner loin, tu t'arrêtes, tu montres tes mains."
+ },
+ "w2": {
+  "dit": "Ne cours pas dans un défenseur profond : l'espace est en dessous.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Ne cours pas dans un défenseur profond. L'espace est en dessous."
+ },
+ "p1": {
+  "dit": "Deuxième arme : le séfti.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Deuxième arme, le safety."
+ },
+ "p2": {
+  "dit": "C'est lui, le défenseur en conflit.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "C'est lui le défenseur en conflit."
+ },
+ "p3": {
+  "dit": "On feinte la course pour le faire monter.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "On feinte la course pour le faire monter."
+ },
+ "p4": {
+  "dit": "Le slotte coupe au milieu, à dix ou douze yardz.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.92,
+  "entendu": "Le slot coupe au milieu à 10 ou 12 yards."
+ },
+ "p5": {
+  "dit": "Le receveur extérieur part en pôste, derrière lui.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.96,
+  "entendu": "le receveur extérieur par un poste derrière lui."
+ },
+ "p6": {
+  "dit": "kouateurbak, tu ne regardes que ce séfti.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Quarterback, tu ne regardes que ce safety."
+ },
+ "p7": {
+  "dit": "Il descend sur le slotte : tu lances la pôste.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.99,
+  "entendu": "Il descend sur le slot. Tu lances la poste."
+ },
+ "p8": {
+  "dit": "Il reste profond : tu lances au slotte.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Il reste profond. Tu lances au slot."
+ },
+ "p9": {
+  "dit": "Sans la feinte, ou sans le tracé du slotte, cette pôste file droit entre deux séfti.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.99,
+  "entendu": "Sans la feinte ou sans le tracé du slot, cette poste file droit entre deux safeties."
+ },
+ "p10": {
+  "dit": "On ne la lance pas.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "on ne la lance pas."
+ },
+ "n1": {
+  "dit": "Ne confonds pas avec la Coveur deux.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Ne confonds pas avec la Cover 2."
+ },
+ "n2": {
+  "dit": "En Coveur deux, le corneur reste court, et le trou est le long de la touche.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "En Cover 2, le corner reste court, et le trou est le long de la touche."
+ },
+ "n3": {
+  "dit": "En Coveur quatre, le corneur recule : le trou est devant lui.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "En cover 4, le corner recule. Le trou est devant lui."
+ },
+ "z0": {
+  "dit": "Le réflexe.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Le réflexe."
+ },
+ "z1": {
+  "dit": "kouateurbak : deux séfti et des corneurs loin, le jeu court est ouvert, et la pôste se mérite.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.96,
+  "entendu": "Quarterback. De safety et des corners loin, le jeu court est ouvert et la poste se mérite."
+ },
+ "z2": {
+  "dit": "Receveur : je m'arrête sous les profonds.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Receveur, je m'arrête sous les profonds."
+ },
+ "z3": {
+  "dit": "Et si je suis slotte, c'est moi qui tiens le séfti.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Et si je suis slot, c'est moi qui tiens le safety."
+ }
+}
