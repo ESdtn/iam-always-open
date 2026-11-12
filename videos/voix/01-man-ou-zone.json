@@ -1,0 +1,106 @@
+{
+  "id": "01-man-ou-zone",
+  "debut": 1.2,
+  "fin": 2.4,
+  "pause_phrase": 0.32,
+  "pause_scene": 0.9,
+  "scenes": [
+    {
+      "id": "titre",
+      "phrases": [
+        {"id": "t1", "texte": "Man ou zone ?", "pause": 0.5},
+        {"id": "t2", "texte": "C'est la première question."},
+        {"id": "t3", "texte": "Et elle change tout ce que tu fais ensuite."}
+      ],
+      "pause": 1.1
+    },
+    {
+      "id": "familles",
+      "phrases": [
+        {"id": "f1", "texte": "En man, chaque défenseur a un joueur.", "pause": 0.5},
+        {"id": "f2", "texte": "Il le suit partout, même de l'autre côté du terrain.", "pause": 1.3},
+        {"id": "f3", "texte": "En zone, chaque défenseur a un espace.", "pause": 0.5},
+        {"id": "f4", "texte": "Il te prend quand tu y entres, et il te laisse au suivant quand tu en sors.", "pause": 1.2}
+      ],
+      "pause": 0.8
+    },
+    {
+      "id": "pourquoi",
+      "phrases": [
+        {"id": "w1", "texte": "Pourquoi c'est si important ?"},
+        {"id": "w2", "texte": "Parce que le même tracé ne se finit pas de la même façon.", "pause": 0.7},
+        {"id": "w3", "texte": "Contre du man, tu continues de courir.", "pause": 1.0},
+        {"id": "w4", "texte": "Si tu t'arrêtes, ton défenseur te rattrape.", "pause": 1.3},
+        {"id": "w5", "texte": "Contre de la zone, tu t'arrêtes dans le trou.", "pause": 1.0},
+        {"id": "w6", "texte": "Si tu continues, tu cours droit dans le défenseur suivant.", "pause": 1.3}
+      ],
+      "pause": 0.7
+    },
+    {
+      "id": "indices",
+      "phrases": [
+        {"id": "i0", "texte": "Avant le snap, trois indices.", "pause": 0.6},
+        {"id": "i1", "texte": "Les yeux.", "pause": 0.4},
+        {"id": "i2", "texte": "En man, ton défenseur te regarde, toi.", "pause": 0.6},
+        {"id": "i3", "texte": "En zone, il regarde le quarterback.", "pause": 0.9},
+        {"id": "i4", "texte": "Le placement.", "pause": 0.4},
+        {"id": "i5", "texte": "En man, il est en face de toi, souvent collé, souvent à l'intérieur.", "pause": 0.6},
+        {"id": "i6", "texte": "En zone, il est plus loin, décalé, tourné vers le ballon.", "pause": 0.9},
+        {"id": "i7", "texte": "Le motion.", "pause": 0.4},
+        {"id": "i8", "texte": "Si un défenseur traverse le terrain avec le receveur, c'est du man.", "pause": 1.0},
+        {"id": "i9", "texte": "Si la défense se décale juste d'un cran, c'est de la zone.", "pause": 0.9},
+        {"id": "i10", "texte": "Ce sont des indices."},
+        {"id": "i11", "texte": "Une bonne défense sait mentir."}
+      ],
+      "pause": 1.2
+    },
+    {
+      "id": "preuve",
+      "phrases": [
+        {"id": "s1", "texte": "La preuve arrive au snap.", "pause": 0.6},
+        {"id": "s2", "texte": "Ton défenseur tourne le dos au quarterback et te suit : c'est du man.", "pause": 1.2},
+        {"id": "s3", "texte": "Il recule en gardant les yeux sur le quarterback : c'est de la zone.", "pause": 1.2}
+      ],
+      "pause": 0.8
+    },
+    {
+      "id": "receveur",
+      "phrases": [
+        {"id": "r1", "texte": "Receveur, ça te donne deux façons de jouer.", "pause": 0.5},
+        {"id": "r2", "texte": "En man, tu gagnes un duel : ton départ, ta vitesse, une cassure nette, et tu ne t'arrêtes pas.", "pause": 0.7},
+        {"id": "r3", "texte": "En zone, tu cherches un espace : tu trouves le trou entre deux défenseurs, tu t'y assieds, et tu montres tes mains au quarterback."}
+      ],
+      "pause": 1.1
+    },
+    {
+      "id": "quarterback",
+      "phrases": [
+        {"id": "b1", "texte": "Quarterback, ça te donne deux façons de lire.", "pause": 0.5},
+        {"id": "b2", "texte": "En man, il n'y a pas de trou à trouver."},
+        {"id": "b3", "texte": "Tu choisis ton meilleur duel avant le snap, et tu lances devant ton receveur, loin de son défenseur.", "pause": 1.3},
+        {"id": "b4", "texte": "En zone, tu lis un seul joueur, le défenseur en conflit, et tu lances dans la fenêtre qu'il laisse, à un receveur arrêté.", "pause": 1.4}
+      ],
+      "pause": 0.6
+    },
+    {
+      "id": "rangees",
+      "phrases": [
+        {"id": "k1", "texte": "Dans cette série, deux couvertures sont en man : la Cover 0, et la Cover 1."},
+        {"id": "k2", "texte": "Trois sont en zone : la Cover 2, la Cover 3, et la Cover 4.", "pause": 0.5},
+        {"id": "k3", "texte": "À chaque chapitre, tu verras l'étiquette en haut de l'écran : man, ou zone."}
+      ],
+      "pause": 1.0
+    },
+    {
+      "id": "reflexe",
+      "phrases": [
+        {"id": "x0", "texte": "Le réflexe.", "pause": 0.5},
+        {"id": "x1", "texte": "Receveur : man, je cours.", "pause": 0.4},
+        {"id": "x2", "texte": "Zone, je m'assieds dans le trou.", "pause": 0.7},
+        {"id": "x3", "texte": "Quarterback : man, je choisis mon duel.", "pause": 0.4},
+        {"id": "x4", "texte": "Zone, je lis un défenseur."}
+      ],
+      "pause": 0.2
+    }
+  ]
+}

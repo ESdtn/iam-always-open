@@ -13,7 +13,7 @@ Dernière mise à jour : 12 novembre 2026.
 | Choix de la voix | Fait : Supertonic 3, voix M3 |
 | Prononciation et vitesse de la voix | Voix corrigée (elle lisait en mode anglais), pauses à la ponctuation ; termes anglais à réécouter |
 | Installation de l'outil de rendu | Fait : HyperFrames, un projet par vidéo |
-| Vidéo pilote (introduction) | Deuxième version rendue, en attente de l'avis du coach |
+| Vidéo pilote (introduction) | Validée par le coach |
 | Autres vidéos | À faire |
 | Fusion en une seule vidéo | À faire |
 
@@ -21,7 +21,7 @@ Dernière mise à jour : 12 novembre 2026.
 
 | # | Vidéo | Script | Texte de voix | Audio | Calage | Animation | Rendu | Validé |
 |---|---|---|---|---|---|---|---|---|
-| 0 | Introduction | Relu | Fait | Fait (v2) | Fait | Fait | Fait (v2) | |
+| 0 | Introduction | Relu | Fait | Fait | Fait | Fait | Fait | Oui |
 | 1 | Man ou zone ? | Relu | | | | | | |
 | 2 | Cover 0 | Relu | | | | | | |
 | 3 | Cover 1 | Relu | | | | | | |

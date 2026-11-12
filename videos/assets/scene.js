@@ -137,6 +137,30 @@ function creerScene(hote) {
     tl.to(cam, { z: zoom, tx: sx - zoom * X(cx), ty: sy - zoom * Y(cy), duration: d, ease: 'power2.inOut', onUpdate: poseCamera }, t);
   S.cameraLarge = (tl, t, d = 0.8) => tl.to(cam, { z: 1, tx: 0, ty: 0, duration: d, ease: 'power2.inOut', onUpdate: poseCamera }, t);
 
+  // Apparition d'un élément d'habillage HTML (pas d'un élément du terrain, que GSAP place déjà par x et y).
+  S.apparait = (tl, id, t, d = 0.3) => tl.fromTo(sel(id), { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: d, ease: 'power2.out', immediateRender: false }, t);
+  // Déplace une extrémité d'une ligne (n = 1 ou 2), pour qu'elle suive un joueur.
+  S.bout = (tl, id, n, x, y, t, d, ease = 'none') => tl.to('#' + id, { attr: n === 1 ? { x1: X(x), y1: Y(y) } : { x2: X(x), y2: Y(y) }, duration: d, ease }, t);
+  S.poseLigne = (tl, id, x1, y1, x2, y2, t) => tl.set('#' + id, { attr: { x1: X(x1), y1: Y(y1), x2: X(x2), y2: Y(y2) } }, t);
+  // Même découpage que S.court, pour l'extrémité d'une ligne attachée à un joueur qui court.
+  S.boutCourt = (tl, id, n, pts, t, d) => {
+    const L = pts.slice(1).map((p, i) => Math.hypot(p[0] - pts[i][0], p[1] - pts[i][1])), total = L.reduce((a, b) => a + b, 0);
+    let t0 = t;
+    pts.slice(1).forEach((p, i) => { const di = d * L[i] / total; S.bout(tl, id, n, p[0], p[1], t0, di); t0 += di; });
+  };
+  S.cercle = (id, x, y, r = 34, col = C.orange) => {
+    const el = ajoute('zones', `<g id="${id}" opacity="0"><circle r="${r}" fill="${col}" fill-opacity=".22" stroke="${col}" stroke-width="4" stroke-dasharray="9 7"/></g>`);
+    gsap.set(el, { x: X(x), y: Y(y) });
+    return el;
+  };
+  // Liste d'étapes numérotées (#et1, #et2...) : met la n-ième en avant.
+  S.etape = (tl, n, t, total = 3) => { for (let i = 1; i <= total; i++) {
+    tl.to('#et' + i, { backgroundColor: i === n ? C.orange : 'rgba(0,0,0,0)', color: i === n ? C.ardoise : 'rgba(255,255,255,.45)', duration: 0.2 }, t);
+    tl.to(`#et${i} b`, { color: i === n ? C.ardoise : 'rgba(255,255,255,.55)', duration: 0.2 }, t);
+  } };
+  // Grande étiquette MAN ou ZONE dans la marge droite (#b-man, #b-zone). famille = 'man', 'zone' ou null.
+  S.famille = (tl, famille, t) => ['man', 'zone'].forEach((f) => tl.to('#b-' + f, { opacity: f === famille ? 1 : 0, duration: 0.25 }, t));
+
   // Tableau d'ardoise plein écran : pendant qu'il couvre tout, le terrain est masqué pour de bon.
   S.ardoise = (tl, id, t0, t1, d = 0.45) => {
     const fond = hote.querySelector('svg.fond');

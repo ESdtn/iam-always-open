@@ -28,9 +28,9 @@
 
 **À l'écran**
 
-- Écran partagé, titres **MAN** à gauche et **ZONE** à droite, même formation des deux côtés.
-- Gauche : pointillés de marquage entre chaque défenseur et son receveur. H traverse tout le terrain, son défenseur le suit jusqu'au bout.
-- Droite : zones sable et bleues. H traverse : le premier défenseur l'accompagne jusqu'au bord de sa zone, s'arrête, le suivant le prend. Un petit trait marque le passage de relais.
+- Les deux démonstrations s'enchaînent sur le même terrain, avec une grande étiquette **MAN** puis **ZONE** dans la marge droite.
+- En man : pointillés de marquage entre chaque défenseur et son receveur. H traverse tout le terrain, son défenseur le suit jusqu'au bout.
+- En zone : zones jaunes et bleues. H traverse : le premier défenseur l'accompagne jusqu'au bord de sa zone, s'arrête, le suivant le prend. Un petit trait marque le passage de relais.
 
 ## Scène 3 · Pourquoi ça change tout (≈ 26 s)
 
@@ -44,9 +44,9 @@
 
 **À l'écran**
 
-- Même écran partagé, même tracé rentrant à 10 yards des deux côtés.
-- Gauche : le receveur continue, l'écart avec son défenseur grandit, ballon. Puis contre-exemple en fantôme : il s'arrête, le défenseur lui tombe dessus, croix rouge.
-- Droite : le receveur s'arrête entre deux défenseurs, halo orange sur le trou, ballon. Puis contre-exemple en fantôme : il continue et entre dans la zone suivante, croix rouge.
+- Le même tracé rentrant, à 7 ou 8 yards, joué quatre fois de suite.
+- En man : le receveur continue, l'écart avec son défenseur grandit, ballon. Puis contre-exemple en fantôme : il s'arrête, le défenseur lui tombe dessus, croix rouge.
+- En zone : le receveur s'arrête entre deux défenseurs, halo orange sur le trou, ballon. Puis contre-exemple en fantôme : il continue et entre dans la zone suivante, croix rouge.
 - Texte : **MÊME TRACÉ, DEUX FINS**.
 
 ## Scène 4 · Les indices avant le snap (≈ 36 s)
@@ -83,8 +83,8 @@
 
 **À l'écran**
 
-- Bandeau **AU SNAP**. Écran partagé, même image avant le snap des deux côtés.
-- Snap simultané. Gauche : le corner pivote, dos au QB, et court avec Z. Droite : le corner recule face au jeu, regard sur le QB, et laisse partir Z.
+- Zoom sur Z et son corner. La même image avant le snap, jouée deux fois.
+- Première fois : le corner pivote, dos au QB, et court avec Z. Retour en arrière. Deuxième fois : le corner recule face au jeu, regard sur le QB, et laisse partir Z.
 - Arrêt sur image, étiquettes **MAN** et **ZONE**.
 
 ## Scène 6 · Ce que ça change pour le receveur (≈ 22 s)
@@ -115,7 +115,7 @@
 
 **À l'écran**
 
-- Écran partagé, onglet **QB**.
+- Les deux lectures s'enchaînent sur le terrain, onglet **QB**.
 - Gauche, **MAN** : le cône de vision du QB passe sur les quatre duels et s'arrête sur l'un d'eux. Le ballon arrive devant le receveur en course, du côté opposé au défenseur.
 - Droite, **ZONE** : halo jaune sur un défenseur de zone courte, cône de vision sur lui. Il glisse d'un côté, le ballon part de l'autre, vers un receveur arrêté.
 - Bandeaux bas : **MAN : JE CHOISIS MON DUEL** et **ZONE : JE LIS UN DÉFENSEUR**.

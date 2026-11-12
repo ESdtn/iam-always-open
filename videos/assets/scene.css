@@ -56,3 +56,28 @@ html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; backgro
 .colonne .tete i { font-style: normal; color: var(--orange); margin-left: auto; font-size: 26px; }
 .colonne .carte-plan { display: flex; margin-top: 30px; justify-content: space-between; }
 .plan .fin-plan { margin-top: 60px; text-align: center; }
+
+/* Grande étiquette de famille, marge droite. */
+.badge { position: absolute; right: 30px; top: 44px; width: 260px; text-align: center; font-family: var(--titre); font-size: 76px; line-height: 1; padding: 16px 0 22px; border-radius: 18px; opacity: 0; z-index: 20; box-shadow: 0 6px 18px rgba(0, 0, 0, .4); }
+.badge.man { background: var(--bleu); color: #fff; }
+.badge.zone { background: var(--jaune); color: var(--ardoise); }
+.badge small { display: block; font-family: var(--label); font-weight: 700; font-size: 22px; letter-spacing: .1em; text-transform: uppercase; margin-top: 8px; opacity: .9; }
+
+/* Cartes sur ardoise : réflexe, comparaisons. */
+.titre-ardoise { position: absolute; top: 96px; left: 0; right: 0; text-align: center; }
+.titre-ardoise .script { font-size: 140px; filter: url(#craie); display: inline-block; transform: rotate(-4deg); }
+.cartes { position: absolute; top: 400px; left: 170px; right: 170px; display: flex; gap: 70px; align-items: stretch; }
+.cartes.haut { top: 250px; }
+.carte { flex: 1; position: relative; background: var(--ardoise-claire); border-radius: 14px; padding: 84px 50px 56px; box-shadow: 0 0 0 3px rgba(242, 239, 233, .55); }
+.carte .onglet { position: absolute; top: -34px; left: 44px; background: var(--orange); color: var(--ardoise); font-family: var(--titre); font-size: 50px; padding: 8px 30px 12px; border-radius: 8px; transform: skewX(-10deg); }
+.carte .onglet.man { background: var(--bleu); color: #fff; }
+.carte .onglet.zone { background: var(--jaune); }
+.carte .quand { font-family: var(--label); font-weight: 700; font-size: 34px; letter-spacing: .12em; text-transform: uppercase; color: var(--ciel); margin-bottom: 20px; }
+.carte .quoi { font-family: var(--label); font-weight: 700; font-size: 62px; line-height: 1.12; color: var(--craie); margin-top: 14px; }
+.carte .quoi b { color: var(--orange); }
+.carte .quoi i { font-style: normal; display: inline-block; font-size: 30px; letter-spacing: .1em; text-transform: uppercase; padding: 3px 16px 5px; border-radius: 999px; margin-right: 18px; vertical-align: middle; }
+.carte .quoi i.man { background: var(--bleu); color: #fff; }
+.carte .quoi i.zone { background: var(--jaune); color: var(--ardoise); }
+.carte ul { list-style: none; margin: 0; padding: 0; }
+.carte li { font-family: var(--label); font-weight: 700; font-size: 54px; line-height: 1.15; color: var(--craie); padding: 12px 0; border-bottom: 2px solid rgba(242, 239, 233, .16); }
+.carte li:last-child { border-bottom: 0; color: var(--orange); }

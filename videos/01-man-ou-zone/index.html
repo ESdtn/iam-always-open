@@ -1,0 +1,301 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1920, height=1080">
+<title>01 · Man ou zone ?</title>
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/scene.css">
+<script src="assets/gsap.min.js"></script>
+<script src="assets/kit.js"></script>
+<script src="assets/scene.js"></script>
+<script src="assets/audio/01-man-ou-zone.timing.js"></script>
+</head>
+<body>
+<div id="root" data-composition-id="man-ou-zone" data-start="0" data-duration="100" data-width="1920" data-height="1080">
+  <div id="scene" class="clip" data-start="0" data-duration="100" data-track-index="0"></div>
+  <audio id="voix" src="assets/audio/01-man-ou-zone.mp3" data-start="0" data-duration="100" data-track-index="1" data-volume="1"></audio>
+</div>
+<script>
+// Minutage de la voix : T = début d'une phrase, F = sa fin, A = un instant à l'intérieur (0 = début, 1 = fin).
+const M = window.MINUTAGE, P = {};
+M.scenes.forEach((s) => s.phrases.forEach((p) => { P[p.id] = p; }));
+const T = (id) => P[id].t0, F = (id) => P[id].t1, A = (id, r) => P[id].t0 + r * (P[id].t1 - P[id].t0);
+
+const hote = document.getElementById('scene');
+const S = creerScene(hote);
+const tl = gsap.timeline({ paused: true });
+const { X, Y } = S;
+
+// --- Alignements défensifs : man (collé, à l'intérieur) et zone (en retrait, décalé) ---
+const DEFM = { CBG: [6.7, 1.6], CBD: [46.6, 1.6], N: [14.9, 1.8], LBG: [23, 5.4], LBD: [30.4, 5.4], SS: [38.4, 2.2], FS: [26.667, 13.5] };
+const DEFZ = { CBG: [4.4, 7.5], CBD: [49, 7.5], N: [15, 5], LBG: [22.3, 4.8], LBD: [31.2, 4.8], SS: [41.2, 5], FS: [26.667, 13.2] };
+const LIENS = [['X', 'CBG'], ['H', 'N'], ['Y', 'SS'], ['Z', 'CBD'], ['RB', 'LBD']];
+
+// --- Éléments du terrain ---
+const att = S.creerAttaque(true); // la vidéo part de l'état neutre : l'attaque est déjà en place
+const def = S.creerDefense(DEFZ, false);
+const ZONES_C = ['z-cfg', 'z-hg', 'z-hd', 'z-cfd'], ZONES_P = ['z-p1', 'z-p2', 'z-p3'];
+S.zone('z-cfg', 11.6, 7, 6.3, 1.6, 'CURL / FLAT', 'courte'); S.zone('z-hg', 21.7, 7, 3.7, 1.5, 'HOOK', 'courte');
+S.zone('z-hd', 31.7, 7, 3.7, 1.5, 'HOOK', 'courte'); S.zone('z-cfd', 41.8, 7, 6.3, 1.6, 'CURL / FLAT', 'courte');
+S.zone('z-p1', 9, 18, 8.3, 3.4, '1/3 PROFOND'); S.zone('z-p2', 26.667, 18, 8.3, 3.4, '1/3 PROFOND'); S.zone('z-p3', 44.3, 18, 8.3, 3.4, '1/3 PROFOND');
+S.cone('cone', 26.667, -5, 43.6, 4.5);
+S.cercle('trou', 36.2, 7.5, 36);
+S.trace('t-hx', [[14, -1.3], [16, 3], [44, 3]]);
+S.trace('t-hz', [[14, -1.3], [15.5, 6.4], [44, 6.6]]);
+S.trace('t-dm', [[47.5, -0.1], [47.5, 7.5], [30, 7.5]]);
+S.trace('t-ds', [[47.5, 7.5], [41, 7.5]], { fin: 'stop', col: C.rouge });
+S.trace('t-dz', [[47.5, -0.1], [47.5, 7.5], [36.2, 7.5]], { fin: 'stop' });
+S.trace('t-dc', [[36.2, 7.5], [32.1, 7.5]], { col: C.rouge });
+S.trace('t-zv', [[47.5, -0.1], [47.5, 11]]);
+S.trace('t-out', [[47.5, -0.1], [47.5, 5], [51.6, 5.7]]);
+S.trace('t-curl', [[47.5, -0.1], [47.5, 12.6], [46.1, 10.4]], { fin: 'stop' });
+S.trace('t-flat', [[39.3, -1.2], [40.4, 1.7], [48.8, 2.7]], { op: 0.6 });
+LIENS.forEach(([a, d]) => S.ligne('ln-' + a, S.ATTAQUE[a][0], S.ATTAQUE[a][1], DEFM[d][0], DEFM[d][1], { col: '#fff', w: 3, tirets: '3 8' }));
+S.ligne('l-regard', 46.6, 1.6, 47.5, -0.8, { col: C.jaune, w: 4, tirets: '' });
+S.etiquette('e-man', 13.3, 16.2, 'MAN', { col: C.bleu, coulTexte: '#fff', taille: 46 });
+S.etiquette('e-zone', 40, 16.2, 'ZONE', { taille: 46 });
+S.etiquette('e-meme', 26.667, 21.6, 'MÊME TRACÉ, DEUX FINS', { col: '#fff', coulTexte: C.vertTexte, taille: 22 });
+S.etiquette('e-ind', 26.667, 21.6, 'DES INDICES, PAS DES PREUVES', { col: '#fff', coulTexte: C.vertTexte, taille: 22 });
+S.etiquette('e-rattrape', 41.6, 10.3, 'RATTRAPÉ', { col: C.rouge, coulTexte: '#fff', taille: 19 });
+S.etiquette('e-trou', 36.2, 10.1, 'LE TROU', { col: C.orange, taille: 19 });
+S.etiquette('e-dedans', 31.6, 10.1, 'DANS LE DÉFENSEUR', { col: C.rouge, coulTexte: '#fff', taille: 19 });
+S.etiquette('e-face', 42.4, 3.1, 'EN FACE', { taille: 13 }); S.etiquette('e-colle', 42.4, 1.7, 'COLLÉ', { taille: 13 }); S.etiquette('e-int', 42.4, 0.3, "À L'INTÉRIEUR", { taille: 13 });
+S.etiquette('e-loin', 45, 8.2, 'PLUS LOIN', { taille: 13 }); S.etiquette('e-dec', 45, 6.8, 'DÉCALÉ', { taille: 13 });
+S.etiquette('e-conflit', 42.2, 7.1, 'DÉFENSEUR EN CONFLIT');
+S.ballon();
+
+// --- Habillage ---
+const gribouillis = [
+  rond(30, 20, 78, C.orange, 9), rond(1450, 82, 56, C.orange, 7), croix(1452, 84, 30, C.craie, 7, 0, .8), croix(1558, 92, 28, C.craie, 7, 4, .8), croix(1662, 96, 28, C.craie, 7, -5, .8),
+  croix(1838, 124, 60, C.orange, 16, 4), hachures(8, 470, 13, 46, 48, C.orange, 9, true), rond(150, 990, 50, C.orange, 8), croix(96, 920, 34, C.craie, 8, -8, .85),
+  hachures(1420, 1016, 7, 44, 56, C.orange, 9, false), rond(1850, 800, 30, C.craie, 6, .75), rond(1790, 872, 28, C.craie, 6, .75), rond(1862, 884, 30, C.craie, 6, .75),
+].join('');
+const li = (id, texte) => `<li id="${id}" style="opacity:0">${texte}</li>`;
+const ligne = (id, famille, texte) => `<div class="quoi" id="${id}" style="opacity:0"><i class="${famille}">${famille}</i>${texte}</div>`;
+const carteCover = (id, nom) => `<div class="carte-plan" id="${id}" style="opacity:0"><span class="titre">${nom}</span></div>`;
+hote.insertAdjacentHTML('beforeend', `
+  <div class="panneau" id="panneau" style="opacity:0"><span class="label">Lire la couverture</span><span class="script">Man ou zone ?</span></div>
+  <div class="panneau bas" id="liste" style="opacity:0"><ol class="liste"><li id="et1"><b>1</b>Les yeux</li><li id="et2"><b>2</b>Le placement</li><li id="et3"><b>3</b>Le motion</li></ol></div>
+  <div class="badge man" id="b-man">MAN<small>un défenseur, un joueur</small></div>
+  <div class="badge zone" id="b-zone">ZONE<small>un défenseur, un espace</small></div>
+  <div class="ardoise" id="ardoise" style="opacity:0">
+    <svg width="1920" height="1080" viewBox="0 0 1920 1080">${defs()}${fond()}<g data-layout-allow-overflow>${gribouillis}</g></svg>
+    <div id="bloc-wr">
+      <div class="titre-ardoise"><span class="script">Receveur : deux façons de jouer</span></div>
+      <div class="cartes">
+        <div class="carte" id="wr-man" style="opacity:0"><div class="onglet man">MAN</div><div class="quand">Je gagne un duel</div><ul>${li('wm1', 'Mon départ')}${li('wm2', 'Ma vitesse')}${li('wm3', 'Une cassure nette')}${li('wm4', "Je ne m'arrête pas")}</ul></div>
+        <div class="carte" id="wr-zone" style="opacity:0"><div class="onglet zone">ZONE</div><div class="quand">Je cherche un espace</div><ul>${li('wz1', 'Je trouve le trou')}${li('wz2', "Je m'y assieds")}${li('wz3', 'Je montre mes mains')}</ul></div>
+      </div>
+    </div>
+    <div class="plan" id="bloc-rangees" style="opacity:0">
+      <div class="tete-plan"><span class="script">Les cinq couvertures</span></div>
+      <div class="colonnes">
+        <div class="colonne" id="col-man" style="opacity:0"><div class="tete"><span class="pastille man" style="font-size:44px;padding:6px 30px 8px">Man</span></div>${carteCover('rg-c0', 'COVER 0')}${carteCover('rg-c1', 'COVER 1')}</div>
+        <div class="colonne" id="col-zone" style="opacity:0"><div class="tete"><span class="pastille zone" style="font-size:44px;padding:6px 30px 8px">Zone</span></div>${carteCover('rg-c2', 'COVER 2')}${carteCover('rg-c3', 'COVER 3')}${carteCover('rg-c4', 'COVER 4')}</div>
+      </div>
+      <div class="fin-plan"><div class="carte-plan" id="rg-rappel" style="opacity:0"><span class="label">En haut de chaque chapitre</span><span class="pastille man">Man</span><span class="label">ou</span><span class="pastille zone">Zone</span></div></div>
+    </div>
+    <div id="bloc-reflexe" style="opacity:0">
+      <div class="titre-ardoise"><span class="script">Le réflexe</span></div>
+      <div class="cartes">
+        <div class="carte" id="rx-wr" style="opacity:0"><div class="onglet">WR</div>${ligne('rx1', 'man', 'Je <b>cours.</b>')}${ligne('rx2', 'zone', "Je m'assieds <b>dans le&nbsp;trou.</b>")}</div>
+        <div class="carte" id="rx-qb" style="opacity:0"><div class="onglet">QB</div>${ligne('rx3', 'man', 'Je choisis <b>mon&nbsp;duel.</b>')}${ligne('rx4', 'zone', 'Je lis <b>un défenseur.</b>')}</div>
+      </div>
+    </div>
+  </div>`);
+creerSousTitres(hote, tl, M);
+
+// --- Aides propres à cette vidéo ---
+const liens = (actif, t) => LIENS.forEach(([a]) => (actif ? S.montre(tl, 'ln-' + a, t, 0.25, 0.9) : S.cache(tl, 'ln-' + a, t, 0.2)));
+const poseLiens = (t) => LIENS.forEach(([a, d]) => S.poseLigne(tl, 'ln-' + a, S.ATTAQUE[a][0], S.ATTAQUE[a][1], DEFM[d][0], DEFM[d][1], t));
+const zones = (ids, actif, t) => ids.forEach((id, i) => (actif ? S.montre(tl, id, t + i * 0.05, 0.3) : S.cache(tl, id, t, 0.25)));
+const remet = (formation, t, d = 0.45) => { S.formation(tl, S.ATTAQUE, t, d); S.formation(tl, formation, t, d); poseLiens(t + d + 0.02); };
+const haloRouge = (id, t) => { S.halo(tl, id, t, 0, C.rouge); };
+const haloEteint = (id, t, col = C.jaune) => { tl.to(`#${id} .halo1`, { opacity: 0, duration: 0.2 }, t); tl.set(`#${id} .halo1`, { stroke: col }, t + 0.25); };
+const ZOOM_CB = { zoom: 2.2, cx: 44, cy: 3, sx: 1150, sy: 470 };
+
+// ===== Scène 1 · Titre =====
+S.montre(tl, 'panneau', 0.5, 0.4);
+S.entre(tl, def, T('t1') - 0.5, 0.05);
+S.montre(tl, 'e-man', T('t1'), 0.25); S.montre(tl, 'e-zone', A('t1', 0.55), 0.25);
+let t = F('t3') + 0.45;
+S.cache(tl, 'e-man', t, 0.3); S.cache(tl, 'e-zone', t, 0.3);
+
+// ===== Scène 2 · Deux familles =====
+// En man : un défenseur, un joueur. Il suit partout.
+t = T('f1');
+S.formation(tl, DEFM, t - 0.2, 0.5); S.famille(tl, 'man', t);
+liens(true, A('f1', 0.5));
+t = T('f2') + 0.1;
+const Hx = [[14, -1.9], [16, 3], [44, 3]], Nx = [[14.9, 1.8], [17.6, 4], [42.2, 4]];
+S.dessine(tl, 't-hx', t, 2.5); S.court(tl, 'H', Hx, t, 2.5); S.court(tl, 'N', Nx, t, 2.5);
+S.boutCourt(tl, 'ln-H', 1, Hx, t, 2.5); S.boutCourt(tl, 'ln-H', 2, Nx, t, 2.5);
+// En zone : un défenseur, un espace. Il passe le receveur au suivant.
+t = T('f3') - 0.5;
+S.efface(tl, 't-hx', t, 0.25); liens(false, t); remet(DEFZ, t + 0.05, 0.45);
+S.famille(tl, 'zone', T('f3'));
+zones(ZONES_C, true, A('f3', 0.45)); zones(ZONES_P, true, A('f3', 0.6));
+t = T('f4') + 0.1;
+S.dessine(tl, 't-hz', t, 3.0); S.court(tl, 'H', [[14, -1.9], [15.5, 6.4], [44, 6.6]], t, 3.0);
+[['N', 0, 0.88, 17.4, 5.2, 15, 5], ['LBG', 0.88, 1.5, 24.6, 5, 22.3, 4.8], ['LBD', 1.62, 2.3, 34.2, 5, 31.2, 4.8], ['SS', 2.3, 3.0, 43.4, 5.2, 41.2, 5]].forEach(([id, d0, d1, x, y, x0, y0]) => {
+  S.halo(tl, id, t + d0, d1 - d0);
+  S.va(tl, id, x, y, t + d0, d1 - d0, 'power1.out');
+  if (id !== 'SS') S.va(tl, id, x0, y0, t + d1 + 0.05, 0.4);
+});
+t = T('w1') - 0.55;
+S.efface(tl, 't-hz', t, 0.25); zones([...ZONES_C, ...ZONES_P], false, t); S.famille(tl, null, t); remet(DEFZ, t + 0.05, 0.45);
+
+// ===== Scène 3 · Pourquoi ça change tout =====
+S.montre(tl, 'e-meme', A('w2', 0.3), 0.3);
+// Contre du man : je continue de courir.
+t = T('w3') - 0.35;
+S.formation(tl, DEFM, t, 0.45); S.famille(tl, 'man', T('w3')); S.montre(tl, 'ln-Z', T('w3'), 0.25, 0.9);
+t = A('w3', 0.3);
+const Zm = [[47.5, -0.8], [47.5, 7.5], [30, 7.5]], Cm = [[46.6, 1.6], [46.8, 8.4], [33.6, 8.7]];
+S.dessine(tl, 't-dm', t, 2.0); S.court(tl, 'Z', Zm, t, 2.0); S.court(tl, 'CBD', Cm, t, 2.0);
+S.boutCourt(tl, 'ln-Z', 1, Zm, t, 2.0); S.boutCourt(tl, 'ln-Z', 2, Cm, t, 2.0);
+S.lance(tl, [26.667, -5], [30.3, 7.5], t + 1.35, 0.65); S.halo(tl, 'Z', t + 2.0, 0);
+// Si je m'arrête, il me rattrape.
+t = T('w4') - 0.4;
+S.cache(tl, 'ballon', t, 0.15); haloEteint('Z', t, C.orange); S.efface(tl, 't-dm', t, 0.2);
+S.va(tl, 'Z', 47.5, 7.5, t, 0.35); S.va(tl, 'CBD', 46.8, 8.4, t, 0.35); S.bout(tl, 'ln-Z', 1, 47.5, 7.5, t, 0.35, 'power2.inOut'); S.bout(tl, 'ln-Z', 2, 46.8, 8.4, t, 0.35, 'power2.inOut');
+t = T('w4') + 0.1;
+S.dessine(tl, 't-ds', t, 0.7); S.court(tl, 'Z', [[47.5, 7.5], [41, 7.5]], t, 0.7); S.bout(tl, 'ln-Z', 1, 41, 7.5, t, 0.7);
+S.va(tl, 'CBD', 41.9, 8.3, t, 1.15, 'power1.out'); S.bout(tl, 'ln-Z', 2, 41.9, 8.3, t, 1.15, 'power1.out');
+haloRouge('CBD', t + 1.15); S.montre(tl, 'e-rattrape', t + 1.2, 0.2);
+// Contre de la zone : je m'arrête dans le trou.
+t = T('w5') - 0.5;
+['e-rattrape', 'ln-Z'].forEach((id) => S.cache(tl, id, t, 0.2)); haloEteint('CBD', t); S.efface(tl, 't-ds', t, 0.2);
+remet(DEFZ, t + 0.05, 0.42); zones(ZONES_C, true, t + 0.2); S.famille(tl, 'zone', T('w5'));
+t = A('w5', 0.25);
+S.dessine(tl, 't-dz', t, 1.45); S.court(tl, 'Z', [[47.5, -0.8], [47.5, 7.5], [36.2, 7.5]], t, 1.45);
+S.va(tl, 'CBD', 49, 13.6, t, 1.4, 'power1.out');
+S.montre(tl, 'trou', t + 1.3, 0.25); S.montre(tl, 'e-trou', t + 1.35, 0.25);
+S.lance(tl, [26.667, -5], [35.9, 7.5], t + 1.55, 0.6); S.halo(tl, 'Z', t + 2.15, 0);
+// Si je continue, je cours dans le défenseur suivant.
+t = T('w6') - 0.25;
+S.cache(tl, 'ballon', t, 0.15); haloEteint('Z', t, C.orange); S.cache(tl, 'trou', t, 0.2); S.cache(tl, 'e-trou', t, 0.2);
+t = T('w6') + 0.25;
+S.dessine(tl, 't-dc', t, 0.6); S.court(tl, 'Z', [[36.2, 7.5], [32.3, 7.5]], t, 0.65);
+S.va(tl, 'LBD', 31.4, 6.6, t + 0.1, 0.55, 'power1.out');
+haloRouge('LBD', t + 0.65); S.montre(tl, 'e-dedans', t + 0.7, 0.2);
+
+// ===== Scène 4 · Les indices avant le snap =====
+t = T('i0') - 0.6;
+['e-dedans', 'e-meme'].forEach((id) => S.cache(tl, id, t, 0.25)); haloEteint('LBD', t);
+S.efface(tl, 't-dz', t, 0.2); S.efface(tl, 't-dc', t, 0.2); zones(ZONES_C, false, t); S.famille(tl, null, t);
+remet(DEFM, t + 0.05, 0.45);
+S.montre(tl, 'liste', T('i0'), 0.4);
+// Un : les yeux.
+S.etape(tl, 1, T('i1'));
+S.camera(tl, T('i1') - 0.15, 0.85, ZOOM_CB);
+S.famille(tl, 'man', T('i2')); S.montre(tl, 'l-regard', T('i2') + 0.2, 0.2);
+S.famille(tl, 'zone', T('i3')); S.bout(tl, 'l-regard', 2, 26.667, -5, A('i3', 0.3), 0.45, 'power2.inOut');
+// Deux : le placement.
+t = T('i4');
+S.etape(tl, 2, t); S.cache(tl, 'l-regard', t - 0.1, 0.2); S.famille(tl, null, t);
+S.famille(tl, 'man', T('i5'));
+S.montre(tl, 'e-face', A('i5', 0.3), 0.2); S.montre(tl, 'e-colle', A('i5', 0.6), 0.2); S.montre(tl, 'e-int', A('i5', 0.85), 0.2);
+t = T('i6');
+['e-face', 'e-colle', 'e-int'].forEach((id) => S.cache(tl, id, t - 0.1, 0.2)); S.famille(tl, 'zone', t);
+S.va(tl, 'CBD', 49.2, 7.5, t, 0.45);
+S.montre(tl, 'e-loin', A('i6', 0.4), 0.2); S.montre(tl, 'e-dec', A('i6', 0.62), 0.2);
+S.poseLigne(tl, 'l-regard', 49.2, 7.5, 26.667, -5, A('i6', 0.7)); S.montre(tl, 'l-regard', A('i6', 0.76), 0.25);
+// Trois : le motion.
+t = T('i7');
+S.etape(tl, 3, t); ['e-loin', 'e-dec', 'l-regard'].forEach((id) => S.cache(tl, id, t - 0.15, 0.2)); S.famille(tl, null, t);
+S.cameraLarge(tl, t - 0.1, 0.85); S.formation(tl, DEFM, t, 0.5);
+t = T('i8');
+S.famille(tl, 'man', t); S.montre(tl, 'ln-H', t, 0.25, 0.9);
+S.va(tl, 'H', 33, -2.7, t + 0.2, 1.8, 'power1.inOut'); S.va(tl, 'N', 33.6, 2.6, t + 0.2, 1.8, 'power1.inOut');
+S.bout(tl, 'ln-H', 1, 33, -2.7, t + 0.2, 1.8, 'power1.inOut'); S.bout(tl, 'ln-H', 2, 33.6, 2.6, t + 0.2, 1.8, 'power1.inOut');
+t = T('i9') - 0.5;
+S.cache(tl, 'ln-H', t, 0.2); remet(DEFZ, t + 0.02, 0.45); S.famille(tl, 'zone', T('i9'));
+t = T('i9') + 0.25;
+S.va(tl, 'H', 33, -2.7, t, 1.8, 'power1.inOut');
+[['N', 17, 5], ['LBG', 24.3, 4.8], ['LBD', 33.2, 4.8], ['SS', 43.2, 5], ['FS', 28.4, 13.2]].forEach(([id, x, y]) => S.va(tl, id, x, y, t + 0.35, 1.3, 'power1.inOut'));
+S.montre(tl, 'e-ind', T('i10'), 0.3);
+
+// ===== Scène 5 · La preuve au snap =====
+t = T('s1') - 0.6;
+['e-ind', 'liste'].forEach((id) => S.cache(tl, id, t, 0.25)); S.famille(tl, null, t);
+remet(DEFZ, t + 0.05, 0.45); S.va(tl, 'CBD', 48.3, 4.5, t + 0.05, 0.45);
+const ZOOM_SNAP = { zoom: 1.9, cx: 44, cy: 5, sx: 1180, sy: 480 };
+S.camera(tl, T('s1'), 0.85, ZOOM_SNAP);
+// Il tourne le dos et il suit : man.
+t = T('s2') + 0.2;
+S.dessine(tl, 't-zv', t, 1.3); S.court(tl, 'Z', [[47.5, -0.8], [47.5, 11]], t, 1.35);
+S.va(tl, 'CBD', 48.5, 11.9, t + 0.1, 1.3, 'power1.in');
+S.poseLigne(tl, 'ln-Z', 47.5, 11, 48.5, 11.9, t + 1.3); S.montre(tl, 'ln-Z', t + 1.4, 0.2, 0.9);
+S.famille(tl, 'man', A('s2', 0.78));
+// Il recule, les yeux sur le quarterback : zone.
+t = T('s3') - 0.55;
+S.efface(tl, 't-zv', t, 0.2); S.cache(tl, 'ln-Z', t, 0.2); S.famille(tl, null, t);
+S.va(tl, 'Z', 47.5, -0.8, t, 0.45); S.va(tl, 'CBD', 48.3, 4.5, t, 0.45);
+t = T('s3') + 0.2;
+S.poseLigne(tl, 'l-regard', 48.3, 4.5, 26.667, -5, t - 0.05); S.montre(tl, 'l-regard', t, 0.2);
+S.dessine(tl, 't-zv', t, 1.3); S.court(tl, 'Z', [[47.5, -0.8], [47.5, 11]], t, 1.35);
+S.va(tl, 'CBD', 49.4, 14.2, t, 1.35, 'power1.out'); S.bout(tl, 'l-regard', 1, 49.4, 14.2, t, 1.35, 'power1.out');
+S.famille(tl, 'zone', A('s3', 0.78));
+
+// ===== Scène 6 · Ce que ça change pour le receveur (sur ardoise) =====
+t = T('r1') - 0.6;
+S.cache(tl, 'panneau', t, 0.25); S.famille(tl, null, t);
+S.ardoise(tl, 'ardoise', t, F('r3') + 0.55, 0.45);
+// Sous l'ardoise : retour au plan large et à l'alignement man.
+t += 0.55;
+S.cameraLarge(tl, t, 0.01); S.efface(tl, 't-zv', t, 0.01); tl.set('#l-regard', { opacity: 0 }, t); remet(DEFM, t, 0.01);
+S.apparait(tl, 'wr-man', T('r2') - 0.1);
+['wm1', 'wm2', 'wm3', 'wm4'].forEach((id, i) => S.apparait(tl, id, A('r2', [0.36, 0.5, 0.66, 0.86][i])));
+S.apparait(tl, 'wr-zone', T('r3') - 0.1);
+['wz1', 'wz2', 'wz3'].forEach((id, i) => S.apparait(tl, id, A('r3', [0.34, 0.68, 0.82][i])));
+tl.set('#bloc-wr', { opacity: 0 }, F('r3') + 1.1); tl.set('#bloc-rangees', { opacity: 1 }, F('r3') + 1.1);
+
+// ===== Scène 7 · Ce que ça change pour le quarterback =====
+S.montre(tl, 'panneau', F('r3') + 0.7, 0.3);
+// En man : je choisis mon duel, je lance devant mon receveur, loin de son défenseur.
+S.famille(tl, 'man', T('b2')); liens(true, T('b2') + 0.2);
+['X', 'H', 'Y'].forEach((id, i) => S.halo(tl, id, A('b3', 0.06) + i * 0.24, 0.3));
+S.halo(tl, 'Z', A('b3', 0.06) + 0.72, 0);
+t = A('b3', 0.5);
+const Zo = [[47.5, -0.8], [47.5, 5], [51.6, 5.7]], Co = [[46.6, 1.6], [46.8, 4.3], [49.4, 6.7]];
+S.dessine(tl, 't-out', t, 0.95); S.court(tl, 'Z', Zo, t, 0.95); S.court(tl, 'CBD', Co, t + 0.08, 1.0);
+S.boutCourt(tl, 'ln-Z', 1, Zo, t, 0.95); S.boutCourt(tl, 'ln-Z', 2, Co, t + 0.08, 1.0);
+S.lance(tl, [26.667, -5], [51.9, 5.7], t + 0.4, 0.6);
+// En zone : je lis un seul joueur, je lance dans la fenêtre qu'il laisse.
+t = T('b4') - 0.55;
+S.cache(tl, 'ballon', t, 0.15); haloEteint('Z', t, C.orange); S.efface(tl, 't-out', t, 0.2); liens(false, t);
+remet(DEFZ, t + 0.05, 0.45); zones(ZONES_C, true, t + 0.25); S.famille(tl, 'zone', T('b4'));
+S.conflit(tl, 'SS', A('b4', 0.16)); S.montre(tl, 'cone', A('b4', 0.2), 0.3); S.montre(tl, 'e-conflit', A('b4', 0.3), 0.25);
+tl.to('#z-cfd text', { opacity: 0, duration: 0.2 }, A('b4', 0.28));
+t = A('b4', 0.42);
+S.dessine(tl, 't-curl', t, 1.25); S.court(tl, 'Z', [[47.5, -0.8], [47.5, 12.6], [46.1, 10.4]], t, 1.3);
+S.dessine(tl, 't-flat', t, 1.0); S.court(tl, 'Y', [[39.3, -1.9], [40.4, 1.7], [48.8, 2.7]], t, 1.05);
+S.va(tl, 'CBD', 49, 14.8, t, 1.3, 'power1.out'); S.va(tl, 'CBG', 4.4, 13, t, 1.3, 'power1.out');
+S.va(tl, 'SS', 44.7, 4.2, A('b4', 0.66), 0.5);
+S.lance(tl, [26.667, -5], [46.1, 10.4], A('b4', 0.84), 0.7); S.halo(tl, 'Z', A('b4', 0.84) + 0.7, 0);
+
+// ===== Scènes 8 et 9 · Les cinq couvertures, puis le réflexe (sur ardoise) =====
+t = T('k1') - 0.6;
+S.cache(tl, 'panneau', t, 0.25); S.famille(tl, null, t);
+S.ardoise(tl, 'ardoise', t, F('x4') + 0.75, 0.5);
+// Sous l'ardoise, le terrain revient à l'état neutre.
+t += 0.65;
+[...def, ...ZONES_C, 'cone', 'ballon', 'e-conflit'].forEach((id) => tl.set('#' + id, { opacity: 0 }, t));
+['t-curl', 't-flat'].forEach((id) => S.efface(tl, id, t, 0.01));
+tl.set('#Z .halo1', { opacity: 0 }, t); S.formation(tl, S.ATTAQUE, t, 0.01);
+S.apparait(tl, 'col-man', A('k1', 0.42)); S.apparait(tl, 'rg-c0', A('k1', 0.68)); S.apparait(tl, 'rg-c1', A('k1', 0.88));
+S.apparait(tl, 'col-zone', A('k2', 0.12)); S.apparait(tl, 'rg-c2', A('k2', 0.45)); S.apparait(tl, 'rg-c3', A('k2', 0.68)); S.apparait(tl, 'rg-c4', A('k2', 0.9));
+S.apparait(tl, 'rg-rappel', A('k3', 0.45));
+t = T('x0') - 0.5;
+S.cache(tl, 'bloc-rangees', t, 0.3); S.montre(tl, 'bloc-reflexe', t + 0.3, 0.3);
+S.apparait(tl, 'rx-wr', T('x1') - 0.05); S.apparait(tl, 'rx1', A('x1', 0.45)); S.apparait(tl, 'rx2', T('x2') + 0.1);
+S.apparait(tl, 'rx-qb', T('x3') - 0.05); S.apparait(tl, 'rx3', A('x3', 0.5)); S.apparait(tl, 'rx4', T('x4') + 0.1);
+
+window.__timelines = window.__timelines || {};
+window.__timelines['man-ou-zone'] = tl;
+tl.seek(0);
+</script>
+</body>
+</html>
