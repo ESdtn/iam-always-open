@@ -55,101 +55,101 @@ Au snap, confirme : ton défenseur te suit, le safety reste au milieu.
 Le safety ne peut pas être partout.
 
 15
-00:00:48,116 --> 00:00:50,390
+00:00:48,116 --> 00:00:50,510
 Un : les duels à l'extérieur sont loin de lui.
 
 16
-00:00:51,290 --> 00:00:54,357
+00:00:51,410 --> 00:00:54,477
 Deux : sur un tracé vers la touche, personne ne vient aider.
 
 17
-00:00:55,657 --> 00:00:58,868
+00:00:55,777 --> 00:00:58,988
 Trois : sur un croisement, ton défenseur court derrière toi.
 
 18
-00:01:01,068 --> 00:01:06,223
+00:01:01,188 --> 00:01:06,343
 Quarterback, tu as deux joueurs à situer, et seulement deux : le safety, et le robber.
 
 19
-00:01:06,823 --> 00:01:09,511
+00:01:06,943 --> 00:01:09,632
 Tous les autres ont le dos tourné, occupés par leur receveur.
 
 20
-00:01:10,311 --> 00:01:16,051
+00:01:10,432 --> 00:01:16,171
 Règle simple : tu lances loin du safety, et jamais sur un croisement avant que ton receveur ait dépassé le robber.
 
 21
-00:01:17,571 --> 00:01:19,890
+00:01:17,691 --> 00:01:20,010
 Première arme : ton meilleur duel à l'extérieur.
 
 22
-00:01:20,490 --> 00:01:25,447
+00:01:20,610 --> 00:01:25,567
 Receveur, tu vends la verticale pour faire reculer ton défenseur, puis tu casses à l'opposé de son levier.
 
 23
-00:01:26,047 --> 00:01:29,392
+00:01:26,167 --> 00:01:29,512
 Il est dedans, tu casses dehors : out, ou comeback.
 
 24
-00:01:30,792 --> 00:01:35,277
+00:01:30,912 --> 00:01:35,397
 Sur la fade, garde ta largeur : si tu te rapproches du milieu, tu amènes le safety.
 
 25
-00:01:37,277 --> 00:01:38,849
+00:01:37,397 --> 00:01:38,969
 Deuxième arme : le mesh.
 
 26
-00:01:39,349 --> 00:01:42,214
+00:01:39,469 --> 00:01:42,334
 Les deux slots se croisent à cinq yards, épaule contre épaule.
 
 27
-00:01:42,714 --> 00:01:44,641
+00:01:42,834 --> 00:01:44,761
 Les défenseurs qui poursuivent doivent contourner.
 
 28
-00:01:45,641 --> 00:01:49,002
+00:01:45,761 --> 00:01:49,122
 Receveur, tu ne t'arrêtes jamais, et tu accélères après le croisement.
 
 29
-00:01:49,702 --> 00:01:53,653
+00:01:49,822 --> 00:01:53,773
 Quarterback, tu lances à celui qui a pris de l'avance, une fois le robber derrière lui.
 
 30
-00:01:55,853 --> 00:01:57,466
+00:01:55,973 --> 00:01:57,586
 Le piège, c'est la Cover 3.
 
 31
-00:01:57,866 --> 00:02:00,900
+00:01:57,986 --> 00:02:01,020
 Avant le snap, c'est la même image : un safety au milieu.
 
 32
-00:02:01,600 --> 00:02:02,741
+00:02:01,720 --> 00:02:02,861
 La différence se voit au snap.
 
 33
-00:02:03,141 --> 00:02:05,657
+00:02:03,261 --> 00:02:05,777
 En Cover 1, le corner reste attaché à son receveur.
 
 34
-00:02:06,857 --> 00:02:09,507
+00:02:06,977 --> 00:02:09,627
 En Cover 3, il recule en regardant le quarterback.
 
 35
-00:02:10,707 --> 00:02:13,811
+00:02:10,827 --> 00:02:13,932
 Même un corner collé peut reculer : ne te fie pas qu'à sa distance.
 
 36
-00:02:15,331 --> 00:02:15,926
+00:02:15,452 --> 00:02:16,046
 Le réflexe.
 
 37
-00:02:16,426 --> 00:02:20,864
+00:02:16,546 --> 00:02:20,984
 Quarterback : un safety et du man, je lance loin du safety, après le robber.
 
 38
-00:02:21,464 --> 00:02:23,663
+00:02:21,584 --> 00:02:23,783
 Receveur : man, je gagne mon duel.
 
 39
-00:02:24,063 --> 00:02:26,453
+00:02:24,183 --> 00:02:26,573
 Je cours, je sépare, je ne m'arrête pas.

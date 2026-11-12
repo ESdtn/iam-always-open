@@ -1,7 +1,7 @@
 // Généré par outils/voix/synthese.py. Ne pas modifier à la main.
 window.MINUTAGE = {
  "id": "03-cover-1",
- "duree": 149.37,
+ "duree": 149.49,
  "scenes": [
   {
    "id": "titre",
@@ -105,7 +105,7 @@ window.MINUTAGE = {
   {
    "id": "faiblesses",
    "t0": 46.17,
-   "t1": 58.868,
+   "t1": 58.988,
    "phrases": [
     {
      "id": "f0",
@@ -116,186 +116,186 @@ window.MINUTAGE = {
     {
      "id": "f1",
      "t0": 48.116,
-     "t1": 50.39,
+     "t1": 50.51,
      "texte": "Un : les duels à l'extérieur sont loin de lui."
     },
     {
      "id": "f2",
-     "t0": 51.29,
-     "t1": 54.357,
+     "t0": 51.41,
+     "t1": 54.477,
      "texte": "Deux : sur un tracé vers la touche, personne ne vient aider."
     },
     {
      "id": "f3",
-     "t0": 55.657,
-     "t1": 58.868,
+     "t0": 55.777,
+     "t1": 58.988,
      "texte": "Trois : sur un croisement, ton défenseur court derrière toi."
     }
    ]
   },
   {
    "id": "battre-qb",
-   "t0": 61.068,
-   "t1": 76.051,
+   "t0": 61.188,
+   "t1": 76.171,
    "phrases": [
     {
      "id": "q1",
-     "t0": 61.068,
-     "t1": 66.223,
+     "t0": 61.188,
+     "t1": 66.343,
      "texte": "Quarterback, tu as deux joueurs à situer, et seulement deux : le safety, et le robber."
     },
     {
      "id": "q2",
-     "t0": 66.823,
-     "t1": 69.511,
+     "t0": 66.943,
+     "t1": 69.632,
      "texte": "Tous les autres ont le dos tourné, occupés par leur receveur."
     },
     {
      "id": "q3",
-     "t0": 70.311,
-     "t1": 76.051,
+     "t0": 70.432,
+     "t1": 76.171,
      "texte": "Règle simple : tu lances loin du safety, et jamais sur un croisement avant que ton receveur ait dépassé le robber."
     }
    ]
   },
   {
    "id": "duel",
-   "t0": 77.571,
-   "t1": 95.277,
+   "t0": 77.691,
+   "t1": 95.397,
    "phrases": [
     {
      "id": "d1",
-     "t0": 77.571,
-     "t1": 79.89,
+     "t0": 77.691,
+     "t1": 80.01,
      "texte": "Première arme : ton meilleur duel à l'extérieur."
     },
     {
      "id": "d2",
-     "t0": 80.49,
-     "t1": 85.447,
+     "t0": 80.61,
+     "t1": 85.567,
      "texte": "Receveur, tu vends la verticale pour faire reculer ton défenseur, puis tu casses à l'opposé de son levier."
     },
     {
      "id": "d3",
-     "t0": 86.047,
-     "t1": 89.392,
+     "t0": 86.167,
+     "t1": 89.512,
      "texte": "Il est dedans, tu casses dehors : out, ou comeback."
     },
     {
      "id": "d4",
-     "t0": 90.792,
-     "t1": 95.277,
+     "t0": 90.912,
+     "t1": 95.397,
      "texte": "Sur la fade, garde ta largeur : si tu te rapproches du milieu, tu amènes le safety."
     }
    ]
   },
   {
    "id": "mesh",
-   "t0": 97.277,
-   "t1": 113.653,
+   "t0": 97.397,
+   "t1": 113.773,
    "phrases": [
     {
      "id": "m1",
-     "t0": 97.277,
-     "t1": 98.849,
+     "t0": 97.397,
+     "t1": 98.969,
      "texte": "Deuxième arme : le mesh."
     },
     {
      "id": "m2",
-     "t0": 99.349,
-     "t1": 102.214,
+     "t0": 99.469,
+     "t1": 102.334,
      "texte": "Les deux slots se croisent à cinq yards, épaule contre épaule."
     },
     {
      "id": "m3",
-     "t0": 102.714,
-     "t1": 104.641,
+     "t0": 102.834,
+     "t1": 104.761,
      "texte": "Les défenseurs qui poursuivent doivent contourner."
     },
     {
      "id": "m4",
-     "t0": 105.641,
-     "t1": 109.002,
+     "t0": 105.761,
+     "t1": 109.122,
      "texte": "Receveur, tu ne t'arrêtes jamais, et tu accélères après le croisement."
     },
     {
      "id": "m5",
-     "t0": 109.702,
-     "t1": 113.653,
+     "t0": 109.822,
+     "t1": 113.773,
      "texte": "Quarterback, tu lances à celui qui a pris de l'avance, une fois le robber derrière lui."
     }
    ]
   },
   {
    "id": "confondre",
-   "t0": 115.853,
-   "t1": 133.811,
+   "t0": 115.973,
+   "t1": 133.932,
    "phrases": [
     {
      "id": "n1",
-     "t0": 115.853,
-     "t1": 117.466,
+     "t0": 115.973,
+     "t1": 117.586,
      "texte": "Le piège, c'est la Cover 3."
     },
     {
      "id": "n2",
-     "t0": 117.866,
-     "t1": 120.9,
+     "t0": 117.986,
+     "t1": 121.02,
      "texte": "Avant le snap, c'est la même image : un safety au milieu."
     },
     {
      "id": "n3",
-     "t0": 121.6,
-     "t1": 122.741,
+     "t0": 121.72,
+     "t1": 122.861,
      "texte": "La différence se voit au snap."
     },
     {
      "id": "n4",
-     "t0": 123.141,
-     "t1": 125.657,
+     "t0": 123.261,
+     "t1": 125.777,
      "texte": "En Cover 1, le corner reste attaché à son receveur."
     },
     {
      "id": "n5",
-     "t0": 126.857,
-     "t1": 129.507,
+     "t0": 126.977,
+     "t1": 129.627,
      "texte": "En Cover 3, il recule en regardant le quarterback."
     },
     {
      "id": "n6",
-     "t0": 130.707,
-     "t1": 133.811,
+     "t0": 130.827,
+     "t1": 133.932,
      "texte": "Même un corner collé peut reculer : ne te fie pas qu'à sa distance."
     }
    ]
   },
   {
    "id": "reflexe",
-   "t0": 135.331,
-   "t1": 146.453,
+   "t0": 135.452,
+   "t1": 146.573,
    "phrases": [
     {
      "id": "z0",
-     "t0": 135.331,
-     "t1": 135.926,
+     "t0": 135.452,
+     "t1": 136.046,
      "texte": "Le réflexe."
     },
     {
      "id": "z1",
-     "t0": 136.426,
-     "t1": 140.864,
+     "t0": 136.546,
+     "t1": 140.984,
      "texte": "Quarterback : un safety et du man, je lance loin du safety, après le robber."
     },
     {
      "id": "z2",
-     "t0": 141.464,
-     "t1": 143.663,
+     "t0": 141.584,
+     "t1": 143.783,
      "texte": "Receveur : man, je gagne mon duel."
     },
     {
      "id": "z3",
-     "t0": 144.063,
-     "t1": 146.453,
+     "t0": 144.183,
+     "t1": 146.573,
      "texte": "Je cours, je sépare, je ne m'arrête pas."
     }
    ]
