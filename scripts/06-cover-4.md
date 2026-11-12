@@ -1,6 +1,6 @@
-# 05 · Cover 4
+# 06 · Cover 4
 
-- **Durée visée :** 3 min
+- **Durée visée :** 3 min 10
 - **Image de départ :** état neutre (dernière image de « Cover 2 »)
 - **Image de fin :** état neutre
 - **Ce que le joueur doit retenir :** deux safeties et des corners qui reculent = le jeu court est ouvert, et la post ne se lance que si le safety a été attiré.
@@ -16,19 +16,22 @@
 **À l'écran**
 
 - État neutre. La défense entre : deux safeties à 11 yds, resserrés, corners à 7-8 yds, N et deux LB en dessous.
-- Titre **COVER 4**, pastilles **ZONE · 2 SAFETIES · « QUARTERS »**.
+- Titre **COVER 4**, pastilles **ZONE · 2 SAFETIES · MOFO**.
 
-## Scène 2 · Carte d'identité (≈ 16 s)
+## Scène 2 · Carte d'identité (≈ 28 s)
 
 **Voix off**
 
 > Les deux corners et les deux safeties prennent chacun un quart du terrain. On l'appelle aussi quarters. Conséquence directe : il ne reste que trois défenseurs pour toute la zone courte.
+>
+> C'est de la zone, avec une nuance : si tu pars vertical, le défenseur de ton quart te suit comme en man. En dessous, tu t'arrêtes dans le trou. En profondeur, tu continues de courir.
 
 **À l'écran**
 
 - Quatre zones bleues **1/4 PROFOND** se dessinent.
 - Trois zones sable seulement : **CURL/FLAT** (N), **HOOK** (LB), **CURL/FLAT** (LB). Les espaces entre elles restent visibles.
-- Compteur **4 PROFONDS · 3 DESSOUS**.
+- Compteur **4 PROFONDS · 3 DESSOUS**, étiquette **MOFO** entre les deux safeties.
+- L'étiquette **ZONE** du bandeau grossit un instant. Puis un receveur part vertical : le défenseur de son quart le suit, relié par un pointillé de marquage. Rappel à l'écran : **COURT = JE M'ASSIEDS · VERTICAL = JE COURS**.
 
 ## Scène 3 · La reconnaître (≈ 28 s)
 
@@ -137,6 +140,7 @@
 
 ## Notes pour le coach
 
+- **Scène 2, la nuance man sur les verticaux** : c'est le comportement des quarters modernes, dites « match ». Si tes adversaires jouent une Cover 4 en zone pure, on retire la phrase.
 - **Slant et curl retirés** des tracés gagnants du guide PDF : quand le slot part au flat, le safety vient voler le tracé rentrant du receveur extérieur. La règle vient d'un seul coach, mais une deuxième source juge le concept curls et flats mauvais contre cette couverture.
 - **Scène 5, lecture du défenseur du flat avant le snap** : formulation de ma part. Les sources confirment que le hitch et le quick out sont très difficiles à défendre quand les corners reculent.
 - **Scène 7** : c'est le concept post et dig, souvent appelé Mills ou Pin. Mets le nom que vous lui donnez.

@@ -16,11 +16,11 @@ Rendues en 1920 × 1080 par `node identite-visuelle/render.cjs`, à partir de `r
 | Fichier | Rôle |
 |---|---|
 | `reference/01-titre.png` | Titre de la série |
-| `reference/02-terrain-clair.png` | Scène de terrain, version porte-bloc (recommandée) |
-| `reference/03-terrain-ardoise.png` | La même scène, version tout ardoise |
+| `reference/02-terrain-clair.png` | Scène de terrain, version porte-bloc (retenue) |
+| `reference/03-terrain-ardoise.png` | La même scène, version tout ardoise (écartée) |
 | `reference/04-reflexe.png` | Carte « réflexe » de fin de chapitre |
 
-**Décision à prendre : terrain clair ou terrain ardoise.** Je recommande le clair. Sur un vidéoprojecteur en salle éclairée, un fond sombre perd son contraste et les zones translucides deviennent illisibles ; la feuille claire reste nette. Elle fait aussi le lien avec le guide PDF que les joueurs connaissent déjà.
+**Décision prise : terrain clair.** Sur un vidéoprojecteur en salle éclairée, un fond sombre perd son contraste et les zones translucides deviennent illisibles ; la feuille claire reste nette. La version ardoise reste dans le kit, pour mémoire.
 
 ## Couleurs
 

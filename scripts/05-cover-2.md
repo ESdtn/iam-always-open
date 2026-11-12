@@ -1,4 +1,4 @@
-# 04 · Cover 2
+# 05 · Cover 2
 
 - **Durée visée :** 3 min 10
 - **Image de départ :** état neutre (dernière image de « Cover 3 »)
@@ -11,24 +11,27 @@
 
 **Voix off**
 
-> Cover 2. Deux safeties, et le milieu du terrain s'ouvre.
+> Cover 2. Deux safeties, et le milieu du terrain s'ouvre : MOFO.
 
 **À l'écran**
 
 - État neutre. La défense entre : deux safeties à 13 yds près des hashes, corners à 5 yds, N et deux LB en dessous.
-- Titre **COVER 2**, pastilles **ZONE · 2 SAFETIES · MILIEU OUVERT**.
+- Titre **COVER 2**, pastilles **ZONE · 2 SAFETIES · MOFO**.
 
-## Scène 2 · Carte d'identité (≈ 16 s)
+## Scène 2 · Carte d'identité (≈ 20 s)
 
 **Voix off**
 
 > Les deux safeties se partagent la profondeur, une moitié chacun. Devant eux, cinq défenseurs en zone courte. Les corners ne reculent pas : ils gardent les flats.
+>
+> C'est de la zone : tu cherches le trou, et tu t'y arrêtes.
 
 **À l'écran**
 
-- Deux grandes zones bleues **MOITIÉ PROFONDE**. Cadenas ouvert entre les deux.
+- Deux grandes zones bleues **MOITIÉ PROFONDE**. Cadenas ouvert entre les deux, étiquette **MOFO**.
 - Cinq zones sable : **FLAT** (CB), **CURL** (N), **HOOK** (LB), **CURL** (LB), **FLAT** (CB).
 - Compteur **2 PROFONDS · 5 DESSOUS**.
+- L'étiquette **ZONE** du bandeau grossit un instant, avec le rappel **ZONE = JE M'ASSIEDS DANS LE TROU**.
 
 ## Scène 3 · La reconnaître (≈ 26 s)
 

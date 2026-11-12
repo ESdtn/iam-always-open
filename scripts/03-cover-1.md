@@ -1,4 +1,4 @@
-# 02 · Cover 1
+# 03 · Cover 1
 
 - **Durée visée :** 3 min
 - **Image de départ :** état neutre (dernière image de « Cover 0 »)
@@ -16,20 +16,21 @@
 **À l'écran**
 
 - État neutre. La défense entre : quatre défenseurs sur les receveurs, un FS seul au milieu à 13 yds.
-- Titre **COVER 1**, pastilles **MAN · 1 SAFETY · MILIEU FERMÉ**.
+- Titre **COVER 1**, pastilles **MAN · 1 SAFETY · MOFC**.
 
-## Scène 2 · Carte d'identité (≈ 20 s)
+## Scène 2 · Carte d'identité (≈ 24 s)
 
 **Voix off**
 
-> Chaque receveur a son défenseur, comme en Cover 0. La différence : un safety reste au milieu, en profondeur. Le milieu du terrain est fermé.
+> Chaque receveur a son défenseur, comme en Cover 0. Man, donc tu cours et tu ne t'arrêtes pas. La différence : un safety reste au milieu, en profondeur. Le milieu du terrain est fermé : MOFC.
 >
 > Et la défense garde souvent un joueur libre au milieu court, pour couper les croisements. On l'appelle le robber.
 
 **À l'écran**
 
 - Pointillés de marquage (CB-X, N-H, SS-Y, CB-Z, LB-RB).
-- Zone bleue ovale autour du FS, texte **AIDE PROFONDE**, cadenas fermé.
+- L'étiquette **MAN** du bandeau grossit un instant, avec le rappel **MAN = JE COURS**.
+- Zone bleue ovale autour du FS, texte **AIDE PROFONDE**, cadenas fermé, étiquette **MOFC**.
 - Le second LB passe en sable avec une petite zone à 5-7 yds au milieu, étiquette **ROBBER**.
 
 ## Scène 3 · La reconnaître (≈ 30 s)

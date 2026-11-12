@@ -1,7 +1,7 @@
-# 01 · Cover 0
+# 02 · Cover 0
 
 - **Durée visée :** 2 min 30
-- **Image de départ :** état neutre (dernière image de l'introduction)
+- **Image de départ :** état neutre (dernière image de « Man ou zone ? »)
 - **Image de fin :** état neutre
 - **Ce que le joueur doit retenir :** zéro safety = le ballon part tout de suite, sur un tracé court choisi avant le snap.
 
@@ -18,17 +18,20 @@
 - État neutre. La défense entre : quatre joueurs collés aux receveurs, six près de la ligne, personne en profondeur.
 - Titre **COVER 0**, pastilles **MAN · 0 SAFETY · BLITZ**.
 
-## Scène 2 · Carte d'identité (≈ 14 s)
+## Scène 2 · Carte d'identité (≈ 20 s)
 
 **Voix off**
 
 > C'est du man partout : chaque receveur a son défenseur. Personne en profondeur. Et tous ceux qui ne couvrent pas viennent chercher le quarterback : six rushers, parfois plus.
+>
+> Man, donc tu connais la règle : tu cours, tu sépares, tu ne t'arrêtes pas.
 
 **À l'écran**
 
 - Les pointillés de marquage relient chaque défenseur à son receveur (CB-X, N-H, SS-Y, CB-Z, LB-RB).
 - La moitié haute du terrain se teinte en orange clair, texte **PERSONNE EN PROFONDEUR**.
 - Les six rushers s'allument un par un avec un compteur de 1 à 6.
+- L'étiquette **MAN** du bandeau grossit un instant, avec le rappel **MAN = JE COURS**.
 
 ## Scène 3 · La reconnaître (≈ 22 s)
 

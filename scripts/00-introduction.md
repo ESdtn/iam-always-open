@@ -1,9 +1,9 @@
 # 00 · Introduction
 
-- **Durée visée :** 2 min 15
+- **Durée visée :** 2 min
 - **Image de départ :** terrain vide (première vidéo de la série)
 - **Image de fin :** état neutre
-- **Ce que le joueur doit retenir :** man ou zone, la lecture en trois étapes, l'idée de défenseur en conflit, le plan de la série.
+- **Ce que le joueur doit retenir :** la lecture en trois étapes, MOFC et MOFO, l'idée de défenseur en conflit, le plan de la série.
 
 ---
 
@@ -33,30 +33,25 @@
 - Trois mots s'affichent l'un après l'autre : **LA RECONNAÎTRE · L'ESPACE · LE BALLON**.
 - Démonstration du désaccord : Z s'arrête dans un trou, le ballon part en profondeur dans le vide. Rembobinage, puis même action où Z et le QB choisissent le même trou : réception.
 
-## Scène 3 · Man ou zone (≈ 32 s)
+## Scène 3 · La première question (≈ 14 s)
 
 **Voix off**
 
-> Première question : man ou zone ?
->
-> En man, un défenseur prend un receveur et le suit partout. Ses yeux sont sur toi. Pour le battre, tu gagnes ton duel et tu ne t'arrêtes pas.
->
-> En zone, chaque défenseur garde un espace. Ses yeux sont sur le quarterback. Pour la battre, tu trouves le trou entre deux défenseurs, tu t'y arrêtes et tu montres tes mains.
+> Avant tout le reste, une question : man ou zone ? En man, un défenseur te suit. En zone, il garde un espace. Tout ce que tu fais ensuite en dépend, alors on lui consacre la prochaine vidéo.
 
 **À l'écran**
 
 - Écran partagé en deux, titres **MAN** à gauche et **ZONE** à droite.
-- Gauche : un receveur court un tracé en travers, son défenseur le suit, relié par un pointillé. Le regard du défenseur pointe vers le receveur.
-- Droite : le même tracé traverse deux zones sable, les défenseurs restent dans leur zone et se passent le receveur. Leurs regards pointent vers le QB. Le receveur s'arrête entre les deux, un halo orange marque le trou.
-- Bandeaux bas : « MAN : cours, sépare » et « ZONE : trouve le trou, arrête-toi ».
+- Gauche : un défenseur suit son receveur, relié par un pointillé. Droite : un défenseur reste dans sa zone sable et laisse passer le receveur.
+- Les deux moitiés se referment sur un carton « Prochaine vidéo : Man ou zone ? ».
 
-## Scène 4 · La lecture en trois étapes (≈ 40 s)
+## Scène 4 · La lecture en trois étapes (≈ 46 s)
 
 **Voix off**
 
 > La lecture tient en trois étapes.
 >
-> Un : compte les safeties, les défenseurs à dix yards et plus. Zéro, un ou deux. Un seul safety, le milieu du terrain est fermé. Deux safeties, il est ouvert.
+> Un : compte les safeties, les défenseurs à dix yards et plus. Zéro, un ou deux. Un seul safety, le milieu du terrain est fermé : on dit MOFC. Deux safeties, il est ouvert : MOFO.
 >
 > Deux : regarde le corner. Collé à toi, à cinq yards, ou loin ? Tourné vers toi, ou vers le quarterback ?
 >
@@ -65,7 +60,7 @@
 **À l'écran**
 
 - Retour au terrain complet. Compteur **1 · 2 · 3** en haut à gauche, l'étape en cours en orange.
-- Étape 1 : une ligne horizontale à 10 yds se trace. Les safeties au-dessus s'allument, un chiffre géant **0**, **1** puis **2** défile pendant que la défense change de forme. Sur « fermé », un cadenas se ferme au milieu profond ; sur « ouvert », il s'ouvre.
+- Étape 1 : une ligne horizontale à 10 yds se trace. Les safeties au-dessus s'allument, un chiffre géant **0**, **1** puis **2** défile pendant que la défense change de forme. Sur « fermé », un cadenas se ferme au milieu profond et l'étiquette **MOFC (Middle Of the Field Closed : milieu fermé)** s'affiche ; sur « ouvert », il s'ouvre, avec **MOFO (Middle Of the Field Open : milieu ouvert)**. Les deux définitions restent à l'écran jusqu'à la fin de l'étape 1.
 - Étape 2 : zoom sur Z et son corner. Le corner prend trois positions (collé, 5 yds, 8 yds) avec une cote de distance, puis son regard bascule du receveur au QB.
 - Étape 3 : le ballon est snappé, tout le monde bouge pendant deux secondes, arrêt sur image. Texte : **AVANT LE SNAP = HYPOTHÈSE**.
 
@@ -85,13 +80,12 @@
 
 **Voix off**
 
-> On va suivre le nombre de safeties. Zéro safety : la Cover 0. Un safety : la Cover 1 et la Cover 3. Deux safeties : la Cover 2 et la Cover 4. Et pour finir, un quiz.
->
-> On commence par la plus agressive.
+> On commence par la question qui change tout : man ou zone. Ensuite, on suit le nombre de safeties. Zéro safety : la Cover 0. Un safety, MOFC : la Cover 1 et la Cover 3. Deux safeties, MOFO : la Cover 2 et la Cover 4. Et pour finir, un quiz.
 
 **À l'écran**
 
-- L'arbre de lecture se construit de gauche à droite : trois colonnes **0**, **1**, **2**, avec les cartes Cover 0, Cover 1 et Cover 3, Cover 2 et Cover 4.
+- Une première carte « Man ou zone ? » s'affiche seule.
+- L'arbre de lecture se construit ensuite de gauche à droite : trois colonnes **0**, **1 · MOFC**, **2 · MOFO**, avec les cartes Cover 0, Cover 1 et Cover 3, Cover 2 et Cover 4. Chaque carte porte son étiquette **MAN** ou **ZONE**.
 - Une carte « Quiz » s'ajoute au bout.
 - L'arbre se replie, la défense sort du terrain. Retour à l'état neutre, tenu une demi-seconde.
 
@@ -99,5 +93,6 @@
 
 ## Notes pour le coach
 
-- « Milieu fermé » et « milieu ouvert » sont introduits ici parce que la suite s'en sert pour opposer Cover 1/3 à Cover 2/4. Si tes joueurs connaissent MOFC et MOFO, on peut afficher les sigles en plus.
+- **MOFC et MOFO** sont définis ici, à l'écran et entre parenthèses, puis utilisés tels quels dans la suite. La voix les prononce « mof-ci » et « mofo » : dis-moi si vous les épelez plutôt lettre par lettre.
+- **Man ou zone** n'est qu'annoncé ici ; le sujet est traité dans la vidéo suivante.
 - Le défenseur en conflit n'existe pas vraiment en Cover 0 et en Cover 1 ; les chapitres le disent clairement.

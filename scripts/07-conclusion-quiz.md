@@ -1,6 +1,6 @@
-# 06 · Conclusion et quiz
+# 07 · Conclusion et quiz
 
-- **Durée visée :** 3 min 30
+- **Durée visée :** 3 min 40
 - **Image de départ :** état neutre (dernière image de « Cover 4 »)
 - **Image de fin :** état neutre, puis carton de fin
 - **Ce que le joueur doit retenir :** une seule méthode pour les cinq couvertures, et la preuve qu'il sait l'appliquer en trois secondes.
@@ -17,22 +17,23 @@
 
 - État neutre. Les cinq titres de chapitres s'alignent en haut, puis se rangent en arbre.
 
-## Scène 2 · L'arbre de lecture (≈ 22 s)
+## Scène 2 · L'arbre de lecture (≈ 28 s)
 
 **Voix off**
 
 > Compte les safeties.
 >
-> Zéro : Cover 0, le ballon part vite.
+> Zéro : Cover 0. C'est du man, le ballon part vite.
 >
-> Un : regarde le corner. Il te suit, Cover 1. Il recule, Cover 3.
+> Un, MOFC : regarde le corner. Il te suit, c'est du man : Cover 1. Il recule, c'est de la zone : Cover 3.
 >
-> Deux : regarde le corner. Il reste court, Cover 2. Il recule, Cover 4.
+> Deux, MOFO : regarde le corner. Il reste court, Cover 2. Il recule, Cover 4. Les deux sont en zone.
 
 **À l'écran**
 
 - L'arbre se construit branche par branche, au rythme de la voix. À chaque couverture, la défense correspondante s'affiche une seconde sur le terrain en arrière-plan.
 - Sous chaque branche, le comportement du corner est animé en miniature (il suit, il recule, il reste court).
+- Chaque carte porte son étiquette **MAN** ou **ZONE** ; les colonnes 1 et 2 portent **MOFC** et **MOFO**.
 
 ## Scène 3 · Un joueur à lire par couverture (≈ 18 s)
 
@@ -50,7 +51,7 @@
 
 **Voix off**
 
-> À toi de jouer. Six situations. Tu as trois secondes avant le snap, puis l'image se fige. Dis la couverture à voix haute, et dis où va le ballon.
+> À toi de jouer. Six situations. Tu as trois secondes avant le snap, puis l'image se fige. Dis à voix haute : man ou zone, quelle couverture, et où va le ballon.
 
 **À l'écran**
 
@@ -63,16 +64,16 @@ Chaque situation suit le même déroulé :
 1. Carton **SITUATION N** (1 s).
 2. La défense s'affiche avant le snap, sans étiquettes ni zones. Décompte **3 · 2 · 1** discret (3 s).
 3. Snap : deux secondes de jeu, puis arrêt sur image.
-4. Texte **QUELLE COUVERTURE ?** avec une jauge de trois secondes, sans voix.
-5. Réponse : le titre de la couverture s'affiche, les zones se dessinent, le tracé gagnant passe en orange.
+4. Texte **MAN OU ZONE ? QUELLE COUVERTURE ?** avec une jauge de trois secondes, sans voix.
+5. Réponse : l'étiquette **MAN** ou **ZONE** puis le titre de la couverture s'affichent, les zones se dessinent, le tracé gagnant passe en orange.
 
 | Situation | Ce qu'on voit | Voix off de la réponse |
 |---|---|---|
-| 1 | Un safety au milieu, corners à 7-8 yds qui reculent | « Un safety, les corners reculent : Cover 3. Lis le défenseur du flat. » |
-| 2 | Aucun safety, corners collés, six défenseurs sur la ligne qui foncent | « Aucun safety, tout le monde arrive : Cover 0. Slant ou quick out, tout de suite. » |
-| 3 | Deux safeties écartés, corners à 5 yds qui restent courts | « Deux safeties, le corner reste court : Cover 2. Le smash, en lisant le corner. » |
-| 4 | Un safety au milieu, corners serrés qui suivent leurs receveurs | « Un safety, ton défenseur te suit : Cover 1. Ton meilleur duel dehors, ou le croisement après le robber. » |
-| 5 | Deux safeties resserrés à 11 yds, corners à 7-8 yds qui reculent | « Deux safeties bas, les corners reculent : Cover 4. Le hitch devant le corner. » |
+| 1 | Un safety au milieu, corners à 7-8 yds qui reculent | « Un safety, les corners reculent : zone, Cover 3. Lis le défenseur du flat. » |
+| 2 | Aucun safety, corners collés, six défenseurs sur la ligne qui foncent | « Aucun safety, tout le monde arrive : man, Cover 0. Slant ou quick out, tout de suite. » |
+| 3 | Deux safeties écartés, corners à 5 yds qui restent courts | « Deux safeties, le corner reste court : zone, Cover 2. Le smash, en lisant le corner. » |
+| 4 | Un safety au milieu, corners serrés qui suivent leurs receveurs | « Un safety, ton défenseur te suit : man, Cover 1. Ton meilleur duel dehors, ou le croisement après le robber. » |
+| 5 | Deux safeties resserrés à 11 yds, corners à 7-8 yds qui reculent | « Deux safeties bas, les corners reculent : zone, Cover 4. Le hitch devant le corner. » |
 
 ## Scène 10 · Situation 6, le piège (≈ 24 s)
 

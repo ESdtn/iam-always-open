@@ -1,16 +1,19 @@
 # Scripts de la série « Lire la couverture »
 
-Sept vidéos, dans l'ordre de l'arbre de lecture (nombre de safeties, puis comportement du corner).
+Huit vidéos : la question man ou zone d'abord, puis les couvertures dans l'ordre de l'arbre de lecture (nombre de safeties, puis comportement du corner).
 
-| # | Fichier | Vidéo | Durée visée | Voix off |
+| # | Fichier | Vidéo | Famille | Durée visée |
 |---|---|---|---|---|
-| 0 | `00-introduction.md` | Introduction | 2 min 15 | ≈ 330 mots |
-| 1 | `01-cover-0.md` | Cover 0 | 2 min 30 | ≈ 360 mots |
-| 2 | `02-cover-1.md` | Cover 1 | 3 min | ≈ 400 mots |
-| 3 | `03-cover-3.md` | Cover 3 | 3 min 10 | ≈ 430 mots |
-| 4 | `04-cover-2.md` | Cover 2 | 3 min 10 | ≈ 420 mots |
-| 5 | `05-cover-4.md` | Cover 4 | 3 min | ≈ 400 mots |
-| 6 | `06-conclusion-quiz.md` | Conclusion et quiz | 3 min 30 | ≈ 380 mots |
+| 0 | `00-introduction.md` | Introduction | | 2 min |
+| 1 | `01-man-ou-zone.md` | Man ou zone ? | | 2 min 50 |
+| 2 | `02-cover-0.md` | Cover 0 | Man | 2 min 35 |
+| 3 | `03-cover-1.md` | Cover 1 | Man, MOFC | 3 min 05 |
+| 4 | `04-cover-3.md` | Cover 3 | Zone, MOFC | 3 min 15 |
+| 5 | `05-cover-2.md` | Cover 2 | Zone, MOFO | 3 min 15 |
+| 6 | `06-cover-4.md` | Cover 4 | Zone, MOFO | 3 min 10 |
+| 7 | `07-conclusion-quiz.md` | Conclusion et quiz | | 3 min 40 |
+
+Total : environ 24 minutes.
 
 Les durées sont des estimations (2,5 mots par seconde, plus les temps d'animation sans voix). Le minutage définitif viendra de l'audio.
 
@@ -28,9 +31,27 @@ Les durées sont des estimations (2,5 mots par seconde, plus les temps d'animati
 
 **Regard du QB.** Quand la voix dit « tu ne regardes que lui », un cône de vision part du QB vers le défenseur lu, et ce défenseur est entouré d'un halo orange.
 
-**Voix.** Tutoiement, phrases courtes, ton de coach. Les termes techniques restent en anglais (safety, corner, slot, snap, flat, seam, slant, hitch, out, post, smash, mesh). Distances en yards.
+**Voix.** Tutoiement, phrases courtes, ton de coach dynamique. Distances en yards.
+
+**Anonymat.** Le dépôt est public : aucun nom de club, de joueur ou de jeu maison dans les scripts ni à l'écran.
+
+**Man ou zone, fil rouge.** Chaque chapitre porte une pastille **MAN** ou **ZONE** dans son bandeau et rappelle la règle dans sa carte d'identité : man, je cours ; zone, je m'assieds dans le trou.
+
+**MOFC et MOFO.** Définis une fois dans l'introduction, à l'écran et entre parenthèses : MOFC (Middle Of the Field Closed, milieu fermé) et MOFO (Middle Of the Field Open, milieu ouvert). Utilisés tels quels ensuite.
 
 **Gabarit d'un chapitre « couverture ».** Titre, carte d'identité, la reconnaître (avant le snap, puis au snap), ses faiblesses, la battre (lecture QB et ajustement receveur), ne pas confondre avec, réflexe, retour à l'état neutre.
+
+## Prononciation
+
+Règle donnée par le coach : les termes de football se prononcent à l'anglaise, les numéros en français.
+
+| À l'anglaise | En français |
+|---|---|
+| Cover, safety, corner, slot, snap, blitz, press, jam, robber, quarterback, running back, linebacker, nickel, man, deep, hook, flat, seam, quarters, play-action, smash, mesh | Les numéros : « Cover zéro, un, deux, trois, quatre », « Cover six », « Tampa deux », « deux-man » |
+| Tous les tracés : slant, hitch, out, quick out, comeback, fade, curl, corner, post, dig | Les mots courants : zone, défenseur, receveur, tracé, levier, yards, touche, milieu, profondeur |
+| MOFC (« mof-ci ») et MOFO (« mofo »), à confirmer | « quatre verticaux », « le croisement », « le trou », « la fenêtre » |
+
+La voix de synthèse lit le français : chaque terme anglais aura donc une écriture phonétique dans un lexique séparé (`voix/lexique.md`), validée à l'oreille. Les scripts gardent l'orthographe normale.
 
 ## Écarts volontaires par rapport au guide PDF
 
@@ -52,8 +73,9 @@ La recherche (`recherche/complements-couvertures.md`) contredit ou nuance le gui
 
 Ces choix viennent de moi ou d'une seule source. Ils sont repris dans les notes en bas de chaque script.
 
-1. **Prononciation.** « Cover zéro, un, deux, trois, quatre » ou à l'anglaise ? Les scripts supposent le français.
+1. **MOFC et MOFO.** Prononcés « mof-ci » et « mofo », ou épelés lettre par lettre ?
 2. **Vocabulaire maison.** « Robber », « défenseur du flat », « levier », « s'asseoir dans la fenêtre » : à remplacer par les mots que tes joueurs entendent à l'entraînement.
 3. **Conversions de tracés** (slant ou quick out selon le levier contre Cover 0). Le guide rappelle qu'on n'ajuste que selon les règles validées avec le staff : la vidéo doit montrer vos règles, pas les miennes.
-4. **Concepts choisis** : quick game et mesh (Cover 0 et 1), curl-flat et 4 verticaux (Cover 3), smash et seam (Cover 2), hitch-seam et post-dig sur play-action (Cover 4). À remplacer par vos jeux si le playbook en contient d'équivalents.
+4. **Concepts choisis**, tous génériques : quick game et mesh (Cover 0 et 1), curl-flat et 4 verticaux (Cover 3), smash et seam (Cover 2), hitch-seam et post-dig sur play-action (Cover 4).
 5. **Cover 2, lecture du safety sur la seam** et **Cover 4, lecture du défenseur du flat avant le snap** : formulations de ma part, cohérentes avec les sources mais non sourcées telles quelles.
+6. **Cover 4, la nuance man sur les verticaux** : vraie pour les quarters dites « match », à retirer si tes adversaires jouent une zone pure.
