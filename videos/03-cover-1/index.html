@@ -61,12 +61,12 @@ E('e-colle', 43, 2.9, 'COLLÉ', { taille: 13 }); E('e-int', 43, 1.5, "À L'INTÉ
 E('e-ind', 26.667, 21.6, 'UN INDICE, PAS UNE PREUVE', BLANC);
 E('e-20g', 15, 14.6, '20 YARDS', { taille: 16 }); E('e-20d', 38.5, 14.6, '20 YARDS', { taille: 16 });
 E('e-regle', 26.667, 21.6, 'LOIN DU SAFETY · APRÈS LE ROBBER', BLANC);
-E('e-out', 49.4, 12.4, 'OUT', ORANGE); E('e-cb', 44.2, 12.6, 'COMEBACK', ORANGE);
+E('e-out', 50.7, 8.5, 'OUT', ORANGE); E('e-cb', 44.2, 12.6, 'COMEBACK', ORANGE);
 E('e-largeur', 10.6, 21.4, 'GARDE TA LARGEUR', ORANGE);
 E('e-meme', 26.667, 21.6, 'MÊME IMAGE AVANT LE SNAP', BLANC);
 E('e-c1', 37, 12.5, 'COVER 1 · MAN', { col: C.bleu, coulTexte: '#fff', taille: 15 }); E('e-c3', 37, 12.5, 'COVER 3 · ZONE', { taille: 15 });
 E('e-dist', 26.667, 21.6, "NE TE FIE PAS QU'À SA DISTANCE", BLANC);
-S.numero('no1g', 5.8, 11, 1); S.numero('no1d', 47.5, 11, 1); S.numero('no2', 50.4, 13, 2); S.numero('no3', 27, 1.7, 3);
+S.numero('no1g', 5.8, 11, 1); S.numero('no1d', 47.5, 11, 1); S.numero('no2', 50.4, 13, 2); S.numero('no3', 18.4, 5, 3);
 S.marque('m-derive', 14, 19);
 S.ballon();
 
@@ -139,11 +139,13 @@ S.etapeChapitre(tl, 1, t); bloc(null, t); liens(false, t); cache(['cad', 'e-ferm
 S.montre(tl, 'l-10', A('r1', 0.25), 0.3); bloc('bloc-un', A('r1', 0.3)); S.montre(tl, 'e-12', A('r1', 0.7), 0.25);
 // Les corners : collés, à l'intérieur, les yeux sur les receveurs.
 t = T('r2') - 0.2;
-cache(['l-10', 'e-12'], t); haloEteint('FS', t); marges(false, t); S.camera(tl, t, 0.85, ZOOM_CB);
+cache(['l-10', 'e-12'], t); haloEteint('FS', t); marges(false, t); bloc(null, t); S.camera(tl, t, 0.85, ZOOM_CB);
+['R', 'LB', 'N'].forEach((id) => tl.to('#' + id, { opacity: 0, duration: 0.25 }, t));
 S.montre(tl, 'e-colle', A('r2', 0.2), 0.2); S.montre(tl, 'e-int', A('r2', 0.55), 0.2); S.montre(tl, 'l-regard', A('r2', 0.8), 0.2);
 // Le motion : un défenseur traverse.
 t = T('r3') - 0.35;
 cache(['e-colle', 'e-int', 'l-regard'], t, 0.2); S.cameraLarge(tl, t, 0.8); marges(true, t + 0.5);
+['R', 'LB', 'N'].forEach((id) => tl.to('#' + id, { opacity: 1, duration: 0.25 }, t + 0.3));
 t = A('r3', 0.18);
 S.montre(tl, 'ln-H', t, 0.25, 0.9);
 S.va(tl, 'H', 33, -2.7, t, 1.8, 'power1.inOut'); S.va(tl, 'N', 33.6, 3.4, t, 1.8, 'power1.inOut');

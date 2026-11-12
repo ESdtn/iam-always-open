@@ -29,7 +29,7 @@ Le réglage est corrigé. Conséquences :
 | safety, safeties | séfti | À réécouter |
 | corner | corneur | À réécouter |
 | slot | slotte | À réécouter |
-| quarterback | couarteurbac | À réécouter |
+| quarterback | kouateurbak | Écriture donnée par le coach |
 | running back | reuning-bac | À réécouter |
 | linebacker | laïnebakeur | À réécouter |
 | nickel | nikeul | À réécouter |
@@ -59,8 +59,8 @@ Le réglage est corrigé. Conséquences :
 | dix yards, six yards | di yardz, si yardz | À réécouter |
 | quiz | couize | Écriture proposée par le coach |
 | motion | mocheune | Nouveau, à écouter dans « Man ou zone ? » |
-| rushers | reucheur | Nouveau, à écouter dans Cover 0 |
-| touchdown | tatch-daoune | Nouveau, à écouter dans Cover 0 |
+| rushers | rusher | Écriture donnée par le coach. « six rushers, parfois plus » est lu « si rusher, parfoi plusse » |
+| touchdown | teutchdaoun | Écriture donnée par le coach |
 
 Laissés tels quels : snap, blitz. Numéros en toutes lettres et en français : « Coveur trois », « la Tampa deux », « la Coveur six ».
 

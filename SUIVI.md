@@ -14,9 +14,10 @@ Dernière mise à jour : 12 novembre 2026.
 | Prononciation et vitesse de la voix | Voix corrigée (elle lisait en mode anglais), pauses à la ponctuation ; termes anglais à réécouter |
 | Installation de l'outil de rendu | Fait : HyperFrames, un projet par vidéo |
 | Vidéo pilote (introduction) | Validée par le coach |
-| « Man ou zone ? » | Première version rendue, en attente de l'avis du coach |
-| Cover 0 | Première version rendue, en attente de l'avis du coach |
-| Cover 1, 3, 2, 4 et la conclusion | À faire |
+| « Man ou zone ? » | Validée par le coach, trois prononciations corrigées |
+| Cover 0 | Validée par le coach (habillage et rythme), trois prononciations corrigées |
+| Cover 1 | Première version rendue, en attente de l'avis du coach |
+| Cover 3, 2, 4 et la conclusion | À faire |
 | Fusion en une seule vidéo | À faire |
 
 ## Avancement par vidéo
@@ -24,9 +25,9 @@ Dernière mise à jour : 12 novembre 2026.
 | # | Vidéo | Script | Texte de voix | Audio | Calage | Animation | Rendu | Validé |
 |---|---|---|---|---|---|---|---|---|
 | 0 | Introduction | Relu | Fait | Fait | Fait | Fait | Fait | Oui |
-| 1 | Man ou zone ? | Relu | Fait | Fait | Fait | Fait | Fait (v1) | |
-| 2 | Cover 0 | Relu | Fait | Fait | Fait | Fait | Fait (v1) | |
-| 3 | Cover 1 | Relu | | | | | | |
+| 1 | Man ou zone ? | Relu | Fait | Fait | Fait | Fait | Fait | Oui |
+| 2 | Cover 0 | Relu | Fait | Fait | Fait | Fait | Fait | Oui |
+| 3 | Cover 1 | Relu | Fait | Fait | Fait | Fait | Fait (v1) | |
 | 4 | Cover 3 | Relu | | | | | | |
 | 5 | Cover 2 | Relu | | | | | | |
 | 6 | Cover 4 | Relu | | | | | | |
@@ -51,8 +52,8 @@ Dernière mise à jour : 12 novembre 2026.
 
 ## Points ouverts
 
-1. **« Man ou zone ? » et Cover 0** : avis du coach, avec les relevés `videos/voix/01-man-ou-zone.releve.md` et `videos/voix/02-cover-0.releve.md`.
-2. **Termes anglais nouveaux** à écouter : « motion » (« mocheune »), « rushers » (« reucheur »), « touchdown » (« tatch-daoune »), « quick out », « slant », « fade ».
+1. **Cover 1** : avis du coach, avec le relevé `videos/voix/03-cover-1.releve.md`.
+2. **Termes anglais nouveaux** à écouter dans Cover 1 : « robber » (« robeur »), « out » (« a-outte »), « comeback » (« comme-bac »), « mesh » (« mèch »), « slots » (« slottes »).
 3. **Points tactiques à valider** : liste en bas de `scripts/README.md`.
 
 ## Journal
@@ -61,3 +62,4 @@ Dernière mise à jour : 12 novembre 2026.
 - **12 novembre 2026, suite.** Retours du coach sur le pilote : accent anglophone, pas de pause aux virgules, MOFC et MOFO à retirer. Cause de l'accent trouvée : le réglage de langue n'était pas transmis au moteur de voix, qui lisait tout en anglais. Voix refaite en français, avec pauses à la ponctuation et prises reproductibles. Sigles retirés des scripts, des visuels et de l'animation. Deuxième rendu de l'introduction : 1 min 42.
 - **12 novembre 2026, fin.** Introduction validée par le coach. Production de « Man ou zone ? » : 43 phrases, neuf scènes, 2 min 25.
 - **12 novembre 2026, nuit.** Production du chapitre Cover 0 : 43 phrases, neuf scènes, 2 min 14. Premier chapitre avec l'habillage complet (titre, pastilles, progression).
+- **Suite.** Gabarit de chapitre et rythme validés par le coach. Prononciations corrigées : quarterback, rushers, touchdown ; les quatorze phrases concernées régénérées et les trois premières vidéos re-rendues. Production de Cover 1 : 39 phrases, neuf scènes, 2 min 29.
