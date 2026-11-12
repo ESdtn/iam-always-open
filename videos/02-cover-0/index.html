@@ -1,0 +1,274 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1920, height=1080">
+<title>02 · Cover 0</title>
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/scene.css">
+<script src="assets/gsap.min.js"></script>
+<script src="assets/kit.js"></script>
+<script src="assets/scene.js"></script>
+<script src="assets/audio/02-cover-0.timing.js"></script>
+</head>
+<body>
+<div id="root" data-composition-id="cover-0" data-start="0" data-duration="100" data-width="1920" data-height="1080">
+  <div id="scene" class="clip" data-start="0" data-duration="100" data-track-index="0"></div>
+  <audio id="voix" src="assets/audio/02-cover-0.mp3" data-start="0" data-duration="100" data-track-index="1" data-volume="1"></audio>
+</div>
+<script>
+// Minutage de la voix : T = début d'une phrase, F = sa fin, A = un instant à l'intérieur (0 = début, 1 = fin).
+const M = window.MINUTAGE, P = {};
+M.scenes.forEach((s) => s.phrases.forEach((p) => { P[p.id] = p; }));
+const T = (id) => P[id].t0, F = (id) => P[id].t1, A = (id, r) => P[id].t0 + r * (P[id].t1 - P[id].t0);
+
+const hote = document.getElementById('scene');
+const S = creerScene(hote);
+const tl = gsap.timeline({ paused: true });
+const { X, Y } = S;
+
+// --- Cover 0 : man partout, personne en profondeur, six rushers ---
+// Le corner de gauche est à l'extérieur de X, celui de droite à l'intérieur de Z : deux leviers, deux tracés.
+const DEF0 = { CBG: [5, 1.5], CBD: [46.7, 1.5], N: [14.7, 1.6], SS: [38.6, 1.6], LBD: [30.6, 3.2], LBG: [23, 2.9], FS: [34.8, 2.4] };
+const LIENS = [['X', 'CBG'], ['H', 'N'], ['Y', 'SS'], ['Z', 'CBD'], ['RB', 'LBD']];
+const BLITZ_G = [[23, 2.9], [21.3, -0.4], [24.6, -4.6]], BLITZ_D = [[34.8, 2.4], [32.4, -0.5], [28.9, -4.8]];
+const DL = ['DL0', 'DL1', 'DL2', 'DL3'], DLX = [22.4, 25.2, 28.1, 30.9];
+
+// --- Éléments du terrain ---
+const att = S.creerAttaque(true);
+const def = S.creerDefense(DEF0, false);
+S.teinte('vide', 1, 9, 52.3, 24.3);
+S.teinte('boite', 3, 0.2, 50.3, 4.3, C.jaune, 0.1);
+S.zone('z-aide', 26.667, 14.5, 8, 3.2, 'AIDE PROFONDE');
+S.trace('t-b1', BLITZ_G, { col: '#fff', w: 4 }); S.trace('t-b2', BLITZ_D, { col: '#fff', w: 4 });
+S.trace('t-go', [[47.5, -0.1], [48.6, 5], [48.8, 21]]);
+S.trace('t-cx1', [[14, -1.3], [16.5, 5.2], [37, 5.8]]); S.trace('t-cx2', [[39.3, -1.3], [37, 5.9], [17, 6.4]]);
+S.trace('t-slant', [[5.8, -0.1], [5.8, 2.4], [12.6, 6.6]]);
+S.trace('t-qo', [[47.5, -0.1], [47.5, 3.6], [51.6, 4.2]]);
+S.trace('t-fade', [[47.5, -0.1], [48.8, 4.5], [49.6, 20]], { op: 0.55 });
+LIENS.forEach(([a, d]) => S.ligne('ln-' + a, S.ATTAQUE[a][0], S.ATTAQUE[a][1], DEF0[d][0], DEF0[d][1], { col: '#fff', w: 3, tirets: '3 8' }));
+// Protection : cinq bloqueurs pour six rushers.
+[[23.467, 22.4, 0.95], [25.067, 25.2, 0.95], [28.267, 28.1, 0.95], [29.867, 30.9, 0.95], [26.667, 23, 2.9]].forEach(([x, x2, y2], i) => S.ligne('pr' + i, x, -0.8, x2, y2, { col: '#fff', w: 4, tirets: '' }));
+S.ligne('l-10', 0, 10, 53.333, 10, { col: C.jaune, w: 4, tirets: '14 10' });
+S.ligne('l-5', 0, 5, 22, 5, { col: C.jaune, w: 4, tirets: '14 10' });
+S.ligne('g-1', 5, 1.5, 5.8, -0.8, { col: C.jaune, w: 4, tirets: '' }); S.ligne('g-2', 46.7, 1.5, 47.5, -0.8, { col: C.jaune, w: 4, tirets: '' });
+const E = (id, x, y, texte, o) => S.etiquette(id, x, y, texte, o);
+const BLANC = { col: '#fff', coulTexte: C.vertTexte, taille: 22 }, ROUGE = { col: C.rouge, coulTexte: '#fff', taille: 19 }, ORANGE = { col: C.orange, taille: 19 };
+E('e-0s', 26.667, 14, '0 SAFETY', { taille: 34 });
+E('e-vide', 26.667, 16.5, 'PERSONNE EN PROFONDEUR', { col: C.orange, taille: 24 });
+E('e-10', 46.6, 11.1, '10 YARDS', { taille: 18 });
+E('e-monde', 26.667, 5.7, 'TOUT LE MONDE PRÈS DE LA LIGNE', { taille: 19 });
+E('e-td', 44.4, 22.7, 'TOUCHDOWN', ORANGE);
+E('e-libre', 38.4, 3.6, 'LIBRE', ORANGE);
+E('e-chrono', 26.667, 21.6, "L'ADVERSAIRE : LE CHRONO", BLANC);
+E('e-levier', 7.4, 3.3, 'LEVIER EXTÉRIEUR', { taille: 13 });
+E('e-p1', 24.3, -5.6, '1', { taille: 17 }); E('e-p2', 24.3, -6.3, '2', { taille: 17 }); E('e-p3', 24.3, -7, '3', { taille: 17 });
+E('e-int', 43.2, 2.9, "À L'INTÉRIEUR", { taille: 16 }); E('e-ext', 9.2, 2.9, "À L'EXTÉRIEUR", { taille: 16 });
+E('e-qo', 47.6, 6.6, 'QUICK OUT', ORANGE); E('e-sl', 10.4, 8.6, 'SLANT', ORANGE);
+E('e-5y', 18.4, 5.9, '5 YARDS', { taille: 18 });
+E('e-tete', 9.6, 1.5, 'TÊTE TOURNÉE', ORANGE);
+E('e-feinte', 26.667, 21.6, 'PAS DE DOUBLE FEINTE', BLANC);
+E('e-frole', 26.667, 21.6, 'ON SE CROISE, ON NE BLOQUE PAS', BLANC);
+E('e-pari', 45.6, 14, 'UN PARI', ROUGE);
+E('e-c1', 26.667, 20.6, 'COVER 1', { col: '#fff', coulTexte: C.vertTexte, taille: 40 });
+S.numero('no1', 26.667, 19.4, 1); S.numero('no2', 33.6, -2.6, 2); S.numero('no3', 27, 9, 3);
+S.marque('m-choc', 27.1, 8.4);
+S.jauge('chrono', 26.667, -6.9);
+S.ballon();
+
+// --- Habillage du chapitre ---
+S.habillage({
+  titre: 'COVER 0',
+  pastilles: [['man', 'Man'], ['', '0 safety'], ['', 'Blitz']],
+  etapes: [["Carte d'identité", ''], ['La reconnaître', 'Avant le snap'], ['La reconnaître', 'Au snap'], ['Ses faiblesses', ''],
+    ['La battre', 'Côté quarterback'], ['La battre', 'Côté receveur'], ['La battre', 'Le croisement'], ['Ne pas confondre', ''], ['Réflexe', '']],
+});
+const gribouillis = [
+  rond(30, 20, 78, C.orange, 9), rond(1450, 82, 56, C.orange, 7), croix(1452, 84, 30, C.craie, 7, 0, .8), croix(1558, 92, 28, C.craie, 7, 4, .8), croix(1662, 96, 28, C.craie, 7, -5, .8),
+  croix(1838, 124, 60, C.orange, 16, 4), hachures(8, 470, 13, 46, 48, C.orange, 9, true), rond(150, 990, 50, C.orange, 8), croix(96, 920, 34, C.craie, 8, -8, .85),
+  hachures(1420, 1016, 7, 44, 56, C.orange, 9, false), rond(1850, 800, 30, C.craie, 6, .75), rond(1790, 872, 28, C.craie, 6, .75), rond(1862, 884, 30, C.craie, 6, .75),
+].join('');
+hote.insertAdjacentHTML('beforeend', `
+  <div class="bloc-g ombre" id="bloc-cpt" style="opacity:0"><div class="ligne"><b style="position:relative;display:inline-block;width:52px;height:72px">${[1, 2, 3, 4, 5, 6].map((n) => `<span id="cp${n}" style="position:absolute;left:0;top:0;opacity:0">${n}</span>`).join('')}</b>rushers</div></div>
+  <div class="bloc-g ombre" id="bloc-rappel" style="opacity:0"><div class="rappel">Man = je cours, je sépare, je ne m'arrête pas</div></div>
+  <div class="bloc-g ombre" id="bloc-zero" style="opacity:0"><div class="ligne"><b>0</b>safety</div></div>
+  <div class="bloc-g ombre" id="bloc-un" style="opacity:0"><div class="ligne"><b>1</b>safety</div></div>
+  <div class="ardoise" id="ardoise" style="opacity:0">
+    <svg width="1920" height="1080" viewBox="0 0 1920 1080">${defs()}${fond()}<g data-layout-allow-overflow>${gribouillis}</g></svg>
+    <div class="coin" style="position:absolute;top:34px;left:160px;display:flex;align-items:center;gap:20px"><span class="titre" style="font-size:46px">COVER 0</span><span class="pastille man">Man</span><span class="pastille">0 safety</span></div>
+    <div class="titre-ardoise"><span class="script">Le réflexe</span></div>
+    <div class="cartes">
+      <div class="carte" id="rx-qb" style="opacity:0"><div class="onglet">QB</div><div class="quand">Zéro safety</div><div class="quoi">Je sais où je lance <b>avant le&nbsp;snap.</b></div></div>
+      <div class="carte" id="rx-wr" style="opacity:0"><div class="onglet">WR</div><div class="quand">Zéro safety</div><div class="quoi">Je gagne <b>mon départ</b>, je regarde <b>le ballon.</b></div><div class="quoi" id="rx-fonce" style="opacity:0">Personne derrière : <b>je&nbsp;fonce.</b></div></div>
+    </div>
+  </div>`);
+creerSousTitres(hote, tl, M);
+
+// --- Aides propres à cette vidéo ---
+const liens = (actif, t) => LIENS.forEach(([a]) => (actif ? S.montre(tl, 'ln-' + a, t, 0.25, 0.9) : S.cache(tl, 'ln-' + a, t, 0.2)));
+const poseLiens = (t) => LIENS.forEach(([a, d]) => S.poseLigne(tl, 'ln-' + a, S.ATTAQUE[a][0], S.ATTAQUE[a][1], DEF0[d][0], DEF0[d][1], t));
+const bloc = (id, t) => ['bloc-cpt', 'bloc-rappel', 'bloc-zero', 'bloc-un'].forEach((b) => tl.to('#' + b, { opacity: b === id ? 1 : 0, duration: 0.25 }, t));
+const compteur = (n, t) => [1, 2, 3, 4, 5, 6].forEach((i) => tl.set('#cp' + i, { opacity: i === n ? 1 : 0 }, t));
+const croixCouleur = (id, col, t) => tl.to(`#${id} path`, { stroke: col, duration: 0.2 }, t);
+const haloEteint = (id, t, col = C.jaune) => { tl.to(`#${id} .halo1`, { opacity: 0, duration: 0.2 }, t); tl.set(`#${id} .halo1`, { stroke: col }, t + 0.25); };
+const cache = (ids, t, d = 0.25) => ids.forEach((id) => S.cache(tl, id, t, d));
+// Retour à l'image d'avant le snap : attaque en place, Cover 0 alignée.
+const remet = (t, d = 0.45) => {
+  S.formation(tl, S.ATTAQUE, t, d); S.formation(tl, DEF0, t, d); DL.forEach((id, i) => S.va(tl, id, DLX[i], 0.95, t, d));
+  poseLiens(t + d + 0.02);
+};
+// Le rush : la ligne s'engage, les deux blitzeurs contournent.
+const rush = (t, d = 1.6, fleches = true) => {
+  DL.forEach((id, i) => S.va(tl, id, DLX[i] + (26.667 - DLX[i]) * 0.12, 0.1, t, 0.5, 'power1.out'));
+  S.court(tl, 'LBG', BLITZ_G, t, d); S.court(tl, 'FS', BLITZ_D, t, d);
+  if (fleches) { S.dessine(tl, 't-b1', t, d); S.dessine(tl, 't-b2', t, d); }
+};
+const croisement = (t) => {
+  S.dessine(tl, 't-cx1', t, 2.0); S.court(tl, 'H', [[14, -1.9], [16.5, 5.2], [37, 5.8]], t, 2.0);
+  S.dessine(tl, 't-cx2', t, 2.0); S.court(tl, 'Y', [[39.3, -1.9], [37, 5.9], [17, 6.4]], t, 2.0);
+  S.court(tl, 'N', [[14.7, 1.6], [16.8, 6.6], [25.5, 7.1]], t + 0.05, 1.2); S.court(tl, 'SS', [[38.6, 1.6], [36.8, 7.2], [28.7, 7.4]], t + 0.05, 1.2);
+  S.montre(tl, 'm-choc', t + 1.25, 0.15);
+};
+const SLANT_X = [[5.8, -0.8], [5.8, 2.4], [12.6, 6.6]], SLANT_CB = [[5, 1.5], [5.2, 3.4], [10.4, 7.5]];
+
+// ===== Scène 1 · Titre =====
+S.montreHabillage(tl, 0.5);
+S.entre(tl, def, T('t1') - 0.4, 0.05);
+S.montre(tl, 'e-0s', T('t2'), 0.25); S.cache(tl, 'e-0s', F('t2') + 0.6, 0.3);
+
+// ===== Scène 2 · Carte d'identité =====
+S.etapeChapitre(tl, 0, T('c1') - 0.3);
+liens(true, A('c1', 0.45));
+S.montre(tl, 'vide', T('c2'), 0.3); S.montre(tl, 'e-vide', T('c2') + 0.1, 0.3);
+bloc('bloc-cpt', A('c3', 0.55));
+[...DL, 'LBG', 'FS'].forEach((id, i) => {
+  const t = A('c3', 0.62) + i * 0.14;
+  compteur(i + 1, t);
+  if (i < 4) croixCouleur(id, C.orange, t); else S.couleur(tl, id, t, C.orange);
+});
+bloc('bloc-rappel', A('c4', 0.1));
+
+// ===== Scène 3 · La reconnaître =====
+let t = T('r1') - 0.4;
+S.etapeChapitre(tl, 1, t); bloc(null, t); liens(false, t); cache(['vide', 'e-vide'], t);
+DL.forEach((id) => croixCouleur(id, '#fff', t)); S.couleur(tl, 'LBG', t); S.couleur(tl, 'FS', t);
+S.montre(tl, 'l-10', A('r1', 0.4), 0.3); S.montre(tl, 'e-10', A('r1', 0.4), 0.3);
+S.montre(tl, 'vide', A('r2', 0.2), 0.3); bloc('bloc-zero', A('r2', 0.3));
+['CBG', 'CBD'].forEach((id) => S.halo(tl, id, T('r3') + 0.1, 2.4));
+S.montre(tl, 'g-1', A('r3', 0.6), 0.2); S.montre(tl, 'g-2', A('r3', 0.6), 0.2);
+t = T('r4');
+cache(['g-1', 'g-2', 'l-10', 'e-10', 'vide'], t - 0.1, 0.2);
+S.montre(tl, 'boite', t, 0.3); S.montre(tl, 'e-monde', A('r4', 0.35), 0.25);
+t = T('r5') - 0.25;
+S.etapeChapitre(tl, 2, t); cache(['boite', 'e-monde'], t); bloc(null, t);
+t = A('r5', 0.45); // le snap
+rush(t, 1.8);
+[['X', 5.8, 3.4], ['H', 14, 2.6], ['Y', 39.3, 2.6], ['Z', 47.5, 3.4], ['CBG', 5.1, 4.5], ['N', 14.6, 3.9], ['SS', 38.7, 3.9], ['CBD', 46.8, 4.5]].forEach(([id, x, y]) => S.va(tl, id, x, y, t, 1.6, 'power1.out'));
+S.va(tl, 'QB', 26.667, -7.2, t, 1.0, 'power1.out');
+['CBG', 'N', 'SS', 'CBD'].forEach((id, i) => S.halo(tl, id, T('r6') + 0.1 + i * 0.06, 1.2));
+S.couleur(tl, 'LBG', A('r6', 0.6), C.orange); S.couleur(tl, 'FS', A('r6', 0.6), C.orange);
+
+// ===== Scène 4 · Ses faiblesses =====
+t = T('f0') - 0.5;
+S.etapeChapitre(tl, 3, t); S.efface(tl, 't-b1', t, 0.2); S.efface(tl, 't-b2', t, 0.2); S.couleur(tl, 'LBG', t); S.couleur(tl, 'FS', t); remet(t + 0.05);
+// Un : personne derrière.
+S.montre(tl, 'vide', A('f1', 0.3), 0.3); S.montre(tl, 'no1', A('f1', 0.3), 0.25);
+t = T('f2') + 0.1;
+S.dessine(tl, 't-go', t, 1.7); S.court(tl, 'Z', [[47.5, -0.8], [48.6, 5], [48.8, 21]], t, 1.7); S.court(tl, 'CBD', [[46.7, 1.5], [47.6, 5.4], [48.1, 16.4]], t, 1.7);
+S.lance(tl, [26.667, -5], [48.8, 20.4], t + 0.95, 0.75); S.halo(tl, 'Z', t + 1.7, 0); S.montre(tl, 'e-td', t + 1.75, 0.2);
+// Deux : un rusher de trop.
+t = T('f3') - 0.5;
+cache(['ballon', 'e-td', 'vide', 'no1'], t, 0.2); haloEteint('Z', t, C.orange); S.efface(tl, 't-go', t, 0.2);
+S.va(tl, 'Z', 47.5, -0.8, t, 0.45); S.va(tl, 'CBD', 46.7, 1.5, t, 0.45);
+S.montre(tl, 'no2', A('f3', 0.08), 0.25);
+[0, 1, 2, 3, 4].forEach((i) => S.montre(tl, 'pr' + i, A('f3', 0.32) + i * 0.08, 0.2));
+S.couleur(tl, 'FS', A('f3', 0.72), C.orange); S.montre(tl, 'e-libre', A('f3', 0.76), 0.2);
+t = T('f4');
+S.montre(tl, 'chrono', t, 0.2); S.vide(tl, 'chrono', t + 0.15, 1.5);
+S.dessine(tl, 't-b2', t + 0.15, 1.5); S.court(tl, 'FS', BLITZ_D, t + 0.15, 1.5);
+// Trois : ils se gênent sur les croisements.
+t = T('f5') - 0.5;
+cache(['chrono', 'e-libre', 'no2', 'pr0', 'pr1', 'pr2', 'pr3', 'pr4'], t, 0.2); S.efface(tl, 't-b2', t, 0.2); S.couleur(tl, 'FS', t);
+S.va(tl, 'FS', 34.8, 2.4, t, 0.45);
+S.montre(tl, 'no3', A('f5', 0.08), 0.25);
+croisement(A('f5', 0.5));
+
+// ===== Scène 5 · La battre, côté quarterback =====
+t = T('q1') - 0.55;
+S.etapeChapitre(tl, 4, t); cache(['no3', 'm-choc'], t, 0.2); S.efface(tl, 't-cx1', t, 0.2); S.efface(tl, 't-cx2', t, 0.2); remet(t + 0.05);
+S.montre(tl, 'e-chrono', T('q2'), 0.3); tl.set('#chrono .niveau', { attr: { width: 110 } }, T('q2') - 0.1); S.montre(tl, 'chrono', T('q2') + 0.1, 0.25);
+['H', 'Y', 'Z'].forEach((id, i) => S.halo(tl, id, A('q3', 0.3) + i * 0.2, 0.25));
+S.halo(tl, 'X', A('q3', 0.3) + 0.62, 0);
+S.camera(tl, T('q4') - 0.15, 0.85, { zoom: 2.2, cx: 9, cy: 3, sx: 780, sy: 470 });
+S.halo(tl, 'CBG', A('q4', 0.45), 0); S.montre(tl, 'e-levier', A('q4', 0.5), 0.2);
+t = T('q5') - 0.5;
+S.cameraLarge(tl, t, 0.7); cache(['e-levier', 'e-chrono'], t, 0.2); haloEteint('CBG', t);
+t = T('q5') + 0.3; // le snap : trois pas, ballon parti
+S.vide(tl, 'chrono', t, 1.5); rush(t, 1.7);
+[[-5.6, 'e-p1'], [-6.2, 'e-p2'], [-6.8, 'e-p3']].forEach(([y, id], i) => { S.va(tl, 'QB', 26.667, y, t + i * 0.27, 0.25, 'power1.out'); S.montre(tl, id, t + i * 0.27 + 0.1, 0.12); });
+S.dessine(tl, 't-slant', t, 1.05); S.court(tl, 'X', SLANT_X, t, 1.05); S.court(tl, 'CBG', SLANT_CB, t + 0.06, 1.15);
+S.lance(tl, [26.667, -6.8], [12.8, 6.7], t + 0.82, 0.5); S.halo(tl, 'X', t + 1.32, 0);
+
+// ===== Scène 6 · La battre, côté receveur =====
+t = T('w1') - 0.55;
+S.etapeChapitre(tl, 5, t); cache(['ballon', 'chrono', 'e-p1', 'e-p2', 'e-p3'], t, 0.2); haloEteint('X', t, C.orange);
+['t-slant', 't-b1', 't-b2'].forEach((id) => S.efface(tl, id, t, 0.2)); remet(t + 0.05);
+// À l'intérieur : je gagne dehors.
+S.halo(tl, 'CBD', A('w2', 0.3), 0); S.montre(tl, 'e-int', A('w2', 0.4), 0.2);
+t = T('w3') + 0.15;
+S.dessine(tl, 't-qo', t, 0.9); S.court(tl, 'Z', [[47.5, -0.8], [47.5, 3.6], [51.6, 4.2]], t, 0.9); S.court(tl, 'CBD', [[46.7, 1.5], [46.9, 3.2], [49.3, 5.3]], t + 0.06, 1.0);
+S.montre(tl, 'e-qo', t + 0.3, 0.2); S.lance(tl, [26.667, -5], [51.8, 4.2], t + 0.4, 0.55); S.halo(tl, 'Z', t + 0.95, 0);
+// À l'extérieur : slant.
+t = T('w4') - 0.3;
+cache(['ballon', 'e-int'], t, 0.15); haloEteint('CBD', t);
+S.halo(tl, 'CBG', A('w4', 0.3), 0); S.montre(tl, 'e-ext', A('w4', 0.4), 0.2);
+t = T('w5') + 0.15;
+S.dessine(tl, 't-slant', t, 1.0); S.court(tl, 'X', SLANT_X, t, 1.0); S.court(tl, 'CBG', SLANT_CB, t + 0.06, 1.1);
+S.montre(tl, 'e-sl', t + 0.35, 0.2); S.lance(tl, [26.667, -5], [12.8, 6.7], t + 0.5, 0.5); S.halo(tl, 'X', t + 1.0, 0);
+// Cinq yards gagnées, tête tournée : le ballon est déjà en l'air.
+t = T('w6') - 0.5;
+cache(['ballon', 'e-ext', 'e-qo', 'e-sl'], t, 0.2); ['X', 'Z'].forEach((id) => haloEteint(id, t, C.orange)); haloEteint('CBG', t);
+S.efface(tl, 't-slant', t, 0.2); S.efface(tl, 't-qo', t, 0.2); remet(t + 0.05);
+S.montre(tl, 'l-5', A('w6', 0.3), 0.25); S.montre(tl, 'e-5y', A('w6', 0.3), 0.25);
+t = A('w6', 0.48);
+S.dessine(tl, 't-slant', t, 1.3); S.court(tl, 'X', SLANT_X, t, 1.3); S.court(tl, 'CBG', SLANT_CB, t + 0.08, 1.4);
+S.montre(tl, 'e-tete', t + 0.45, 0.15); S.lance(tl, [26.667, -5], [12.8, 6.7], t + 0.5, 0.8); S.halo(tl, 'X', t + 1.3, 0);
+S.va(tl, 'X', 21, 21.5, t + 1.35, 1.3, 'power1.in'); S.va(tl, 'CBG', 17, 15.5, t + 1.5, 1.2, 'power1.in');
+tl.to('#ballon', { x: X(21), y: Y(21.5), duration: 1.3, ease: 'power1.in' }, t + 1.35);
+S.montre(tl, 'e-feinte', T('w7') + 0.1, 0.25);
+
+// ===== Scène 7 · Le croisement, et la fade =====
+t = T('x1') - 0.55;
+S.etapeChapitre(tl, 6, t); cache(['ballon', 'e-feinte', 'e-tete', 'l-5', 'e-5y'], t, 0.2); haloEteint('X', t, C.orange); S.efface(tl, 't-slant', t, 0.2); remet(t + 0.05);
+t = T('x2') + 0.15;
+croisement(t);
+S.lance(tl, [26.667, -5], [36.6, 5.8], t + 1.35, 0.6); S.halo(tl, 'H', t + 1.95, 0);
+S.montre(tl, 'e-frole', T('x3'), 0.3);
+t = T('x4') - 0.45;
+cache(['ballon', 'm-choc', 'e-frole'], t, 0.2); haloEteint('H', t, C.orange); S.efface(tl, 't-cx1', t, 0.2); S.efface(tl, 't-cx2', t, 0.2); remet(t + 0.05);
+S.dessine(tl, 't-fade', T('x4') + 0.15, 1.2); S.montre(tl, 'e-pari', T('x5') + 0.2, 0.25);
+
+// ===== Scène 8 · Ne pas confondre =====
+t = T('n1') - 0.5;
+S.etapeChapitre(tl, 7, t); S.cache(tl, 'e-pari', t, 0.2); S.efface(tl, 't-fade', t, 0.2);
+bloc('bloc-zero', T('n1'));
+S.va(tl, 'FS', 26.667, 13.2, A('n2', 0.08), 0.7); S.halo(tl, 'FS', A('n2', 0.22), 0);
+S.montre(tl, 'z-aide', A('n2', 0.3), 0.3); bloc('bloc-un', A('n2', 0.3));
+S.montre(tl, 'e-c1', A('n2', 0.8), 0.3);
+
+// ===== Scène 9 · Réflexe (sur ardoise) =====
+t = T('z0') - 0.6;
+S.cacheHabillage(tl, t); bloc(null, t);
+S.ardoise(tl, 'ardoise', t, F('z3') + 0.75, 0.5);
+// Sous l'ardoise, le terrain revient à l'état neutre.
+t += 0.65;
+[...def, 'z-aide', 'e-c1'].forEach((id) => tl.set('#' + id, { opacity: 0 }, t));
+S.formation(tl, S.ATTAQUE, t, 0.01);
+S.apparait(tl, 'rx-qb', T('z1') - 0.05); S.apparait(tl, 'rx-wr', T('z2') - 0.05); S.apparait(tl, 'rx-fonce', A('z3', 0.3));
+
+window.__timelines = window.__timelines || {};
+window.__timelines['cover-0'] = tl;
+tl.seek(0);
+</script>
+</body>
+</html>

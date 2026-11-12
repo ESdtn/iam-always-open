@@ -1,0 +1,106 @@
+{
+  "id": "02-cover-0",
+  "debut": 1.2,
+  "fin": 2.4,
+  "pause_phrase": 0.32,
+  "pause_scene": 0.9,
+  "scenes": [
+    {
+      "id": "titre",
+      "phrases": [
+        {"id": "t1", "texte": "Cover 0.", "pause": 0.5},
+        {"id": "t2", "texte": "Zéro safety, et tout le monde arrive."}
+      ],
+      "pause": 1.1
+    },
+    {
+      "id": "identite",
+      "phrases": [
+        {"id": "c1", "texte": "C'est du man partout : chaque receveur a son défenseur.", "pause": 0.5},
+        {"id": "c2", "texte": "Personne en profondeur.", "pause": 0.6},
+        {"id": "c3", "texte": "Et tous ceux qui ne couvrent pas viennent chercher le quarterback : six rushers, parfois plus.", "pause": 0.8},
+        {"id": "c4", "texte": "Man, donc tu connais la règle : tu cours, tu sépares, tu ne t'arrêtes pas."}
+      ],
+      "pause": 1.1
+    },
+    {
+      "id": "reconnaitre",
+      "phrases": [
+        {"id": "r1", "texte": "Avant le snap, compte les safeties.", "pause": 0.4},
+        {"id": "r2", "texte": "Tu n'en trouves aucun à dix yards.", "pause": 0.6},
+        {"id": "r3", "texte": "Les corners sont collés aux receveurs, les yeux sur eux.", "pause": 0.6},
+        {"id": "r4", "texte": "Et il y a beaucoup de monde près de la ligne.", "pause": 0.9},
+        {"id": "r5", "texte": "Au snap, confirme : personne ne recule.", "pause": 0.5},
+        {"id": "r6", "texte": "Ton défenseur te colle, les autres foncent.", "pause": 1.4}
+      ],
+      "pause": 0.7
+    },
+    {
+      "id": "faiblesses",
+      "phrases": [
+        {"id": "f0", "texte": "Cette défense prend un risque énorme.", "pause": 0.6},
+        {"id": "f1", "texte": "Un : il n'y a personne derrière."},
+        {"id": "f2", "texte": "Un défenseur battu, c'est un touchdown.", "pause": 1.3},
+        {"id": "f3", "texte": "Deux : avec autant de rushers, il y en a toujours un que personne ne bloque."},
+        {"id": "f4", "texte": "Le ballon doit partir avant qu'il arrive.", "pause": 1.0},
+        {"id": "f5", "texte": "Trois : en man serré, les défenseurs se gênent dès que deux tracés se croisent.", "pause": 1.4}
+      ],
+      "pause": 0.7
+    },
+    {
+      "id": "battre-qb",
+      "phrases": [
+        {"id": "q1", "texte": "Ici, il n'y a pas de défenseur en conflit."},
+        {"id": "q2", "texte": "Ton adversaire, c'est le chrono.", "pause": 0.7},
+        {"id": "q3", "texte": "Quarterback : tu choisis ton duel avant le snap."},
+        {"id": "q4", "texte": "Tu regardes le levier, le côté où se place le défenseur.", "pause": 0.7},
+        {"id": "q5", "texte": "Trois pas, et le ballon est parti.", "pause": 1.3}
+      ],
+      "pause": 0.7
+    },
+    {
+      "id": "battre-wr",
+      "phrases": [
+        {"id": "w1", "texte": "Receveur : ton tracé se joue sur le levier.", "pause": 0.5},
+        {"id": "w2", "texte": "Le défenseur est à l'intérieur ?"},
+        {"id": "w3", "texte": "Tu gagnes dehors, quick out.", "pause": 1.2},
+        {"id": "w4", "texte": "Il est à l'extérieur ?"},
+        {"id": "w5", "texte": "Slant.", "pause": 1.3},
+        {"id": "w6", "texte": "Dans les deux cas, tu gagnes tes cinq premières yards, et tu tournes la tête tout de suite : le ballon est déjà en l'air.", "pause": 0.6},
+        {"id": "w7", "texte": "Pas de double feinte, le quarterback n'a pas le temps."}
+      ],
+      "pause": 1.1
+    },
+    {
+      "id": "croisement",
+      "phrases": [
+        {"id": "x1", "texte": "Deuxième arme : le croisement.", "pause": 0.5},
+        {"id": "x2", "texte": "Deux receveurs se frôlent, et les défenseurs se rentrent dedans.", "pause": 1.2},
+        {"id": "x3", "texte": "Attention, tu ne bloques personne : tu cours ton tracé, c'est tout.", "pause": 0.9},
+        {"id": "x4", "texte": "La fade ?", "pause": 0.5},
+        {"id": "x5", "texte": "C'est un pari, pas une réponse."},
+        {"id": "x6", "texte": "On la garde pour le duel qu'on est sûr de gagner."}
+      ],
+      "pause": 1.1
+    },
+    {
+      "id": "confondre",
+      "phrases": [
+        {"id": "n1", "texte": "Ne confonds pas avec la Cover 1.", "pause": 0.5},
+        {"id": "n2", "texte": "Si tu vois un safety au milieu, à douze ou quinze yards, il y a de l'aide en profondeur.", "pause": 0.5},
+        {"id": "n3", "texte": "Ce n'est plus la même défense."}
+      ],
+      "pause": 1.2
+    },
+    {
+      "id": "reflexe",
+      "phrases": [
+        {"id": "z0", "texte": "Le réflexe.", "pause": 0.5},
+        {"id": "z1", "texte": "Quarterback : zéro safety, je sais où je lance avant le snap.", "pause": 0.6},
+        {"id": "z2", "texte": "Receveur : zéro safety, je gagne mon départ, et je regarde le ballon tout de suite.", "pause": 0.5},
+        {"id": "z3", "texte": "Et après la réception, il n'y a personne derrière : tu fonces."}
+      ],
+      "pause": 0.2
+    }
+  ]
+}

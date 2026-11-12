@@ -161,6 +161,54 @@ function creerScene(hote) {
   // Grande étiquette MAN ou ZONE dans la marge droite (#b-man, #b-zone). famille = 'man', 'zone' ou null.
   S.famille = (tl, famille, t) => ['man', 'zone'].forEach((f) => tl.to('#b-' + f, { opacity: f === famille ? 1 : 0, duration: 0.25 }, t));
 
+  // --- Éléments propres aux chapitres ---
+  // Pastille numérotée, pour pointer une faiblesse.
+  S.numero = (id, x, y, n) => {
+    const el = ajoute('dessus', `<g id="${id}" opacity="0"><circle r="19" fill="${C.orange}" stroke="#fff" stroke-width="3" filter="url(#ombre)"/><text text-anchor="middle" dominant-baseline="central" font-family="Alfa Slab One" font-size="22" fill="${C.ardoise}">${n}</text></g>`);
+    gsap.set(el, { x: X(x), y: Y(y) });
+    return el;
+  };
+  // Aplat rectangulaire sur une portion du terrain (par exemple la profondeur laissée vide).
+  S.teinte = (id, x1, y1, x2, y2, col = C.orange, op = 0.2) =>
+    ajoute('zones', `<rect id="${id}" opacity="0" x="${X(x1)}" y="${Y(y2)}" width="${(x2 - x1) * 24}" height="${(y2 - y1) * 24}" rx="14" fill="${col}" fill-opacity="${op}" stroke="${col}" stroke-width="3" stroke-dasharray="12 9"/>`);
+  // Jauge qui se vide : le temps qu'il reste au quarterback.
+  S.jauge = (id, x, y, largeur = 110) => {
+    const el = ajoute('dessus', `<g id="${id}" opacity="0"><rect x="${-largeur / 2 - 3}" y="-10" width="${largeur + 6}" height="20" rx="10" fill="${C.ardoise}" stroke="#fff" stroke-width="2.5"/><rect class="niveau" x="${-largeur / 2}" y="-7" width="${largeur}" height="14" rx="7" fill="${C.rouge}"/></g>`);
+    gsap.set(el, { x: X(x), y: Y(y) });
+    el._largeur = largeur;
+    return el;
+  };
+  S.vide = (tl, id, t, d) => { const el = document.getElementById(id); tl.fromTo(el.querySelector('.niveau'), { attr: { width: el._largeur } }, { attr: { width: 0 }, duration: d, ease: 'none', immediateRender: false }, t); };
+  S.couleur = (tl, id, t, col = null) => {
+    tl.to(`#${id} .corps`, { fill: col || C.ardoise, stroke: col || '#fff', duration: 0.25 }, t);
+    tl.to(`#${id} .lettre`, { fill: col ? C.ardoise : '#fff', duration: 0.25 }, t);
+  };
+
+  // Habillage d'un chapitre : titre, pastilles et étape en cours à gauche ; progression et légende à droite.
+  // pastilles = [[classe, texte], ...], etapes = [[nom, précision], ...]
+  S.habillage = ({ titre, pastilles, etapes }) => {
+    hote.insertAdjacentHTML('beforeend', `
+      <div class="ui-g ombre" id="ui-g" style="opacity:0"><span class="titre">${titre}</span>
+        <div class="pastilles">${pastilles.map(([c, t]) => `<span class="pastille ${c}">${t}</span>`).join('')}</div>
+        <div class="etape">${etapes.map(([nom, detail], i) => `<div class="nom-etape" id="en${i}" style="opacity:0"><span class="script">${nom}</span>${detail ? `<span class="label">${detail}</span>` : ''}</div>`).join('')}</div></div>
+      <div class="ui-d ombre" id="ui-d" style="opacity:0"><ul class="etapes">${[...new Set(etapes.map((e) => e[0]))].map((nom, i) => `<li id="ep${i}">${nom}</li>`).join('')}</ul></div>
+      <div class="legende ombre" id="legende" style="opacity:0">
+        <div><svg width="34" height="24"><circle cx="17" cy="12" r="10" fill="#fff"/></svg>Attaque</div>
+        <div><svg width="34" height="24"><circle cx="17" cy="12" r="9.5" fill="#1d1e20" stroke="#fff" stroke-width="2"/></svg>Défense</div>
+        <div><svg width="34" height="24"><path d="M2,12 H30 M22,5 L30,12 L22,19" fill="none" stroke="#ff8a1f" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></svg>Il continue de courir</div>
+        <div><svg width="34" height="24"><path d="M2,12 H30 M30,4 V20" fill="none" stroke="#ff8a1f" stroke-width="4" stroke-linecap="round"/></svg>Il s'arrête</div>
+      </div>`);
+    const noms = [...new Set(etapes.map((e) => e[0]))];
+    // Passe à l'étape n (indice dans etapes) à l'instant t.
+    S.etapeChapitre = (tl, n, t) => {
+      etapes.forEach((e, i) => tl.to('#en' + i, { opacity: i === n ? 1 : 0, duration: 0.25 }, i === n ? t + 0.15 : t));
+      const rang = noms.indexOf(etapes[n][0]);
+      noms.forEach((nom, i) => tl.to('#ep' + i, { color: i === rang ? C.orange : i < rang ? 'rgba(255,255,255,.8)' : 'rgba(255,255,255,.45)', duration: 0.25 }, t));
+    };
+    S.montreHabillage = (tl, t, d = 0.4) => ['ui-g', 'ui-d', 'legende'].forEach((id) => tl.to('#' + id, { opacity: 1, duration: d }, t));
+    S.cacheHabillage = (tl, t, d = 0.25) => ['ui-g', 'ui-d', 'legende'].forEach((id) => tl.to('#' + id, { opacity: 0, duration: d }, t));
+  };
+
   // Tableau d'ardoise plein écran : pendant qu'il couvre tout, le terrain est masqué pour de bon.
   S.ardoise = (tl, id, t0, t1, d = 0.45) => {
     const fond = hote.querySelector('svg.fond');

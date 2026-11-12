@@ -83,3 +83,27 @@ html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; backgro
 .carte ul { list-style: none; margin: 0; padding: 0; }
 .carte li { font-family: var(--label); font-weight: 700; font-size: 54px; line-height: 1.15; color: var(--craie); padding: 12px 0; border-bottom: 2px solid rgba(242, 239, 233, .16); }
 .carte li:last-child { border-bottom: 0; color: var(--orange); }
+
+/* Habillage d'un chapitre : marge gauche (titre, pastilles, étape) et marge droite (progression, légende). */
+.ui-g { position: absolute; left: 24px; top: 28px; width: 280px; z-index: 20; }
+.ui-g .titre { font-size: 56px; }
+.pastilles { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 18px; }
+.ui-g .etape { margin-top: 34px; position: relative; height: 150px; }
+.nom-etape { position: absolute; left: 0; top: 0; }
+.nom-etape .script { font-size: 48px; display: block; line-height: 1.02; }
+.nom-etape .label { font-size: 19px; color: rgba(255, 255, 255, .75); display: block; margin-top: 10px; }
+.ui-d { position: absolute; right: 26px; top: 40px; width: 268px; z-index: 20; }
+.etapes { list-style: none; margin: 0; padding: 0 0 0 18px; border-left: 3px solid rgba(255, 255, 255, .25); }
+.etapes li { font-family: var(--label); font-weight: 700; font-size: 20px; letter-spacing: .1em; text-transform: uppercase; color: rgba(255, 255, 255, .45); padding: 7px 0; }
+.legende { position: absolute; right: 26px; bottom: 44px; width: 268px; z-index: 20; font-family: var(--label); font-weight: 600; font-size: 19px; letter-spacing: .06em; text-transform: uppercase; color: rgba(255, 255, 255, .8); }
+.legende div { display: flex; align-items: center; gap: 12px; margin-top: 9px; }
+.legende svg { flex: none; }
+/* Bloc libre sous l'étape, marge gauche : compteur, rappel, règle de lecture. */
+.bloc-g { position: absolute; left: 24px; top: 560px; width: 280px; z-index: 20; font-family: var(--label); font-weight: 700; color: #fff; }
+.bloc-g .ligne { display: flex; align-items: baseline; gap: 12px; font-size: 24px; letter-spacing: .1em; text-transform: uppercase; }
+.bloc-g .ligne b { font-family: var(--titre); font-weight: 400; font-size: 72px; letter-spacing: 0; color: var(--orange); line-height: 1; }
+.rappel { background: var(--bleu); color: #fff; border-radius: 8px; padding: 9px 14px 10px; font-size: 22px; letter-spacing: .06em; text-transform: uppercase; line-height: 1.15; }
+.rappel.zone { background: var(--jaune); color: var(--ardoise); }
+.regle { display: flex; flex-direction: column; gap: 10px; }
+.regle div { font-size: 22px; letter-spacing: .06em; text-transform: uppercase; padding: 9px 14px 10px; border-radius: 8px; background: rgba(14, 18, 15, .78); border: 2px solid rgba(255, 255, 255, .35); }
+.regle div b { color: var(--orange); font-weight: 700; }
