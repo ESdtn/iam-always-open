@@ -102,13 +102,17 @@ creerSousTitres(hote, tl, M);
 // --- Aides propres à cette vidéo ---
 const BLOCS = ['bloc-compte', 'bloc-rappel', 'bloc-un', 'bloc-regle', 'bloc-regle2'];
 const bloc = (id, t) => BLOCS.forEach((b) => tl.to('#' + b, { opacity: b === id ? 1 : 0, duration: 0.25 }, t));
-const regle = (n, t) => ['rg-a', 'rg-b'].forEach((id, i) => tl.to('#' + id, { backgroundColor: i === n ? C.orange : 'rgba(14,18,15,.78)', color: i === n ? C.ardoise : '#fff', duration: 0.2 }, t));
+const regle = (n, t) => ['rg-a', 'rg-b'].forEach((id, i) => {
+  tl.to('#' + id, { backgroundColor: i === n ? C.orange : 'rgba(14,18,15,.78)', color: i === n ? C.ardoise : '#fff', duration: 0.2 }, t);
+  tl.to(`#${id} b`, { color: i === n ? C.ardoise : C.orange, duration: 0.2 }, t);
+});
 const zones = (ids, actif, t) => ids.forEach((id, i) => (actif ? S.montre(tl, id, t + i * 0.05, 0.3) : S.cache(tl, id, t, 0.25)));
 const haloEteint = (id, t, col = C.jaune) => { tl.to(`#${id} .halo1`, { opacity: 0, duration: 0.2 }, t); tl.set(`#${id} .halo1`, { stroke: col }, t + 0.25); };
 const cache = (ids, t, d = 0.25) => ids.forEach((id) => S.cache(tl, id, t, d));
 const remet = (t, d = 0.45) => { S.formation(tl, S.ATTAQUE, t, d); S.formation(tl, DEF3, t, d); };
-const marges = (actif, t) => ['ui-d', 'legende'].forEach((id) => (actif ? S.montre(tl, id, t, 0.25) : S.cache(tl, id, t, 0.25)));
-const ZOOM_CB = { zoom: 2.0, cx: 44, cy: 5, sx: 1150, sy: 470 };
+// Pendant un zoom, on ne garde que le titre et les pastilles : le reste de l'habillage gênerait le terrain.
+const marges = (actif, t) => ['#ui-d', '#legende', '#ui-g .etape'].forEach((q) => tl.to(q, { opacity: actif ? 1 : 0, duration: 0.25 }, t));
+const ZOOM_CB = { zoom: 2.0, cx: 44, cy: 5, sx: 1150, sy: 425 };
 // Le curl et le flat courus par Z et Y, pendant que les corners reculent.
 const curlFlat = (t) => {
   S.dessine(tl, 't-curl', t, 1.25); S.court(tl, 'Z', [[47.5, -0.8], [47.5, 12.6], [46.1, 10.4]], t, 1.3);
@@ -137,12 +141,12 @@ S.montre(tl, 'l-10', A('r1', 0.3), 0.3); bloc('bloc-un', A('r1', 0.35)); S.halo(
 // Le corner : sept ou huit yards, à l'extérieur, tourné vers le quarterback.
 t = T('r2') - 0.2;
 cache(['l-10'], t); marges(false, t); bloc(null, t); S.camera(tl, t, 0.85, ZOOM_CB);
-['N', 'LBG', 'LBD'].forEach((id) => tl.to('#' + id, { opacity: 0, duration: 0.25 }, t));
+['N', 'LBG', 'LBD', 'FS'].forEach((id) => tl.to('#' + id, { opacity: 0, duration: 0.25 }, t));
 S.montre(tl, 'e-78', A('r2', 0.3), 0.2); S.montre(tl, 'e-ext', A('r2', 0.58), 0.2); S.montre(tl, 'l-regard', A('r2', 0.8), 0.25);
 // Le deuxième safety, descendu.
 t = T('r3') - 0.35;
 cache(['e-78', 'e-ext', 'l-regard'], t, 0.2); S.cameraLarge(tl, t, 0.8); marges(true, t + 0.5);
-['N', 'LBG', 'LBD'].forEach((id) => tl.to('#' + id, { opacity: 1, duration: 0.25 }, t + 0.3));
+['N', 'LBG', 'LBD', 'FS'].forEach((id) => tl.to('#' + id, { opacity: 1, duration: 0.25 }, t + 0.3));
 S.halo(tl, 'SS', A('r3', 0.45), 1.8); S.montre(tl, 'e-desc', A('r3', 0.5), 0.25);
 // Le motion : personne ne suit.
 t = T('r4');
@@ -205,10 +209,10 @@ S.lance(tl, [26.667, -5], [48.8, 2.7], t + 0.75, 0.6); S.halo(tl, 'Y', t + 1.35,
 // ===== Scène 6 · Le curl, côté receveur =====
 t = T('w1') - 0.55;
 S.etapeChapitre(tl, 5, t); finCurlFlat(t); cache(['cone', 'e-conflit'], t, 0.2); bloc(null, t); S.conflit(tl, 'SS', t, false); remet(t + 0.05);
-marges(false, t + 0.3); S.camera(tl, t + 0.3, 0.85, { zoom: 1.9, cx: 43, cy: 6, sx: 1160, sy: 470 });
+marges(false, t + 0.3); S.camera(tl, t + 0.3, 0.85, { zoom: 1.8, cx: 43, cy: 5, sx: 1160, sy: 440 });
 t = A('w1', 0.16);
 S.dessine(tl, 't-curl', t, 2.2); S.court(tl, 'Z', [[47.5, -0.8], [47.5, 12.6], [46.1, 10.4]], t, 2.3);
-S.va(tl, 'CBD', 49, 15, t, 2.0, 'power1.out'); S.va(tl, 'SS', 43.4, 7.2, t + 0.4, 1.4); S.va(tl, 'LBD', 32.4, 7, t + 0.4, 1.4);
+S.va(tl, 'CBD', 49, 14.4, t, 2.0, 'power1.out'); S.va(tl, 'SS', 43.4, 7.2, t + 0.4, 1.4); S.va(tl, 'LBD', 32.6, 5.5, t + 0.4, 1.4);
 S.montre(tl, 'fenetre', A('w1', 0.72), 0.3); S.montre(tl, 'e-fen', A('w1', 0.76), 0.25);
 S.halo(tl, 'SS', A('w2', 0.2), 1.6); S.halo(tl, 'CBD', A('w2', 0.2), 1.6); S.halo(tl, 'Z', A('w2', 0.6), 0);
 

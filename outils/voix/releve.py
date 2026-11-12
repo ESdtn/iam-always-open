@@ -22,7 +22,10 @@ TITRES = {"accroche": "Accroche", "promesse": "La promesse", "question": "La pre
           "rangees": "Les cinq couvertures, rangées", "reflexe": "Le réflexe", "identite": "Carte d'identité",
           "reconnaitre": "La reconnaître", "faiblesses": "Ses faiblesses", "battre-qb": "La battre, côté quarterback",
           "battre-wr": "La battre, côté receveur", "battre": "La battre", "croisement": "Le croisement, et la fade",
-          "confondre": "Ne pas confondre"}
+          "confondre": "Ne pas confondre", "curl": "Le curl, côté receveur", "verticaux": "Quatre verticaux", "piege": "Le piège",
+          "duel": "Le duel extérieur", "mesh": "Le mesh", "smash": "Le smash", "milieu": "Le milieu profond", "variante": "La variante",
+          "court": "Prendre ce qu'elle donne", "post": "Attirer le safety", "arbre": "L'arbre de lecture", "joueurs": "Un joueur à lire par couverture",
+          "quiz": "Le quiz", "variantes": "Trois variantes", "cloture": "Clôture"}
 
 
 def temps(t):
