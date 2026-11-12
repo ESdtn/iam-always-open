@@ -1,0 +1,431 @@
+{
+ "t1": {
+  "dit": "Coveur un.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Cover 1."
+ },
+ "t2": {
+  "dit": "Du manne partout, et un seul séfti pour aider.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "du man partout et un seul safety pour aider."
+ },
+ "c1": {
+  "dit": "Chaque receveur a son défenseur, comme en Coveur zéro.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Chaque receveur a son défenseur, comme en cover 0."
+ },
+ "c2": {
+  "dit": "manne, donc tu cours, et tu ne t'arrêtes pas.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Man, donc tu cours et tu ne t'arrêtes pas."
+ },
+ "c3": {
+  "dit": "La différence : un séfti reste au milieu, en profondeur.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "la différence. Un safety reste au milieu, en profondeur."
+ },
+ "c4": {
+  "dit": "Le milieu du terrain est fermé.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Le milieu du terrain est fermé."
+ },
+ "c5": {
+  "dit": "Et la défense garde souvent un joueur libre au milieu court, pour couper les croisements.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "et la défense garde souvent un joueur libre au milieu court pour couper les croisements."
+ },
+ "c6": {
+  "dit": "On l'appelle le robeur.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.95,
+  "entendu": "On l'appelle le Robeur."
+ },
+ "r1": {
+  "dit": "Avant le snap, un seul séfti, au milieu, à douze ou quinze yardz.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.87,
+  "entendu": "Avant le snap, un seul safety au milieu à 12 ou 15 yards."
+ },
+ "r2": {
+  "dit": "Les corneurs sont collés ou serrés, souvent placés à l'intérieur, les yeux sur les receveurs.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Les corners sont collés ou serrés, souvent placés à l'intérieur, les yeux sur les receveurs."
+ },
+ "r3": {
+  "dit": "Si un receveur part en mocheune et qu'un défenseur traverse avec lui, c'est un bon indice de manne.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Si un receveur part en motion et qu'un défenseur traverse avec lui, c'est un bon indice de man."
+ },
+ "r4": {
+  "dit": "Un indice, pas une preuve.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Un indice, pas une preuve."
+ },
+ "r5": {
+  "dit": "Au snap, confirme : ton défenseur te suit, le séfti reste au milieu.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Au snap. Confirme. Ton défenseur te suit. Le safety reste au milieu."
+ },
+ "f0": {
+  "dit": "Le séfti ne peut pas être partout.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Le safety ne peut pas être partout."
+ },
+ "f1": {
+  "dit": "Un : les duels à l'extérieur sont loin de lui.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.95,
+  "entendu": "Anne, les duels à l'extérieur sont loin de lui."
+ },
+ "f2": {
+  "dit": "Deux : sur un tracé vers la touche, personne ne vient aider.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "2. Sur un tracé vers la touche, personne ne vient aider."
+ },
+ "f3": {
+  "dit": "Trois : sur un croisement, ton défenseur court derrière toi.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "3. Sur un croisement, ton défenseur court derrière toi."
+ },
+ "q1": {
+  "dit": "kouateurbak, tu as deux joueurs à situer, et seulement deux : le séfti, et le robeur.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.99,
+  "entendu": "Quarterback, tu as deux joueurs à situer et seulement deux, le safety et le rober."
+ },
+ "q2": {
+  "dit": "Tous les autres ont le dos tourné, occupés par leur receveur.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.97,
+  "entendu": "Tous les autres ont le dos tourné, occupé par le receveur."
+ },
+ "q3": {
+  "dit": "Règle simple : tu lances loin du séfti, et jamais sur un croisement avant que ton receveur ait dépassé le robeur.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Règle simple, tu lances loin du safety et jamais sur un croisement avant que ton receveur ait dépassé le robber."
+ },
+ "d1": {
+  "dit": "Première arme : ton meilleur duel à l'extérieur.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Première arme, ton meilleur duel à l'extérieur."
+ },
+ "d2": {
+  "dit": "Receveur, tu vends la verticale pour faire reculer ton défenseur, puis tu casses à l'opposé de son levier.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Receveur, tu vends la verticale pour faire reculer ton défenseur, puis tu casses à l'opposé de son levier."
+ },
+ "d3": {
+  "dit": "Il est dedans, tu casses dehors : a-outte, ou comme-bac.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.99,
+  "entendu": "Il est dedans, tu casses dehors, out ou come back."
+ },
+ "d4": {
+  "dit": "Sur la feïde, garde ta largeur : si tu te rapproches du milieu, tu amènes le séfti.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.97,
+  "entendu": "Sur la faillide, garde ta largeur. Si tu te rapproches du milieu, tu amènes le safety."
+ },
+ "m1": {
+  "dit": "Deuxième arme : le mèch.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Deuxième arme, le mesh."
+ },
+ "m2": {
+  "dit": "Les deux slottes se croisent à cinq yardz, épaule contre épaule.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Les deux slots se croisent à 5 yards, épaule contre épaule."
+ },
+ "m3": {
+  "dit": "Les défenseurs qui poursuivent doivent contourner.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Les défenseurs qui poursuivent doivent contourner."
+ },
+ "m4": {
+  "dit": "Receveur, tu ne t'arrêtes jamais, et tu accélères après le croisement.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Receveur, tu ne t'arrêtes jamais et tu accélères après le croisement."
+ },
+ "m5": {
+  "dit": "kouateurbak, tu lances à celui qui a pris de l'avance, une fois le robeur derrière lui.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.98,
+  "entendu": "Quarterback, tu lances à celui qui a pris de l'avance, une fois le robur derrière lui."
+ },
+ "n1": {
+  "dit": "Le piège, c'est la Coveur trois.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Le piège, c'est la cover 3."
+ },
+ "n2": {
+  "dit": "Avant le snap, c'est la même image : un séfti au milieu.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Avant le snap, c'est la même image. Un safety au milieu."
+ },
+ "n3": {
+  "dit": "La différence se voit au snap.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "La différence se voit au snap."
+ },
+ "n4": {
+  "dit": "En Coveur un, le corneur reste attaché à son receveur.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.97,
+  "entendu": "En cover, le corner reste attaché à son receveur."
+ },
+ "n5": {
+  "dit": "En Coveur trois, il recule en regardant le kouateurbak.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "En cover 3, il recule en regardant le quarterback."
+ },
+ "n6": {
+  "dit": "Même un corneur collé peut reculer : ne te fie pas qu'à sa distance.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Même un corner collé peut reculer. Ne te fie pas qu'à sa distance."
+ },
+ "z0": {
+  "dit": "Le réflexe.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Le réflexe."
+ },
+ "z1": {
+  "dit": "kouateurbak : un séfti et du manne, je lance loin du séfti, après le robeur.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.99,
+  "entendu": "Quarterback. Un safety et du man. Je lance loin du safety après le robeur."
+ },
+ "z2": {
+  "dit": "Receveur : manne, je gagne mon duel.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Receveur. Man, je gagne mon duel."
+ },
+ "z3": {
+  "dit": "Je cours, je sépare, je ne m'arrête pas.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Je cours, je sépare, je ne m'arrête pas."
+ }
+}
