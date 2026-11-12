@@ -42,7 +42,7 @@ Tout tourne dans une session cloud Claude Code, sans installation locale.
 | Besoin | Outil | État |
 |---|---|---|
 | Animation et rendu | HyperFrames 0.9.39 (HTML, GSAP, FFmpeg) | En place |
-| Voix off | Supertonic 3, voix M3, en local | Testé |
+| Voix off | Supertonic 3, voix M3, en local, en français | En place |
 | Calage et sous-titres | Minutage phrase par phrase, produit par la synthèse | En place |
 | Images de référence | `node identite-visuelle/render.cjs` (Chromium) | En place |
 
@@ -68,6 +68,8 @@ cd videos/00-introduction && npx --yes hyperframes@0.9.39 check --no-craft
 cd videos/00-introduction && npx --yes hyperframes@0.9.39 render -o ../rendus/00-introduction.mp4
 ```
 
-La synthèse génère chaque phrase jusqu'à six fois et garde la prise la mieux retranscrite : la voix n'est pas déterministe, et une phrase courte sort parfois mal. Elle écrit l'audio, les sous-titres et le minutage dans `videos/assets/audio/`. Si l'audio est régénéré, sa durée change : reporter la nouvelle valeur dans les attributs `data-duration` de la composition.
+La synthèse découpe chaque phrase à la ponctuation pour y placer une pause, génère chaque morceau avec plusieurs graines et garde la prise la mieux retranscrite. Elle écrit l'audio, les sous-titres et le minutage dans `videos/assets/audio/`, range les prises retenues dans `videos/voix/prises/`, et reporte la durée dans la composition. Seules les phrases modifiées sont régénérées.
+
+Le relevé à faire relire au coach se produit avec `python3 outils/voix/releve.py 00-introduction`, depuis `outils/voix/`.
 
 Les rendus (`videos/rendus/`) ne sont pas versionnés : ils se régénèrent à l'identique à partir du dépôt.

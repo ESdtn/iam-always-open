@@ -3,7 +3,7 @@
 - **Durée visée :** 2 min
 - **Image de départ :** terrain vide (première vidéo de la série)
 - **Image de fin :** état neutre
-- **Ce que le joueur doit retenir :** la lecture en trois étapes, MOFC et MOFO, l'idée de défenseur en conflit, le plan de la série.
+- **Ce que le joueur doit retenir :** la lecture en trois étapes, milieu fermé ou ouvert, l'idée de défenseur en conflit, le plan de la série.
 
 ---
 
@@ -51,7 +51,7 @@
 
 > La lecture tient en trois étapes.
 >
-> Un : compte les safeties, les défenseurs à dix yards et plus. Zéro, un ou deux. Un seul safety, le milieu du terrain est fermé : on dit MOFC. Deux safeties, il est ouvert : MOFO.
+> Un : compte les safeties, les défenseurs à dix yards et plus. Zéro, un, ou deux. Un seul safety, le milieu du terrain est fermé. Deux safeties, le milieu est ouvert.
 >
 > Deux : regarde le corner. Collé à toi, à cinq yards, ou loin ? Tourné vers toi, ou vers le quarterback ?
 >
@@ -60,7 +60,7 @@
 **À l'écran**
 
 - Retour au terrain complet. Compteur **1 · 2 · 3** en haut à gauche, l'étape en cours en orange.
-- Étape 1 : une ligne horizontale à 10 yds se trace. Les safeties au-dessus s'allument, un chiffre géant **0**, **1** puis **2** défile pendant que la défense change de forme. Sur « fermé », un cadenas se ferme au milieu profond et l'étiquette **MOFC (Middle Of the Field Closed : milieu fermé)** s'affiche ; sur « ouvert », il s'ouvre, avec **MOFO (Middle Of the Field Open : milieu ouvert)**. Les deux définitions restent à l'écran jusqu'à la fin de l'étape 1.
+- Étape 1 : une ligne horizontale à 10 yds se trace. Les safeties au-dessus s'allument, un chiffre géant **0**, **1** puis **2** défile pendant que la défense change de forme. Sur « fermé », un cadenas se ferme au milieu profond avec l'étiquette **MILIEU FERMÉ** ; sur « ouvert », il s'ouvre, avec **MILIEU OUVERT**.
 - Étape 2 : zoom sur Z et son corner. Le corner prend trois positions (collé, 5 yds, 8 yds) avec une cote de distance, puis son regard bascule du receveur au QB.
 - Étape 3 : le ballon est snappé, tout le monde bouge pendant deux secondes, arrêt sur image. Texte : **AVANT LE SNAP = HYPOTHÈSE**.
 
@@ -80,12 +80,12 @@
 
 **Voix off**
 
-> On commence par la question qui change tout : man ou zone. Ensuite, on suit le nombre de safeties. Zéro safety : la Cover 0. Un safety, MOFC : la Cover 1 et la Cover 3. Deux safeties, MOFO : la Cover 2 et la Cover 4. Et pour finir, un quiz.
+> On commence par la question qui change tout : man ou zone. Ensuite, on suit le nombre de safeties. Zéro safety : la Cover 0. Un safety, milieu fermé : la Cover 1 et la Cover 3. Deux safeties, milieu ouvert : la Cover 2 et la Cover 4. Et pour finir, un quiz.
 
 **À l'écran**
 
 - Une première carte « Man ou zone ? » s'affiche seule.
-- L'arbre de lecture se construit ensuite de gauche à droite : trois colonnes **0**, **1 · MOFC**, **2 · MOFO**, avec les cartes Cover 0, Cover 1 et Cover 3, Cover 2 et Cover 4. Chaque carte porte son étiquette **MAN** ou **ZONE**.
+- L'arbre de lecture se construit ensuite de gauche à droite : trois colonnes **0**, **1 · MILIEU FERMÉ**, **2 · MILIEU OUVERT**, avec les cartes Cover 0, Cover 1 et Cover 3, Cover 2 et Cover 4. Chaque carte porte son étiquette **MAN** ou **ZONE**.
 - Une carte « Quiz » s'ajoute au bout.
 - L'arbre se replie, la défense sort du terrain. Retour à l'état neutre, tenu une demi-seconde.
 
@@ -93,6 +93,6 @@
 
 ## Notes pour le coach
 
-- **MOFC et MOFO** sont définis ici, à l'écran et entre parenthèses, puis utilisés tels quels dans la suite. La voix les prononce à la française : « mofsi » et « mofo ».
+- **Milieu fermé, milieu ouvert** : dits en français. Les sigles MOFC et MOFO ont été retirés à la demande du coach, pour ne pas embrouiller les joueurs.
 - **Man ou zone** n'est qu'annoncé ici ; le sujet est traité dans la vidéo suivante.
 - Le défenseur en conflit n'existe pas vraiment en Cover 0 et en Cover 1 ; les chapitres le disent clairement.

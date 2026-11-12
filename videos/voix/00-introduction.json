@@ -8,69 +8,69 @@
     {
       "id": "accroche",
       "phrases": [
-        { "id": "a1", "texte": "Avant chaque snap, la défense te montre ce qu'elle va faire." },
-        { "id": "a2", "texte": "Pas tout, mais presque." },
-        { "id": "a3", "texte": "Il faut juste savoir où regarder." }
+        {"id": "a1", "texte": "Avant chaque snap, la défense te montre ce qu'elle va faire."},
+        {"id": "a2", "texte": "Pas tout, mais presque."},
+        {"id": "a3", "texte": "Il faut juste savoir où regarder."}
       ],
       "pause": 1.1
     },
     {
       "id": "promesse",
       "phrases": [
-        { "id": "p1", "texte": "Dans cette série, tu vas apprendre à lire les cinq couvertures de base." },
-        { "id": "p2", "texte": "Pour chacune, trois questions : comment la reconnaître, où est l'espace, et où va le ballon.", "pause": 0.7 },
-        { "id": "p3", "texte": "Quarterback et receveurs, vous regardez la même vidéo pour une raison." },
-        { "id": "p4", "texte": "Si vous ne lisez pas la même chose, le ballon part là où il n'y a personne.", "pause": 0.5 },
-        { "id": "p5", "texte": "Ou pire, là où il y a un défenseur." }
+        {"id": "p1", "texte": "Dans cette série, tu vas apprendre à lire les cinq couvertures de base."},
+        {"id": "p2", "texte": "Pour chacune, trois questions : comment la reconnaître, où est l'espace, et où va le ballon.", "pause": 0.7},
+        {"id": "p3", "texte": "Quarterback et receveurs, vous regardez la même vidéo pour une raison."},
+        {"id": "p4", "texte": "Si vous ne lisez pas la même chose, le ballon part là où il n'y a personne.", "pause": 0.5},
+        {"id": "p5", "texte": "Ou pire, là où il y a un défenseur."}
       ],
       "pause": 1.4
     },
     {
       "id": "question",
       "phrases": [
-        { "id": "q1", "texte": "Avant tout le reste, une question : man ou zone ?", "pause": 0.5 },
-        { "id": "q2", "texte": "En man, un défenseur te suit.", "pause": 0.6 },
-        { "id": "q3", "texte": "En zone, il garde un espace.", "pause": 0.6 },
-        { "id": "q4", "texte": "Tout ce que tu fais ensuite en dépend, alors on lui consacre la prochaine vidéo." }
+        {"id": "q1", "texte": "Avant tout le reste, une question : man ou zone ?", "pause": 0.5},
+        {"id": "q2", "texte": "En man, un défenseur te suit.", "pause": 0.6},
+        {"id": "q3", "texte": "En zone, il garde un espace.", "pause": 0.6},
+        {"id": "q4", "texte": "Tout ce que tu fais ensuite en dépend, alors on lui consacre la prochaine vidéo."}
       ],
       "pause": 1.2
     },
     {
       "id": "etapes",
       "phrases": [
-        { "id": "e0", "texte": "La lecture tient en trois étapes.", "pause": 0.6 },
-        { "id": "e1", "texte": "Un : compte les safeties, les défenseurs à dix yards et plus." },
-        { "id": "e2", "texte": "Zéro, un, ou deux.", "vitesse": 0.95, "pause": 0.5 },
-        { "id": "e3", "texte": "Un seul safety, le milieu du terrain est fermé : on dit MOFC.", "pause": 0.6 },
-        { "id": "e4", "texte": "Deux safeties, il est ouvert : MOFO.", "pause": 0.9 },
-        { "id": "e5", "texte": "Deux : regarde le corner." },
-        { "id": "e6", "texte": "Collé à toi, à cinq yards, ou loin ?", "pause": 0.5 },
-        { "id": "e7", "texte": "Tourné vers toi, ou vers le quarterback ?", "pause": 0.9 },
-        { "id": "e8", "texte": "Trois : confirme au snap." },
-        { "id": "e9", "texte": "Ce que tu as vu avant le snap, c'est une hypothèse." },
-        { "id": "e10", "texte": "Les deux premières secondes te disent si elle était bonne.", "pause": 1.6 }
+        {"id": "e0", "texte": "La lecture tient en trois étapes.", "pause": 0.6},
+        {"id": "e1", "texte": "Un : compte les safeties, les défenseurs à dix yards et plus.", "lu": "Un, compte les safeties, les défenseurs à dix yards et plus."},
+        {"id": "e2", "texte": "Zéro, un, ou deux.", "pause": 0.5},
+        {"id": "e3", "texte": "Un seul safety, le milieu du terrain est fermé.", "pause": 0.6},
+        {"id": "e4", "texte": "Deux safeties, le milieu est ouvert.", "pause": 0.9},
+        {"id": "e5", "texte": "Deux : regarde le corner."},
+        {"id": "e6", "texte": "Collé à toi, à cinq yards, ou loin ?", "pause": 0.5},
+        {"id": "e7", "texte": "Tourné vers toi, ou vers le quarterback ?", "pause": 0.9},
+        {"id": "e8", "texte": "Trois : confirme au snap.", "lu": "Trois, confirme au snap."},
+        {"id": "e9", "texte": "Ce que tu as vu avant le snap, c'est une hypothèse."},
+        {"id": "e10", "texte": "Les deux premières secondes te disent si elle était bonne.", "pause": 1.6}
       ],
       "pause": 0.6
     },
     {
       "id": "conflit",
       "phrases": [
-        { "id": "c1", "texte": "Dernière idée, et c'est elle qui relie le quarterback à ses receveurs." },
-        { "id": "c2", "texte": "Dans chaque couverture de zone, un défenseur a deux joueurs à surveiller." },
-        { "id": "c3", "texte": "On l'appelle le défenseur en conflit.", "pause": 0.5 },
-        { "id": "c4", "texte": "Le quarterback le regarde, et lance là où il n'est pas.", "pause": 1.4 }
+        {"id": "c1", "texte": "Dernière idée, et c'est elle qui relie le quarterback à ses receveurs."},
+        {"id": "c2", "texte": "Dans chaque couverture de zone, un défenseur a deux joueurs à surveiller."},
+        {"id": "c3", "texte": "On l'appelle le défenseur en conflit.", "pause": 0.5},
+        {"id": "c4", "texte": "Le quarterback le regarde, et lance là où il n'est pas.", "pause": 1.4}
       ],
       "pause": 0.6
     },
     {
       "id": "plan",
       "phrases": [
-        { "id": "s1", "texte": "On commence par la question qui change tout : man ou zone." },
-        { "id": "s2", "texte": "Ensuite, on suit le nombre de safeties." },
-        { "id": "s3", "texte": "Zéro safety : la Cover 0." },
-        { "id": "s4", "texte": "Un safety, MOFC : la Cover 1 et la Cover 3." },
-        { "id": "s5", "texte": "Deux safeties, MOFO : la Cover 2 et la Cover 4." },
-        { "id": "s6", "texte": "Et pour finir, un quiz." }
+        {"id": "s1", "texte": "On commence par la question qui change tout : man ou zone.", "lu": "On commence par la question qui change tout, man ou zone."},
+        {"id": "s2", "texte": "Ensuite, on suit le nombre de safeties."},
+        {"id": "s3", "texte": "Zéro safety : la Cover 0.", "lu": "Zéro safety, la Cover 0."},
+        {"id": "s4", "texte": "Un safety, milieu fermé : la Cover 1 et la Cover 3.", "lu": "Un safety, milieu fermé : la Cover 1, et la Cover 3."},
+        {"id": "s5", "texte": "Deux safeties, milieu ouvert : la Cover 2 et la Cover 4."},
+        {"id": "s6", "texte": "Et pour finir, un quiz."}
       ],
       "pause": 0.2
     }

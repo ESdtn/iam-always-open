@@ -1,0 +1,365 @@
+{
+ "a1": {
+  "dit": "Avant chaque snap, la défense te montre ce qu'elle va faire.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Avant chaque snap, la défense te montre ce qu'elle va faire."
+ },
+ "a2": {
+  "dit": "Pas tout, mais presque.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Pas tout, mais presque."
+ },
+ "a3": {
+  "dit": "Il faut juste savoir où regarder.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.95,
+  "entendu": "Il faut juste savoir regarder."
+ },
+ "p1": {
+  "dit": "Dans cette série, tu vas apprendre à lire les cinq couvertures de base.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Dans cette série, tu vas apprendre à lire les 5 couvertures de base."
+ },
+ "p2": {
+  "dit": "Pour chacune, trois questions : comment la reconnaître, où est l'espace, et où va le ballon.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Pour chacune, trois questions. Comment la reconnaître ? Où est l'espace ? Et où va le ballon ?"
+ },
+ "p3": {
+  "dit": "couarteurbac et receveurs, vous regardez la même vidéo pour une raison.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.99,
+  "entendu": "Quarterback et receveur, vous regardez la même vidéo pour une raison."
+ },
+ "p4": {
+  "dit": "Si vous ne lisez pas la même chose, le ballon part là où il n'y a personne.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Si vous ne lisez pas la même chose, le ballon part là où il n'y a personne."
+ },
+ "p5": {
+  "dit": "Ou pire, là où il y a un défenseur.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Ou pire, là où il y a un défenseur."
+ },
+ "q1": {
+  "dit": "Avant tout le reste, une question : manne ou zone ?",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.96,
+  "entendu": "Avant tout le reste, une question manuzone ?"
+ },
+ "q2": {
+  "dit": "En manne, un défenseur te suit.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "En man, un défenseur te suit."
+ },
+ "q3": {
+  "dit": "En zone, il garde un espace.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "En zone, il garde un espace."
+ },
+ "q4": {
+  "dit": "Tout ce que tu fais ensuite en dépend, alors on lui consacre la prochaine vidéo.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Tout ce que tu fais ensuite en dépend, alors on lui consacre la prochaine vidéo."
+ },
+ "e0": {
+  "dit": "La lecture tient en trois étapes.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "La lecture tient en trois étapes."
+ },
+ "e1": {
+  "dit": "Un, compte les séfti, les défenseurs à di yardz et plus.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.9,
+  "entendu": "1 contre les safety, les défenseurs à Diyard et plus."
+ },
+ "e2": {
+  "dit": "Zéro, un, ou deux.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "0, 1 ou 2 ?"
+ },
+ "e3": {
+  "dit": "Un seul séfti, le milieu du terrain est fermé.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Un seul safety, le milieu du terrain est fermé."
+ },
+ "e4": {
+  "dit": "Deux séfti, le milieu est ouvert.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.91,
+  "entendu": "De safety, le milieu est ouvert."
+ },
+ "e5": {
+  "dit": "Deux : regarde le corneur.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.91,
+  "entendu": "2. Regarde au corner."
+ },
+ "e6": {
+  "dit": "Collé à toi, à cinq yardz, ou loin ?",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "collé à toi, à 5 yards ou loin."
+ },
+ "e7": {
+  "dit": "Tourné vers toi, ou vers le couarteurbac ?",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.99,
+  "entendu": "Tourner vers toi ou vers le quarterback."
+ },
+ "e8": {
+  "dit": "Trois, confirme au snap.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "3. Confirme au snap."
+ },
+ "e9": {
+  "dit": "Ce que tu as vu avant le snap, c'est une hypothèse.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Ce que tu as vu avant le snap, c'est une hypothèse."
+ },
+ "e10": {
+  "dit": "Les deux premières secondes te disent si elle était bonne.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Les deux premières secondes te disent si elle était bonne."
+ },
+ "c1": {
+  "dit": "Dernière idée, et c'est elle qui relie le couarteurbac à ses receveurs.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Dernière idée, et c'est elle qui relie le quarterback à ses receveurs."
+ },
+ "c2": {
+  "dit": "Dans chaque couverture de zone, un défenseur a deux joueurs à surveiller.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Dans chaque couverture de zone, un défenseur a deux joueurs à surveiller."
+ },
+ "c3": {
+  "dit": "On l'appelle le défenseur en conflit.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "On l'appelle le défenseur en conflit."
+ },
+ "c4": {
+  "dit": "Le couarteurbac le regarde, et lance là où il n'est pas.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Le quarterback le regarde et lance là où il n'est pas."
+ },
+ "s1": {
+  "dit": "On commence par la question qui change tout, manne ou zone.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.98,
+  "entendu": "On commence par la question qui change tout, Manu Zone."
+ },
+ "s2": {
+  "dit": "Ensuite, on suit le nombre de séfti.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.94,
+  "entendu": "Ensuite, on suit le nombre de safety."
+ },
+ "s3": {
+  "dit": "Zéro séfti, la Coveur zéro.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Zero safety, la cover 0."
+ },
+ "s4": {
+  "dit": "Un séfti, milieu fermé : la Coveur un, et la Coveur trois.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Un safety, milieu fermé, la cover 1 et la cover 3."
+ },
+ "s5": {
+  "dit": "Deux séfti, milieu ouvert : la Coveur deux et la Coveur quatre.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 0.97,
+  "entendu": "2 safety, milieu ouvert. La cover 2 et la cover 4."
+ },
+ "s6": {
+  "dit": "Et pour finir, un couize.",
+  "vitesse": 1.1,
+  "pauses": {
+   ",": 0.26,
+   ":": 0.4,
+   ";": 0.4
+  },
+  "score": 1.0,
+  "entendu": "Et pour finir, un quiz."
+ }
+}

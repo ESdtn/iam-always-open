@@ -16,13 +16,13 @@
 **À l'écran**
 
 - État neutre. La défense entre : FS au milieu à 13 yds, corners à 7-8 yds, SS descendu côté Y, N face à H, deux LB.
-- Titre **COVER 3**, pastilles **ZONE · 1 SAFETY · MOFC**.
+- Titre **COVER 3**, pastilles **ZONE · 1 SAFETY · MILIEU FERMÉ**.
 
 ## Scène 2 · Carte d'identité (≈ 22 s)
 
 **Voix off**
 
-> Trois défenseurs se partagent la profondeur, un tiers chacun : les deux corners et le safety du milieu. Devant eux, quatre défenseurs couvrent la zone courte. Le milieu est fermé : MOFC.
+> Trois défenseurs se partagent la profondeur, un tiers chacun : les deux corners et le safety du milieu. Devant eux, quatre défenseurs couvrent la zone courte. Le milieu est fermé.
 >
 > Zone, donc la règle change : tu cherches le trou, et tu t'y arrêtes.
 
@@ -30,7 +30,7 @@
 
 - Trois zones bleues **1/3 PROFOND** se dessinent en haut.
 - Quatre zones sable en dessous : **CURL/FLAT** (N), **HOOK** (LB), **HOOK** (LB), **CURL/FLAT** (SS).
-- Compteur **3 PROFONDS · 4 DESSOUS**, cadenas fermé au milieu, étiquette **MOFC**.
+- Compteur **3 PROFONDS · 4 DESSOUS**, cadenas fermé au milieu, étiquette **MILIEU FERMÉ**.
 - L'étiquette **ZONE** du bandeau grossit un instant, avec le rappel **ZONE = JE M'ASSIEDS DANS LE TROU**.
 
 ## Scène 3 · La reconnaître (≈ 32 s)

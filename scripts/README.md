@@ -7,10 +7,10 @@ Huit vidéos : la question man ou zone d'abord, puis les couvertures dans l'ordr
 | 0 | `00-introduction.md` | Introduction | | 2 min |
 | 1 | `01-man-ou-zone.md` | Man ou zone ? | | 2 min 50 |
 | 2 | `02-cover-0.md` | Cover 0 | Man | 2 min 35 |
-| 3 | `03-cover-1.md` | Cover 1 | Man, MOFC | 3 min 05 |
-| 4 | `04-cover-3.md` | Cover 3 | Zone, MOFC | 3 min 15 |
-| 5 | `05-cover-2.md` | Cover 2 | Zone, MOFO | 3 min 15 |
-| 6 | `06-cover-4.md` | Cover 4 | Zone, MOFO | 3 min 10 |
+| 3 | `03-cover-1.md` | Cover 1 | Man, milieu fermé | 3 min 05 |
+| 4 | `04-cover-3.md` | Cover 3 | Zone, milieu fermé | 3 min 15 |
+| 5 | `05-cover-2.md` | Cover 2 | Zone, milieu ouvert | 3 min 15 |
+| 6 | `06-cover-4.md` | Cover 4 | Zone, milieu ouvert | 3 min 10 |
 | 7 | `07-conclusion-quiz.md` | Conclusion et quiz | | 3 min 40 |
 
 Total : environ 24 minutes.
@@ -37,7 +37,7 @@ Les durées sont des estimations (2,5 mots par seconde, plus les temps d'animati
 
 **Man ou zone, fil rouge.** Chaque chapitre porte une pastille **MAN** ou **ZONE** dans son bandeau et rappelle la règle dans sa carte d'identité : man, je cours ; zone, je m'assieds dans le trou.
 
-**MOFC et MOFO.** Définis une fois dans l'introduction, à l'écran et entre parenthèses : MOFC (Middle Of the Field Closed, milieu fermé) et MOFO (Middle Of the Field Open, milieu ouvert). Utilisés tels quels ensuite.
+**Milieu fermé, milieu ouvert.** Un seul safety profond : le milieu du terrain est fermé. Deux : il est ouvert. On le dit et on l'écrit en français. Les sigles MOFC et MOFO ne sont pas utilisés, à la demande du coach, pour ne pas embrouiller les joueurs.
 
 **Gabarit d'un chapitre « couverture ».** Titre, carte d'identité, la reconnaître (avant le snap, puis au snap), ses faiblesses, la battre (lecture QB et ajustement receveur), ne pas confondre avec, réflexe, retour à l'état neutre.
 
@@ -49,9 +49,11 @@ Règle donnée par le coach : les termes de football se prononcent à l'anglaise
 |---|---|
 | Cover, safety, corner, slot, snap, blitz, press, jam, robber, quarterback, running back, linebacker, nickel, man, deep, hook, flat, seam, quarters, play-action, smash, mesh | Les numéros : « Cover zéro, un, deux, trois, quatre », « Cover six », « Tampa deux », « deux-man » |
 | Tous les tracés : slant, hitch, out, quick out, comeback, fade, curl, corner, post, dig | Les mots courants : zone, défenseur, receveur, tracé, levier, yards, touche, milieu, profondeur |
-| | MOFC et MOFO, prononcés à la française : « mofsi » et « mofo » | « quatre verticaux », « le croisement », « le trou », « la fenêtre » |
+| | | « quatre verticaux », « le croisement », « le trou », « la fenêtre » |
 
-La voix de synthèse lit le français : chaque terme anglais aura donc une écriture phonétique dans un lexique séparé (`voix/lexique.md`), validée à l'oreille. Les scripts gardent l'orthographe normale.
+La voix de synthèse lit le français : chaque terme anglais a donc une écriture phonétique dans un lexique séparé (`voix/lexique.json`, expliqué dans `voix/lexique.md`), validée à l'oreille. Les scripts gardent l'orthographe normale.
+
+**Pauses.** La voix marque une pause à chaque virgule et à chaque deux-points. La ponctuation des scripts compte donc : une virgule de plus, c'est un temps d'arrêt de plus.
 
 ## Écarts volontaires par rapport au guide PDF
 

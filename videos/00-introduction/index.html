@@ -12,9 +12,9 @@
 <script src="assets/audio/00-introduction.timing.js"></script>
 </head>
 <body>
-<div id="root" data-composition-id="introduction" data-start="0" data-duration="89.34" data-width="1920" data-height="1080">
-  <div id="scene" class="clip" data-start="0" data-duration="89.34" data-track-index="0"></div>
-  <audio id="voix" src="assets/audio/00-introduction.mp3" data-start="0" data-duration="89.34" data-track-index="1" data-volume="1"></audio>
+<div id="root" data-composition-id="introduction" data-start="0" data-duration="101.95" data-width="1920" data-height="1080">
+  <div id="scene" class="clip" data-start="0" data-duration="101.95" data-track-index="0"></div>
+  <audio id="voix" src="assets/audio/00-introduction.mp3" data-start="0" data-duration="101.95" data-track-index="1" data-volume="1"></audio>
 </div>
 <script>
 // Minutage de la voix : T = début d'une phrase, F = sa fin, A = un instant à l'intérieur (0 = début, 1 = fin).
@@ -52,8 +52,8 @@ S.etiquette('e-zone', 40, 16.2, 'ZONE', { taille: 46 });
 S.etiquette('e-personne', 47.3, 21.6, 'PERSONNE', { col: C.rouge, coulTexte: '#fff', taille: 19 });
 S.etiquette('e-inter', 43.6, 16.6, 'INTERCEPTION', { col: C.rouge, coulTexte: '#fff', taille: 19 });
 S.etiquette('e-10', 46.6, 11.1, '10 YARDS', { taille: 18 });
-S.etiquette('e-mofc', 26.667, 18.3, 'MOFC', { col: '#fff', coulTexte: C.vertTexte, taille: 30 });
-S.etiquette('e-mofo', 26.667, 18.3, 'MOFO', { col: '#fff', coulTexte: C.vertTexte, taille: 30 });
+S.etiquette('e-mofc', 26.667, 18.3, 'MILIEU FERMÉ', { col: '#fff', coulTexte: C.vertTexte, taille: 26 });
+S.etiquette('e-mofo', 26.667, 18.3, 'MILIEU OUVERT', { col: '#fff', coulTexte: C.vertTexte, taille: 26 });
 S.cadenas('cad-f', 26.667, 20.6, true); S.cadenas('cad-o', 26.667, 20.6, false);
 S.etiquette('e-colle', 44.9, 1.6, 'COLLÉ', { taille: 13 }); S.etiquette('e-5', 45.2, 5, '5 YARDS', { taille: 13 }); S.etiquette('e-loin', 46, 8.5, 'LOIN', { taille: 13 });
 S.etiquette('e-hyp', 26.667, 21.6, 'AVANT LE SNAP = HYPOTHÈSE', { col: '#fff', coulTexte: C.vertTexte, taille: 22 });
@@ -78,8 +78,6 @@ hote.insertAdjacentHTML('beforeend', `
   <div class="panneau bas" id="liste" style="opacity:0"><ol class="liste"><li id="et1"><b>1</b>Compte les safeties</li><li id="et2"><b>2</b>Regarde le corner</li><li id="et3"><b>3</b>Confirme au snap</li></ol></div>
   <div class="marge-d">
     <div id="bloc-chiffre" style="opacity:0"><div class="grand-chiffre ombre"><span id="ch0">0</span><span id="ch1">1</span><span id="ch2">2</span></div><div class="legende-chiffre ombre">safeties</div></div>
-    <div class="definition" id="def-mofc" style="opacity:0"><b>MOFC</b><i>(Middle Of the Field Closed)</i><u>Milieu fermé</u></div>
-    <div class="definition" id="def-mofo" style="opacity:0"><b>MOFO</b><i>(Middle Of the Field Open)</i><u>Milieu ouvert</u></div>
   </div>
   <div class="annonce" id="annonce" style="opacity:0"><span>Prochaine vidéo <b>Man ou zone ?</b></span></div>
   <div class="ardoise" id="ardoise" style="opacity:0">
@@ -90,8 +88,8 @@ hote.insertAdjacentHTML('beforeend', `
       <div class="tete-plan"><span class="script">Le plan</span><div class="carte-plan" id="pl-mz" style="opacity:0"><span class="label">D'abord</span><span class="titre">MAN OU ZONE ?</span></div></div>
       <div class="colonnes">
         <div class="colonne" id="col0" style="opacity:0"><div class="tete"><b>0</b>safety</div>${carte('pl-c0', 'COVER 0', 'man')}</div>
-        <div class="colonne" id="col1" style="opacity:0"><div class="tete"><b>1</b>safety<i>MOFC</i></div>${carte('pl-c1', 'COVER 1', 'man')}${carte('pl-c3', 'COVER 3', 'zone')}</div>
-        <div class="colonne" id="col2" style="opacity:0"><div class="tete"><b>2</b>safeties<i>MOFO</i></div>${carte('pl-c2', 'COVER 2', 'zone')}${carte('pl-c4', 'COVER 4', 'zone')}</div>
+        <div class="colonne" id="col1" style="opacity:0"><div class="tete"><b>1</b>safety<i>Milieu fermé</i></div>${carte('pl-c1', 'COVER 1', 'man')}${carte('pl-c3', 'COVER 3', 'zone')}</div>
+        <div class="colonne" id="col2" style="opacity:0"><div class="tete"><b>2</b>safeties<i>Milieu ouvert</i></div>${carte('pl-c2', 'COVER 2', 'zone')}${carte('pl-c4', 'COVER 4', 'zone')}</div>
       </div>
       <div class="fin-plan"><div class="carte-plan" id="pl-quiz" style="opacity:0"><span class="label">Pour finir</span><span class="titre">QUIZ</span></div></div>
     </div>
@@ -120,7 +118,7 @@ S.va(tl, 'CBD', 49, 7.5, F('a3') + 0.55, 0.3);
 let t = T('p1') - 0.45;
 S.cache(tl, 'panneau', t, 0.25);
 S.ardoise(tl, 'ardoise', t, F('p2') + 0.25);
-apparait('q-a', A('p2', 0.30)); apparait('q-b', A('p2', 0.60)); apparait('q-c', A('p2', 0.80));
+apparait('q-a', A('p2', 0.40)); apparait('q-b', A('p2', 0.64)); apparait('q-c', A('p2', 0.83));
 t = F('p2') + 0.25;
 S.montre(tl, 'panneau', t + 0.2, 0.3);
 tl.set('#titre-serie', { opacity: 0 }, t + 0.6); tl.set('#plan', { opacity: 1 }, t + 0.6);
@@ -172,19 +170,19 @@ S.montre(tl, 'bloc-chiffre', t - 0.35, 0.2);
 S.formation(tl, DEF0, t - 0.35, 0.3); chiffre(0, t - 0.2);
 S.formation(tl, DEF1, A('e2', 0.34), 0.28); chiffre(1, A('e2', 0.4));
 S.formation(tl, DEF2, A('e2', 0.7), 0.28); chiffre(2, A('e2', 0.76));
-// Un seul safety : MOFC.
+// Un seul safety : milieu fermé.
 t = T('e3');
 S.cache(tl, 'l-10', t, 0.25); S.cache(tl, 'e-10', t, 0.25);
 S.formation(tl, DEF1, t, 0.4); chiffre(1, t + 0.2);
-S.montre(tl, 'cad-f', A('e3', 0.42), 0.25); S.montre(tl, 'e-mofc', A('e3', 0.8), 0.25); apparait('def-mofc', A('e3', 0.8));
-// Deux safeties : MOFO.
+S.montre(tl, 'cad-f', A('e3', 0.5), 0.25); S.montre(tl, 'e-mofc', A('e3', 0.72), 0.25);
+// Deux safeties : milieu ouvert.
 t = T('e4');
 S.cache(tl, 'cad-f', t, 0.2); S.cache(tl, 'e-mofc', t, 0.2);
 S.formation(tl, DEF2, t, 0.4); chiffre(2, t + 0.2);
-S.montre(tl, 'cad-o', A('e4', 0.45), 0.25); S.montre(tl, 'e-mofo', A('e4', 0.75), 0.25); apparait('def-mofo', A('e4', 0.75));
+S.montre(tl, 'cad-o', A('e4', 0.5), 0.25); S.montre(tl, 'e-mofo', A('e4', 0.72), 0.25);
 // Deux : regarde le corner.
 t = T('e5') - 0.25;
-['cad-o', 'e-mofo', 'bloc-chiffre', 'def-mofc', 'def-mofo'].forEach((id) => S.cache(tl, id, t, 0.25));
+['cad-o', 'e-mofo', 'bloc-chiffre'].forEach((id) => S.cache(tl, id, t, 0.25));
 S.formation(tl, DEF1, t, 0.4);
 etape(2, T('e5'));
 S.camera(tl, T('e5'), 0.85, { zoom: 2.2, cx: 44, cy: 3, sx: 1150, sy: 470 });

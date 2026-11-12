@@ -11,12 +11,12 @@
 
 **Voix off**
 
-> Cover 2. Deux safeties, et le milieu du terrain s'ouvre : MOFO.
+> Cover 2. Deux safeties, et le milieu du terrain s'ouvre.
 
 **À l'écran**
 
 - État neutre. La défense entre : deux safeties à 13 yds près des hashes, corners à 5 yds, N et deux LB en dessous.
-- Titre **COVER 2**, pastilles **ZONE · 2 SAFETIES · MOFO**.
+- Titre **COVER 2**, pastilles **ZONE · 2 SAFETIES · MILIEU OUVERT**.
 
 ## Scène 2 · Carte d'identité (≈ 20 s)
 
@@ -28,7 +28,7 @@
 
 **À l'écran**
 
-- Deux grandes zones bleues **MOITIÉ PROFONDE**. Cadenas ouvert entre les deux, étiquette **MOFO**.
+- Deux grandes zones bleues **MOITIÉ PROFONDE**. Cadenas ouvert entre les deux, étiquette **MILIEU OUVERT**.
 - Cinq zones sable : **FLAT** (CB), **CURL** (N), **HOOK** (LB), **CURL** (LB), **FLAT** (CB).
 - Compteur **2 PROFONDS · 5 DESSOUS**.
 - L'étiquette **ZONE** du bandeau grossit un instant, avec le rappel **ZONE = JE M'ASSIEDS DANS LE TROU**.

@@ -14,7 +14,7 @@ ident = sys.argv[1]
 brut = (RACINE / "videos" / "assets" / "audio" / f"{ident}.timing.js").read_text(encoding="utf-8")
 minutage = json.loads(brut[brut.index("{"):brut.rindex("}") + 1])
 plan = json.loads((RACINE / "videos" / "voix" / f"{ident}.json").read_text(encoding="utf-8"))
-forces = {p.get("id"): p["dit"] for s in plan["scenes"] for p in s["phrases"] if p.get("dit")}
+forces = {p.get("id"): p.get("dit") or phonetique(p["lu"]) for s in plan["scenes"] for p in s["phrases"] if p.get("dit") or p.get("lu")}
 TITRES = {"accroche": "Accroche", "promesse": "La promesse", "question": "La première question", "etapes": "La lecture en trois étapes",
           "conflit": "Le défenseur en conflit", "plan": "Le plan de la série"}
 
@@ -24,7 +24,7 @@ def temps(t):
 
 
 lignes = [f"# Relevé de la voix · {ident}", "",
-          f"Durée : {temps(minutage['duree'])}. Voix M3, vitesse 1,10.", "",
+          f"Durée : {temps(minutage['duree'])}. Voix M3, en français, vitesse 1,10, pause à chaque virgule et à chaque deux-points.", "",
           "Chaque ligne est une phrase prononcée. La colonne « Donné à la voix » montre l'écriture phonétique quand elle diffère du texte.",
           "Note dans la dernière colonne ce qui ne va pas : un mot mal prononcé, un débit trop rapide, une pause trop courte, une intonation bizarre.", ""]
 n = 0

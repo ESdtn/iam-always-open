@@ -16,7 +16,7 @@
 **À l'écran**
 
 - État neutre. La défense entre : deux safeties à 11 yds, resserrés, corners à 7-8 yds, N et deux LB en dessous.
-- Titre **COVER 4**, pastilles **ZONE · 2 SAFETIES · MOFO**.
+- Titre **COVER 4**, pastilles **ZONE · 2 SAFETIES · MILIEU OUVERT**.
 
 ## Scène 2 · Carte d'identité (≈ 28 s)
 
@@ -30,7 +30,7 @@
 
 - Quatre zones bleues **1/4 PROFOND** se dessinent.
 - Trois zones sable seulement : **CURL/FLAT** (N), **HOOK** (LB), **CURL/FLAT** (LB). Les espaces entre elles restent visibles.
-- Compteur **4 PROFONDS · 3 DESSOUS**, étiquette **MOFO** entre les deux safeties.
+- Compteur **4 PROFONDS · 3 DESSOUS**, étiquette **MILIEU OUVERT** entre les deux safeties.
 - L'étiquette **ZONE** du bandeau grossit un instant. Puis un receveur part vertical : le défenseur de son quart le suit, relié par un pointillé de marquage. Rappel à l'écran : **COURT = JE M'ASSIEDS · VERTICAL = JE COURS**.
 
 ## Scène 3 · La reconnaître (≈ 28 s)

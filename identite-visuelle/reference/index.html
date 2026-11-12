@@ -70,7 +70,7 @@
 const frame = (location.hash || '#titre').slice(1);
 const cadre = document.getElementById('cadre');
 const svg = (classe, contenu) => `<svg class="${classe}" width="1920" height="1080" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">${contenu}</svg>`;
-const PASTILLES = `<div class="pastilles"><span class="pastille zone">Zone</span><span class="pastille">1 safety</span><span class="pastille">MOFC</span></div>`;
+const PASTILLES = `<div class="pastilles"><span class="pastille zone">Zone</span><span class="pastille">1 safety</span><span class="pastille">Milieu fermé</span></div>`;
 
 function titre() {
   const g = [
@@ -120,8 +120,8 @@ function neutre() {
 function identite() {
   const f = terrain();
   const defense = [f.defenseur(4.4, 7.6, 'CB'), f.defenseur(49, 7.6, 'CB'), f.defenseur(26.667, 13.2, 'FS'), f.defenseur(41.2, 5, 'SS'), f.defenseur(15, 5, 'N'), f.defenseur(22.3, 4.8, 'LB'), f.defenseur(31.2, 4.8, 'LB')].join('');
-  const mofc = f.cadenas(26.667, 23.6) + f.etiquette(26.667, 22.4, 'MOFC · MILIEU FERMÉ', { col: '#fff', coulTexte: C.vertTexte });
-  return svg('fond', defs() + f.base + zonesC3(f) + mofc + attaque(f) + ligneDef(f) + defense + f.vignette) + `
+  const ferme = f.cadenas(26.667, 23.6) + f.etiquette(26.667, 22.4, 'MILIEU FERMÉ', { col: '#fff', coulTexte: C.vertTexte });
+  return svg('fond', defs() + f.base + zonesC3(f) + ferme + attaque(f) + ligneDef(f) + defense + f.vignette) + `
     <div class="ui-g ombre"><span class="titre">COVER 3</span>${PASTILLES}
       <div class="etape"><span class="script">Carte d'identité</span></div></div>
     <div class="compte ombre"><div class="p"><b>3</b> profonds</div><div class="c"><b>4</b> dessous</div>
@@ -153,7 +153,7 @@ function reflexe() {
   const g = [croix(120, 250, 34, C.craie, 7, 8, .5), rond(1790, 210, 44, C.orange, 7, .9), croix(1792, 212, 24, C.craie, 6, 0, .6), hachures(10, 520, 9, 44, 44, C.orange, 8, true, .8),
     fleche(1500, 980, 1640, 1040, 1780, 960, C.craie, 6, .5, 22, '30 18'), rond(250, 990, 30, C.craie, 6, .5), croix(330, 960, 24, C.craie, 6, 6, .5)].join('');
   return svg('fond', defs() + fond() + g) + `
-    <div class="coin"><span class="titre">COVER 3</span><span class="pastille zone">Zone</span><span class="pastille">1 safety</span><span class="pastille">MOFC</span></div>
+    <div class="coin"><span class="titre">COVER 3</span><span class="pastille zone">Zone</span><span class="pastille">1 safety</span><span class="pastille">Milieu fermé</span></div>
     <div class="reflexe-titre"><span class="script">Le réflexe</span></div>
     <div class="cartes">
       <div class="carte"><div class="onglet">QB</div><div class="quand">1 safety, les corners reculent</div><div class="quoi">Je lis le <b>défenseur du&nbsp;flat.</b></div></div>

@@ -27,11 +27,6 @@ html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; backgro
 .grand-chiffre { font-family: var(--titre); font-size: 230px; line-height: 1; color: #fff; text-align: center; height: 230px; position: relative; }
 .grand-chiffre span { position: absolute; left: 0; right: 0; top: 0; opacity: 0; }
 .legende-chiffre { font-family: var(--label); font-weight: 700; font-size: 26px; letter-spacing: .14em; text-transform: uppercase; color: rgba(255, 255, 255, .8); text-align: center; margin-top: 6px; }
-.definition { margin-top: 26px; background: rgba(14, 18, 15, .78); border-radius: 12px; padding: 14px 16px 16px; font-family: var(--label); color: #fff; }
-.definition b { display: block; font-family: var(--titre); font-weight: 400; font-size: 40px; color: var(--orange); }
-.definition i { display: block; font-style: normal; font-weight: 600; font-size: 20px; letter-spacing: .04em; color: rgba(255, 255, 255, .75); margin-top: 4px; }
-.definition u { display: block; text-decoration: none; font-weight: 700; font-size: 24px; letter-spacing: .08em; text-transform: uppercase; margin-top: 2px; }
-
 /* Bandeau d'annonce, en haut au centre. */
 .annonce { position: absolute; left: 0; right: 0; top: 22px; text-align: center; z-index: 20; }
 .annonce span { display: inline-block; background: var(--ardoise); box-shadow: 0 0 0 3px rgba(242, 239, 233, .6), 0 6px 18px rgba(0, 0, 0, .45); border-radius: 12px; padding: 12px 34px 16px; font-family: var(--label); font-weight: 700; font-size: 30px; letter-spacing: .1em; text-transform: uppercase; color: var(--craie); }
@@ -58,6 +53,6 @@ html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; backgro
 .colonne { flex: 1; }
 .colonne .tete { font-family: var(--label); font-weight: 700; font-size: 30px; letter-spacing: .12em; text-transform: uppercase; color: var(--craie); border-bottom: 3px solid rgba(242, 239, 233, .4); padding-bottom: 10px; display: flex; align-items: baseline; gap: 14px; }
 .colonne .tete b { font-family: var(--titre); font-weight: 400; font-size: 110px; line-height: 1.15; color: var(--ciel); }
-.colonne .tete i { font-style: normal; color: var(--orange); margin-left: auto; }
+.colonne .tete i { font-style: normal; color: var(--orange); margin-left: auto; font-size: 26px; }
 .colonne .carte-plan { display: flex; margin-top: 30px; justify-content: space-between; }
 .plan .fin-plan { margin-top: 60px; text-align: center; }

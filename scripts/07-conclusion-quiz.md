@@ -25,15 +25,15 @@
 >
 > Zéro : Cover 0. C'est du man, le ballon part vite.
 >
-> Un, MOFC : regarde le corner. Il te suit, c'est du man : Cover 1. Il recule, c'est de la zone : Cover 3.
+> Un, milieu fermé : regarde le corner. Il te suit, c'est du man : Cover 1. Il recule, c'est de la zone : Cover 3.
 >
-> Deux, MOFO : regarde le corner. Il reste court, Cover 2. Il recule, Cover 4. Les deux sont en zone.
+> Deux, milieu ouvert : regarde le corner. Il reste court, Cover 2. Il recule, Cover 4. Les deux sont en zone.
 
 **À l'écran**
 
 - L'arbre se construit branche par branche, au rythme de la voix. À chaque couverture, la défense correspondante s'affiche une seconde sur le terrain en arrière-plan.
 - Sous chaque branche, le comportement du corner est animé en miniature (il suit, il recule, il reste court).
-- Chaque carte porte son étiquette **MAN** ou **ZONE** ; les colonnes 1 et 2 portent **MOFC** et **MOFO**.
+- Chaque carte porte son étiquette **MAN** ou **ZONE** ; les colonnes 1 et 2 portent **MILIEU FERMÉ** et **MILIEU OUVERT**.
 
 ## Scène 3 · Un joueur à lire par couverture (≈ 18 s)
 

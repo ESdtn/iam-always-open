@@ -74,7 +74,7 @@ Les fichiers sont dans `videos/assets/fonts/`, chargés en local pour que le ren
 
 ## Habillage
 
-- **Marge gauche** : titre du chapitre, pastilles (MAN ou ZONE, nombre de safeties, MOFC ou MOFO), étape en cours en script, puis la règle de lecture ou le compteur de la scène.
+- **Marge gauche** : titre du chapitre, pastilles (MAN ou ZONE, nombre de safeties, milieu fermé ou ouvert), étape en cours en script, puis la règle de lecture ou le compteur de la scène.
 - **Marge droite** : progression dans le chapitre (l'étape en cours en orange) et légende.
 - **Sous-titres** : en bas du terrain, sur un bandeau sombre, la partie importante en orange.
 - **Cartes « réflexe »** : sur ardoise, deux cartes côte à côte, onglet orange QB et WR.
