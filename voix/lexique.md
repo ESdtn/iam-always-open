@@ -8,7 +8,7 @@ Règle du coach : les termes de football se prononcent à l'anglaise, les numér
 
 La voix lit du français. Avec l'orthographe anglaise normale, elle déraille : le mot anglais sort mal et les mots français autour sont déformés (« le safety reste deep » devient « le safety rest deep », « garde le hook » devient « gardley hook »). Avec une écriture phonétique à la française, la phrase reste propre.
 
-Les scripts gardent donc l'orthographe normale, et ce lexique est appliqué au texte juste avant la synthèse.
+Les scripts gardent donc l'orthographe normale, et ce lexique est appliqué au texte juste avant la synthèse. La version lue par l'outil est `voix/lexique.json` ; ce fichier-ci en est l'explication.
 
 ## Limite
 
@@ -29,7 +29,7 @@ Je ne peux pas écouter les fichiers. L'état ci-dessous vient d'une retranscrip
 | linebacker | laïnebakeur | Reconnu |
 | nickel | nikeul | Reconnu |
 | deep | dip | Reconnu |
-| hook | à choisir | **Refusé par le coach**, quatre variantes dans le fichier D |
+| hook | houque | Validé par le coach (fichier D, phrase 2) |
 | flat | flatt | Reconnu |
 | quarters | couarteurz | Reconnu |
 | play-action | plé-akcheune | Reconnu |
@@ -40,23 +40,24 @@ Je ne peux pas écouter les fichiers. L'état ci-dessous vient d'une retranscrip
 | comeback | comme-bac | Reconnu |
 | dig | digue | Reconnu |
 | post | pôste | Reconnu |
-| out | à choisir | **Refusé par le coach**, quatre variantes dans le fichier D |
-| quick out | à choisir | **Refusé par le coach**, quatre variantes dans le fichier D |
+| out | a-outte | **À confirmer.** Les quatre phrases du fichier D ont été refusées, mais la même écriture passe dans « quick out ». Je soupçonne « dix yards », mal prononcé dans ces phrases |
+| quick out | couic a-outte | Validé par le coach (fichier D, phrase 9) |
 | MOFC | mofsi | Validé par le coach (« MOFSI », à la française) |
 | MOFO | mofo | Validé par le coach (à la française) |
 | robber | robeur | Pas signalé par le coach |
 | seam | sim | Pas signalé par le coach |
-| fade | féde ou feïde | Pas signalé par le coach ; à départager entre les deux variantes du fichier C |
+| fade | feïde | Validé par le coach (fichier C, phrase 2) |
 | hitch | hitsh | Pas signalé par le coach |
 | jam | jame | Pas signalé par le coach |
 | press | presse | Pas signalé par le coach |
 | man | man | Pas signalé par le coach |
-| yards | yards | Pas signalé par le coach |
-| 2-Man | à choisir | **Refusé par le coach** (« deux-mann »), quatre variantes dans le fichier D |
+| yards | yardz | Corrigé par le coach |
+| dix yards | di yardz | Corrigé par le coach. Même règle pour « six yards » |
+| 2-Man | deux mane | Validé par le coach (fichier D, phrase 14) |
 
 Numéros : écrits en toutes lettres, en français (« Coveur trois », « la Tampa deux », « la Coveur six »).
 
-Retour du coach après écoute des fichiers A, B et C : seuls hook, out, quick out et 2-Man sonnent faux.
+Retour du coach après écoute des fichiers A, B et C : seuls hook, out, quick out et 2-Man sonnent faux. Après le fichier D : hook, quick out et 2-Man sont réglés, « out » seul reste à confirmer.
 
 ## Fichiers d'écoute
 
@@ -99,4 +100,4 @@ Dans `essais/`, voix M3, vitesse normale.
 
 ## Ce que tu peux me renvoyer
 
-Pour le fichier D, un numéro par mot suffit, par exemple « 2, 6, 10, 14 ». Si aucune des quatre ne convient pour un mot, dis-le : j'essaierai autre chose.
+Le plus simple désormais : écouter la vidéo, et me donner l'instant et le mot qui sonne faux, par exemple « 0:38, yards ». Je corrige l'écriture dans `lexique.json` et je régénère la phrase.

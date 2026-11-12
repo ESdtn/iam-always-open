@@ -15,15 +15,16 @@ L'avancement et les décisions sont dans [`SUIVI.md`](SUIVI.md).
 | `scripts/` | Un script par vidéo (voix off et description de l'écran), conventions communes |
 | `identite-visuelle/` | Couleurs, typographies, kit de dessin du terrain, images de référence |
 | `voix/` | Comparatif des voix, lexique de prononciation, essais audio |
-| `videos/` | À venir : une composition par vidéo, son audio et son rendu |
+| `videos/` | Un projet HyperFrames par vidéo (`videos/NN-titre/`), le texte de voix (`videos/voix/`) et les ressources partagées (`videos/assets/`) : kit de dessin, moteur de scène, polices, audio |
+| `outils/voix/` | Synthèse de la voix off et minutage |
 
 ## Chaîne de production d'une vidéo
 
 1. **Script** validé par le coach (`scripts/NN-titre.md`).
 2. **Texte de voix** : la voix off du script, passée au lexique de prononciation (`voix/lexique.md`).
-3. **Audio** : synthèse scène par scène avec la voix retenue, puis écoute et corrections.
-4. **Calage** : alignement mot à mot de l'audio, qui donne le minutage de chaque scène et les sous-titres.
-5. **Animation** : composition en code avec le kit de `identite-visuelle/`, calée sur l'audio.
+3. **Audio** : synthèse phrase par phrase avec la voix retenue, puis écoute et corrections.
+4. **Calage** : la synthèse produit le minutage de chaque phrase et les sous-titres.
+5. **Animation** : composition en code avec le kit et le moteur de scène de `videos/assets/`, calée sur le minutage.
 6. **Rendu** en 1920 × 1080, puis vérification image par image des moments clés.
 7. **Validation** par le coach, corrections, rendu final.
 
@@ -40,7 +41,33 @@ Tout tourne dans une session cloud Claude Code, sans installation locale.
 
 | Besoin | Outil | État |
 |---|---|---|
-| Animation et rendu | HyperFrames (HTML, GSAP, FFmpeg) | À installer dans le dépôt au premier rendu |
+| Animation et rendu | HyperFrames 0.9.39 (HTML, GSAP, FFmpeg) | En place |
 | Voix off | Supertonic 3, voix M3, en local | Testé |
-| Calage et sous-titres | Parakeet TDT v3 via sherpa-onnx | Testé |
+| Calage et sous-titres | Minutage phrase par phrase, produit par la synthèse | En place |
 | Images de référence | `node identite-visuelle/render.cjs` (Chromium) | En place |
+
+## Produire une vidéo
+
+```bash
+bash outils/voix/installer.sh
+```
+
+```bash
+outils/voix/.venv/bin/python outils/voix/synthese.py videos/voix/00-introduction.json
+```
+
+```bash
+cd videos && npm install
+```
+
+```bash
+cd videos/00-introduction && npx --yes hyperframes@0.9.39 check --no-craft
+```
+
+```bash
+cd videos/00-introduction && npx --yes hyperframes@0.9.39 render -o ../rendus/00-introduction.mp4
+```
+
+La synthèse génère chaque phrase jusqu'à six fois et garde la prise la mieux retranscrite : la voix n'est pas déterministe, et une phrase courte sort parfois mal. Elle écrit l'audio, les sous-titres et le minutage dans `videos/assets/audio/`. Si l'audio est régénéré, sa durée change : reporter la nouvelle valeur dans les attributs `data-duration` de la composition.
+
+Les rendus (`videos/rendus/`) ne sont pas versionnés : ils se régénèrent à l'identique à partir du dépôt.

@@ -9,11 +9,11 @@ Dernière mise à jour : 12 novembre 2026.
 | Organisation de la série | Fait |
 | Recherche complémentaire | Fait |
 | Scripts | Écrits et validés par le coach |
-| Identité visuelle et images de référence | Deuxième version (terrain en gazon), en attente de validation |
+| Identité visuelle et images de référence | Validée par le coach (terrain en gazon) |
 | Choix de la voix | Fait : Supertonic 3, voix M3 |
-| Prononciation et vitesse de la voix | Vitesse 1,10 retenue ; quatre mots restent à choisir (fichier D) |
-| Installation de l'outil de rendu | À faire au lancement du pilote |
-| Vidéo pilote (introduction) | À faire |
+| Prononciation et vitesse de la voix | Vitesse 1,10 ; lexique figé, « out » seul à confirmer |
+| Installation de l'outil de rendu | Fait : HyperFrames, un projet par vidéo |
+| Vidéo pilote (introduction) | Première version rendue, en attente de l'avis du coach |
 | Autres vidéos | À faire |
 | Fusion en une seule vidéo | À faire |
 
@@ -21,7 +21,7 @@ Dernière mise à jour : 12 novembre 2026.
 
 | # | Vidéo | Script | Texte de voix | Audio | Calage | Animation | Rendu | Validé |
 |---|---|---|---|---|---|---|---|---|
-| 0 | Introduction | Relu | | | | | | |
+| 0 | Introduction | Relu | Fait | Fait | Fait | Fait | Fait (v1) | |
 | 1 | Man ou zone ? | Relu | | | | | | |
 | 2 | Cover 0 | Relu | | | | | | |
 | 3 | Cover 1 | Relu | | | | | | |
@@ -49,10 +49,11 @@ Dernière mise à jour : 12 novembre 2026.
 
 ## Points ouverts
 
-1. **Maquettes** : valider la deuxième version (`identite-visuelle/reference/`), en particulier l'échelle du plan large.
-2. **Prononciation** : choisir une écriture pour hook, out, quick out et 2-Man dans le fichier D, et départager les deux « fade » du fichier C (voir `voix/lexique.md`).
-3. **Points tactiques à valider** : liste en bas de `scripts/README.md`.
+1. **Pilote** : avis du coach sur l'introduction (rythme, lisibilité, prononciation, animations).
+2. **« out » seul** : écriture « a-outte » à confirmer à la première occurrence (chapitre Cover 1).
+3. **Débit de la voix** : à 1,10, la voix dit environ 5 mots par seconde. À confirmer sur la vidéo entière.
+4. **Points tactiques à valider** : liste en bas de `scripts/README.md`.
 
 ## Journal
 
-- **12 novembre 2026.** Lecture du guide, recherche tactique et vérification des outils. Écriture des sept scripts, puis ajout de « Man ou zone ? » à la demande du coach. Création de l'identité visuelle et de quatre images de référence. Comparatif des voix gratuites, choix de Supertonic M3, premiers essais de prononciation. Anonymisation du guide PDF et réécriture de l'historique git. Deuxième version de l'identité visuelle, sur trois nouvelles références.
+- **12 novembre 2026.** Lecture du guide, recherche tactique et vérification des outils. Écriture des sept scripts, puis ajout de « Man ou zone ? » à la demande du coach. Création de l'identité visuelle et de quatre images de référence. Comparatif des voix gratuites, choix de Supertonic M3, premiers essais de prononciation. Anonymisation du guide PDF et réécriture de l'historique git. Deuxième version de l'identité visuelle, sur trois nouvelles références, validée. Mise en place de la chaîne de production (voix avec sélection automatique de la meilleure prise, moteur de scène, HyperFrames) et premier rendu de l'introduction : 89 secondes.

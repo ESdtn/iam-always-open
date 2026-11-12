@@ -1,0 +1,14 @@
+{
+  "name": "lire-la-couverture",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "postinstall": "cp node_modules/gsap/dist/gsap.min.js assets/gsap.min.js",
+    "check": "npx --yes hyperframes@0.9.39 check",
+    "snapshot": "npx --yes hyperframes@0.9.39 snapshot",
+    "render": "npx --yes hyperframes@0.9.39 render"
+  },
+  "dependencies": {
+    "gsap": "3.15.0"
+  }
+}

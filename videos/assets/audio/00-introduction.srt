@@ -1,0 +1,131 @@
+1
+00:00:01,600 --> 00:00:03,684
+Avant chaque snap, la défense te montre ce qu'elle va faire.
+
+2
+00:00:03,984 --> 00:00:04,903
+Pas tout, mais presque.
+
+3
+00:00:05,203 --> 00:00:06,621
+Il faut juste savoir où regarder.
+
+4
+00:00:08,021 --> 00:00:10,912
+Dans cette série, tu vas apprendre à lire les cinq couvertures de base.
+
+5
+00:00:11,212 --> 00:00:15,118
+Pour chacune, trois questions : comment la reconnaître, où est l'espace, et où va le ballon.
+
+6
+00:00:15,818 --> 00:00:18,827
+Quarterback et receveurs, vous regardez la même vidéo pour une raison.
+
+7
+00:00:19,127 --> 00:00:22,114
+Si vous ne lisez pas la même chose, le ballon part là où il n'y a personne.
+
+8
+00:00:22,614 --> 00:00:24,138
+Ou pire, là où il y a un défenseur.
+
+9
+00:00:25,838 --> 00:00:27,669
+Avant tout le reste, une question : man ou zone ?
+
+10
+00:00:28,169 --> 00:00:29,263
+En man, un défenseur te suit.
+
+11
+00:00:29,863 --> 00:00:31,183
+En zone, il garde un espace.
+
+12
+00:00:31,783 --> 00:00:35,105
+Tout ce que tu fais ensuite en dépend, alors on lui consacre la prochaine vidéo.
+
+13
+00:00:36,605 --> 00:00:37,903
+La lecture tient en trois étapes.
+
+14
+00:00:38,503 --> 00:00:41,098
+Un : compte les safeties, les défenseurs à dix yards et plus.
+
+15
+00:00:41,398 --> 00:00:42,390
+Zéro, un, ou deux.
+
+16
+00:00:42,890 --> 00:00:45,548
+Un seul safety, le milieu du terrain est fermé : on dit MOFC.
+
+17
+00:00:46,148 --> 00:00:47,568
+Deux safeties, il est ouvert : MOFO.
+
+18
+00:00:48,468 --> 00:00:49,509
+Deux : regarde le corner.
+
+19
+00:00:49,809 --> 00:00:51,119
+Collé à toi, à cinq yards, ou loin ?
+
+20
+00:00:51,619 --> 00:00:53,155
+Tourné vers toi, ou vers le quarterback ?
+
+21
+00:00:54,055 --> 00:00:55,151
+Trois : confirme au snap.
+
+22
+00:00:55,451 --> 00:00:57,110
+Ce que tu as vu avant le snap, c'est une hypothèse.
+
+23
+00:00:57,410 --> 00:00:59,670
+Les deux premières secondes te disent si elle était bonne.
+
+24
+00:01:01,870 --> 00:01:04,739
+Dernière idée, et c'est elle qui relie le quarterback à ses receveurs.
+
+25
+00:01:05,039 --> 00:01:08,039
+Dans chaque couverture de zone, un défenseur a deux joueurs à surveiller.
+
+26
+00:01:08,339 --> 00:01:09,678
+On l'appelle le défenseur en conflit.
+
+27
+00:01:10,178 --> 00:01:12,372
+Le quarterback le regarde, et lance là où il n'est pas.
+
+28
+00:01:14,372 --> 00:01:16,613
+On commence par la question qui change tout : man ou zone.
+
+29
+00:01:16,913 --> 00:01:18,360
+Ensuite, on suit le nombre de safeties.
+
+30
+00:01:18,660 --> 00:01:19,987
+Zéro safety : la Cover 0.
+
+31
+00:01:20,287 --> 00:01:22,497
+Un safety, MOFC : la Cover 1 et la Cover 3.
+
+32
+00:01:22,797 --> 00:01:25,164
+Deux safeties, MOFO : la Cover 2 et la Cover 4.
+
+33
+00:01:25,464 --> 00:01:26,438
+Et pour finir, un quiz.

@@ -58,7 +58,7 @@ Règle d'usage : une couleur, un sens. L'orange désigne toujours ce que l'attaq
 | Sous-titres et texte courant | Barlow 500 et 600 | OFL 1.1 |
 | Annotations manuscrites | Permanent Marker | Apache 2.0 |
 
-Les fichiers sont dans `fonts/`, chargés en local pour que le rendu ne dépende pas du réseau.
+Les fichiers sont dans `videos/assets/fonts/`, chargés en local pour que le rendu ne dépende pas du réseau.
 
 ## Le terrain
 
@@ -81,6 +81,7 @@ Les fichiers sont dans `fonts/`, chargés en local pour que le rendu ne dépende
 
 ## Fichiers
 
-- `tokens.css` : couleurs, typographies et classes de base.
-- `kit.js` : fonctions de dessin (ardoise, gribouillis, terrain avec caméra, joueurs, zones, tracés, cône de lecture). Elles serviront telles quelles aux compositions vidéo.
+- `../videos/assets/tokens.css` : couleurs, typographies et classes de base.
+- `../videos/assets/kit.js` : fonctions de dessin (ardoise, gribouillis, terrain avec caméra, joueurs, zones, tracés, cône de lecture). Les vidéos s'en servent directement.
+- `../videos/assets/fonts/` : les polices, chargées en local.
 - `render.cjs` : rend les images de référence.

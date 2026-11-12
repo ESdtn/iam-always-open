@@ -1,0 +1,255 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=1920, height=1080">
+<title>00 · Introduction</title>
+<link rel="stylesheet" href="assets/tokens.css">
+<link rel="stylesheet" href="assets/scene.css">
+<script src="assets/gsap.min.js"></script>
+<script src="assets/kit.js"></script>
+<script src="assets/scene.js"></script>
+<script src="assets/audio/00-introduction.timing.js"></script>
+</head>
+<body>
+<div id="root" data-composition-id="introduction" data-start="0" data-duration="89.34" data-width="1920" data-height="1080">
+  <div id="scene" class="clip" data-start="0" data-duration="89.34" data-track-index="0"></div>
+  <audio id="voix" src="assets/audio/00-introduction.mp3" data-start="0" data-duration="89.34" data-track-index="1" data-volume="1"></audio>
+</div>
+<script>
+// Minutage de la voix : T = début d'une phrase, F = sa fin, A = un instant à l'intérieur (0 = début, 1 = fin).
+const M = window.MINUTAGE, P = {};
+M.scenes.forEach((s) => s.phrases.forEach((p) => { P[p.id] = p; }));
+const T = (id) => P[id].t0, F = (id) => P[id].t1, A = (id, r) => P[id].t0 + r * (P[id].t1 - P[id].t0);
+
+const hote = document.getElementById('scene');
+const S = creerScene(hote);
+const tl = gsap.timeline({ paused: true });
+const { X, Y } = S;
+
+// --- Alignements défensifs ---
+const DEF1 = { CBG: [4.4, 7.5], CBD: [49, 7.5], N: [15, 5], LBG: [22.3, 4.8], LBD: [31.2, 4.8], SS: [41.2, 5], FS: [26.667, 13.2] };
+const DEF0 = { CBG: [5.8, 1.5], CBD: [47.5, 1.5], N: [14, 1.5], LBG: [22.3, 2.9], LBD: [31.2, 2.9], SS: [39.3, 1.6], FS: [34.4, 1.7] };
+const DEF2 = { CBG: [4.4, 5.5], CBD: [49, 5.5], N: [15, 5], LBG: [23, 4.8], LBD: [33, 4.8], SS: [34, 13.2], FS: [19.4, 13.2] };
+
+// --- Éléments du terrain ---
+const att = S.creerAttaque(false);
+const def = S.creerDefense(DEF1, false);
+S.zone('z-cfg', 11.6, 7, 6.3, 1.6, 'CURL / FLAT', 'courte'); S.zone('z-hg', 21.7, 7, 3.7, 1.5, 'HOOK', 'courte');
+S.zone('z-hd', 31.7, 7, 3.7, 1.5, 'HOOK', 'courte'); S.zone('z-cfd', 41.8, 7, 6.3, 1.6, '', 'courte');
+S.cone('cone', 26.667, -5, 43.6, 4.5);
+S.trace('t-hitch', [[47.5, -0.1], [47.5, 6]], { fin: 'stop' });
+S.trace('t-x', [[5.8, -0.1], [5.8, 7], [16, 10]]);
+S.trace('t-y', [[39.3, -1.2], [39.3, 5], [51, 7.2]]);
+S.trace('t-curl', [[47.5, -0.1], [47.5, 12.6], [46.1, 10.4]], { fin: 'stop' });
+S.trace('t-flat', [[39.3, -1.2], [40.4, 1.7], [48.8, 2.7]], { op: 0.6 });
+S.ligne('lien', 5.8, -0.8, 4.4, 7.5, { col: '#fff', w: 3, tirets: '3 8' });
+S.ligne('l-10', 0, 10, 53.333, 10, { col: C.jaune, w: 4, tirets: '14 10' });
+S.ligne('l-regard', 49, 8.5, 47.5, -0.8, { col: C.jaune, w: 4, tirets: '' });
+['X', 'H', 'Y', 'Z'].forEach((id) => S.ligne('l-q' + id, 26.667, -5, S.ATTAQUE[id][0], S.ATTAQUE[id][1], { col: '#fff', w: 3, tirets: '3 9' }));
+S.etiquette('e-man', 13.3, 16.2, 'MAN', { col: C.bleu, coulTexte: '#fff', taille: 46 });
+S.etiquette('e-zone', 40, 16.2, 'ZONE', { taille: 46 });
+S.etiquette('e-personne', 47.3, 21.6, 'PERSONNE', { col: C.rouge, coulTexte: '#fff', taille: 19 });
+S.etiquette('e-inter', 43.6, 16.6, 'INTERCEPTION', { col: C.rouge, coulTexte: '#fff', taille: 19 });
+S.etiquette('e-10', 46.6, 11.1, '10 YARDS', { taille: 18 });
+S.etiquette('e-mofc', 26.667, 18.3, 'MOFC', { col: '#fff', coulTexte: C.vertTexte, taille: 30 });
+S.etiquette('e-mofo', 26.667, 18.3, 'MOFO', { col: '#fff', coulTexte: C.vertTexte, taille: 30 });
+S.cadenas('cad-f', 26.667, 20.6, true); S.cadenas('cad-o', 26.667, 20.6, false);
+S.etiquette('e-colle', 44.9, 1.6, 'COLLÉ', { taille: 13 }); S.etiquette('e-5', 45.2, 5, '5 YARDS', { taille: 13 }); S.etiquette('e-loin', 46, 8.5, 'LOIN', { taille: 13 });
+S.etiquette('e-hyp', 26.667, 21.6, 'AVANT LE SNAP = HYPOTHÈSE', { col: '#fff', coulTexte: C.vertTexte, taille: 22 });
+S.etiquette('e-2s', 26.667, 16.4, '2 SAFETIES ?', { taille: 20 });
+S.etiquette('e-1s', 26.667, 17.6, 'EN RÉALITÉ : 1 SAFETY', { col: C.orange, taille: 22 });
+S.etiquette('e-conflit', 42.2, 7.1, 'DÉFENSEUR EN CONFLIT');
+S.marque('m-vide', 47.5, 19.5);
+S.ballon();
+
+// --- Habillage ---
+const gribouillis = [
+  `<g filter="url(#craie)"><path d="M380,62 H1310" stroke="${C.craie}" stroke-width="7" stroke-dasharray="46 22" stroke-linecap="round" opacity=".75"/></g>`,
+  rond(30, 20, 78, C.orange, 9),
+  rond(1450, 82, 56, C.orange, 7), croix(1452, 84, 30, C.craie, 7, 0, .8), croix(1558, 92, 28, C.craie, 7, 4, .8), croix(1662, 96, 28, C.craie, 7, -5, .8),
+  croix(1838, 124, 60, C.orange, 16, 4), hachures(8, 470, 13, 46, 48, C.orange, 9, true),
+  rond(180, 968, 62, C.orange, 8), croix(126, 880, 42, C.craie, 8, -8, .85), hachures(1360, 1010, 7, 44, 60, C.orange, 9, false),
+  rond(1850, 800, 30, C.craie, 6, .75), rond(1790, 872, 28, C.craie, 6, .75), rond(1862, 884, 30, C.craie, 6, .75), rond(1846, 968, 30, C.craie, 6, .75),
+].join('');
+const carte = (id, nom, famille) => `<div class="carte-plan" id="${id}" style="opacity:0"><span class="titre">${nom}</span><span class="pastille ${famille}">${famille}</span></div>`;
+hote.insertAdjacentHTML('beforeend', `
+  <div class="panneau" id="panneau" style="opacity:0"><span class="label">Lire la couverture</span><span class="script">Introduction</span></div>
+  <div class="panneau bas" id="liste" style="opacity:0"><ol class="liste"><li id="et1"><b>1</b>Compte les safeties</li><li id="et2"><b>2</b>Regarde le corner</li><li id="et3"><b>3</b>Confirme au snap</li></ol></div>
+  <div class="marge-d">
+    <div id="bloc-chiffre" style="opacity:0"><div class="grand-chiffre ombre"><span id="ch0">0</span><span id="ch1">1</span><span id="ch2">2</span></div><div class="legende-chiffre ombre">safeties</div></div>
+    <div class="definition" id="def-mofc" style="opacity:0"><b>MOFC</b><i>(Middle Of the Field Closed)</i><u>Milieu fermé</u></div>
+    <div class="definition" id="def-mofo" style="opacity:0"><b>MOFO</b><i>(Middle Of the Field Open)</i><u>Milieu ouvert</u></div>
+  </div>
+  <div class="annonce" id="annonce" style="opacity:0"><span>Prochaine vidéo <b>Man ou zone ?</b></span></div>
+  <div class="ardoise" id="ardoise" style="opacity:0">
+    <svg width="1920" height="1080" viewBox="0 0 1920 1080">${defs()}${fond()}<g data-layout-allow-overflow>${gribouillis}</g></svg>
+    <div class="bloc-titre" id="titre-serie"><div class="script">Lire la</div><div class="titre">COUVERTURE</div>
+      <div class="trois"><span id="q-a" style="opacity:0"><b>1</b>La reconnaître</span><span id="q-b" style="opacity:0"><b>2</b>L'espace</span><span id="q-c" style="opacity:0"><b>3</b>Le ballon</span></div></div>
+    <div class="plan" id="plan" style="opacity:0">
+      <div class="tete-plan"><span class="script">Le plan</span><div class="carte-plan" id="pl-mz" style="opacity:0"><span class="label">D'abord</span><span class="titre">MAN OU ZONE ?</span></div></div>
+      <div class="colonnes">
+        <div class="colonne" id="col0" style="opacity:0"><div class="tete"><b>0</b>safety</div>${carte('pl-c0', 'COVER 0', 'man')}</div>
+        <div class="colonne" id="col1" style="opacity:0"><div class="tete"><b>1</b>safety<i>MOFC</i></div>${carte('pl-c1', 'COVER 1', 'man')}${carte('pl-c3', 'COVER 3', 'zone')}</div>
+        <div class="colonne" id="col2" style="opacity:0"><div class="tete"><b>2</b>safeties<i>MOFO</i></div>${carte('pl-c2', 'COVER 2', 'zone')}${carte('pl-c4', 'COVER 4', 'zone')}</div>
+      </div>
+      <div class="fin-plan"><div class="carte-plan" id="pl-quiz" style="opacity:0"><span class="label">Pour finir</span><span class="titre">QUIZ</span></div></div>
+    </div>
+  </div>`);
+creerSousTitres(hote, tl, M);
+
+const etape = (n, t) => [1, 2, 3].forEach((i) => {
+  tl.to('#et' + i, { backgroundColor: i === n ? C.orange : 'rgba(0,0,0,0)', color: i === n ? C.ardoise : 'rgba(255,255,255,.45)', duration: 0.2 }, t);
+  tl.to(`#et${i} b`, { color: i === n ? C.ardoise : 'rgba(255,255,255,.55)', duration: 0.2 }, t);
+});
+const chiffre = (n, t) => [0, 1, 2].forEach((i) => tl.set('#ch' + i, { opacity: i === n ? 1 : 0 }, t));
+const apparait = (id, t) => tl.fromTo('#' + id, { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.3, ease: 'power2.out', immediateRender: false }, t);
+const lien = (bout, x, y, t, d) => tl.to('#lien', { attr: bout === 1 ? { x1: X(x), y1: Y(y) } : { x2: X(x), y2: Y(y) }, duration: d, ease: 'none' }, t);
+const base = (t, d = 0.45) => { S.formation(tl, S.ATTAQUE, t, d); S.formation(tl, DEF1, t, d); };
+
+// ===== Scène 1 · Accroche =====
+S.entre(tl, att, 0.35, 0.07);
+S.montre(tl, 'panneau', 1.1, 0.4);
+S.entre(tl, def, T('a1') + 0.1, 0.05);
+S.halo(tl, 'FS', T('a3'), 1.7);
+S.halo(tl, 'CBD', A('a3', 0.35), 1.6);
+S.va(tl, 'CBD', 49, 9.4, A('a3', 0.7), 0.4);
+S.va(tl, 'CBD', 49, 7.5, F('a3') + 0.55, 0.3);
+
+// ===== Scène 2 · La promesse =====
+let t = T('p1') - 0.45;
+S.cache(tl, 'panneau', t, 0.25);
+S.ardoise(tl, 'ardoise', t, F('p2') + 0.25);
+apparait('q-a', A('p2', 0.30)); apparait('q-b', A('p2', 0.60)); apparait('q-c', A('p2', 0.80));
+t = F('p2') + 0.25;
+S.montre(tl, 'panneau', t + 0.2, 0.3);
+tl.set('#titre-serie', { opacity: 0 }, t + 0.6); tl.set('#plan', { opacity: 1 }, t + 0.6);
+S.halo(tl, 'QB', T('p3'), 2.7);
+['X', 'H', 'Y', 'Z'].forEach((id, i) => S.halo(tl, id, A('p3', 0.25) + i * 0.09, 2.0));
+// Le receveur s'arrête, le ballon part en profondeur : personne.
+t = T('p4') + 0.05;
+S.dessine(tl, 't-hitch', t, 0.75); S.court(tl, 'Z', [[47.5, -0.8], [47.5, 6]], t, 0.8);
+S.va(tl, 'CBD', 49, 14.6, t, 1.3, 'power1.out');
+S.lance(tl, [26.667, -5], [47.5, 19.5], A('p4', 0.48), 1.0);
+S.montre(tl, 'm-vide', A('p4', 0.48) + 1.0, 0.15); S.montre(tl, 'e-personne', A('p4', 0.48) + 1.05, 0.2);
+// Ou pire : un défenseur.
+t = T('p5');
+S.cache(tl, 'ballon', t - 0.12, 0.1); S.cache(tl, 'm-vide', t - 0.1, 0.15); S.cache(tl, 'e-personne', t - 0.1, 0.15);
+S.lance(tl, [26.667, -5], [48.7, 14.2], t + 0.1, 0.9);
+S.halo(tl, 'CBD', t + 1.0, 0, C.rouge); S.montre(tl, 'e-inter', t + 1.0, 0.2);
+t = F('p5') + 0.8;
+['ballon', 'e-inter'].forEach((id) => S.cache(tl, id, t, 0.25));
+tl.to('#CBD .halo1', { opacity: 0, duration: 0.25 }, t); tl.set('#CBD .halo1', { stroke: C.jaune }, t + 0.3);
+S.efface(tl, 't-hitch', t, 0.25); base(t, 0.45);
+
+// ===== Scène 3 · La première question =====
+S.montre(tl, 'e-man', A('q1', 0.55), 0.25); S.montre(tl, 'e-zone', A('q1', 0.78), 0.25);
+// En man, le défenseur suit.
+t = T('q2') + 0.05;
+S.montre(tl, 'lien', t - 0.05, 0.2);
+S.dessine(tl, 't-x', t, 1.5); S.court(tl, 'X', [[5.8, -0.8], [5.8, 7], [16, 10]], t, 1.5);
+S.va(tl, 'CBG', 5.3, 8.8, t, 0.635, 'none'); S.va(tl, 'CBG', 15, 11.3, t + 0.635, 0.865, 'none');
+lien(1, 5.8, 7, t, 0.635); lien(1, 16, 10, t + 0.635, 0.865); lien(2, 5.3, 8.8, t, 0.635); lien(2, 15, 11.3, t + 0.635, 0.865);
+// En zone, il garde un espace.
+t = T('q3') + 0.05;
+S.montre(tl, 'z-cfd', t - 0.05, 0.3); S.halo(tl, 'SS', t, 2.2);
+S.dessine(tl, 't-y', t, 1.5); S.court(tl, 'Y', [[39.3, -1.9], [39.3, 5], [51, 7.2]], t, 1.5);
+S.va(tl, 'SS', 45.8, 6.7, t + 0.65, 0.6, 'power1.out');
+apparait('annonce', A('q4', 0.5));
+t = F('q4') + 0.55;
+['annonce', 'e-man', 'e-zone', 'lien', 'z-cfd'].forEach((id) => S.cache(tl, id, t, 0.3));
+S.efface(tl, 't-x', t, 0.3); S.efface(tl, 't-y', t, 0.3); base(t + 0.05, 0.5);
+tl.set('#lien', { attr: { x1: X(5.8), y1: Y(-0.8), x2: X(4.4), y2: Y(7.5) } }, t + 0.6);
+
+// ===== Scène 4 · La lecture en trois étapes =====
+S.montre(tl, 'liste', T('e0'), 0.4);
+// Un : compte les safeties.
+etape(1, T('e1'));
+S.halo(tl, 'FS', A('e1', 0.28), 2.0);
+S.montre(tl, 'l-10', A('e1', 0.5), 0.3); S.montre(tl, 'e-10', A('e1', 0.5), 0.3);
+t = T('e2');
+S.montre(tl, 'bloc-chiffre', t - 0.35, 0.2);
+S.formation(tl, DEF0, t - 0.35, 0.3); chiffre(0, t - 0.2);
+S.formation(tl, DEF1, A('e2', 0.34), 0.28); chiffre(1, A('e2', 0.4));
+S.formation(tl, DEF2, A('e2', 0.7), 0.28); chiffre(2, A('e2', 0.76));
+// Un seul safety : MOFC.
+t = T('e3');
+S.cache(tl, 'l-10', t, 0.25); S.cache(tl, 'e-10', t, 0.25);
+S.formation(tl, DEF1, t, 0.4); chiffre(1, t + 0.2);
+S.montre(tl, 'cad-f', A('e3', 0.42), 0.25); S.montre(tl, 'e-mofc', A('e3', 0.8), 0.25); apparait('def-mofc', A('e3', 0.8));
+// Deux safeties : MOFO.
+t = T('e4');
+S.cache(tl, 'cad-f', t, 0.2); S.cache(tl, 'e-mofc', t, 0.2);
+S.formation(tl, DEF2, t, 0.4); chiffre(2, t + 0.2);
+S.montre(tl, 'cad-o', A('e4', 0.45), 0.25); S.montre(tl, 'e-mofo', A('e4', 0.75), 0.25); apparait('def-mofo', A('e4', 0.75));
+// Deux : regarde le corner.
+t = T('e5') - 0.25;
+['cad-o', 'e-mofo', 'bloc-chiffre', 'def-mofc', 'def-mofo'].forEach((id) => S.cache(tl, id, t, 0.25));
+S.formation(tl, DEF1, t, 0.4);
+etape(2, T('e5'));
+S.camera(tl, T('e5'), 0.85, { zoom: 2.2, cx: 44, cy: 3, sx: 1150, sy: 470 });
+t = T('e6');
+S.va(tl, 'CBD', 47.9, 1.5, t, 0.3); S.montre(tl, 'e-colle', t + 0.15, 0.15);
+S.va(tl, 'CBD', 48.6, 5, A('e6', 0.42), 0.3); S.cache(tl, 'e-colle', A('e6', 0.42), 0.12); S.montre(tl, 'e-5', A('e6', 0.42) + 0.15, 0.15);
+S.va(tl, 'CBD', 49, 8.5, A('e6', 0.76), 0.3); S.cache(tl, 'e-5', A('e6', 0.76), 0.12); S.montre(tl, 'e-loin', A('e6', 0.76) + 0.15, 0.15);
+t = T('e7');
+S.cache(tl, 'e-loin', t, 0.15);
+S.montre(tl, 'l-regard', t + 0.05, 0.2);
+tl.to('#l-regard', { attr: { x2: X(26.667), y2: Y(-5) }, duration: 0.45, ease: 'power2.inOut' }, A('e7', 0.5));
+// Trois : confirme au snap.
+t = T('e8');
+etape(3, t);
+S.cache(tl, 'l-regard', t - 0.1, 0.2);
+S.cameraLarge(tl, t, 0.85);
+S.formation(tl, DEF2, t + 0.1, 0.6);
+S.montre(tl, 'e-2s', T('e9') + 0.1, 0.25); S.montre(tl, 'e-hyp', A('e9', 0.55), 0.25);
+t = T('e10') + 0.3; // le snap
+S.va(tl, 'SS', 43.4, 5.2, t, 1.1, 'power1.inOut'); S.va(tl, 'FS', 26.667, 14.6, t, 1.1, 'power1.inOut');
+S.va(tl, 'CBG', 4.4, 12.4, t, 1.5, 'power1.out'); S.va(tl, 'CBD', 49, 12.4, t, 1.5, 'power1.out');
+S.va(tl, 'N', 17, 6.8, t, 1.2, 'power1.out'); S.va(tl, 'LBG', 22, 6.2, t, 1.2, 'power1.out'); S.va(tl, 'LBD', 31.6, 6.2, t, 1.2, 'power1.out');
+S.va(tl, 'X', 5.8, 8, t, 1.7, 'power1.out'); S.va(tl, 'Z', 47.5, 8, t, 1.7, 'power1.out');
+S.va(tl, 'H', 13.4, 5.8, t, 1.7, 'power1.out'); S.va(tl, 'Y', 39.3, 6.6, t, 1.7, 'power1.out'); S.va(tl, 'QB', 26.667, -6.8, t, 1.0, 'power1.out');
+t = F('e10') + 0.3;
+S.cache(tl, 'e-2s', t, 0.2); S.montre(tl, 'e-1s', t + 0.1, 0.25); S.halo(tl, 'FS', t + 0.1, 1.5);
+t = T('c1') - 0.6;
+['e-1s', 'e-hyp', 'liste'].forEach((id) => S.cache(tl, id, t, 0.3));
+base(t, 0.5);
+
+// ===== Scène 5 · Le défenseur en conflit =====
+S.halo(tl, 'QB', A('c1', 0.5), 1.6);
+['X', 'H', 'Y', 'Z'].forEach((id, i) => { S.montre(tl, 'l-q' + id, A('c1', 0.6) + i * 0.07, 0.2, 0.8); S.cache(tl, 'l-q' + id, F('c1') + 0.25, 0.25); });
+['z-cfg', 'z-hg', 'z-hd', 'z-cfd'].forEach((id, i) => S.montre(tl, id, T('c2') + 0.1 + i * 0.06, 0.3));
+S.conflit(tl, 'SS', A('c2', 0.4));
+t = A('c2', 0.56);
+S.dessine(tl, 't-curl', t, 1.25); S.court(tl, 'Z', [[47.5, -0.8], [47.5, 12.6], [46.1, 10.4]], t, 1.3);
+S.dessine(tl, 't-flat', t, 1.0); S.court(tl, 'Y', [[39.3, -1.9], [40.4, 1.7], [48.8, 2.7]], t, 1.05);
+S.va(tl, 'CBD', 49, 14.8, t, 1.3, 'power1.out'); S.va(tl, 'CBG', 4.4, 13, t, 1.3, 'power1.out');
+S.montre(tl, 'e-conflit', T('c3') + 0.1, 0.25);
+S.montre(tl, 'cone', T('c4') + 0.05, 0.3);
+S.va(tl, 'SS', 44.7, 4.2, A('c4', 0.4), 0.5);
+S.lance(tl, [26.667, -5], [46.1, 10.4], A('c4', 0.66), 0.75);
+S.halo(tl, 'Z', A('c4', 0.66) + 0.75, 0);
+
+// ===== Scène 6 · Le plan =====
+t = T('s1') - 0.55;
+S.cache(tl, 'panneau', t, 0.25); S.cache(tl, 'liste', t, 0.25);
+S.ardoise(tl, 'ardoise', t, F('s6') + 0.75, 0.5);
+// Sous l'ardoise, le terrain revient à l'état neutre.
+t += 0.6;
+[...def, 'z-cfg', 'z-hg', 'z-hd', 'z-cfd', 'cone', 'ballon', 'e-conflit'].forEach((id) => tl.set('#' + id, { opacity: 0 }, t));
+['t-curl', 't-flat'].forEach((id) => S.efface(tl, id, t, 0.01));
+tl.set('#Z .halo1', { opacity: 0 }, t);
+S.formation(tl, S.ATTAQUE, t, 0.01);
+apparait('pl-mz', A('s1', 0.72));
+['col0', 'col1', 'col2'].forEach((id, i) => apparait(id, A('s2', 0.3) + i * 0.12));
+apparait('pl-c0', A('s3', 0.55));
+apparait('pl-c1', A('s4', 0.5)); apparait('pl-c3', A('s4', 0.82));
+apparait('pl-c2', A('s5', 0.5)); apparait('pl-c4', A('s5', 0.82));
+apparait('pl-quiz', A('s6', 0.5));
+
+window.__timelines = window.__timelines || {};
+window.__timelines['introduction'] = tl;
+tl.seek(0);
+</script>
+</body>
+</html>

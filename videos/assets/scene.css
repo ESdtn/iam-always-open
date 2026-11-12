@@ -1,0 +1,63 @@
+/* Habillage commun des vidéos : cadre, panneaux, sous-titres, tableau d'ardoise. */
+
+html, body { margin: 0; width: 1920px; height: 1080px; overflow: hidden; background: #143d1e; }
+.clip { position: absolute; inset: 0; width: 1920px; height: 1080px; overflow: hidden; }
+.clip > svg.fond { position: absolute; inset: 0; }
+.plein { position: absolute; inset: 0; }
+.ombre { filter: drop-shadow(0 2px 4px rgba(0, 0, 0, .55)); }
+
+/* Sous-titres : une phrase à la fois, centrée en bas. */
+.sous-titre { position: absolute; left: 0; right: 0; bottom: 34px; height: 0; z-index: 30; }
+.sous-titre span { position: absolute; left: 0; right: 0; bottom: 0; margin: 0 auto; width: max-content; max-width: 1500px; text-align: center; background: rgba(14, 18, 15, .82); padding: 9px 30px 12px; border-radius: 12px; font-family: var(--texte); font-weight: 600; font-size: 38px; line-height: 1.22; color: #fff; }
+
+/* Panneau d'habillage, en haut à gauche. */
+.panneau { position: absolute; left: 22px; top: 28px; width: 246px; background: rgba(14, 18, 15, .78); border-radius: 14px; padding: 16px 18px 18px; z-index: 20; }
+.panneau.bas { top: 158px; padding: 10px 12px 14px; }
+.panneau .label { font-size: 17px; color: rgba(255, 255, 255, .7); display: block; }
+.panneau .script { font-size: 42px; display: block; margin-top: 6px; }
+.panneau .titre { font-size: 50px; }
+
+/* Liste d'étapes numérotées. */
+.liste { list-style: none; margin: 0; padding: 0; }
+.liste li { display: flex; align-items: center; gap: 12px; font-family: var(--label); font-weight: 700; font-size: 20px; letter-spacing: .04em; text-transform: uppercase; color: rgba(255, 255, 255, .45); padding: 8px 8px; border-radius: 8px; margin-top: 6px; }
+.liste li b { font-family: var(--titre); font-weight: 400; font-size: 30px; width: 30px; text-align: center; color: rgba(255, 255, 255, .55); }
+
+/* Marge droite. */
+.marge-d { position: absolute; right: 22px; top: 40px; width: 280px; z-index: 20; }
+.grand-chiffre { font-family: var(--titre); font-size: 230px; line-height: 1; color: #fff; text-align: center; height: 230px; position: relative; }
+.grand-chiffre span { position: absolute; left: 0; right: 0; top: 0; opacity: 0; }
+.legende-chiffre { font-family: var(--label); font-weight: 700; font-size: 26px; letter-spacing: .14em; text-transform: uppercase; color: rgba(255, 255, 255, .8); text-align: center; margin-top: 6px; }
+.definition { margin-top: 26px; background: rgba(14, 18, 15, .78); border-radius: 12px; padding: 14px 16px 16px; font-family: var(--label); color: #fff; }
+.definition b { display: block; font-family: var(--titre); font-weight: 400; font-size: 40px; color: var(--orange); }
+.definition i { display: block; font-style: normal; font-weight: 600; font-size: 20px; letter-spacing: .04em; color: rgba(255, 255, 255, .75); margin-top: 4px; }
+.definition u { display: block; text-decoration: none; font-weight: 700; font-size: 24px; letter-spacing: .08em; text-transform: uppercase; margin-top: 2px; }
+
+/* Bandeau d'annonce, en haut au centre. */
+.annonce { position: absolute; left: 0; right: 0; top: 22px; text-align: center; z-index: 20; }
+.annonce span { display: inline-block; background: var(--ardoise); box-shadow: 0 0 0 3px rgba(242, 239, 233, .6), 0 6px 18px rgba(0, 0, 0, .45); border-radius: 12px; padding: 12px 34px 16px; font-family: var(--label); font-weight: 700; font-size: 30px; letter-spacing: .1em; text-transform: uppercase; color: var(--craie); }
+.annonce b { font-family: var(--script); font-weight: 400; font-size: 46px; letter-spacing: 0; text-transform: none; color: var(--orange); margin-left: 14px; }
+
+/* Tableau d'ardoise plein écran : titre de série, plan, cartes. */
+.ardoise { position: absolute; inset: 0; z-index: 10; }
+.ardoise > svg { position: absolute; inset: 0; }
+.bloc-titre { position: absolute; inset: 0; display: flex; flex-direction: column; align-items: center; justify-content: center; padding-bottom: 60px; }
+.bloc-titre .script { font-size: 190px; transform: rotate(-5deg) translate(-360px, 6px); filter: url(#craie); }
+.bloc-titre .titre { font-size: 208px; filter: url(#craie); }
+.bloc-titre .trois { margin-top: 50px; display: flex; gap: 46px; }
+.bloc-titre .trois span { font-family: var(--label); font-weight: 700; font-size: 40px; letter-spacing: .18em; text-transform: uppercase; color: var(--craie); }
+.bloc-titre .trois span b { color: var(--orange); font-weight: 700; margin-right: 14px; }
+
+.plan { position: absolute; left: 170px; right: 170px; top: 96px; }
+.plan .tete-plan { display: flex; align-items: center; gap: 30px; }
+.plan .tete-plan .script { font-size: 84px; filter: url(#craie); }
+.carte-plan { display: inline-flex; align-items: center; gap: 18px; background: var(--ardoise-claire); box-shadow: 0 0 0 3px rgba(242, 239, 233, .55); border-radius: 12px; padding: 20px 30px 24px; }
+.carte-plan .titre { font-size: 58px; }
+.carte-plan .pastille { font-size: 26px; padding: 4px 16px 5px; }
+.carte-plan .label { font-size: 24px; color: var(--craie); }
+.colonnes { display: flex; gap: 44px; margin-top: 64px; }
+.colonne { flex: 1; }
+.colonne .tete { font-family: var(--label); font-weight: 700; font-size: 30px; letter-spacing: .12em; text-transform: uppercase; color: var(--craie); border-bottom: 3px solid rgba(242, 239, 233, .4); padding-bottom: 10px; display: flex; align-items: baseline; gap: 14px; }
+.colonne .tete b { font-family: var(--titre); font-weight: 400; font-size: 110px; line-height: 1.15; color: var(--ciel); }
+.colonne .tete i { font-style: normal; color: var(--orange); margin-left: auto; }
+.colonne .carte-plan { display: flex; margin-top: 30px; justify-content: space-between; }
+.plan .fin-plan { margin-top: 60px; text-align: center; }
