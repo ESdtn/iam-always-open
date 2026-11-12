@@ -26,19 +26,11 @@ import numpy as np
 import sherpa_onnx as so
 import soundfile as sf
 
+from lexique import RACINE, lexique, phonetique
+
 ICI = Path(__file__).resolve().parent
-RACINE = ICI.parent.parent
 MODELES = Path(os.environ.get("VOIX_MODELES", ICI / ".modeles"))
 SORTIE = RACINE / "videos" / "assets" / "audio"
-
-lexique = json.loads((RACINE / "voix" / "lexique.json").read_text(encoding="utf-8"))
-REGLES = [(re.compile(r"(?<!\w)(?:" + motif + r")(?!\w)", re.I), remplacement) for motif, remplacement in lexique["remplacements"]]
-
-
-def phonetique(texte):
-    for motif, remplacement in REGLES:
-        texte = motif.sub(remplacement, texte)
-    return texte
 
 
 def charger_voix():
