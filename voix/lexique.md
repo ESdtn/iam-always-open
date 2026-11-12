@@ -46,7 +46,7 @@ Je ne peux pas écouter les fichiers. L'état ci-dessous vient d'une retranscrip
 | MOFO | mofo | Validé par le coach (à la française) |
 | robber | robeur | Pas signalé par le coach |
 | seam | sim | Pas signalé par le coach |
-| fade | féde ou feïde | Les deux variantes du fichier C conviennent ; à départager |
+| fade | féde ou feïde | Pas signalé par le coach ; à départager entre les deux variantes du fichier C |
 | hitch | hitsh | Pas signalé par le coach |
 | jam | jame | Pas signalé par le coach |
 | press | presse | Pas signalé par le coach |

@@ -73,9 +73,8 @@ La recherche (`recherche/complements-couvertures.md`) contredit ou nuance le gui
 
 Ces choix viennent de moi ou d'une seule source. Ils sont repris dans les notes en bas de chaque script.
 
-1. **Vocabulaire maison.** Voir le point suivant.
-2. **Vocabulaire maison.** « Robber », « défenseur du flat », « levier », « s'asseoir dans la fenêtre » : à remplacer par les mots que tes joueurs entendent à l'entraînement.
-3. **Conversions de tracés** (slant ou quick out selon le levier contre Cover 0). Le guide rappelle qu'on n'ajuste que selon les règles validées avec le staff : la vidéo doit montrer vos règles, pas les miennes.
-4. **Concepts choisis**, tous génériques : quick game et mesh (Cover 0 et 1), curl-flat et 4 verticaux (Cover 3), smash et seam (Cover 2), hitch-seam et post-dig sur play-action (Cover 4).
-5. **Cover 2, lecture du safety sur la seam** et **Cover 4, lecture du défenseur du flat avant le snap** : formulations de ma part, cohérentes avec les sources mais non sourcées telles quelles.
-6. **Cover 4, la nuance man sur les verticaux** : vraie pour les quarters dites « match », à retirer si tes adversaires jouent une zone pure.
+1. **Vocabulaire maison.** « Robber », « défenseur du flat », « levier », « s'asseoir dans la fenêtre » : à remplacer par les mots que tes joueurs entendent à l'entraînement.
+2. **Conversions de tracés** (slant ou quick out selon le levier contre Cover 0). Le guide rappelle qu'on n'ajuste que selon les règles validées avec le staff : la vidéo doit montrer vos règles, pas les miennes.
+3. **Concepts choisis**, tous génériques : quick game et mesh (Cover 0 et 1), curl-flat et 4 verticaux (Cover 3), smash et seam (Cover 2), hitch-seam et post-dig sur play-action (Cover 4).
+4. **Cover 2, lecture du safety sur la seam** et **Cover 4, lecture du défenseur du flat avant le snap** : formulations de ma part, cohérentes avec les sources mais non sourcées telles quelles.
+5. **Cover 4, la nuance man sur les verticaux** : vraie pour les quarters dites « match », à retirer si tes adversaires jouent une zone pure.
