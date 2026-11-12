@@ -1,6 +1,6 @@
 # Lexique de prononciation
 
-**Voix retenue : Supertonic 3, voix M3.**
+**Voix retenue : Supertonic 3, voix M3, vitesse 1,10.**
 
 Règle du coach : les termes de football se prononcent à l'anglaise, les numéros en français.
 
@@ -29,7 +29,7 @@ Je ne peux pas écouter les fichiers. L'état ci-dessous vient d'une retranscrip
 | linebacker | laïnebakeur | Reconnu |
 | nickel | nikeul | Reconnu |
 | deep | dip | Reconnu |
-| hook | houk | Reconnu |
+| hook | à choisir | **Refusé par le coach**, quatre variantes dans le fichier D |
 | flat | flatt | Reconnu |
 | quarters | couarteurz | Reconnu |
 | play-action | plé-akcheune | Reconnu |
@@ -40,20 +40,23 @@ Je ne peux pas écouter les fichiers. L'état ci-dessous vient d'une retranscrip
 | comeback | comme-bac | Reconnu |
 | dig | digue | Reconnu |
 | post | pôste | Reconnu |
-| out | aoute | Reconnu dans une liste, douteux isolé |
-| quick out | couic aoute | Reconnu une fois sur deux |
-| MOFC | mof-si | Reconnu |
-| MOFO | mofo | Reconnu |
-| robber | robeur | À écouter |
-| seam | sim | À écouter |
-| fade | féïd | À écouter (variantes : féde, feïde) |
-| hitch | hitsh | À écouter, instable selon la phrase |
-| jam | jame | À écouter, instable |
-| press | presse | À écouter |
-| man | man | À écouter |
-| yards | yards | À écouter |
+| out | à choisir | **Refusé par le coach**, quatre variantes dans le fichier D |
+| quick out | à choisir | **Refusé par le coach**, quatre variantes dans le fichier D |
+| MOFC | mofsi | Validé par le coach (« MOFSI », à la française) |
+| MOFO | mofo | Validé par le coach (à la française) |
+| robber | robeur | Pas signalé par le coach |
+| seam | sim | Pas signalé par le coach |
+| fade | féde ou feïde | Les deux variantes du fichier C conviennent ; à départager |
+| hitch | hitsh | Pas signalé par le coach |
+| jam | jame | Pas signalé par le coach |
+| press | presse | Pas signalé par le coach |
+| man | man | Pas signalé par le coach |
+| yards | yards | Pas signalé par le coach |
+| 2-Man | à choisir | **Refusé par le coach** (« deux-mann »), quatre variantes dans le fichier D |
 
 Numéros : écrits en toutes lettres, en français (« Coveur trois », « la Tampa deux », « la Coveur six »).
+
+Retour du coach après écoute des fichiers A, B et C : seuls hook, out, quick out et 2-Man sonnent faux.
 
 ## Fichiers d'écoute
 
@@ -83,8 +86,17 @@ Dans `essais/`, voix M3, vitesse normale.
 7. Coveur zéro, un, deux, trois, quatre
 8. La Tampa deux, la deux-man, la Coveur six
 
-**`vitesse_M3_x1.00.wav`, `x1.10` et `x1.20`** : la première phrase de l'introduction à trois vitesses, pour choisir le rythme.
+**`vitesse_M3_x1.00.wav`, `x1.10` et `x1.20`** : la première phrase de l'introduction à trois vitesses. Le coach a retenu 1,10.
+
+**`prononciation_M3_D_mots-a-corriger.wav`** : seize phrases numérotées à voix haute, à la vitesse 1,10. Quatre écritures pour chacun des quatre mots refusés.
+
+| Numéros | Mot | Écritures, dans l'ordre |
+|---|---|---|
+| 1 à 4 | hook | houc, houque, hook, ouk |
+| 5 à 8 | out | a-outte, aotte, aoutt, awte |
+| 9 à 12 | quick out | couic a-outte, kwik aotte, quick aoutt, couik awte |
+| 13 à 16 | 2-Man | deux man, deux mane, deux mèn, deux manne |
 
 ## Ce que tu peux me renvoyer
 
-Pour chaque phrase, le numéro et le mot qui sonne faux suffisent, par exemple « B4 : hitch », ou « C : garde la 2 et la 4 ». Je corrige l'écriture et je régénère.
+Pour le fichier D, un numéro par mot suffit, par exemple « 2, 6, 10, 14 ». Si aucune des quatre ne convient pour un mot, dis-le : j'essaierai autre chose.

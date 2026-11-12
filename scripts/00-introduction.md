@@ -93,6 +93,6 @@
 
 ## Notes pour le coach
 
-- **MOFC et MOFO** sont définis ici, à l'écran et entre parenthèses, puis utilisés tels quels dans la suite. La voix les prononce « mof-ci » et « mofo » : dis-moi si vous les épelez plutôt lettre par lettre.
+- **MOFC et MOFO** sont définis ici, à l'écran et entre parenthèses, puis utilisés tels quels dans la suite. La voix les prononce à la française : « mofsi » et « mofo ».
 - **Man ou zone** n'est qu'annoncé ici ; le sujet est traité dans la vidéo suivante.
 - Le défenseur en conflit n'existe pas vraiment en Cover 0 et en Cover 1 ; les chapitres le disent clairement.

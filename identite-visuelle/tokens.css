@@ -9,25 +9,25 @@
 @font-face { font-family: "Permanent Marker"; src: url("fonts/permanent-marker-latin-400-normal.woff2") format("woff2"); font-weight: 400; }
 
 :root {
-  /* Fond */
+  /* Ardoise : titres, cartes */
   --ardoise: #1d1e20;
   --ardoise-claire: #2a2b2e;
-  --cadre: #3f4042;
-  --papier: #fbfaf6;
-
-  /* Traits */
   --craie: #f2efe9;
   --craie-grise: #8a8d8f;
-  --encre: #2a2b2d;
+
+  /* Gazon : le terrain */
+  --gazon: #1f5a2b;
+  --gazon-clair: #246331;
+  --hors-jeu: #143d1e;
+  --vert-texte: #12391b;
 
   /* Rôles */
-  --orange: #f5821f;        /* tracé gagnant, mot clé, titre */
-  --bleu: #2b8fd6;          /* défense */
-  --jaune: #ffb400;         /* défenseur en conflit, regard du QB, pince */
-  --jaune-fonce: #e89b00;
-  --ciel: #8ecbf0;          /* zones profondes */
-  --vert: #47a800;          /* réservé aux images d'ambiance */
-  --rouge: #e5484d;         /* contre-exemple */
+  --orange: #ff8a1f;        /* tracé gagnant, mot clé, titre */
+  --jaune: #ffc400;         /* défenseur lu, regard du QB, zones courtes, pastille ZONE */
+  --ciel: #9fd4f5;          /* zones profondes */
+  --los: #3ea0ee;           /* ligne de mêlée */
+  --bleu: #2b8fd6;          /* pastille MAN */
+  --rouge: #ff5a5f;         /* contre-exemple */
 
   /* Typographies */
   --titre: "Alfa Slab One", serif;
@@ -47,8 +47,10 @@ html, body { margin: 0; background: var(--ardoise); }
 .script { font-family: var(--script); color: var(--craie); line-height: 1; }
 .label { font-family: var(--label); font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; }
 
-.pastille { display: inline-block; font-family: var(--label); font-weight: 700; font-size: 24px; letter-spacing: 0.12em; text-transform: uppercase; padding: 5px 16px 6px; border-radius: 999px; border: 2.5px solid var(--craie); color: var(--craie); }
-.pastille.pleine { background: var(--bleu); border-color: var(--bleu); color: #fff; }
+.pastille { display: inline-block; font-family: var(--label); font-weight: 700; font-size: 21px; letter-spacing: 0.1em; text-transform: uppercase; padding: 3px 13px 4px; border-radius: 999px; border: 2.5px solid #fff; color: #fff; }
+.pastille.zone { background: var(--jaune); border-color: var(--jaune); color: var(--ardoise); }
+.pastille.man { background: var(--bleu); border-color: var(--bleu); color: #fff; }
 
-.sous-titre { position: absolute; left: 160px; right: 160px; top: 922px; text-align: center; font-family: var(--texte); font-weight: 600; font-size: 44px; line-height: 1.25; color: var(--craie); }
+.sous-titre { position: absolute; left: 0; right: 0; bottom: 36px; text-align: center; }
+.sous-titre span { display: inline-block; background: rgba(14, 18, 15, .8); padding: 10px 32px 13px; border-radius: 12px; font-family: var(--texte); font-weight: 600; font-size: 40px; line-height: 1.2; color: #fff; }
 .sous-titre b { color: var(--orange); font-weight: 600; }

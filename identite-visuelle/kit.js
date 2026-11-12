@@ -1,10 +1,11 @@
 // Kit de dessin « Le tableau du coach ».
-// Fonctions pures qui renvoient du SVG : fond d'ardoise, gribouillis à la craie, terrain, joueurs, zones, tracés.
+// Fonctions pures qui renvoient du SVG : ardoise, gribouillis à la craie, terrain en gazon, joueurs, zones, tracés.
 // Aucun hasard non déterministe : le même appel produit toujours la même image.
 
 const C = {
-  ardoise: '#1d1e20', cadre: '#3f4042', papier: '#fbfaf6', craie: '#f2efe9', gris: '#8a8d8f', encre: '#2a2b2d',
-  orange: '#f5821f', bleu: '#2b8fd6', jaune: '#ffb400', jauneFonce: '#e89b00', ciel: '#8ecbf0', rouge: '#e5484d',
+  ardoise: '#1d1e20', craie: '#f2efe9', gris: '#8a8d8f',
+  gazon: '#1f5a2b', gazonClair: '#246331', horsJeu: '#143d1e', vertTexte: '#12391b',
+  blanc: '#ffffff', orange: '#ff8a1f', jaune: '#ffc400', ciel: '#9fd4f5', los: '#3ea0ee', bleu: '#2b8fd6', rouge: '#ff5a5f',
 };
 
 // Filtres et dégradés partagés. À placer une fois par SVG.
@@ -22,16 +23,14 @@ function defs() {
       <feColorMatrix type="matrix" values="0 0 0 0 1  0 0 0 0 1  0 0 0 0 1  0 0 0 -2.2 1.06"/>
     </filter>
     <filter id="flou"><feGaussianBlur stdDeviation="70"/></filter>
+    <filter id="ombre" x="-30%" y="-30%" width="160%" height="160%"><feDropShadow dx="0" dy="2" stdDeviation="2.5" flood-color="#000" flood-opacity=".45"/></filter>
     <radialGradient id="vignette" cx="50%" cy="50%" r="75%">
-      <stop offset="55%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity="0.55"/>
+      <stop offset="50%" stop-color="#000" stop-opacity="0"/><stop offset="100%" stop-color="#000" stop-opacity="0.6"/>
     </radialGradient>
-    <linearGradient id="cone" gradientUnits="objectBoundingBox" x1="0" y1="1" x2="1" y2="0">
-      <stop offset="0" stop-color="${C.jaune}" stop-opacity="0.05"/><stop offset="1" stop-color="${C.jaune}" stop-opacity="0.38"/>
-    </linearGradient>
   </defs>`;
 }
 
-// Fond d'ardoise : traces d'effaçage, grain, vignette.
+// Fond d'ardoise, pour les titres et les cartes : traces d'effaçage, grain, vignette.
 function fond() {
   const traces = [[420, 300, 520, 190, -18], [1380, 240, 460, 170, 12], [980, 760, 640, 210, -6], [300, 880, 380, 150, 20], [1640, 820, 360, 160, -24]]
     .map(([x, y, rx, ry, r]) => `<ellipse cx="${x}" cy="${y}" rx="${rx}" ry="${ry}" transform="rotate(${r} ${x} ${y})" fill="#fff" opacity="0.045" filter="url(#flou)"/>`).join('');
@@ -62,63 +61,81 @@ function hachures(x, y, n, pas, long, col = C.orange, w = 7, vertical = true, op
 
 // --- Terrain ---
 // Repère : x en yards depuis la touche gauche (0 à 53,33), y en yards depuis la ligne de mêlée (positif vers la défense).
-function terrain({ theme = 'clair', fx = 160, fy = 120, ppy = 30, yMin = -6, yMax = 20 } = {}) {
-  const W = 53.333 * ppy, H = (yMax - yMin) * ppy;
-  const X = (x) => fx + x * ppy, Y = (y) => fy + (yMax - y) * ppy;
-  const clair = theme === 'clair';
-  const t = clair
-    ? { ligne: '#d4d7d8', los: '#6f7375', num: '#b9bdbf', att: '#ffffff', attTrait: C.encre, attTexte: C.encre, bleu: '#1f80cc', zoneP: 'rgba(43,143,214,.15)', zonePT: '#4a9fdc', zonePTexte: '#1c6aa8', zoneC: 'rgba(255,180,0,.20)', zoneCT: C.jauneFonce, zoneCTexte: '#9a6500' }
-    : { ligne: 'rgba(242,239,233,.20)', los: 'rgba(242,239,233,.75)', num: 'rgba(242,239,233,.38)', att: C.ardoise, attTrait: C.craie, attTexte: C.craie, bleu: C.bleu, zoneP: 'rgba(142,203,240,.17)', zonePT: 'rgba(142,203,240,.75)', zonePTexte: C.ciel, zoneC: 'rgba(255,180,0,.17)', zoneCT: 'rgba(255,180,0,.8)', zoneCTexte: C.jaune };
+// Caméra : ppy = pixels par yard, ox = abscisse en pixels de la touche gauche, oy = ordonnée en pixels de la ligne de mêlée.
+// Plan large de référence : ppy 24, ox 320, oy 600, soit de -20 à +25 yards sur toute la hauteur.
+function terrain({ ppy = 24, ox = 320, oy = 600, W = 1920, H = 1080 } = {}) {
+  const X = (x) => ox + x * ppy, Y = (y) => oy - y * ppy;
+  const L = 53.333, k = ppy / 24;
+  const yHaut = Math.ceil((oy) / ppy) + 1, yBas = -Math.ceil((H - oy) / ppy) - 1;
+  const R = Math.min(0.72 * ppy, 30), police = 'Barlow Condensed';
 
-  let fondTerrain = '';
-  if (clair) {
-    // Le porte-bloc : cadre sombre, feuille, pince jaune.
-    fondTerrain = `<rect x="${fx - 20}" y="${fy - 20}" width="${W + 40}" height="${H + 40}" rx="16" fill="${C.cadre}"/>
-      <rect x="${fx}" y="${fy}" width="${W}" height="${H}" rx="3" fill="${C.papier}"/>
-      <circle cx="960" cy="${fy - 44}" r="24" fill="none" stroke="${C.jaune}" stroke-width="13"/>
-      <rect x="845" y="${fy - 40}" width="230" height="50" rx="5" fill="${C.jaune}"/><rect x="845" y="${fy - 4}" width="230" height="14" rx="4" fill="${C.jauneFonce}"/>`;
-  } else {
-    fondTerrain = `<rect x="${fx}" y="${fy}" width="${W}" height="${H}" fill="rgba(255,255,255,.025)"/>
-      <rect x="${fx}" y="${fy}" width="${W}" height="${H}" fill="none" stroke="${C.craie}" stroke-width="6" opacity=".7" filter="url(#craie)"/>`;
+  // Gazon : hors-jeu sombre, bandes de tonte tous les 5 yards, grain, vignette.
+  let base = `<rect width="${W}" height="${H}" fill="${C.horsJeu}"/>`;
+  for (let y = Math.floor(yBas / 5) * 5; y < yHaut; y += 5) {
+    base += `<rect x="${X(0)}" y="${Y(y + 5)}" width="${L * ppy}" height="${5 * ppy}" fill="${(Math.abs(y / 5) % 2) ? C.gazonClair : C.gazon}"/>`;
   }
+  base += `<rect width="${W}" height="${H}" filter="url(#grain)" opacity="0.07"/>`;
+  // Lignes de 5 yards, repères d'un yard sur les hashes et les touches.
   let lignes = '';
-  for (let y = 5; y < yMax; y += 5) {
-    lignes += `<line x1="${X(0)}" x2="${X(53.333)}" y1="${Y(y)}" y2="${Y(y)}" stroke="${t.ligne}" stroke-width="3"/>`;
-    for (const x of [2.2, 51.1]) lignes += `<text x="${X(x)}" y="${Y(y) + 11}" text-anchor="middle" font-family="Barlow Condensed" font-weight="700" font-size="30" fill="${t.num}">${y}</text>`;
+  for (let y = yBas; y <= yHaut; y++) {
+    if (y % 5 === 0) {
+      if (y !== 0) lignes += `<line x1="${X(0)}" x2="${X(L)}" y1="${Y(y)}" y2="${Y(y)}" stroke="#fff" stroke-width="${2.5 * k}" opacity=".8"/>`;
+    } else {
+      for (const [a, b] of [[0.3, 1], [19.65, 20.35], [32.98, 33.68], [L - 1, L - 0.3]]) lignes += `<line x1="${X(a)}" x2="${X(b)}" y1="${Y(y)}" y2="${Y(y)}" stroke="#fff" stroke-width="${2 * k}" opacity=".6"/>`;
+    }
   }
-  for (let y = Math.ceil(yMin) + 1; y < yMax; y++) for (const x of [20, 33.333]) lignes += `<line x1="${X(x) - 7}" x2="${X(x) + 7}" y1="${Y(y)}" y2="${Y(y)}" stroke="${t.ligne}" stroke-width="3"/>`;
-  lignes += `<line x1="${X(0)}" x2="${X(53.333)}" y1="${Y(0)}" y2="${Y(0)}" stroke="${t.los}" stroke-width="3.5" stroke-dasharray="14 10"/>`;
+  // Grands chiffres couchés : distance à la ligne de mêlée.
+  for (const y of [-10, 10, 20]) {
+    if (Y(y) < -40 || Y(y) > H + 40) continue;
+    lignes += `<text transform="translate(${X(8)} ${Y(y)}) rotate(-90)" text-anchor="middle" dominant-baseline="central" font-family="${police}" font-weight="700" font-size="${3.3 * ppy}" fill="#fff" opacity=".11">${Math.abs(y)}</text>`;
+    lignes += `<text transform="translate(${X(L - 8)} ${Y(y)}) rotate(90)" text-anchor="middle" dominant-baseline="central" font-family="${police}" font-weight="700" font-size="${3.3 * ppy}" fill="#fff" opacity=".11">${Math.abs(y)}</text>`;
+  }
+  // Touches et ligne de mêlée.
+  lignes += `<line x1="${X(0)}" x2="${X(0)}" y1="0" y2="${H}" stroke="#fff" stroke-width="${5 * k}"/><line x1="${X(L)}" x2="${X(L)}" y1="0" y2="${H}" stroke="#fff" stroke-width="${5 * k}"/>`;
+  lignes += `<line x1="${X(0)}" x2="${X(L)}" y1="${Y(0)}" y2="${Y(0)}" stroke="${C.los}" stroke-width="${4 * k}"/>`;
+  // Échelle de profondeur le long de la touche gauche.
+  for (const y of [5, 10, 15, 20]) lignes += `<text x="${X(0) - 10 * k}" y="${Y(y) + 6 * k}" text-anchor="end" font-family="${police}" font-weight="700" font-size="${17 * k}" fill="#fff" opacity=".55">+${y}</text>`;
+  const vignette = `<rect width="${W}" height="${H}" fill="url(#vignette)"/>`;
 
-  const api = {
-    X, Y, t, base: fondTerrain + lignes,
-    attaquant: (x, y, lettre = '', r = 20) => `<circle cx="${X(x)}" cy="${Y(y)}" r="${r}" fill="${t.att}" stroke="${t.attTrait}" stroke-width="4"/>` + (lettre ? `<text x="${X(x)}" y="${Y(y) + 7.5}" text-anchor="middle" font-family="Barlow Condensed" font-weight="700" font-size="22" fill="${t.attTexte}">${lettre}</text>` : ''),
-    centre: (x, y) => `<rect x="${X(x) - 15}" y="${Y(y) - 15}" width="30" height="30" rx="5" fill="${t.att}" stroke="${t.attTrait}" stroke-width="4"/>`,
-    defenseur: (x, y, lettre, r = 21) => `<circle cx="${X(x)}" cy="${Y(y)}" r="${r}" fill="${t.bleu}"/><text x="${X(x)}" y="${Y(y) + 7.5}" text-anchor="middle" font-family="Barlow Condensed" font-weight="700" font-size="22" fill="#fff">${lettre}</text>`,
-    ligneDef: (x, y, s = 11) => `<path d="M${X(x) - s},${Y(y) - s} L${X(x) + s},${Y(y) + s} M${X(x) + s},${Y(y) - s} L${X(x) - s},${Y(y) + s}" stroke="${t.bleu}" stroke-width="7" stroke-linecap="round"/>`,
+  const lettre = (x, y, t, col, taille = R) => `<text x="${X(x)}" y="${Y(y)}" text-anchor="middle" dominant-baseline="central" font-family="${police}" font-weight="700" font-size="${taille * (t.length > 1 ? 0.98 : 1.15)}" fill="${col}">${t}</text>`;
+
+  return {
+    X, Y, ppy, R, base: base + lignes, vignette,
+    // Attaque : disque blanc avec la lettre du poste. Ligne offensive en anneaux, centre en carré.
+    attaquant: (x, y, t) => `<circle cx="${X(x)}" cy="${Y(y)}" r="${R}" fill="#fff" filter="url(#ombre)"/>${lettre(x, y, t, C.vertTexte)}`,
+    ligneOff: (x, y) => `<circle cx="${X(x)}" cy="${Y(y)}" r="${R * 0.72}" fill="${C.gazon}" stroke="#fff" stroke-width="${R * 0.3}"/>`,
+    centre: (x, y) => `<rect x="${X(x) - R * 0.72}" y="${Y(y) - R * 0.72}" width="${R * 1.44}" height="${R * 1.44}" rx="${R * 0.18}" fill="${C.gazon}" stroke="#fff" stroke-width="${R * 0.3}"/>`,
+    // Défense : disque ardoise cerclé de blanc. Ligne défensive en croix à la craie.
+    defenseur: (x, y, t, { conflit = false } = {}) => conflit
+      ? `<circle cx="${X(x)}" cy="${Y(y)}" r="${R * 1.85}" fill="none" stroke="${C.jaune}" stroke-width="${2.5 * k}" opacity=".45"/><circle cx="${X(x)}" cy="${Y(y)}" r="${R * 1.42}" fill="none" stroke="${C.jaune}" stroke-width="${4.5 * k}"/><circle cx="${X(x)}" cy="${Y(y)}" r="${R}" fill="${C.jaune}" filter="url(#ombre)"/>${lettre(x, y, t, C.ardoise)}`
+      : `<circle cx="${X(x)}" cy="${Y(y)}" r="${R}" fill="${C.ardoise}" stroke="#fff" stroke-width="${2.6 * k}" filter="url(#ombre)"/>${lettre(x, y, t, '#fff')}`,
+    ligneDef: (x, y) => { const s = R * 0.62; return `<path d="M${X(x) - s},${Y(y) - s} L${X(x) + s},${Y(y) + s} M${X(x) + s},${Y(y) - s} L${X(x) - s},${Y(y) + s}" stroke="#fff" stroke-width="${R * 0.36}" stroke-linecap="round"/>`; },
     zone: (x, y, rx, ry, texte, type = 'profonde') => {
-      const p = type === 'profonde';
-      return `<ellipse cx="${X(x)}" cy="${Y(y)}" rx="${rx * ppy}" ry="${ry * ppy}" fill="${p ? t.zoneP : t.zoneC}" stroke="${p ? t.zonePT : t.zoneCT}" stroke-width="3"/>
-        <text x="${X(x)}" y="${Y(y) + (p ? -ry * ppy * 0.42 : 7)}" text-anchor="middle" font-family="Barlow Condensed" font-weight="700" font-size="${p ? 24 : 19}" letter-spacing="2.5" fill="${p ? t.zonePTexte : t.zoneCTexte}">${texte}</text>`;
+      const p = type === 'profonde', col = p ? C.ciel : C.jaune;
+      return `<ellipse cx="${X(x)}" cy="${Y(y)}" rx="${rx * ppy}" ry="${ry * ppy}" fill="${col}" fill-opacity="${p ? 0.2 : 0.22}" stroke="${col}" stroke-width="${2.5 * k}"/>
+        <text x="${X(x)}" y="${Y(y) + (p ? -ry * ppy * 0.5 : 0)}" text-anchor="middle" dominant-baseline="central" font-family="${police}" font-weight="700" font-size="${(p ? 19 : 15.5) * k}" letter-spacing="${2 * k}" fill="${p ? '#e3f3fd' : '#ffe58a'}">${texte}</text>`;
     },
-    // Tracé : liste de points en yards, pointe en chevron ouvert.
-    trace: (pts, { col = C.orange, w = 8, tirets = '', tete = 20, op = 1 } = {}) => {
+    // Tracé : liste de points en yards. fin 'fleche' = le receveur continue de courir, fin 'stop' = il s'arrête.
+    trace: (pts, { col = C.orange, w = 6.5 * k, tirets = '', fin = 'fleche', op = 1 } = {}) => {
       const P = pts.map(([x, y]) => [X(x), Y(y)]), n = P.length, [x2, y2] = P[n - 1], [x1, y1] = P[n - 2];
-      const a = Math.atan2(y2 - y1, x2 - x1), q = (da) => `${x2 - tete * Math.cos(a + da)},${y2 - tete * Math.sin(a + da)}`;
-      return `<g opacity="${op}"><path d="M${P.map((p) => p.join(',')).join(' L')}" fill="none" stroke="${col}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round" ${tirets ? `stroke-dasharray="${tirets}"` : ''}/>
-        <path d="M${q(0.6)} L${x2},${y2} L${q(-0.6)}" fill="none" stroke="${col}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/></g>`;
+      const a = Math.atan2(y2 - y1, x2 - x1), t = 17 * k, q = (da) => `${x2 - t * Math.cos(a + da)},${y2 - t * Math.sin(a + da)}`;
+      const bout = fin === 'stop'
+        ? `<path d="M${x2 - 14 * k * Math.sin(a)},${y2 + 14 * k * Math.cos(a)} L${x2 + 14 * k * Math.sin(a)},${y2 - 14 * k * Math.cos(a)}" stroke="${col}" stroke-width="${w * 1.1}" stroke-linecap="round"/>`
+        : `<path d="M${q(0.6)} L${x2},${y2} L${q(-0.6)}" fill="none" stroke="${col}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round"/>`;
+      return `<g opacity="${op}"><path d="M${P.map((p) => p.join(',')).join(' L')}" fill="none" stroke="${col}" stroke-width="${w}" stroke-linecap="round" stroke-linejoin="round" ${tirets ? `stroke-dasharray="${tirets}"` : ''}/>${bout}</g>`;
     },
-    halo: (x, y) => `<circle cx="${X(x)}" cy="${Y(y)}" r="40" fill="none" stroke="${C.jaune}" stroke-width="3" opacity=".4"/><circle cx="${X(x)}" cy="${Y(y)}" r="31" fill="none" stroke="${C.jaune}" stroke-width="6"/>`,
-    cone: (x1, y1, x2, y2, larg = 2.6) => {
+    cone: (x1, y1, x2, y2, larg = 2.4) => {
       const a = Math.atan2(Y(y2) - Y(y1), X(x2) - X(x1)), dx = Math.sin(a) * larg * ppy, dy = -Math.cos(a) * larg * ppy;
-      return `<polygon points="${X(x1)},${Y(y1)} ${X(x2) + dx},${Y(y2) + dy} ${X(x2) - dx},${Y(y2) - dy}" fill="${C.jaune}" opacity=".20"/>`;
+      return `<polygon points="${X(x1)},${Y(y1)} ${X(x2) + dx},${Y(y2) + dy} ${X(x2) - dx},${Y(y2) - dy}" fill="${C.jaune}" opacity=".22"/>`;
     },
-    ballon: (x, y, rot = 0) => `<g transform="translate(${X(x)} ${Y(y)}) rotate(${rot})"><ellipse rx="17" ry="10" fill="#8a4b22" stroke="${clair ? C.encre : C.craie}" stroke-width="2.5"/><path d="M-7,0 H7 M-4,-3 V3 M0,-3 V3 M4,-3 V3" stroke="#fff" stroke-width="2"/></g>`,
-    etiquette: (x, y, texte, { col = C.jaune, coulTexte = C.encre, ancre = 'middle' } = {}) => {
-      const w = texte.length * 12.4 + 30, dx = ancre === 'middle' ? -w / 2 : ancre === 'end' ? -w : 0;
-      return `<g transform="translate(${X(x) + dx} ${Y(y) - 19})"><rect width="${w}" height="38" rx="6" fill="${col}"/><text x="${w / 2}" y="27" text-anchor="middle" font-family="Barlow Condensed" font-weight="700" font-size="24" letter-spacing="2" fill="${coulTexte}">${texte}</text></g>`;
+    vol: (x1, y1, cx, cy, x2, y2) => `<path d="M${X(x1)},${Y(y1)} Q${X(cx)},${Y(cy)} ${X(x2)},${Y(y2)}" fill="none" stroke="#fff" stroke-width="${3 * k}" stroke-dasharray="${2 * k} ${10 * k}" stroke-linecap="round" opacity=".9"/>`,
+    ballon: (x, y, rot = 0) => `<g transform="translate(${X(x)} ${Y(y)}) rotate(${rot}) scale(${k})" filter="url(#ombre)"><ellipse rx="15" ry="9" fill="#8a4b22" stroke="#fff" stroke-width="2"/><path d="M-6,0 H6 M-3.5,-2.6 V2.6 M0,-2.6 V2.6 M3.5,-2.6 V2.6" stroke="#fff" stroke-width="1.6"/></g>`,
+    etiquette: (x, y, texte, { col = C.jaune, coulTexte = C.ardoise } = {}) => {
+      const f = 17 * k, w = texte.length * f * 0.56 + 22 * k, h = f * 1.55;
+      return `<g transform="translate(${X(x) - w / 2} ${Y(y) - h / 2})" filter="url(#ombre)"><rect width="${w}" height="${h}" rx="${5 * k}" fill="${col}"/><text x="${w / 2}" y="${h / 2}" text-anchor="middle" dominant-baseline="central" font-family="${police}" font-weight="700" font-size="${f}" letter-spacing="${1.6 * k}" fill="${coulTexte}">${texte}</text></g>`;
     },
+    cadenas: (x, y, ferme = true) => `<g transform="translate(${X(x)} ${Y(y)}) scale(${k})" stroke="#fff" stroke-width="3.2" fill="none" stroke-linecap="round"><path d="M-8,-4 V-11 A8,8 0 0 1 8,-11 ${ferme ? 'V-4' : ''}"/><rect x="-12" y="-4" width="24" height="18" rx="3.5" fill="#fff" stroke="none"/></g>`,
   };
-  return api;
 }
 
 if (typeof module !== 'undefined') module.exports = { C, defs, fond, croix, rond, fleche, hachures, terrain };

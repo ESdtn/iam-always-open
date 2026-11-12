@@ -8,10 +8,10 @@ Dernière mise à jour : 12 novembre 2026.
 |---|---|
 | Organisation de la série | Fait |
 | Recherche complémentaire | Fait |
-| Scripts | Écrits et relus ; la vidéo « Man ou zone ? » est nouvelle et reste à relire |
-| Identité visuelle et images de référence | Fait, terrain clair retenu |
+| Scripts | Écrits et validés par le coach |
+| Identité visuelle et images de référence | Deuxième version (terrain en gazon), en attente de validation |
 | Choix de la voix | Fait : Supertonic 3, voix M3 |
-| Prononciation et vitesse de la voix | En attente de l'écoute du coach |
+| Prononciation et vitesse de la voix | Vitesse 1,10 retenue ; quatre mots restent à choisir (fichier D) |
 | Installation de l'outil de rendu | À faire au lancement du pilote |
 | Vidéo pilote (introduction) | À faire |
 | Autres vidéos | À faire |
@@ -22,7 +22,7 @@ Dernière mise à jour : 12 novembre 2026.
 | # | Vidéo | Script | Texte de voix | Audio | Calage | Animation | Rendu | Validé |
 |---|---|---|---|---|---|---|---|---|
 | 0 | Introduction | Relu | | | | | | |
-| 1 | Man ou zone ? | À relire | | | | | | |
+| 1 | Man ou zone ? | Relu | | | | | | |
 | 2 | Cover 0 | Relu | | | | | | |
 | 3 | Cover 1 | Relu | | | | | | |
 | 4 | Cover 3 | Relu | | | | | | |
@@ -41,19 +41,18 @@ Dernière mise à jour : 12 novembre 2026.
 | Ordre | Man ou zone, puis Cover 0, 1, 3, 2, 4 |
 | Vocabulaire | MOFC et MOFO définis dans l'introduction, puis utilisés tels quels |
 | Prononciation | Termes de football à l'anglaise, numéros en français |
-| Visuel | Identité « Le tableau du coach », terrain clair sur porte-bloc |
-| Voix | Synthèse gratuite et locale : Supertonic 3, voix M3 |
+| Visuel | Identité « Le tableau du coach » : ardoise pour les titres, terrain en gazon de −20 à +25 yards |
+| Voix | Synthèse gratuite et locale : Supertonic 3, voix M3, vitesse 1,10 |
+| MOFC et MOFO | Prononcés à la française : « mofsi » et « mofo » |
+| Guide PDF | Conservé dans le dépôt, nom du club effacé ; historique git réécrit |
 | Schémas | Dessinés en code, pas générés par IA |
 
 ## Points ouverts
 
-1. **Prononciation** : écouter les fichiers A, B et C de `voix/essais/` et signaler les mots qui sonnent faux (voir `voix/lexique.md`).
-2. **Vitesse de la voix** : choisir entre 1,00, 1,10 et 1,20.
-3. **Script « Man ou zone ? »** : à relire.
-4. **MOFC et MOFO** : prononcés « mof-ci » et « mofo », ou épelés ?
-5. **Guide PDF** : il porte le nom du club sur chaque page, ce qui contredit la règle d'anonymat. À trancher.
-6. **Points tactiques à valider** : liste en bas de `scripts/README.md`.
+1. **Maquettes** : valider la deuxième version (`identite-visuelle/reference/`), en particulier l'échelle du plan large.
+2. **Prononciation** : choisir une écriture pour hook, out, quick out et 2-Man dans le fichier D, et départager les deux « fade » du fichier C (voir `voix/lexique.md`).
+3. **Points tactiques à valider** : liste en bas de `scripts/README.md`.
 
 ## Journal
 
-- **12 novembre 2026.** Lecture du guide, recherche tactique et vérification des outils. Écriture des sept scripts, puis ajout de « Man ou zone ? » à la demande du coach. Création de l'identité visuelle et de quatre images de référence. Comparatif des voix gratuites, choix de Supertonic M3, premiers essais de prononciation.
+- **12 novembre 2026.** Lecture du guide, recherche tactique et vérification des outils. Écriture des sept scripts, puis ajout de « Man ou zone ? » à la demande du coach. Création de l'identité visuelle et de quatre images de référence. Comparatif des voix gratuites, choix de Supertonic M3, premiers essais de prononciation. Anonymisation du guide PDF et réécriture de l'historique git. Deuxième version de l'identité visuelle, sur trois nouvelles références.

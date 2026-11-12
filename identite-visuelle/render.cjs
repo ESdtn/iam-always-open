@@ -3,7 +3,7 @@
 const path = require('path');
 const { chromium } = require('playwright');
 
-const frames = ['titre', 'terrain-clair', 'terrain-ardoise', 'reflexe'];
+const frames = ['titre', 'neutre', 'identite', 'lecture-large', 'lecture-serre', 'reflexe'];
 const dossier = path.join(__dirname, 'reference');
 
 (async () => {

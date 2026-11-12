@@ -49,7 +49,7 @@ Règle donnée par le coach : les termes de football se prononcent à l'anglaise
 |---|---|
 | Cover, safety, corner, slot, snap, blitz, press, jam, robber, quarterback, running back, linebacker, nickel, man, deep, hook, flat, seam, quarters, play-action, smash, mesh | Les numéros : « Cover zéro, un, deux, trois, quatre », « Cover six », « Tampa deux », « deux-man » |
 | Tous les tracés : slant, hitch, out, quick out, comeback, fade, curl, corner, post, dig | Les mots courants : zone, défenseur, receveur, tracé, levier, yards, touche, milieu, profondeur |
-| MOFC (« mof-ci ») et MOFO (« mofo »), à confirmer | « quatre verticaux », « le croisement », « le trou », « la fenêtre » |
+| | MOFC et MOFO, prononcés à la française : « mofsi » et « mofo » | « quatre verticaux », « le croisement », « le trou », « la fenêtre » |
 
 La voix de synthèse lit le français : chaque terme anglais aura donc une écriture phonétique dans un lexique séparé (`voix/lexique.md`), validée à l'oreille. Les scripts gardent l'orthographe normale.
 
@@ -73,7 +73,7 @@ La recherche (`recherche/complements-couvertures.md`) contredit ou nuance le gui
 
 Ces choix viennent de moi ou d'une seule source. Ils sont repris dans les notes en bas de chaque script.
 
-1. **MOFC et MOFO.** Prononcés « mof-ci » et « mofo », ou épelés lettre par lettre ?
+1. **Vocabulaire maison.** Voir le point suivant.
 2. **Vocabulaire maison.** « Robber », « défenseur du flat », « levier », « s'asseoir dans la fenêtre » : à remplacer par les mots que tes joueurs entendent à l'entraînement.
 3. **Conversions de tracés** (slant ou quick out selon le levier contre Cover 0). Le guide rappelle qu'on n'ajuste que selon les règles validées avec le staff : la vidéo doit montrer vos règles, pas les miennes.
 4. **Concepts choisis**, tous génériques : quick game et mesh (Cover 0 et 1), curl-flat et 4 verticaux (Cover 3), smash et seam (Cover 2), hitch-seam et post-dig sur play-action (Cover 4).

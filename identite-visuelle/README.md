@@ -1,13 +1,14 @@
 # Identité visuelle · « Le tableau du coach »
 
-L'identité part de deux images d'inspiration fournies par le coach. Elles ne sont pas stockées dans le dépôt : ce sont des visuels de tiers, on n'en reprend que l'esprit.
+L'identité part de trois images d'inspiration fournies par le coach. Elles ne sont pas stockées dans le dépôt : ce sont des visuels de tiers, on n'en reprend que l'esprit.
 
 | Image d'inspiration | Ce qu'on en garde | Où ça sert |
 |---|---|---|
-| Tableau noir, craie blanche, orange, titre en script et en slab italique | Fond d'ardoise texturé, gribouillis X et O à la craie, hachures orange, duo de typos | Titres, cartons de chapitre, cartes « réflexe », marges |
-| Porte-bloc tenu à deux mains, X bleus, O gris, flèches arrondies, pince jaune | Le porte-bloc comme scène, défense en bleu, attaque en cercles, flèches à pointe ouverte, jaune d'accent | Le terrain et tout ce qui s'y joue |
+| Tableau noir, craie blanche, orange, titre en script et en slab italique | Fond d'ardoise texturé, gribouillis X et O à la craie, hachures orange, duo de typos | Titres, cartons de chapitre, cartes « réflexe » |
+| Terrain vert vu de dessus, lignes blanches, X et O blancs | Gazon sombre avec bandes de tonte et vignette, lignes de 5 yards, hashes, croix blanches pour la ligne défensive, anneaux pour la ligne offensive | Le terrain |
+| Schéma de playbook : pastilles lettrées, tracés colorés, ligne de mêlée bleue, grands chiffres couchés | Joueurs en disques avec la lettre du poste, défense en sombre, joueur clé en couleur, tracés finis par une flèche ou une barre, ligne de mêlée bleue, chiffres en filigrane | Tout ce qui se joue sur le terrain |
 
-L'idée : l'ardoise habille la série, le porte-bloc porte le contenu tactique.
+L'idée : l'ardoise habille la série, le gazon porte le contenu tactique.
 
 ## Images de référence
 
@@ -16,30 +17,36 @@ Rendues en 1920 × 1080 par `node identite-visuelle/render.cjs`, à partir de `r
 | Fichier | Rôle |
 |---|---|
 | `reference/01-titre.png` | Titre de la série |
-| `reference/02-terrain-clair.png` | Scène de terrain, version porte-bloc (retenue) |
-| `reference/03-terrain-ardoise.png` | La même scène, version tout ardoise (écartée) |
-| `reference/04-reflexe.png` | Carte « réflexe » de fin de chapitre |
+| `reference/02-neutre.png` | État neutre : première et dernière image de chaque vidéo |
+| `reference/03-identite.png` | Plan large, carte d'identité d'une couverture |
+| `reference/04-lecture-large.png` | Plan large, lecture du quarterback |
+| `reference/05-lecture-serre.png` | Plan serré sur la même lecture |
+| `reference/06-reflexe.png` | Carte « réflexe » de fin de chapitre |
 
-**Décision prise : terrain clair.** Sur un vidéoprojecteur en salle éclairée, un fond sombre perd son contraste et les zones translucides deviennent illisibles ; la feuille claire reste nette. La version ardoise reste dans le kit, pour mémoire.
+## Cadrage
+
+- **Plan large** : de −20 à +25 yards sur toute la hauteur, 24 pixels par yard. Le terrain occupe la bande centrale (1280 pixels), les marges hors-jeu de 320 pixels portent l'habillage.
+- **Plan serré** : la caméra zoome sur la zone qui compte (42 pixels par yard dans la référence). L'habillage passe dans un panneau flottant.
+- La caméra est un simple réglage du kit (échelle et origine) : le passage du large au serré s'anime.
 
 ## Couleurs
 
 | Rôle | Nom | Valeur |
 |---|---|---|
-| Fond | Ardoise | `#1d1e20` |
-| Cartes sur fond | Ardoise claire | `#2a2b2e` |
-| Cadre du porte-bloc | Cadre | `#3f4042` |
-| Feuille du porte-bloc | Papier | `#fbfaf6` |
-| Texte et traits sur ardoise | Craie | `#f2efe9` |
-| Texte et traits sur papier | Encre | `#2a2b2d` |
-| Tracé gagnant, mot clé, titres | Orange | `#f5821f` |
-| Défense | Bleu | `#2b8fd6` |
-| Défenseur en conflit, regard du QB | Jaune | `#ffb400` |
-| Zones profondes | Ciel | `#8ecbf0` |
-| Zones courtes | Jaune, en aplat translucide | `#ffb400` à 20 % |
-| Contre-exemple, erreur | Rouge | `#e5484d` |
+| Terrain | Gazon, gazon clair (bandes de tonte) | `#1f5a2b`, `#246331` |
+| Hors-jeu, marges | Hors-jeu | `#143d1e` |
+| Lignes, attaque | Blanc | `#ffffff` |
+| Ligne de mêlée | Bleu ligne | `#3ea0ee` |
+| Défense | Ardoise cerclée de blanc | `#1d1e20` |
+| Tracé gagnant, mot clé, titres | Orange | `#ff8a1f` |
+| Défenseur lu, regard du QB, zones courtes, pastille ZONE | Jaune | `#ffc400` |
+| Zones profondes | Ciel | `#9fd4f5` |
+| Pastille MAN | Bleu | `#2b8fd6` |
+| Contre-exemple, erreur | Rouge | `#ff5a5f` |
+| Fond des titres et des cartes | Ardoise | `#1d1e20` |
+| Texte sur ardoise | Craie | `#f2efe9` |
 
-Règle d'usage : une couleur, un sens. L'orange désigne toujours ce que l'attaque doit faire, le bleu toujours la défense, le jaune toujours le joueur que le QB lit.
+Règle d'usage : une couleur, un sens. L'orange désigne toujours ce que l'attaque doit faire, le jaune toujours le joueur que le quarterback lit.
 
 ## Typographies
 
@@ -55,25 +62,25 @@ Les fichiers sont dans `fonts/`, chargés en local pour que le rendu ne dépende
 
 ## Le terrain
 
-- **Repère** : x en yards depuis la touche gauche (0 à 53,33), y en yards depuis la ligne de mêlée, positif vers la défense. Fenêtre affichée : de −6 à +20 yards, à 30 pixels par yard, soit 1600 × 780 pixels.
-- **Attaque** : cercles à contour, lettre du poste au centre. Ligne offensive sans lettre, centre en carré.
-- **Défense** : pastilles bleues pleines avec le poste (CB, FS, SS, N, LB). Ligne défensive en croix bleues.
-- **Zones** : ellipses translucides, bleu ciel pour les profondes, jaune pour les courtes, nom en capitales.
-- **Tracés** : trait orange épais, bouts ronds, pointe en chevron ouvert. Le tracé secondaire est à 45 % d'opacité.
-- **Déplacement d'un défenseur** : pointillés bleus fins.
-- **Lecture du QB** : cône jaune translucide du QB vers le défenseur lu, double anneau jaune autour de lui, étiquette jaune « DÉFENSEUR EN CONFLIT ».
-- **Vol du ballon** : pointillés orange fins, avec le ballon dessus.
-- **Règle de lecture** : deux étiquettes en bas à gauche, celle qui s'applique en orange plein, l'autre en contour gris.
+- **Repère** : x en yards depuis la touche gauche (0 à 53,33), y en yards depuis la ligne de mêlée, positif vers la défense.
+- **Marquage** : ligne blanche tous les 5 yards, repère tous les yards sur les hashes et le long des touches, grands chiffres couchés à 10 et 20 yards de la ligne de mêlée, échelle +5 à +20 dans la marge gauche.
+- **Attaque** : disques blancs avec la lettre du poste. Ligne offensive en anneaux blancs, centre en carré.
+- **Défense** : disques ardoise cerclés de blanc avec le poste (CB, FS, SS, N, LB). Ligne défensive en croix blanches.
+- **Défenseur lu** : disque jaune, double anneau jaune, étiquette jaune « DÉFENSEUR EN CONFLIT », cône jaune translucide depuis le quarterback.
+- **Zones** : ellipses translucides, ciel pour les profondes, jaune pour les courtes, nom en capitales.
+- **Tracés** : trait orange épais. Il finit par une **flèche** quand le receveur continue de courir, par une **barre** quand il s'arrête. C'est la distinction man ou zone, visible sur chaque schéma. Le tracé secondaire est à demi-opacité.
+- **Déplacement d'un défenseur** : pointillés blancs fins.
+- **Vol du ballon** : pointillés blancs, avec le ballon dessus.
 
 ## Habillage
 
-- **Bandeau haut** : titre du chapitre et pastilles à gauche, étape en cours à droite (mot en script, précision en capitales grises).
-- **Sous-titres** : sous le porte-bloc, centrés, Barlow 600 en 44 px, la partie importante en orange.
-- **Marges** : quelques gribouillis à la craie à faible opacité, jamais sur le terrain.
-- **Cartes « réflexe »** : deux cartes côte à côte, onglet orange QB et WR, condition en bleu ciel, action en craie avec le mot clé en orange.
+- **Marge gauche** : titre du chapitre, pastilles (MAN ou ZONE, nombre de safeties, MOFC ou MOFO), étape en cours en script, puis la règle de lecture ou le compteur de la scène.
+- **Marge droite** : progression dans le chapitre (l'étape en cours en orange) et légende.
+- **Sous-titres** : en bas du terrain, sur un bandeau sombre, la partie importante en orange.
+- **Cartes « réflexe »** : sur ardoise, deux cartes côte à côte, onglet orange QB et WR.
 
 ## Fichiers
 
 - `tokens.css` : couleurs, typographies et classes de base.
-- `kit.js` : fonctions de dessin (fond d'ardoise, gribouillis, terrain, joueurs, zones, tracés, cône de lecture). Elles serviront telles quelles aux compositions vidéo.
+- `kit.js` : fonctions de dessin (ardoise, gribouillis, terrain avec caméra, joueurs, zones, tracés, cône de lecture). Elles serviront telles quelles aux compositions vidéo.
 - `render.cjs` : rend les images de référence.
